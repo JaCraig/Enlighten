@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="NameFinder\" />
+    <Folder Include="ML\" />
+    <Folder Include="Lemmatizer\" />
+    <Folder Include="LanguageModel\" />
+    <Folder Include="LanguageDetection\" />
+    <Folder Include="Formats\" />
+    <Folder Include="EntityLinker\" />
+    <Folder Include="DocCat\" />
+    <Folder Include="Dictionary\" />
+    <Folder Include="CmdLine\" />
+    <Folder Include="Chunker\" />
+    <Folder Include="NGram\" />
+    <Folder Include="Parser\" />
+    <Folder Include="POSTagger\" />
+    <Folder Include="SentenceDetection\" />
+    <Folder Include="Stemmer\" />
+    <Folder Include="Utils\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BigBook" Version="2.1.10" />
+    <PackageReference Include="System.Memory" Version="4.5.2" />
+  </ItemGroup>
+
+</Project>
