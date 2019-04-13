@@ -15,7 +15,9 @@ limitations under the License.
 */
 
 using BigBook;
+using Enlighten.Tokenizer.Enums;
 using Enlighten.Tokenizer.Interfaces;
+using Enlighten.Tokenizer.Languages.English.Enums;
 using Enlighten.Tokenizer.Utils;
 using System;
 using System.Collections.Generic;
@@ -55,13 +57,29 @@ namespace Enlighten.Tokenizer
         /// <param name="text">The text.</param>
         /// <param name="language">The language.</param>
         /// <returns>The tokens found.</returns>
-        public Token[] Tokenize(string text, string language = "en-us")
+        public Token[] Tokenize(string text, Language language)
         {
             if (!Languages.ContainsKey(language))
                 return Array.Empty<Token>();
             var Language = Languages[language];
-            var Stream = new TokenizableStream<char>(text.ToCharArray());
+            var Stream = new TokenizableStream<char>(text?.ToCharArray());
             return GetTokens(Stream, Language.TokenFinders.OrderBy(x => x.Order).ToArray()).ToArray();
+        }
+
+        /// <summary>
+        /// Gets the next token or null if their isn't one.
+        /// </summary>
+        /// <param name="tokenizableStream">The tokenizable stream.</param>
+        /// <param name="tokenFinders">The token finders.</param>
+        /// <returns>The next token.</returns>
+        private static Token Next(TokenizableStream<char> tokenizableStream, ITokenFinder[] tokenFinders)
+        {
+            if (tokenizableStream.End())
+            {
+                return null;
+            }
+
+            return tokenFinders.Select(x => x.IsMatch(tokenizableStream)).FirstOrDefault(x => x != null);
         }
 
         /// <summary>
@@ -78,22 +96,13 @@ namespace Enlighten.Tokenizer
                 yield return CurrentToken;
                 CurrentToken = Next(tokenizableStream, tokenFinders);
             }
-        }
-
-        /// <summary>
-        /// Gets the next token or null if their isn't one.
-        /// </summary>
-        /// <param name="tokenizableStream">The tokenizable stream.</param>
-        /// <param name="tokenFinders">The token finders.</param>
-        /// <returns>The next token.</returns>
-        private Token Next(TokenizableStream<char> tokenizableStream, ITokenFinder[] tokenFinders)
-        {
-            if (tokenizableStream.End())
+            yield return new Token
             {
-                return null;
-            }
-
-            return tokenFinders.Select(x => x.IsMatch(tokenizableStream)).FirstOrDefault(x => x != null);
+                EndPosition = tokenizableStream.Index,
+                StartPosition = tokenizableStream.Index,
+                TokenType = TokenType.EOF,
+                Value = string.Empty
+            };
         }
     }
 }

@@ -14,21 +14,30 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-using Enlighten.Tokenizer.Enums;
+using Canister.Interfaces;
+using Enlighten.Tokenizer.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Enlighten.Tokenizer.Interfaces
+namespace Enlighten.CanisterModules
 {
     /// <summary>
-    /// Tokenizer interface
+    /// Canister module
     /// </summary>
-    public interface ITokenizer
+    /// <seealso cref="IModule"/>
+    public class Module : IModule
     {
         /// <summary>
-        /// Tokenizes the specified text.
+        /// Order to run this in
         /// </summary>
-        /// <param name="text">The text.</param>
-        /// <param name="language">The language.</param>
-        /// <returns>The tokens found.</returns>
-        Token[] Tokenize(string text, Language language);
+        public int Order => 1;
+
+        public void Load(IBootstrapper bootstrapper)
+        {
+            if (bootstrapper == null)
+                return;
+
+            bootstrapper.RegisterAll<ILanguage>(ServiceLifetime.Singleton);
+            bootstrapper.RegisterAll<ITokenizer>(ServiceLifetime.Singleton);
+        }
     }
 }

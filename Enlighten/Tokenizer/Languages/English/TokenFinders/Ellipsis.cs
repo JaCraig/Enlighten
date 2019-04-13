@@ -43,6 +43,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
                 return null;
 
             var StartPosition = tokenizer.Index;
+            var EndPosition = StartPosition;
 
             var Count = 0;
             var FoundEllipsis = false;
@@ -52,12 +53,12 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
                 {
                     ++Count;
                     FoundEllipsis |= Count >= 3;
+                    EndPosition = tokenizer.Index;
                 }
                 tokenizer.Consume();
             }
             if (!FoundEllipsis)
                 return null;
-            var EndPosition = tokenizer.Index - 1;
 
             return new Token
             {
