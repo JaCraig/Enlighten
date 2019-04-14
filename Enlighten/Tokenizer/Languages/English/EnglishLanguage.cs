@@ -38,7 +38,9 @@ namespace Enlighten.Tokenizer.Languages.English
                 new OtherTokenFinder(),
                 new Symbol(),
                 new Whitespace(),
-                new Word()
+                new Word(),
+                new Number(),
+                new Emoji()
             };
         }
 

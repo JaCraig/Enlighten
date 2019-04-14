@@ -107,6 +107,12 @@ namespace Enlighten.Tokenizer.Languages.English.Enums
         public static TokenType Ellipsis => new TokenType("Ellipsis");
 
         /// <summary>
+        /// Gets the emoji.
+        /// </summary>
+        /// <value>The emoji.</value>
+        public static TokenType Emoji => new TokenType("Emoji");
+
+        /// <summary>
         /// Gets the EOF.
         /// </summary>
         /// <value>The EOF.</value>
@@ -171,6 +177,12 @@ namespace Enlighten.Tokenizer.Languages.English.Enums
         /// </summary>
         /// <value>The new line.</value>
         public static TokenType NewLine => new TokenType("NewLine");
+
+        /// <summary>
+        /// Gets the number.
+        /// </summary>
+        /// <value>The number.</value>
+        public static TokenType Number => new TokenType("Number");
 
         /// <summary>
         /// Gets the other.

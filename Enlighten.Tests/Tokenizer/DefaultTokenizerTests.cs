@@ -75,6 +75,14 @@ namespace Enlighten.Tests.Tokenizer
         }
 
         [Fact]
+        public void TokenizeLongerText()
+        {
+            var Result = new DefaultTokenizer(new ILanguage[] { new EnglishLanguage() }).Tokenize(@"""I said, 'what're you? Crazy?'"" said Sandowsky. ""I can't afford to do that.""", Language.EnglishRuleBased);
+
+            Assert.Equal(37, Result.Length);
+        }
+
+        [Fact]
         public void TokenizeNull()
         {
             var Result = new DefaultTokenizer(new ILanguage[] { new EnglishLanguage() }).Tokenize(null, Language.EnglishRuleBased);
