@@ -1,15 +1,17 @@
-﻿using Enlighten.Stemmer.BaseClasses;
+﻿using BenchmarkDotNet.Attributes;
+using Enlighten.Stemmer.BaseClasses;
+using Enlighten.Stemmer.Languages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Enlighten.Stemmer.Languages
+namespace Enlighten.SpeedTests.Tests
 {
     /// <summary>
     /// English language
     /// </summary>
     /// <seealso cref="StemmerLanguageBaseClass"/>
-    public class EnglishLanguage : StemmerLanguageBaseClass
+    public class OriginalEnglishLanguage : StemmerLanguageBaseClass
     {
         /// <summary>
         /// Gets the vowels.
@@ -143,44 +145,45 @@ namespace Enlighten.Stemmer.Languages
             //Clean up word.
             word = word.ToLowerInvariant();
 
-            var WordSpan = new Span<char>(word.ToCharArray());
-            if (WordSpan[0] == '\'')
-                WordSpan = WordSpan.Slice(1);
-
-            word = new string(WordSpan.ToArray());
+            if (word.StartsWith("'", StringComparison.Ordinal))
+            {
+                word = word.Substring(1);
+            }
 
             //Check for exceptions
             if (Exceptions.ContainsKey(word))
                 return Exceptions[word];
 
             //Set initial y, or y after a vowel, to Y.
-            if (WordSpan.Length > 0)
+            if (word.Length > 0)
             {
-                if (WordSpan[0] == 'y')
+                var Chars = word.ToCharArray();
+                if (Chars[0] == 'y')
                 {
-                    WordSpan[0] = 'Y';
+                    Chars[0] = 'Y';
                 }
-                if (WordSpan.Length > 1)
+                if (Chars.Length > 1)
                 {
-                    for (int x = 1; x < WordSpan.Length; x++)
+                    for (int x = 1; x < Chars.Length; x++)
                     {
-                        if (WordSpan[x] == 'y' && IsVowel(WordSpan[x - 1]))
+                        if (Chars[x] == 'y' && IsVowel(Chars[x - 1]))
                         {
-                            WordSpan[x] = 'Y';
+                            Chars[x] = 'Y';
                         }
                     }
                 }
+                word = new string(Chars);
             }
 
-            var Data = new EnglishDataHolder();
+            var Data = new EnglishDataHolder
+            {
+                Word = word
+            };
 
-            (Data.R1Index, Data.R2Index) = CalculateR1AndR2(WordSpan);
+            (Data.R1Index, Data.R2Index) = CalculateR1AndR2(Data.Word);
 
-            WordSpan = Step0(WordSpan);
-
-            WordSpan = Step1A(WordSpan);
-
-            Data.Word = new string(WordSpan.ToArray());
+            Data.Word = Step0(Data.Word);
+            Data.Word = Step1A(Data.Word);
 
             //Check Exceptions
             if (Exceptions2.Contains(Data.Word))
@@ -226,25 +229,29 @@ namespace Enlighten.Stemmer.Languages
         /// <summary>
         /// Calculates the r1 and r2 values.
         /// </summary>
-        /// <param name="wordSpan">The word.</param>
+        /// <param name="word">The word.</param>
         /// <returns>The resulting r1 and r2 values.</returns>
-        private (int R1, int R2) CalculateR1AndR2(Span<char> wordSpan)
+        private (int R1, int R2) CalculateR1AndR2(string word)
         {
-            int r1 = wordSpan.Length;
-            int r2 = wordSpan.Length;
-            if (wordSpan.StartsWith(new Span<char>("gener".ToCharArray())) || wordSpan.StartsWith(new Span<char>("arsen".ToCharArray())))
+            int r1 = word.Length;
+            int r2 = word.Length;
+
+            char[] characters = word.ToCharArray();
+
+            // Calculate R1
+            if (word.StartsWith("gener", StringComparison.Ordinal) || word.StartsWith("arsen", StringComparison.Ordinal))
             {
                 r1 = 5;
             }
-            else if (wordSpan.StartsWith(new Span<char>("commun".ToCharArray())))
+            else if (word.StartsWith("commun", StringComparison.Ordinal))
             {
                 r1 = 6;
             }
             else
             {
-                for (int x = 1; x < wordSpan.Length; x++)
+                for (int x = 1; x < characters.Length; x++)
                 {
-                    if (!IsVowel(wordSpan[x]) && IsVowel(wordSpan[x - 1]))
+                    if (!IsVowel(characters[x]) && IsVowel(characters[x - 1]))
                     {
                         r1 = x + 1;
                         break;
@@ -253,9 +260,9 @@ namespace Enlighten.Stemmer.Languages
             }
 
             // Calculate R2
-            for (int x = r1; x < wordSpan.Length; ++x)
+            for (int x = r1; x < characters.Length; ++x)
             {
-                if (!IsVowel(wordSpan[x]) && IsVowel(wordSpan[x - 1]))
+                if (!IsVowel(characters[x]) && IsVowel(characters[x - 1]))
                 {
                     r2 = x + 1;
                     break;
@@ -307,19 +314,19 @@ namespace Enlighten.Stemmer.Languages
         /// </summary>
         /// <param name="word">The word.</param>
         /// <returns>The word without the endings.</returns>
-        private Span<char> Step0(Span<char> word)
+        private string Step0(string word)
         {
-            if (word.Length >= 3 && word[word.Length - 3] == '\'' && word[word.Length - 2] == 's' && word[word.Length - 1] == '\'')
+            if (word.Length >= 3 && word.EndsWith("'s'", StringComparison.Ordinal))
             {
-                return word.Slice(0, word.Length - 3);
+                return word.Remove(word.Length - 3, 3);
             }
-            if (word.Length >= 2 && word[word.Length - 2] == '\'' && word[word.Length - 1] == 's')
+            if (word.Length >= 2 && word.EndsWith("'s", StringComparison.Ordinal))
             {
-                return word.Slice(0, word.Length - 2);
+                return word.Remove(word.Length - 2, 2);
             }
-            if (word.Length >= 1 && word[word.Length - 1] == '\'')
+            if (word.Length >= 1 && word.EndsWith("'", StringComparison.Ordinal))
             {
-                return word.Slice(0, word.Length - 1);
+                return word.Remove(word.Length - 1, 1);
             }
             return word;
         }
@@ -329,32 +336,37 @@ namespace Enlighten.Stemmer.Languages
         /// </summary>
         /// <param name="word">The word.</param>
         /// <returns>The word without the endings.</returns>
-        private Span<char> Step1A(Span<char> word)
+        private string Step1A(string word)
         {
-            if (word.EndsWith(new Span<char>("sses".ToCharArray())))
+            if (word.EndsWith("sses", StringComparison.Ordinal))
             {
-                return word.Slice(0, word.Length - 2);
+                return word.Remove(word.Length - 2);
             }
-            if (word.EndsWith(new Span<char>("ied".ToCharArray())) || word.EndsWith(new Span<char>("ies".ToCharArray())))
+            if (word.EndsWith("ied", StringComparison.Ordinal) || word.EndsWith("ies", StringComparison.Ordinal))
             {
                 if (word.Length > 4)
                 {
-                    return word.Slice(0, word.Length - 2);
+                    return word.Remove(word.Length - 2);
                 }
-                return word.Slice(0, word.Length - 1);
+                return word.Remove(word.Length - 1);
             }
-            if (word.EndsWith(new Span<char>("us".ToCharArray())) || word.EndsWith(new Span<char>("ss".ToCharArray())))
+            if (word.EndsWith("us", StringComparison.Ordinal) || word.EndsWith("ss", StringComparison.Ordinal))
             {
                 return word;
             }
-            if (word[word.Length - 1] == 's' && word.Length >= 2)
+            if (word.EndsWith("s", StringComparison.Ordinal))
             {
-                for (int i = 0; i < word.Length - 2; i++)
+                var chars = word.ToCharArray();
+
+                if (chars.Length >= 2)
                 {
-                    if (IsVowel(word[i]))
+                    for (int i = 0; i < chars.Length - 2; i++)
                     {
-                        word = word.Slice(0, word.Length - 1);
-                        break;
+                        if (IsVowel(chars[i]))
+                        {
+                            word = word.Remove(word.Length - 1, 1);
+                            break;
+                        }
                     }
                 }
             }
@@ -570,6 +582,25 @@ namespace Enlighten.Stemmer.Languages
             {
                 data.Word = data.Word.Remove(data.Word.Length - 1);
             }
+        }
+    }
+
+    [MemoryDiagnoser]
+    public class StemmerWithSpans
+    {
+        private static EnglishLanguage NewStemmer { get; } = new EnglishLanguage();
+        private static OriginalEnglishLanguage OriginalStemmer { get; } = new OriginalEnglishLanguage();
+
+        [Benchmark]
+        public void New()
+        {
+            NewStemmer.StemWords(new string[] { "abbreviation" });
+        }
+
+        [Benchmark(Baseline = true)]
+        public void Original()
+        {
+            OriginalStemmer.StemWords(new string[] { "abbreviation" });
         }
     }
 }
