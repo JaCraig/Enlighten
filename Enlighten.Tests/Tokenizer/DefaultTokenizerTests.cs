@@ -13,7 +13,7 @@ namespace Enlighten.Tests.Tokenizer
         [Fact]
         public void Tokenize()
         {
-            var Result = new DefaultTokenizer(new ILanguage[] { new EnglishLanguage() }).Tokenize("This is a test.", Language.EnglishRuleBased);
+            var Result = new DefaultTokenizer(new ITokenizerLanguage[] { new EnglishLanguage() }).Tokenize("This is a test.", Language.EnglishRuleBased);
             Assert.Equal(9, Result.Length);
 
             Assert.Equal(3, Result[0].EndPosition);
@@ -65,7 +65,7 @@ namespace Enlighten.Tests.Tokenizer
         [Fact]
         public void TokenizeEmptyString()
         {
-            var Result = new DefaultTokenizer(new ILanguage[] { new EnglishLanguage() }).Tokenize("", Language.EnglishRuleBased);
+            var Result = new DefaultTokenizer(new ITokenizerLanguage[] { new EnglishLanguage() }).Tokenize("", Language.EnglishRuleBased);
             Assert.Single(Result);
 
             Assert.Equal(0, Result[0].EndPosition);
@@ -77,7 +77,7 @@ namespace Enlighten.Tests.Tokenizer
         [Fact]
         public void TokenizeLongerText()
         {
-            var Result = new DefaultTokenizer(new ILanguage[] { new EnglishLanguage() }).Tokenize(@"""I said, 'what're you? Crazy?'"" said Sandowsky. ""I can't afford to do that.""", Language.EnglishRuleBased);
+            var Result = new DefaultTokenizer(new ITokenizerLanguage[] { new EnglishLanguage() }).Tokenize(@"""I said, 'what're you? Crazy?'"" said Sandowsky. ""I can't afford to do that.""", Language.EnglishRuleBased);
 
             Assert.Equal(37, Result.Length);
         }
@@ -85,7 +85,7 @@ namespace Enlighten.Tests.Tokenizer
         [Fact]
         public void TokenizeNull()
         {
-            var Result = new DefaultTokenizer(new ILanguage[] { new EnglishLanguage() }).Tokenize(null, Language.EnglishRuleBased);
+            var Result = new DefaultTokenizer(new ITokenizerLanguage[] { new EnglishLanguage() }).Tokenize(null, Language.EnglishRuleBased);
             Assert.Single(Result);
 
             Assert.Equal(0, Result[0].EndPosition);

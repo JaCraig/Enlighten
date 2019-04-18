@@ -21,7 +21,6 @@
     <Folder Include="Parser\" />
     <Folder Include="POSTagger\" />
     <Folder Include="SentenceDetection\" />
-    <Folder Include="Stemmer\" />
     <Folder Include="Utils\" />
   </ItemGroup>
 

@@ -36,7 +36,7 @@ namespace Enlighten.CanisterModules
             if (bootstrapper == null)
                 return;
 
-            bootstrapper.RegisterAll<ILanguage>(ServiceLifetime.Singleton);
+            bootstrapper.RegisterAll<ITokenizerLanguage>(ServiceLifetime.Singleton);
             bootstrapper.RegisterAll<ITokenizer>(ServiceLifetime.Singleton);
         }
     }

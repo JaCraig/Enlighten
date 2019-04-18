@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FileCurator.Registration;
+using System;
 using System.Reflection;
 using Xunit;
 
@@ -25,6 +26,7 @@ namespace Enlighten.Tests.Fixtures
             {
                 Canister.Builder.CreateContainer(null, typeof(SetupFixture).GetTypeInfo().Assembly)
                    .RegisterEnlighten()
+                   .RegisterFileCurator()
                    .Build();
             }
         }
