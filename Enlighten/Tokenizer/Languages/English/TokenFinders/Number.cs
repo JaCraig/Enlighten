@@ -21,16 +21,16 @@ using Enlighten.Tokenizer.Utils;
 namespace Enlighten.Tokenizer.Languages.English.TokenFinders
 {
     /// <summary>
-    /// Finds ellipsis
+    /// Number finder
     /// </summary>
     /// <seealso cref="TokenFinderBaseClass"/>
-    public class Ellipsis : TokenFinderBaseClass
+    public class Number : TokenFinderBaseClass
     {
         /// <summary>
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public override int Order { get; } = 3;
+        public override int Order => 3;
 
         /// <summary>
         /// The actual implementation of the IsMatch done by the individual classes.
@@ -39,34 +39,38 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
         /// <returns>The token.</returns>
         protected override Token IsMatchImpl(TokenizableStream<char> tokenizer)
         {
-            if (tokenizer.End() || tokenizer.Current != '.')
+            if (tokenizer.End() || !char.IsNumber(tokenizer.Current))
                 return null;
 
             var StartPosition = tokenizer.Index;
-            var EndPosition = StartPosition;
 
-            var Count = 0;
-            var FoundEllipsis = false;
-            while (!tokenizer.End() && (tokenizer.Current == '.' || char.IsWhiteSpace(tokenizer.Current)))
+            ConsumeNumbers(tokenizer);
+
+            var PeekCharacter = tokenizer.Peek(1);
+
+            if (tokenizer.Current == '.' && (char.IsNumber(PeekCharacter) || PeekCharacter == ','))
             {
-                if (tokenizer.Current == '.')
-                {
-                    ++Count;
-                    FoundEllipsis |= Count >= 3;
-                    EndPosition = tokenizer.Index;
-                }
                 tokenizer.Consume();
+                ConsumeNumbers(tokenizer);
             }
-            if (!FoundEllipsis)
-                return null;
+
+            var EndPosition = tokenizer.Index - 1;
 
             return new Token
             {
                 EndPosition = EndPosition,
                 StartPosition = StartPosition,
-                TokenType = TokenType.Ellipsis,
+                TokenType = TokenType.Number,
                 Value = new string(tokenizer.Slice(StartPosition, EndPosition).ToArray())
             };
+        }
+
+        private static void ConsumeNumbers(TokenizableStream<char> tokenizer)
+        {
+            while (!tokenizer.End() && (char.IsNumber(tokenizer.Current) || tokenizer.Current == ','))
+            {
+                tokenizer.Consume();
+            }
         }
     }
 }

@@ -32,7 +32,7 @@ namespace Enlighten.Tokenizer.Utils
         public TokenizableStream(TData[] content)
         {
             Index = 0;
-            Content = content;
+            Content = content ?? Array.Empty<TData>();
             SnapshotIndexes = new Stack<int>();
         }
 

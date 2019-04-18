@@ -8,19 +8,19 @@ using Xunit;
 
 namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
 {
-    public class NewLineTests : TestBaseClass
+    public class EmojiTests : TestBaseClass
     {
         public static TheoryData<string, Token> Data = new TheoryData<string, Token>
         {
-            { "This has no new line",null },
-            { "\r\nThis has new line",new Token{EndPosition=1,StartPosition=0,TokenType=TokenType.NewLine,Value="\r\n" } },
-            { "This has no new line..",null },
-            { "This. has. no. new line.",null },
+            { "⚾ 100 0",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.Emoji,Value="⚾" } },
+            { "💕\r\nThis has new line",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.Emoji,Value="💕" } },
+            { "💯 1234",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.Emoji,Value="💯" } },
+            { "🏫. 43",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.Emoji,Value="🏫" } },
             { ".This. has. no. new line.",null },
             { "..This. has. no. new line.",null },
-            { "\n\n\n\n\n\nThis has an new line.",new Token{EndPosition=5,StartPosition=0,TokenType=TokenType.NewLine,Value="\n\n\n\n\n\n" } },
-            { "\n This has an new line.",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.NewLine,Value="\n" } },
-            { "\r This has an new line.",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.NewLine,Value="\r" } },
+            { "\n\n\n\n\n\nThis has an new line.",null },
+            { "\n This has an new line.",null },
+            { "\r This has an new line.",null },
             { " ... This has no new line.",null },
             { "",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
             { null,new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
@@ -30,7 +30,7 @@ namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
         [MemberData(nameof(Data))]
         public void IsMatch(string input, Token expectedValue)
         {
-            var Result = new NewLine().IsMatch(new TokenizableStream<char>(input?.ToCharArray() ?? Array.Empty<char>()));
+            var Result = new Emoji().IsMatch(new TokenizableStream<char>(input?.ToCharArray() ?? Array.Empty<char>()));
             Assert.Equal(expectedValue?.EndPosition, Result?.EndPosition);
             Assert.Equal(expectedValue?.StartPosition, Result?.StartPosition);
             Assert.Equal(expectedValue?.TokenType, Result?.TokenType);
