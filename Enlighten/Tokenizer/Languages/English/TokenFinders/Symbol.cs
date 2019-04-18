@@ -66,7 +66,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public override int Order => 3;
+        public override int Order { get; } = 3;
 
         /// <summary>
         /// Determines whether [is match implementation] [the specified tokenizer].

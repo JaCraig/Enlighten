@@ -14,44 +14,23 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-using Enlighten.Tokenizer.Interfaces;
-using Enlighten.Tokenizer.Languages.English.TokenFinders;
-
-namespace Enlighten.Tokenizer.Languages.English
+namespace Enlighten.Tokenizer.Interfaces
 {
     /// <summary>
-    /// English language
+    /// Language interface
     /// </summary>
-    /// <seealso cref="ITokenizerLanguage"/>
-    public class EnglishLanguage : ITokenizerLanguage
+    public interface ITokenizerLanguage
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EnglishLanguage"/> class.
-        /// </summary>
-        public EnglishLanguage()
-        {
-            ISOCode = "en-us";
-            TokenFinders = new ITokenFinder[]
-            {
-                new Ellipsis(),
-                new NewLine(),
-                new OtherTokenFinder(),
-                new Symbol(),
-                new Whitespace(),
-                new Word()
-            };
-        }
-
         /// <summary>
         /// Gets the name.
         /// </summary>
         /// <value>The name.</value>
-        public string ISOCode { get; }
+        string ISOCode { get; }
 
         /// <summary>
         /// Gets the token finders.
         /// </summary>
         /// <value>The token finders.</value>
-        public ITokenFinder[] TokenFinders { get; }
+        ITokenFinder[] TokenFinders { get; }
     }
 }

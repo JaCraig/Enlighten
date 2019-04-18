@@ -14,23 +14,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-namespace Enlighten.Tokenizer.Interfaces
+namespace Enlighten.Stemmer.Interfaces
 {
     /// <summary>
-    /// Language interface
+    /// Stemmer interface
     /// </summary>
-    public interface ILanguage
+    public interface IStemmer
     {
-        /// <summary>
-        /// Gets the name.
-        /// </summary>
-        /// <value>The name.</value>
-        string ISOCode { get; }
-
-        /// <summary>
-        /// Gets the token finders.
-        /// </summary>
-        /// <value>The token finders.</value>
-        ITokenFinder[] TokenFinders { get; }
     }
 }

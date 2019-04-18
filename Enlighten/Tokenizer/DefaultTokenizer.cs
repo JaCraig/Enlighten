@@ -33,7 +33,7 @@ namespace Enlighten.Tokenizer
         /// Initializes a new instance of the <see cref="DefaultTokenizer"/> class.
         /// </summary>
         /// <param name="languages">The languages.</param>
-        public DefaultTokenizer(IEnumerable<ILanguage> languages)
+        public DefaultTokenizer(IEnumerable<ITokenizerLanguage> languages)
         {
             Languages = languages.Where(x => x.GetType().Assembly != typeof(DefaultTokenizer).Assembly).ToDictionary(x => x.ISOCode);
             foreach (var Language in languages.Where(x => x.GetType().Assembly == typeof(DefaultTokenizer).Assembly
@@ -47,7 +47,7 @@ namespace Enlighten.Tokenizer
         /// Gets the languages.
         /// </summary>
         /// <value>The languages.</value>
-        public Dictionary<string, ILanguage> Languages { get; }
+        public Dictionary<string, ITokenizerLanguage> Languages { get; }
 
         /// <summary>
         /// Tokenizes the specified text.

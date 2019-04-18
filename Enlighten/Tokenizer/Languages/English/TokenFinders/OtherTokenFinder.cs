@@ -30,7 +30,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
-        public override int Order => int.MaxValue;
+        public override int Order { get; } = int.MaxValue;
 
         /// <summary>
         /// The actual implementation of the IsMatch done by the individual classes.
