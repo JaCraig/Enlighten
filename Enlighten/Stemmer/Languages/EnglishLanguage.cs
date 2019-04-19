@@ -128,7 +128,7 @@ namespace Enlighten.Stemmer.Languages
         /// Gets the valid li endings.
         /// </summary>
         /// <value>The valid li endings.</value>
-        private string[] ValidLiEndings { get; } = new string[] { "c", "d", "e", "g", "h", "k", "m", "n", "r", "t" };
+        private char[] ValidLiEndings { get; } = new char[] { 'c', 'd', 'e', 'g', 'h', 'k', 'm', 'n', 'r', 't' };
 
         /// <summary>
         /// Stems the word.
@@ -143,80 +143,43 @@ namespace Enlighten.Stemmer.Languages
             //Clean up word.
             word = word.ToLowerInvariant();
 
-            var WordSpan = new Span<char>(word.ToCharArray());
-            if (WordSpan[0] == '\'')
-                WordSpan = WordSpan.Slice(1);
-
-            word = new string(WordSpan.ToArray());
+            if (word[0] == '\'')
+                word = word.Substring(1);
 
             //Check for exceptions
             if (Exceptions.ContainsKey(word))
                 return Exceptions[word];
 
-            //Set initial y, or y after a vowel, to Y.
-            if (WordSpan.Length > 0)
-            {
-                if (WordSpan[0] == 'y')
-                {
-                    WordSpan[0] = 'Y';
-                }
-                if (WordSpan.Length > 1)
-                {
-                    for (int x = 1; x < WordSpan.Length; x++)
-                    {
-                        if (WordSpan[x] == 'y' && IsVowel(WordSpan[x - 1]))
-                        {
-                            WordSpan[x] = 'Y';
-                        }
-                    }
-                }
-            }
+            var WordSpan = new Span<char>(word.ToCharArray());
 
-            var Data = new EnglishDataHolder();
-
-            (Data.R1Index, Data.R2Index) = CalculateR1AndR2(WordSpan);
+            WordSpan = FixYValues(WordSpan);
 
             WordSpan = Step0(WordSpan);
 
             WordSpan = Step1A(WordSpan);
 
-            Data.Word = new string(WordSpan.ToArray());
+            for (int i = 0, Exceptions2Length = Exceptions2.Length; i < Exceptions2Length; i++)
+            {
+                var Exception = Exceptions2[i];
+                if (WordSpan.SequenceEqual(Exception.AsSpan()))
+                    return Exception;
+            }
 
-            //Check Exceptions
-            if (Exceptions2.Contains(Data.Word))
-                return Data.Word;
+            (int R1Index, int R2Index) = CalculateR1AndR2(WordSpan);
 
-            var Region1 = GetRValue(Data.R1Index, WordSpan);
-            var Region2 = GetRValue(Data.R2Index, WordSpan);
+            WordSpan = Step1B(GetRValue(R1Index, WordSpan), R1Index, WordSpan);
 
-            Step1B(Data);
+            WordSpan = Step1C(WordSpan);
 
-            Region1 = GetRValue(Data.R1Index, WordSpan);
-            Region2 = GetRValue(Data.R2Index, WordSpan);
+            WordSpan = Step2(WordSpan, GetRValue(R1Index, WordSpan));
 
-            Data.Word = Step1C(Data.Word);
+            WordSpan = Step3(WordSpan, GetRValue(R1Index, WordSpan), GetRValue(R2Index, WordSpan));
 
-            Region1 = GetRValue(Data.R1Index, WordSpan);
-            Region2 = GetRValue(Data.R2Index, WordSpan);
+            WordSpan = Step4(WordSpan, GetRValue(R2Index, WordSpan));
 
-            Step2(Data);
+            WordSpan = Step5(WordSpan, GetRValue(R1Index, WordSpan), GetRValue(R2Index, WordSpan));
 
-            Region1 = GetRValue(Data.R1Index, WordSpan);
-            Region2 = GetRValue(Data.R2Index, WordSpan);
-
-            Step3(Data);
-
-            Region1 = GetRValue(Data.R1Index, WordSpan);
-            Region2 = GetRValue(Data.R2Index, WordSpan);
-
-            Step4(Data);
-
-            Region1 = GetRValue(Data.R1Index, WordSpan);
-            Region2 = GetRValue(Data.R2Index, WordSpan);
-
-            Step5(Data);
-
-            return Data.Word.ToLowerInvariant();
+            return new string(WordSpan.ToArray()).ToLowerInvariant();
         }
 
         /// <summary>
@@ -228,6 +191,28 @@ namespace Enlighten.Stemmer.Languages
         private static Span<char> GetRValue(int RIndex, Span<char> word)
         {
             return RIndex < word.Length ? word.Slice(RIndex) : Span<char>.Empty;
+        }
+
+        /// <summary>
+        /// Removes the word endings.
+        /// </summary>
+        /// <param name="word">The word.</param>
+        /// <returns>The word without the endings.</returns>
+        private static Span<char> Step0(Span<char> word)
+        {
+            if (word.Length >= 3 && word[word.Length - 3] == '\'' && word[word.Length - 2] == 's' && word[word.Length - 1] == '\'')
+            {
+                return word.Slice(0, word.Length - 3);
+            }
+            if (word.Length >= 2 && word[word.Length - 2] == '\'' && word[word.Length - 1] == 's')
+            {
+                return word.Slice(0, word.Length - 2);
+            }
+            if (word.Length >= 1 && word[word.Length - 1] == '\'')
+            {
+                return word.Slice(0, word.Length - 1);
+            }
+            return word;
         }
 
         /// <summary>
@@ -259,7 +244,6 @@ namespace Enlighten.Stemmer.Languages
                 }
             }
 
-            // Calculate R2
             for (int x = r1; x < wordSpan.Length; ++x)
             {
                 if (!IsVowel(wordSpan[x]) && IsVowel(wordSpan[x - 1]))
@@ -273,12 +257,33 @@ namespace Enlighten.Stemmer.Languages
         }
 
         /// <summary>
+        /// Set initial y, or y after a vowel, to Y.
+        /// </summary>
+        /// <param name="WordSpan">The word span.</param>
+        /// <returns>The word with the y values fixed.</returns>
+        private Span<char> FixYValues(Span<char> WordSpan)
+        {
+            if (WordSpan[0] == 'y')
+                WordSpan[0] = 'Y';
+
+            for (int x = 1; x < WordSpan.Length; x++)
+            {
+                if (WordSpan[x] == 'y' && IsVowel(WordSpan[x - 1]))
+                {
+                    WordSpan[x] = 'Y';
+                }
+            }
+
+            return WordSpan;
+        }
+
+        /// <summary>
         /// Determines whether the characters [are a short syllable].
         /// </summary>
         /// <param name="characters">The characters.</param>
         /// <param name="index">The index.</param>
         /// <returns><c>true</c> if it [is a short syllable]; otherwise, <c>false</c>.</returns>
-        private bool IsShortSyllable(char[] characters, int index)
+        private bool IsShortSyllable(Span<char> characters, int index)
         {
             var PlusOne = index + 1;
             var MinusOne = index - 1;
@@ -304,31 +309,9 @@ namespace Enlighten.Stemmer.Languages
         /// <param name="word">The word.</param>
         /// <param name="r1">The r1.</param>
         /// <returns><c>true</c> if it [is a short word]; otherwise, <c>false</c>.</returns>
-        private bool IsShortWord(string word, string r1)
+        private bool IsShortWord(Span<char> word, Span<char> r1)
         {
-            return string.IsNullOrEmpty(r1) && IsShortSyllable(word.ToCharArray(), word.Length - 2);
-        }
-
-        /// <summary>
-        /// Removes the word endings.
-        /// </summary>
-        /// <param name="word">The word.</param>
-        /// <returns>The word without the endings.</returns>
-        private Span<char> Step0(Span<char> word)
-        {
-            if (word.Length >= 3 && word[word.Length - 3] == '\'' && word[word.Length - 2] == 's' && word[word.Length - 1] == '\'')
-            {
-                return word.Slice(0, word.Length - 3);
-            }
-            if (word.Length >= 2 && word[word.Length - 2] == '\'' && word[word.Length - 1] == 's')
-            {
-                return word.Slice(0, word.Length - 2);
-            }
-            if (word.Length >= 1 && word[word.Length - 1] == '\'')
-            {
-                return word.Slice(0, word.Length - 1);
-            }
-            return word;
+            return r1.IsEmpty && IsShortSyllable(word, word.Length - 2);
         }
 
         /// <summary>
@@ -344,11 +327,7 @@ namespace Enlighten.Stemmer.Languages
             }
             if (word.EndsWith("ied".ToCharArray()) || word.EndsWith("ies".ToCharArray()))
             {
-                if (word.Length > 4)
-                {
-                    return word.Slice(0, word.Length - 2);
-                }
-                return word.Slice(0, word.Length - 1);
+                return word.Length > 4 ? word.Slice(0, word.Length - 2) : word.Slice(0, word.Length - 1);
             }
             if (word.EndsWith("us".ToCharArray()) || word.EndsWith("ss".ToCharArray()))
             {
@@ -360,8 +339,7 @@ namespace Enlighten.Stemmer.Languages
                 {
                     if (IsVowel(word[i]))
                     {
-                        word = word.Slice(0, word.Length - 1);
-                        break;
+                        return word.Slice(0, word.Length - 1);
                     }
                 }
             }
@@ -371,22 +349,22 @@ namespace Enlighten.Stemmer.Languages
         /// <summary>
         /// Removes endings.
         /// </summary>
-        /// <param name="dataHolder">The data holder.</param>
-        /// <param name="R1">The r1.</param>
+        /// <param name="r1">The r1.</param>
+        /// <param name="r1Index">Index of the r1.</param>
         /// <param name="word">The word.</param>
         /// <returns>The word minus the endings.</returns>
-        private Span<char> Step1B(EnglishDataHolder dataHolder, Span<char> R1, Span<char> word)
+        private Span<char> Step1B(Span<char> r1, int r1Index, Span<char> word)
         {
             for (int i = 0, Step1ReplacementsLength = Step1Replacements.Length; i < Step1ReplacementsLength; i++)
             {
                 var Step1Replacement = Step1Replacements[i];
-                if (Step1Replacement == "eedly" && R1.EndsWith("eedly".ToCharArray()))
+                if (Step1Replacement == "eedly" && r1.EndsWith("eedly".ToCharArray()))
                 {
-                    return word.Length >= 2 ? word.Slice(word.Length - 2) : word;
+                    return word.Length >= 2 ? word.Slice(0, word.Length - 2) : word;
                 }
-                else if (Step1Replacement == "eed" && R1.EndsWith("eed".ToCharArray()))
+                else if (Step1Replacement == "eed" && r1.EndsWith("eed".ToCharArray()))
                 {
-                    return word.Length >= 1 ? word.Slice(word.Length - 1) : word;
+                    return word.Length >= 1 ? word.Slice(0, word.Length - 1) : word;
                 }
                 else if (word.EndsWith(Step1Replacement.ToCharArray()))
                 {
@@ -398,45 +376,39 @@ namespace Enlighten.Stemmer.Languages
                         {
                             if (IsVowel(word[x]))
                             {
-                                word = word.Slice(word.Length - Step1Replacement.Length);
+                                word = word.Slice(0, word.Length - Step1Replacement.Length);
                                 vowelIsFound = true;
                                 break;
                             }
                         }
                     }
 
-                    if (vowelIsFound)
+                    if (!vowelIsFound)
+                        return word;
+                    r1 = GetRValue(r1Index, word);
+
+                    if (word.EndsWith("at".ToCharArray())
+                        || word.EndsWith("bl".ToCharArray())
+                        || word.EndsWith("iz".ToCharArray()))
                     {
-                        R1 = GetRValue(dataHolder.R1Index, word);
-
-                        if (word.EndsWith("at".ToCharArray())
-                            || word.EndsWith("bl".ToCharArray())
-                            || word.EndsWith("iz".ToCharArray()))
+                        return word.ToArray().Concat(new char[] { 'e' }).ToArray().AsSpan();
+                    }
+                    for (int x = 0; x < Doubles.Length; x++)
+                    {
+                        if (word.EndsWith(Doubles[x].ToCharArray()))
                         {
-                            word = word + new Span<char>("e".ToCharArray());
-                        }
-                        else
-                        {
-                            bool ContinueProcessing = true;
-                            for (int x = 0; x < Doubles.Length; x++)
-                            {
-                                if (dataHolder.Word.EndsWith(Doubles[x], StringComparison.Ordinal))
-                                {
-                                    dataHolder.Word = dataHolder.Word.Remove(dataHolder.Word.Length - 1, 1);
-                                    ContinueProcessing = false;
-                                    break;
-                                }
-                            }
-
-                            if (ContinueProcessing && IsShortWord(dataHolder.Word, dataHolder.R1))
-                            {
-                                dataHolder.Word += "e";
-                            }
+                            return word.Slice(0, word.Length - 1);
                         }
                     }
-                    return;
+
+                    if (IsShortWord(word, r1))
+                    {
+                        return word.ToArray().Concat(new char[] { 'e' }).ToArray().AsSpan();
+                    }
+                    return word;
                 }
             }
+            return word;
         }
 
         /// <summary>
@@ -444,14 +416,13 @@ namespace Enlighten.Stemmer.Languages
         /// </summary>
         /// <param name="word">The word.</param>
         /// <returns>The word with a replaced ending.</returns>
-        private string Step1C(string word)
+        private Span<char> Step1C(Span<char> word)
         {
             if (word.Length > 2
-                && (word.EndsWith("y", StringComparison.Ordinal) || word.EndsWith("Y", StringComparison.Ordinal))
+                && (word.EndsWith("y".ToCharArray()) || word.EndsWith("Y".ToCharArray()))
                 && !IsVowel(word[word.Length - 2]))
             {
-                word = word.Remove(word.Length - 1);
-                word += "i";
+                return word.Slice(0, word.Length - 1).ToArray().Concat(new char[] { 'i' }).ToArray().AsSpan();
             }
             return word;
         }
@@ -459,121 +430,130 @@ namespace Enlighten.Stemmer.Languages
         /// <summary>
         /// Removes endings
         /// </summary>
-        /// <param name="data">The data.</param>
-        private void Step2(EnglishDataHolder data)
+        /// <param name="word">The word.</param>
+        /// <param name="r1">The r1.</param>
+        private Span<char> Step2(Span<char> word, Span<char> r1)
         {
             foreach (var Step2Replacement in Step2Replacements)
             {
-                if (data.Word.EndsWith(Step2Replacement.Key, StringComparison.Ordinal))
+                if (word.EndsWith(Step2Replacement.Key.ToCharArray()))
                 {
-                    if (data.R1.EndsWith(Step2Replacement.Key, StringComparison.Ordinal))
+                    if (!r1.EndsWith(Step2Replacement.Key.ToCharArray()))
+                        return word;
+                    if (Step2Replacement.Key == "ogi")
                     {
-                        if (Step2Replacement.Key == "ogi")
+                        if (word.EndsWith("logi".ToCharArray()))
                         {
-                            if (data.Word.EndsWith("logi", StringComparison.Ordinal))
-                            {
-                                data.Word = data.Word.Remove(data.Word.Length - 1);
-                            }
-                        }
-                        else if (Step2Replacement.Key == "li")
-                        {
-                            if (data.Word.Length >= 3)
-                            {
-                                string liEnding = data.Word.Substring(data.Word.Length - 3, 1);
-                                if (ValidLiEndings.Contains(liEnding))
-                                {
-                                    data.Word = data.Word.Remove(data.Word.Length - 2);
-                                    break;
-                                }
-                            }
-                        }
-                        else if (data.Word.Length >= Step2Replacement.Key.Length)
-                        {
-                            data.Word = data.Word.Remove(data.Word.Length - Step2Replacement.Key.Length);
-                            data.Word += Step2Replacement.Value;
+                            return word.Slice(0, word.Length - 1);
                         }
                     }
-                    break;
+                    else if (Step2Replacement.Key == "li")
+                    {
+                        if (word.Length >= 3)
+                        {
+                            var liEnding = word[word.Length - 3];
+                            if (ValidLiEndings.Contains(liEnding))
+                            {
+                                return word.Slice(0, word.Length - 2);
+                            }
+                        }
+                        return word;
+                    }
+                    else if (word.Length >= Step2Replacement.Key.Length)
+                    {
+                        return word
+                            .Slice(0, word.Length - Step2Replacement.Key.Length)
+                            .ToArray()
+                            .Concat(Step2Replacement.Value)
+                            .ToArray()
+                            .AsSpan();
+                    }
                 }
             }
+            return word;
         }
 
         /// <summary>
         /// Remove endings
         /// </summary>
-        /// <param name="data">The data.</param>
-        private void Step3(EnglishDataHolder data)
+        /// <param name="word">The word.</param>
+        /// <param name="r1">The r1.</param>
+        /// <param name="r2">The r2.</param>
+        /// <returns></returns>
+        private Span<char> Step3(Span<char> word, Span<char> r1, Span<char> r2)
         {
             foreach (var Step3Replacement in Step3Replacements)
             {
-                if (data.R1.EndsWith(Step3Replacement.Key, StringComparison.Ordinal))
+                if (r1.EndsWith(Step3Replacement.Key.ToCharArray()))
                 {
                     if (Step3Replacement.Key == "ative")
                     {
-                        if (data.R2.EndsWith("ative", StringComparison.Ordinal))
-                        {
-                            data.Word = data.Word.Remove(data.Word.Length - Step3Replacement.Key.Length);
-                        }
+                        return r2.EndsWith("ative".ToCharArray()) ? word.Slice(0, word.Length - Step3Replacement.Key.Length) : word;
                     }
-                    else
-                    {
-                        data.Word = data.Word.Remove(data.Word.Length - Step3Replacement.Key.Length);
-                        data.Word += Step3Replacement.Value;
-                    }
-                    return;
+                    return word
+                        .Slice(0, word.Length - Step3Replacement.Key.Length)
+                        .ToArray()
+                        .Concat(Step3Replacement.Value)
+                        .ToArray()
+                        .AsSpan();
                 }
             }
+            return word;
         }
 
         /// <summary>
         /// Remove yet more endings.
         /// </summary>
-        /// <param name="data">The data.</param>
-        private void Step4(EnglishDataHolder data)
+        /// <param name="data">The</param>
+        private Span<char> Step4(Span<char> word, Span<char> r2)
         {
             for (int i = 0; i < Step4Replacements.Length; ++i)
             {
                 string end = Step4Replacements[i];
 
-                if (data.Word.EndsWith(end, StringComparison.Ordinal))
+                if (word.EndsWith(end.ToCharArray()))
                 {
-                    if (data.R2.EndsWith(end, StringComparison.Ordinal))
+                    if (r2.EndsWith(end.ToCharArray()))
                     {
                         if (end == "ion")
                         {
-                            char preChar = data.Word.Length > 4 ? data.Word[data.Word.Length - 4] : '\0';
+                            char preChar = word.Length > 4 ? word[word.Length - 4] : '\0';
 
                             if (preChar == 's' || preChar == 't')
                             {
-                                data.Word = data.Word.Remove(data.Word.Length - Step4Replacements[i].Length);
+                                return word.Slice(0, word.Length - Step4Replacements[i].Length);
                             }
                         }
                         else
                         {
-                            data.Word = data.Word.Remove(data.Word.Length - Step4Replacements[i].Length);
+                            return word.Slice(0, word.Length - Step4Replacements[i].Length);
                         }
                     }
 
-                    return;
+                    return word;
                 }
             }
+            return word;
         }
 
         /// <summary>
         /// Remove even more endings.
         /// </summary>
-        /// <param name="data">The data.</param>
-        private void Step5(EnglishDataHolder data)
+        /// <param name="word">The word.</param>
+        /// <param name="r1">The r1.</param>
+        /// <param name="r2">The r2.</param>
+        /// <returns>The resulting word</returns>
+        private Span<char> Step5(Span<char> word, Span<char> r1, Span<char> r2)
         {
-            if (data.R2.EndsWith("e", StringComparison.Ordinal)
-                || (data.R1.EndsWith("e", StringComparison.Ordinal) && !IsShortSyllable(data.Word.ToCharArray(), data.Word.Length - 3)))
+            if (r1.Length > 0 && r1[r1.Length - 1] == 'e' && !IsShortSyllable(word, word.Length - 3))
+                return word.Slice(0, word.Length - 1);
+            if (r2.Length == 0)
+                return word;
+            if (r2[r2.Length - 1] == 'e' || (r2[r2.Length - 1] == 'l' && word.EndsWith("ll".ToCharArray())))
             {
-                data.Word = data.Word.Remove(data.Word.Length - 1);
+                return word.Slice(0, word.Length - 1);
             }
-            else if (data.R2.EndsWith("l", StringComparison.Ordinal) && data.Word.EndsWith("ll", StringComparison.Ordinal))
-            {
-                data.Word = data.Word.Remove(data.Word.Length - 1);
-            }
+            return word;
         }
     }
 }
