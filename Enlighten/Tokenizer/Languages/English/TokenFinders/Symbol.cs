@@ -38,7 +38,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
             [','] = TokenType.Comma,
             ['$'] = TokenType.DollarSymbol,
             ['"'] = TokenType.DoubleQuote,
-            ['='] = TokenType.Equals,
+            ['='] = TokenType.EqualsToken,
             ['!'] = TokenType.ExclamationMark,
             ['>'] = TokenType.GreaterThan,
             ['#'] = TokenType.HashSymbol,

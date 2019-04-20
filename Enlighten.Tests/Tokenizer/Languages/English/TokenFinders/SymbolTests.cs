@@ -34,7 +34,7 @@ namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
             { ",",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.Comma,Value="," } },
             { "$",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.DollarSymbol,Value="$" } },
             { "\"",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.DoubleQuote,Value="\"" } },
-            { "=",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.Equals,Value="=" } },
+            { "=",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EqualsToken,Value="=" } },
             { "!",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.ExclamationMark,Value="!" } },
             { ">",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.GreaterThan,Value=">" } },
             { "#",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.HashSymbol,Value="#" } },

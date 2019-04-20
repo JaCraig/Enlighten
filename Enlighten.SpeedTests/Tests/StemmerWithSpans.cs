@@ -227,6 +227,28 @@ namespace Enlighten.SpeedTests.Tests
         }
 
         /// <summary>
+        /// Removes the word endings.
+        /// </summary>
+        /// <param name="word">The word.</param>
+        /// <returns>The word without the endings.</returns>
+        private static string Step0(string word)
+        {
+            if (word.Length >= 3 && word.EndsWith("'s'", StringComparison.Ordinal))
+            {
+                return word.Remove(word.Length - 3, 3);
+            }
+            if (word.Length >= 2 && word.EndsWith("'s", StringComparison.Ordinal))
+            {
+                return word.Remove(word.Length - 2, 2);
+            }
+            if (word.Length >= 1 && word.EndsWith("'", StringComparison.Ordinal))
+            {
+                return word.Remove(word.Length - 1, 1);
+            }
+            return word;
+        }
+
+        /// <summary>
         /// Calculates the r1 and r2 values.
         /// </summary>
         /// <param name="word">The word.</param>
@@ -307,28 +329,6 @@ namespace Enlighten.SpeedTests.Tests
         private bool IsShortWord(string word, string r1)
         {
             return string.IsNullOrEmpty(r1) && IsShortSyllable(word.ToCharArray(), word.Length - 2);
-        }
-
-        /// <summary>
-        /// Removes the word endings.
-        /// </summary>
-        /// <param name="word">The word.</param>
-        /// <returns>The word without the endings.</returns>
-        private string Step0(string word)
-        {
-            if (word.Length >= 3 && word.EndsWith("'s'", StringComparison.Ordinal))
-            {
-                return word.Remove(word.Length - 3, 3);
-            }
-            if (word.Length >= 2 && word.EndsWith("'s", StringComparison.Ordinal))
-            {
-                return word.Remove(word.Length - 2, 2);
-            }
-            if (word.Length >= 1 && word.EndsWith("'", StringComparison.Ordinal))
-            {
-                return word.Remove(word.Length - 1, 1);
-            }
-            return word;
         }
 
         /// <summary>
@@ -625,6 +625,7 @@ namespace Enlighten.SpeedTests.Tests
     public class StemmerWithSpans
     {
         private static EnglishLanguage NewStemmer { get; } = new EnglishLanguage();
+
         private static OriginalEnglishLanguage OriginalStemmer { get; } = new OriginalEnglishLanguage();
 
         [Benchmark]
