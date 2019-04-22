@@ -14,6 +14,12 @@ namespace Enlighten.SpeedTests.Tests
     public class OriginalEnglishLanguage : StemmerLanguageBaseClass
     {
         /// <summary>
+        /// Gets the name.
+        /// </summary>
+        /// <value>The name.</value>
+        public override string ISOCode { get; } = "en-us";
+
+        /// <summary>
         /// Gets the vowels.
         /// </summary>
         /// <value>The vowels.</value>

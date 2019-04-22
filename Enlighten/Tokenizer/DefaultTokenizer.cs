@@ -52,12 +52,23 @@ namespace Enlighten.Tokenizer
         public Dictionary<string, ITokenizerLanguage> Languages { get; }
 
         /// <summary>
+        /// Detokenizes the specified tokens.
+        /// </summary>
+        /// <param name="tokens">The tokens.</param>
+        /// <param name="language">The language.</param>
+        /// <returns>The resulting text.</returns>
+        public string Detokenize(Token[] tokens, TokenizerLanguage language)
+        {
+            return tokens.ToString(x => x.Value, "");
+        }
+
+        /// <summary>
         /// Tokenizes the specified text.
         /// </summary>
         /// <param name="text">The text.</param>
         /// <param name="language">The language.</param>
         /// <returns>The tokens found.</returns>
-        public Token[] Tokenize(string text, Language language)
+        public Token[] Tokenize(string text, TokenizerLanguage language)
         {
             if (!Languages.ContainsKey(language))
                 return Array.Empty<Token>();

@@ -15,6 +15,7 @@ limitations under the License.
 */
 
 using Canister.Interfaces;
+using Enlighten.Stemmer.Interfaces;
 using Enlighten.Tokenizer.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -36,8 +37,10 @@ namespace Enlighten.CanisterModules
             if (bootstrapper == null)
                 return;
 
-            bootstrapper.RegisterAll<ITokenizerLanguage>(ServiceLifetime.Singleton);
-            bootstrapper.RegisterAll<ITokenizer>(ServiceLifetime.Singleton);
+            bootstrapper.RegisterAll<ITokenizerLanguage>(ServiceLifetime.Singleton)
+                        .RegisterAll<ITokenizer>(ServiceLifetime.Singleton)
+                        .RegisterAll<IStemmerLanguage>(ServiceLifetime.Singleton)
+                        .RegisterAll<IStemmer>(ServiceLifetime.Singleton);
         }
     }
 }

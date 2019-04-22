@@ -14,6 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+using Enlighten.Tokenizer.Enums;
 using Enlighten.Tokenizer.Interfaces;
 using Enlighten.Tokenizer.Languages.English.TokenFinders;
 
@@ -30,7 +31,6 @@ namespace Enlighten.Tokenizer.Languages.English
         /// </summary>
         public EnglishLanguage()
         {
-            ISOCode = "en-us";
             TokenFinders = new ITokenFinder[]
             {
                 new Ellipsis(),
@@ -48,7 +48,7 @@ namespace Enlighten.Tokenizer.Languages.English
         /// Gets the name.
         /// </summary>
         /// <value>The name.</value>
-        public string ISOCode { get; }
+        public string ISOCode => TokenizerLanguage.EnglishRuleBased;
 
         /// <summary>
         /// Gets the token finders.

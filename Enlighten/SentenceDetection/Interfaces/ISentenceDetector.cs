@@ -14,29 +14,30 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-using Enlighten.Stemmer.Enums;
+using Enlighten.SentenceDetection.Enum;
 using Enlighten.Tokenizer;
 
-namespace Enlighten.Stemmer.Interfaces
+namespace Enlighten.SentenceDetection.Interfaces
 {
     /// <summary>
-    /// Stemmer interface
+    /// Sentence detector interface
     /// </summary>
-    public interface IStemmer
+    public interface ISentenceDetector
     {
         /// <summary>
-        /// Stems the words.
+        /// Detects the sentences in the specified input.
         /// </summary>
-        /// <param name="words">The words.</param>
-        /// <returns>The resulting stemmed words.</returns>
-        string[] Stem(string[] words, StemmerLanguage language);
+        /// <param name="input">The input.</param>
+        /// <param name="detector">The detector.</param>
+        /// <returns>The sentences.</returns>
+        Sentence[] Detect(string input, SentenceDetectorLanguage detector);
 
         /// <summary>
-        /// Stems the specified tokens.
+        /// Detects the sentences in the specified input.
         /// </summary>
-        /// <param name="tokens">The tokens.</param>
-        /// <param name="language">The language.</param>
-        /// <returns>The resulting stemmed tokens.</returns>
-        Token[] Stem(Token[] tokens, StemmerLanguage language);
+        /// <param name="input">The input.</param>
+        /// <param name="detector">The detector.</param>
+        /// <returns>The sentences.</returns>
+        Sentence[] Detect(Token[] input, SentenceDetectorLanguage detector);
     }
 }

@@ -24,11 +24,19 @@ namespace Enlighten.Tokenizer.Interfaces
     public interface ITokenizer
     {
         /// <summary>
+        /// Detokenizes the specified tokens.
+        /// </summary>
+        /// <param name="tokens">The tokens.</param>
+        /// <param name="language">The language.</param>
+        /// <returns>The resulting text.</returns>
+        string Detokenize(Token[] tokens, TokenizerLanguage language);
+
+        /// <summary>
         /// Tokenizes the specified text.
         /// </summary>
         /// <param name="text">The text.</param>
         /// <param name="language">The language.</param>
         /// <returns>The tokens found.</returns>
-        Token[] Tokenize(string text, Language language);
+        Token[] Tokenize(string text, TokenizerLanguage language);
     }
 }

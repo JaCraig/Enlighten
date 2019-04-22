@@ -20,8 +20,6 @@
     <Folder Include="NGram\" />
     <Folder Include="Parser\" />
     <Folder Include="POSTagger\" />
-    <Folder Include="SentenceDetection\" />
-    <Folder Include="Utils\" />
   </ItemGroup>
 
   <ItemGroup>

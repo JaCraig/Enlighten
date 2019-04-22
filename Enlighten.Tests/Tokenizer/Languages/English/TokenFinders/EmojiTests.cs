@@ -13,9 +13,9 @@ namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
         public static TheoryData<string, Token> Data = new TheoryData<string, Token>
         {
             { "⚾ 100 0",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.Emoji,Value="⚾" } },
-            { "💕\r\nThis has new line",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.Emoji,Value="💕" } },
-            { "💯 1234",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.Emoji,Value="💯" } },
-            { "🏫. 43",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.Emoji,Value="🏫" } },
+            { "💕\r\nThis has new line",new Token{EndPosition=1,StartPosition=0,TokenType=TokenType.Emoji,Value="💕" } },
+            { "💯 1234",new Token{EndPosition=1,StartPosition=0,TokenType=TokenType.Emoji,Value="💯" } },
+            { "🏫. 43",new Token{EndPosition=1,StartPosition=0,TokenType=TokenType.Emoji,Value="🏫" } },
             { ".This. has. no. new line.",null },
             { "..This. has. no. new line.",null },
             { "\n\n\n\n\n\nThis has an new line.",null },

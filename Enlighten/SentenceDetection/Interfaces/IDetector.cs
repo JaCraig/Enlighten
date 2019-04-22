@@ -14,24 +14,26 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-namespace Enlighten.Stemmer.Interfaces
+using Enlighten.Tokenizer;
+
+namespace Enlighten.SentenceDetection.Interfaces
 {
     /// <summary>
-    /// Stemmer language interface
+    /// Detector interface
     /// </summary>
-    public interface IStemmerLanguage
+    public interface IDetector
     {
         /// <summary>
         /// Gets the name.
         /// </summary>
         /// <value>The name.</value>
-        string ISOCode { get; }
+        string Name { get; }
 
         /// <summary>
-        /// Stems the words.
+        /// Detects the sentences.
         /// </summary>
-        /// <param name="words">The words.</param>
-        /// <returns>The resulting stemmed words.</returns>
-        string[] StemWords(string[] words);
+        /// <param name="tokens">The tokens.</param>
+        /// <returns>The sentences found based on the tokens.</returns>
+        Sentence[] DetectSentences(Token[] tokens);
     }
 }

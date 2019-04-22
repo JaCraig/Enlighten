@@ -22,21 +22,21 @@ namespace Enlighten.Tokenizer.Enums
     /// Language enum
     /// </summary>
     /// <seealso cref="StringEnumBaseClass{Language}"/>
-    public class Language : StringEnumBaseClass<Language>
+    public class TokenizerLanguage : StringEnumBaseClass<TokenizerLanguage>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Language"/> class.
+        /// Initializes a new instance of the <see cref="TokenizerLanguage"/> class.
         /// </summary>
         /// <param name="name">The name.</param>
-        public Language(string name)
+        public TokenizerLanguage(string name)
             : base(name)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Language"/> class.
+        /// Initializes a new instance of the <see cref="TokenizerLanguage"/> class.
         /// </summary>
-        public Language() : base("")
+        public TokenizerLanguage() : base("")
         {
         }
 
@@ -44,6 +44,6 @@ namespace Enlighten.Tokenizer.Enums
         /// Gets the english rule based tokenizer.
         /// </summary>
         /// <value>The english rule based tokenizer.</value>
-        public static Language EnglishRuleBased => new Language("en-us");
+        public static TokenizerLanguage EnglishRuleBased { get; } = new TokenizerLanguage("en-us");
     }
 }
