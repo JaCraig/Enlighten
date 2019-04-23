@@ -20,6 +20,7 @@ namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
             { "..This. has. no. ellipsis.",null },
             { ". . . . . . .This has an ellipsis.",new Token{EndPosition=12,StartPosition=0,TokenType=TokenType.Ellipsis,Value=". . . . . . ." } },
             { "... This has an ellipsis.",new Token{EndPosition=2,StartPosition=0,TokenType=TokenType.Ellipsis,Value="..." } },
+            {"… This has an ellipsis.",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.Ellipsis,Value="…" } },
             { " ... This has no ellipsis.",null },
             { "",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
             { null,new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },

@@ -77,5 +77,15 @@ Is the main motive of our preparations,
 The source of this our watch and the chief head
 Of this post-haste and romage in the land.", Results[2].ToString());
         }
+
+        [Fact]
+        public void DetectWithinQuote()
+        {
+            string Text = "\"Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that.\"";
+            var Results = new DefaultSentenceDetector(new[] { new DefaultDetector() }, new DefaultTokenizer(new[] { new EnglishLanguage() })).Detect(Text, SentenceDetectorLanguage.Default);
+            Assert.Equal(2, Results.Length);
+            Assert.Equal("Darkness cannot drive out darkness: only light can do that.", Results[0].ToString());
+            Assert.Equal("Hate cannot drive out hate: only love can do that.", Results[1].ToString());
+        }
     }
 }

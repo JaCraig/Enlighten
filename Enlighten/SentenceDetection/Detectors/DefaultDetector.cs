@@ -47,26 +47,14 @@ namespace Enlighten.SentenceDetection.Detectors
 
             List<Sentence> ReturnValue = new List<Sentence>();
             int CurrentStart = 0;
-            bool InQuote = false;
             List<Token> TempTokens = new List<Token>();
             for (int i = 0, tokensLength = tokens.Length; i < tokensLength; i++)
             {
                 var Token = tokens[i];
-                TempTokens.Add(Token);
-                if (IsQuote(Token))
+                if (ConsumeToken(Token, TempTokens))
+                    TempTokens.Add(Token);
+                if (IsSentenceStopper(Token))
                 {
-                    InQuote = !InQuote;
-                }
-                if (!InQuote && IsSentenceStopper(Token))
-                {
-                    if (TempTokens.Count > 1)
-                        ReturnValue.Add(new Sentence { StartPosition = CurrentStart, EndPosition = i, Tokens = TempTokens.ToArray() });
-                    TempTokens = new List<Token>();
-                    CurrentStart = i + 1;
-                }
-                else if (InQuote && IsSentenceStopper(Token) && tokens.Length > i + 1 && IsQuote(tokens[i + 1]))
-                {
-                    ++i;
                     if (TempTokens.Count > 1)
                         ReturnValue.Add(new Sentence { StartPosition = CurrentStart, EndPosition = i, Tokens = TempTokens.ToArray() });
                     TempTokens = new List<Token>();
@@ -77,27 +65,31 @@ namespace Enlighten.SentenceDetection.Detectors
         }
 
         /// <summary>
-        /// Determines whether the specified token is quote.
-        /// </summary>
-        /// <param name="Token">The token.</param>
-        /// <returns><c>true</c> if the specified token is quote; otherwise, <c>false</c>.</returns>
-        private static bool IsQuote(Token Token)
-        {
-            return Token.TokenType == TokenType.DoubleQuote || Token.TokenType == TokenType.SingleQuote;
-        }
-
-        /// <summary>
         /// Determines whether [is sentence stopper] [the specified token].
         /// </summary>
         /// <param name="Token">The token.</param>
         /// <returns><c>true</c> if [is sentence stopper] [the specified token]; otherwise, <c>false</c>.</returns>
         private static bool IsSentenceStopper(Token Token)
         {
-            return Token.TokenType == TokenType.Ellipsis
-                || Token.TokenType == TokenType.EOF
+            return Token.TokenType == TokenType.EOF
                 || Token.TokenType == TokenType.ExclamationMark
                 || Token.TokenType == TokenType.Period
                 || Token.TokenType == TokenType.QuestionMark;
+        }
+
+        /// <summary>
+        /// Determines if the token should be consumed.
+        /// </summary>
+        /// <param name="token">The token.</param>
+        /// <param name="tempTokens">The temporary tokens.</param>
+        /// <returns>True if the token is part of the sentence, false otherwise.</returns>
+        private bool ConsumeToken(Token token, List<Token> tempTokens)
+        {
+            if (tempTokens.Count == 0 && token.TokenType != TokenType.Word)
+                return false;
+            if (token.TokenType == TokenType.DoubleQuote || token.TokenType == TokenType.SingleQuote)
+                return false;
+            return true;
         }
     }
 }

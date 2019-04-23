@@ -39,7 +39,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
         /// <returns>The token.</returns>
         protected override Token IsMatchImpl(TokenizableStream<char> tokenizer)
         {
-            if (tokenizer.End() || tokenizer.Current != '.')
+            if (tokenizer.End() || (tokenizer.Current != '.' && tokenizer.Current != '…'))
                 return null;
 
             var StartPosition = tokenizer.Index;
@@ -47,15 +47,24 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
 
             var Count = 0;
             var FoundEllipsis = false;
-            while (!tokenizer.End() && (tokenizer.Current == '.' || char.IsWhiteSpace(tokenizer.Current)))
+            if (tokenizer.Current == '…')
             {
-                if (tokenizer.Current == '.')
-                {
-                    ++Count;
-                    FoundEllipsis |= Count >= 3;
-                    EndPosition = tokenizer.Index;
-                }
+                FoundEllipsis = true;
+                EndPosition = tokenizer.Index;
                 tokenizer.Consume();
+            }
+            else
+            {
+                while (!tokenizer.End() && (tokenizer.Current == '.' || char.IsWhiteSpace(tokenizer.Current)))
+                {
+                    if (tokenizer.Current == '.')
+                    {
+                        ++Count;
+                        FoundEllipsis |= Count >= 3;
+                        EndPosition = tokenizer.Index;
+                    }
+                    tokenizer.Consume();
+                }
             }
             if (!FoundEllipsis)
                 return null;

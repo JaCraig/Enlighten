@@ -15,6 +15,7 @@ limitations under the License.
 */
 
 using Canister.Interfaces;
+using Enlighten.SentenceDetection.Interfaces;
 using Enlighten.Stemmer.Interfaces;
 using Enlighten.Tokenizer.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
@@ -40,7 +41,9 @@ namespace Enlighten.CanisterModules
             bootstrapper.RegisterAll<ITokenizerLanguage>(ServiceLifetime.Singleton)
                         .RegisterAll<ITokenizer>(ServiceLifetime.Singleton)
                         .RegisterAll<IStemmerLanguage>(ServiceLifetime.Singleton)
-                        .RegisterAll<IStemmer>(ServiceLifetime.Singleton);
+                        .RegisterAll<IStemmer>(ServiceLifetime.Singleton)
+                        .RegisterAll<IDetector>(ServiceLifetime.Singleton)
+                        .RegisterAll<ISentenceDetector>(ServiceLifetime.Singleton);
         }
     }
 }

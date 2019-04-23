@@ -34,8 +34,4 @@
     <ProjectReference Include="..\Enlighten\Enlighten.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="SentenceDetection\Detectors\" />
-  </ItemGroup>
-
 </Project>
