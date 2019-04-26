@@ -28,6 +28,12 @@ namespace Enlighten.Tokenizer
         public int EndPosition { get; set; }
 
         /// <summary>
+        /// Gets or sets the part of speech.
+        /// </summary>
+        /// <value>The part of speech.</value>
+        public string PartOfSpeech { get; set; }
+
+        /// <summary>
         /// Gets or sets the start position. (inclusive)
         /// </summary>
         /// <value>The start position.</value>

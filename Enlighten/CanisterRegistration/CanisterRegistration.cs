@@ -16,6 +16,7 @@ limitations under the License.
 
 using BigBook.Registration;
 using Canister.Interfaces;
+using FileCurator.Registration;
 using System.Reflection;
 
 namespace Enlighten
@@ -33,7 +34,8 @@ namespace Enlighten
         public static IBootstrapper RegisterEnlighten(this IBootstrapper bootstrapper)
         {
             return bootstrapper.AddAssembly(typeof(CanisterRegistration).GetTypeInfo().Assembly)
-                               .RegisterBigBookOfDataTypes();
+                               .RegisterBigBookOfDataTypes()
+                               .RegisterFileCurator();
         }
     }
 }
