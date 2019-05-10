@@ -16,12 +16,12 @@ limitations under the License.
 
 using Enlighten.Tokenizer.Utils;
 
-namespace Enlighten.Tokenizer.Interfaces
+namespace Enlighten.Tokenizer.Languages.Interfaces
 {
     /// <summary>
-    /// Token finder
+    /// English token finder
     /// </summary>
-    public interface ITokenFinder
+    public interface IEnglishTokenFinder
     {
         /// <summary>
         /// Gets the order.

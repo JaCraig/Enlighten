@@ -17,7 +17,6 @@ limitations under the License.
 using BigBook;
 using Enlighten.Tokenizer.Enums;
 using Enlighten.Tokenizer.Interfaces;
-using Enlighten.Tokenizer.Languages.English.Enums;
 using Enlighten.Tokenizer.Utils;
 using System;
 using System.Collections.Generic;
@@ -59,7 +58,9 @@ namespace Enlighten.Tokenizer
         /// <returns>The resulting text.</returns>
         public string Detokenize(Token[] tokens, TokenizerLanguage language)
         {
-            return tokens.ToString(x => x.Value, "");
+            if (!Languages.ContainsKey(language))
+                return "";
+            return Languages[language].Detokenize(tokens);
         }
 
         /// <summary>
@@ -74,46 +75,7 @@ namespace Enlighten.Tokenizer
                 return Array.Empty<Token>();
             var Language = Languages[language];
             var Stream = new TokenizableStream<char>(text?.ToCharArray());
-            return GetTokens(Stream, Language.TokenFinders.OrderBy(x => x.Order).ToArray()).ToArray();
-        }
-
-        /// <summary>
-        /// Gets the next token or null if their isn't one.
-        /// </summary>
-        /// <param name="tokenizableStream">The tokenizable stream.</param>
-        /// <param name="tokenFinders">The token finders.</param>
-        /// <returns>The next token.</returns>
-        private static Token Next(TokenizableStream<char> tokenizableStream, ITokenFinder[] tokenFinders)
-        {
-            if (tokenizableStream.End())
-            {
-                return null;
-            }
-
-            return tokenFinders.Select(x => x.IsMatch(tokenizableStream)).FirstOrDefault(x => x != null);
-        }
-
-        /// <summary>
-        /// Gets the tokens.
-        /// </summary>
-        /// <param name="tokenizableStream">The tokenizable stream.</param>
-        /// <param name="tokenFinders">The token finders.</param>
-        /// <returns>The tokens.</returns>
-        private IEnumerable<Token> GetTokens(TokenizableStream<char> tokenizableStream, ITokenFinder[] tokenFinders)
-        {
-            var CurrentToken = Next(tokenizableStream, tokenFinders);
-            while (CurrentToken != null)
-            {
-                yield return CurrentToken;
-                CurrentToken = Next(tokenizableStream, tokenFinders);
-            }
-            yield return new Token
-            {
-                EndPosition = tokenizableStream.Index,
-                StartPosition = tokenizableStream.Index,
-                TokenType = TokenType.EOF,
-                Value = string.Empty
-            };
+            return Language.Tokenize(Stream);
         }
     }
 }

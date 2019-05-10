@@ -27,8 +27,6 @@
     <Folder Include="Chunker\" />
     <Folder Include="NGram\" />
     <Folder Include="Parser\" />
-    <Folder Include="POSTagger\BaseClasses\" />
-    <Folder Include="POSTagger\Enum\" />
   </ItemGroup>
 
   <ItemGroup>

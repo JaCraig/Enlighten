@@ -14,17 +14,19 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+using BigBook;
 using Enlighten.Tokenizer.BaseClasses;
 using Enlighten.Tokenizer.Languages.English.Enums;
 using Enlighten.Tokenizer.Utils;
+using System;
 
 namespace Enlighten.Tokenizer.Languages.English.TokenFinders
 {
     /// <summary>
-    /// Finds ellipsis
+    /// URL finder
     /// </summary>
     /// <seealso cref="TokenFinderBaseClass"/>
-    public class Ellipsis : TokenFinderBaseClass
+    public class URL : TokenFinderBaseClass
     {
         /// <summary>
         /// Gets the order.
@@ -39,46 +41,39 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
         /// <returns>The token.</returns>
         protected override Token IsMatchImpl(TokenizableStream<char> tokenizer)
         {
-            if (tokenizer.End() || (tokenizer.Current != '.' && tokenizer.Current != '…'))
+            if (tokenizer.End() || tokenizer.Index + 8 > tokenizer.Length)
                 return null;
 
             var StartPosition = tokenizer.Index;
-            var EndPosition = StartPosition;
 
-            var Count = 0;
-            var FoundEllipsis = false;
-            if (tokenizer.Current == '…')
+            var TempSlice = tokenizer.Slice(StartPosition, StartPosition + 7);
+
+            if (TempSlice[0] != 'f' && TempSlice[0] != 'h' && TempSlice[0] != 's')
+                return null;
+
+            while (!tokenizer.End() && !char.IsWhiteSpace(tokenizer.Current))
             {
-                FoundEllipsis = true;
-                EndPosition = tokenizer.Index;
                 tokenizer.Consume();
             }
-            else
-            {
-                while (!tokenizer.End() && (tokenizer.Current == '.' || char.IsWhiteSpace(tokenizer.Current)))
-                {
-                    if (tokenizer.Current == '.')
-                    {
-                        ++Count;
-                        FoundEllipsis |= Count >= 3;
-                        EndPosition = tokenizer.Index;
-                        if (FoundEllipsis)
-                        {
-                            tokenizer.Consume();
-                            break;
-                        }
-                    }
-                    tokenizer.Consume();
-                }
-            }
-            if (!FoundEllipsis)
+
+            var EndPosition = tokenizer.Index - 1;
+
+            var Result = new string(tokenizer.Slice(StartPosition, EndPosition).ToArray());
+
+            Result = Result.StripRight(".");
+
+            tokenizer.Index = StartPosition + Result.Length;
+
+            if (!Uri.IsWellFormedUriString(Result, UriKind.RelativeOrAbsolute))
                 return null;
+
+            EndPosition = tokenizer.Index - 1;
 
             return new Token
             {
                 EndPosition = EndPosition,
                 StartPosition = StartPosition,
-                TokenType = TokenType.Ellipsis,
+                TokenType = TokenType.Url,
                 Value = new string(tokenizer.Slice(StartPosition, EndPosition).ToArray())
             };
         }

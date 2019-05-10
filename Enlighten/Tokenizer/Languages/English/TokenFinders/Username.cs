@@ -21,10 +21,10 @@ using Enlighten.Tokenizer.Utils;
 namespace Enlighten.Tokenizer.Languages.English.TokenFinders
 {
     /// <summary>
-    /// Finds ellipsis
+    /// Username finder
     /// </summary>
     /// <seealso cref="TokenFinderBaseClass"/>
-    public class Ellipsis : TokenFinderBaseClass
+    public class Username : TokenFinderBaseClass
     {
         /// <summary>
         /// Gets the order.
@@ -39,46 +39,30 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
         /// <returns>The token.</returns>
         protected override Token IsMatchImpl(TokenizableStream<char> tokenizer)
         {
-            if (tokenizer.End() || (tokenizer.Current != '.' && tokenizer.Current != '…'))
+            if (tokenizer.End() || (tokenizer.Current != '@'))
                 return null;
 
             var StartPosition = tokenizer.Index;
-            var EndPosition = StartPosition;
+            tokenizer.Consume();
 
-            var Count = 0;
-            var FoundEllipsis = false;
-            if (tokenizer.Current == '…')
+            bool UsernameFound = false;
+
+            while (!tokenizer.End() && (char.IsLetter(tokenizer.Current) || char.IsNumber(tokenizer.Current) || tokenizer.Current == '_'))
             {
-                FoundEllipsis = true;
-                EndPosition = tokenizer.Index;
+                UsernameFound = true;
                 tokenizer.Consume();
             }
-            else
-            {
-                while (!tokenizer.End() && (tokenizer.Current == '.' || char.IsWhiteSpace(tokenizer.Current)))
-                {
-                    if (tokenizer.Current == '.')
-                    {
-                        ++Count;
-                        FoundEllipsis |= Count >= 3;
-                        EndPosition = tokenizer.Index;
-                        if (FoundEllipsis)
-                        {
-                            tokenizer.Consume();
-                            break;
-                        }
-                    }
-                    tokenizer.Consume();
-                }
-            }
-            if (!FoundEllipsis)
+
+            if (!UsernameFound)
                 return null;
+
+            var EndPosition = tokenizer.Index - 1;
 
             return new Token
             {
                 EndPosition = EndPosition,
                 StartPosition = StartPosition,
-                TokenType = TokenType.Ellipsis,
+                TokenType = TokenType.Username,
                 Value = new string(tokenizer.Slice(StartPosition, EndPosition).ToArray())
             };
         }

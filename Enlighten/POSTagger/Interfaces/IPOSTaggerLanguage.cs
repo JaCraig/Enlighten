@@ -14,6 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+using Enlighten.Tokenizer;
+
 namespace Enlighten.POSTagger.Interfaces
 {
     /// <summary>
@@ -21,5 +23,17 @@ namespace Enlighten.POSTagger.Interfaces
     /// </summary>
     public interface IPOSTaggerLanguage
     {
+        /// <summary>
+        /// Gets the name.
+        /// </summary>
+        /// <value>The name.</value>
+        string ISOCode { get; }
+
+        /// <summary>
+        /// Tags the specified tokens.
+        /// </summary>
+        /// <param name="tokens">The tokens.</param>
+        /// <returns>The tokens tagged.</returns>
+        Token[] Tag(Token[] tokens);
     }
 }

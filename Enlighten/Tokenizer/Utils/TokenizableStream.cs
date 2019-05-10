@@ -34,6 +34,7 @@ namespace Enlighten.Tokenizer.Utils
             Index = 0;
             Content = content ?? Array.Empty<TData>();
             SnapshotIndexes = new Stack<int>();
+            Length = Content.Length;
         }
 
         /// <summary>
@@ -46,7 +47,13 @@ namespace Enlighten.Tokenizer.Utils
         /// Gets or sets the current index.
         /// </summary>
         /// <value>The index.</value>
-        public int Index { get; private set; }
+        public int Index { get; set; }
+
+        /// <summary>
+        /// Gets the length.
+        /// </summary>
+        /// <value>The length.</value>
+        public int Length { get; }
 
         /// <summary>
         /// Gets or sets the content.

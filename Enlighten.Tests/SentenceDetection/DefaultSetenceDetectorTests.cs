@@ -4,6 +4,8 @@ using Enlighten.SentenceDetection.Enum;
 using Enlighten.Tests.BaseClasses;
 using Enlighten.Tokenizer;
 using Enlighten.Tokenizer.Languages.English;
+using Enlighten.Tokenizer.Languages.English.TokenFinders;
+using Enlighten.Tokenizer.Languages.Interfaces;
 using Xunit;
 
 namespace Enlighten.Tests.SentenceDetection
@@ -43,7 +45,7 @@ Is the main motive of our preparations,
 The source of this our watch and the chief head
 Of this post-haste and romage in the land.";
 
-            var Results = new DefaultSentenceDetector(new[] { new DefaultDetector() }, new DefaultTokenizer(new[] { new EnglishLanguage() })).Detect(Text, SentenceDetectorLanguage.Default);
+            var Results = new DefaultSentenceDetector(new[] { new DefaultDetector() }, new DefaultTokenizer(new[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol(), new NewLine() }) })).Detect(Text, SentenceDetectorLanguage.Default);
             Assert.Equal(3, Results.Length);
             Assert.Equal(@"That can I;
 At least, the whisper goes so.", Results[0].ToString());
@@ -82,7 +84,7 @@ Of this post-haste and romage in the land.", Results[2].ToString());
         public void DetectWithinQuote()
         {
             string Text = "\"Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that.\"";
-            var Results = new DefaultSentenceDetector(new[] { new DefaultDetector() }, new DefaultTokenizer(new[] { new EnglishLanguage() })).Detect(Text, SentenceDetectorLanguage.Default);
+            var Results = new DefaultSentenceDetector(new[] { new DefaultDetector() }, new DefaultTokenizer(new[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) })).Detect(Text, SentenceDetectorLanguage.Default);
             Assert.Equal(2, Results.Length);
             Assert.Equal("Darkness cannot drive out darkness: only light can do that.", Results[0].ToString());
             Assert.Equal("Hate cannot drive out hate: only love can do that.", Results[1].ToString());

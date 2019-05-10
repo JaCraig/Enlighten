@@ -14,7 +14,11 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+using Enlighten.POSTagger.Enum;
 using Enlighten.POSTagger.Interfaces;
+using Enlighten.Tokenizer;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Enlighten.POSTagger
 {
@@ -24,5 +28,37 @@ namespace Enlighten.POSTagger
     /// <seealso cref="IPOSTagger"/>
     public class DefaultTagger : IPOSTagger
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DefaultTagger"/> class.
+        /// </summary>
+        /// <param name="languages">The languages.</param>
+        public DefaultTagger(IEnumerable<IPOSTaggerLanguage> languages)
+        {
+            Languages = languages.Where(x => x.GetType().Assembly != typeof(DefaultTagger).Assembly).ToDictionary(x => x.ISOCode);
+            foreach (var Language in languages.Where(x => x.GetType().Assembly == typeof(DefaultTagger).Assembly
+                && !Languages.ContainsKey(x.ISOCode)))
+            {
+                Languages.Add(Language.ISOCode, Language);
+            }
+        }
+
+        /// <summary>
+        /// Gets the languages.
+        /// </summary>
+        /// <value>The languages.</value>
+        private Dictionary<string, IPOSTaggerLanguage> Languages { get; }
+
+        /// <summary>
+        /// Stems the specified tokens.
+        /// </summary>
+        /// <param name="tokens">The tokens.</param>
+        /// <param name="language">The language.</param>
+        /// <returns>The resulting stemmed tokens.</returns>
+        public Token[] Tag(Token[] tokens, POSTaggerLanguage language)
+        {
+            if (!Languages.ContainsKey(language))
+                return tokens;
+            return Languages[language].Tag(tokens);
+        }
     }
 }

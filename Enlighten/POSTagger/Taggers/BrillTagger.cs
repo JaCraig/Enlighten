@@ -15,6 +15,7 @@ limitations under the License.
 */
 
 using BigBook;
+using Enlighten.POSTagger.Enum;
 using Enlighten.POSTagger.Interfaces;
 using Enlighten.Tokenizer;
 using Enlighten.Tokenizer.Languages.English.Enums;
@@ -39,6 +40,12 @@ namespace Enlighten.POSTagger.Taggers
             Lexicon = new ListMapping<string, string>();
             BuildLexicon();
         }
+
+        /// <summary>
+        /// Gets the name.
+        /// </summary>
+        /// <value>The name.</value>
+        public string ISOCode { get; } = POSTaggerLanguage.BrillTagger;
 
         /// <summary>
         /// Gets the lexicon.
@@ -104,6 +111,14 @@ namespace Enlighten.POSTagger.Taggers
                 else if (Token.TokenType == TokenType.Number)
                 {
                     Token.PartOfSpeech = "CD";
+                }
+                else if (Token.TokenType == TokenType.Email || Token.TokenType == TokenType.HashTag || Token.TokenType == TokenType.Username)
+                {
+                    Token.PartOfSpeech = "NN";
+                }
+                else if (Token.TokenType == TokenType.Emoji)
+                {
+                    Token.PartOfSpeech = "EM";
                 }
             }
             return tokens;

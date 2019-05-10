@@ -14,8 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-using Enlighten.Tokenizer.Interfaces;
 using Enlighten.Tokenizer.Languages.English.Enums;
+using Enlighten.Tokenizer.Languages.Interfaces;
 using Enlighten.Tokenizer.Utils;
 
 namespace Enlighten.Tokenizer.BaseClasses
@@ -24,7 +24,7 @@ namespace Enlighten.Tokenizer.BaseClasses
     /// Token finder base class
     /// </summary>
     /// <seealso cref="ITokenFinder"/>
-    public abstract class TokenFinderBaseClass : ITokenFinder
+    public abstract class TokenFinderBaseClass : IEnglishTokenFinder
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TokenFinderBaseClass"/> class.

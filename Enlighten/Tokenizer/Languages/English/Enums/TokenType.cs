@@ -107,6 +107,12 @@ namespace Enlighten.Tokenizer.Languages.English.Enums
         public static TokenType Ellipsis { get; } = new TokenType("Ellipsis");
 
         /// <summary>
+        /// Gets the email.
+        /// </summary>
+        /// <value>The email.</value>
+        public static TokenType Email { get; } = new TokenType("Email");
+
+        /// <summary>
         /// Gets the emoji.
         /// </summary>
         /// <value>The emoji.</value>
@@ -141,6 +147,12 @@ namespace Enlighten.Tokenizer.Languages.English.Enums
         /// </summary>
         /// <value>The hash symbol.</value>
         public static TokenType HashSymbol { get; } = new TokenType("HashSymbol");
+
+        /// <summary>
+        /// Gets the hash tag.
+        /// </summary>
+        /// <value>The hash tag.</value>
+        public static TokenType HashTag { get; } = new TokenType("HashTag");
 
         /// <summary>
         /// Gets the hyphen.
@@ -267,6 +279,18 @@ namespace Enlighten.Tokenizer.Languages.English.Enums
         /// </summary>
         /// <value>The underscore.</value>
         public static TokenType Underscore { get; } = new TokenType("Underscore");
+
+        /// <summary>
+        /// Gets the URL.
+        /// </summary>
+        /// <value>The URL.</value>
+        public static TokenType Url { get; } = new TokenType("Url");
+
+        /// <summary>
+        /// Gets the username.
+        /// </summary>
+        /// <value>The username.</value>
+        public static TokenType Username { get; } = new TokenType("Username");
 
         /// <summary>
         /// Gets the white space.

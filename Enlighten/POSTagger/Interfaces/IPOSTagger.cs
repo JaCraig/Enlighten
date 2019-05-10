@@ -14,6 +14,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+using Enlighten.POSTagger.Enum;
+using Enlighten.Tokenizer;
+
 namespace Enlighten.POSTagger.Interfaces
 {
     /// <summary>
@@ -21,5 +24,12 @@ namespace Enlighten.POSTagger.Interfaces
     /// </summary>
     public interface IPOSTagger
     {
+        /// <summary>
+        /// Tags the specified tokens.
+        /// </summary>
+        /// <param name="tokens">The tokens.</param>
+        /// <param name="language">The language.</param>
+        /// <returns>The tagged tokens.</returns>
+        Token[] Tag(Token[] tokens, POSTaggerLanguage language);
     }
 }

@@ -14,9 +14,14 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+using BigBook;
 using Enlighten.Tokenizer.Enums;
 using Enlighten.Tokenizer.Interfaces;
-using Enlighten.Tokenizer.Languages.English.TokenFinders;
+using Enlighten.Tokenizer.Languages.English.Enums;
+using Enlighten.Tokenizer.Languages.Interfaces;
+using Enlighten.Tokenizer.Utils;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Enlighten.Tokenizer.Languages.English
 {
@@ -29,31 +34,80 @@ namespace Enlighten.Tokenizer.Languages.English
         /// <summary>
         /// Initializes a new instance of the <see cref="EnglishLanguage"/> class.
         /// </summary>
-        public EnglishLanguage()
+        public EnglishLanguage(IEnumerable<IEnglishTokenFinder> tokenFinders)
         {
-            TokenFinders = new ITokenFinder[]
-            {
-                new Ellipsis(),
-                new NewLine(),
-                new OtherTokenFinder(),
-                new Symbol(),
-                new Whitespace(),
-                new Word(),
-                new Number(),
-                new Emoji()
-            };
+            TokenFinders = tokenFinders.ToArray();
         }
 
         /// <summary>
         /// Gets the name.
         /// </summary>
         /// <value>The name.</value>
-        public string ISOCode => TokenizerLanguage.EnglishRuleBased;
+        public string ISOCode { get; } = TokenizerLanguage.EnglishRuleBased;
 
         /// <summary>
         /// Gets the token finders.
         /// </summary>
         /// <value>The token finders.</value>
-        public ITokenFinder[] TokenFinders { get; }
+        public IEnglishTokenFinder[] TokenFinders { get; }
+
+        /// <summary>
+        /// Detokenizes the specified tokens.
+        /// </summary>
+        /// <param name="tokens">The tokens.</param>
+        /// <returns>Converts the tokens into the equivalent string.</returns>
+        public string Detokenize(Token[] tokens)
+        {
+            return tokens.ToString(x => x.Value, "");
+        }
+
+        /// <summary>
+        /// Tokenizes the specified text.
+        /// </summary>
+        /// <param name="text">The text.</param>
+        /// <returns>The tokenized version of the text.</returns>
+        public Token[] Tokenize(TokenizableStream<char> text)
+        {
+            return GetTokens(text, TokenFinders.OrderBy(x => x.Order).ToArray()).ToArray();
+        }
+
+        /// <summary>
+        /// Gets the next token or null if their isn't one.
+        /// </summary>
+        /// <param name="tokenizableStream">The tokenizable stream.</param>
+        /// <param name="tokenFinders">The token finders.</param>
+        /// <returns>The next token.</returns>
+        private static Token Next(TokenizableStream<char> tokenizableStream, IEnglishTokenFinder[] tokenFinders)
+        {
+            if (tokenizableStream.End())
+            {
+                return null;
+            }
+
+            return tokenFinders.Select(x => x.IsMatch(tokenizableStream)).FirstOrDefault(x => x != null);
+        }
+
+        /// <summary>
+        /// Gets the tokens.
+        /// </summary>
+        /// <param name="tokenizableStream">The tokenizable stream.</param>
+        /// <param name="tokenFinders">The token finders.</param>
+        /// <returns>The tokens.</returns>
+        private IEnumerable<Token> GetTokens(TokenizableStream<char> tokenizableStream, IEnglishTokenFinder[] tokenFinders)
+        {
+            var CurrentToken = Next(tokenizableStream, tokenFinders);
+            while (CurrentToken != null)
+            {
+                yield return CurrentToken;
+                CurrentToken = Next(tokenizableStream, tokenFinders);
+            }
+            yield return new Token
+            {
+                EndPosition = tokenizableStream.Index,
+                StartPosition = tokenizableStream.Index,
+                TokenType = TokenType.EOF,
+                Value = string.Empty
+            };
+        }
     }
 }

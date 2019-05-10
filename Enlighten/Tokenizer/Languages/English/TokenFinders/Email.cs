@@ -21,10 +21,10 @@ using Enlighten.Tokenizer.Utils;
 namespace Enlighten.Tokenizer.Languages.English.TokenFinders
 {
     /// <summary>
-    /// Finds ellipsis
+    /// Email token finder
     /// </summary>
     /// <seealso cref="TokenFinderBaseClass"/>
-    public class Ellipsis : TokenFinderBaseClass
+    public class Email : TokenFinderBaseClass
     {
         /// <summary>
         /// Gets the order.
@@ -39,46 +39,38 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
         /// <returns>The token.</returns>
         protected override Token IsMatchImpl(TokenizableStream<char> tokenizer)
         {
-            if (tokenizer.End() || (tokenizer.Current != '.' && tokenizer.Current != '…'))
+            if (tokenizer.End() || !char.IsLetter(tokenizer.Current))
                 return null;
 
             var StartPosition = tokenizer.Index;
-            var EndPosition = StartPosition;
 
-            var Count = 0;
-            var FoundEllipsis = false;
-            if (tokenizer.Current == '…')
+            while (!tokenizer.End() && (char.IsLetter(tokenizer.Current) || char.IsNumber(tokenizer.Current) || tokenizer.Current == '-' || tokenizer.Current == '.'))
             {
-                FoundEllipsis = true;
-                EndPosition = tokenizer.Index;
                 tokenizer.Consume();
             }
-            else
-            {
-                while (!tokenizer.End() && (tokenizer.Current == '.' || char.IsWhiteSpace(tokenizer.Current)))
-                {
-                    if (tokenizer.Current == '.')
-                    {
-                        ++Count;
-                        FoundEllipsis |= Count >= 3;
-                        EndPosition = tokenizer.Index;
-                        if (FoundEllipsis)
-                        {
-                            tokenizer.Consume();
-                            break;
-                        }
-                    }
-                    tokenizer.Consume();
-                }
-            }
-            if (!FoundEllipsis)
+
+            if (tokenizer.Current != '@')
                 return null;
+
+            tokenizer.Consume();
+
+            bool EmailFound = false;
+
+            while (!tokenizer.End() && (char.IsLetter(tokenizer.Current) || char.IsNumber(tokenizer.Current) || tokenizer.Current == '-' || tokenizer.Current == '.'))
+            {
+                if (tokenizer.Current == '.' && !char.IsLetter(tokenizer.Peek(1)))
+                    break;
+                EmailFound |= tokenizer.Current == '.';
+                tokenizer.Consume();
+            }
+
+            var EndPosition = tokenizer.Index - 1;
 
             return new Token
             {
                 EndPosition = EndPosition,
                 StartPosition = StartPosition,
-                TokenType = TokenType.Ellipsis,
+                TokenType = TokenType.Email,
                 Value = new string(tokenizer.Slice(StartPosition, EndPosition).ToArray())
             };
         }

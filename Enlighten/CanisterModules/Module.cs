@@ -15,9 +15,11 @@ limitations under the License.
 */
 
 using Canister.Interfaces;
+using Enlighten.POSTagger.Interfaces;
 using Enlighten.SentenceDetection.Interfaces;
 using Enlighten.Stemmer.Interfaces;
 using Enlighten.Tokenizer.Interfaces;
+using Enlighten.Tokenizer.Languages.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Enlighten.CanisterModules
@@ -43,7 +45,10 @@ namespace Enlighten.CanisterModules
                         .RegisterAll<IStemmerLanguage>(ServiceLifetime.Singleton)
                         .RegisterAll<IStemmer>(ServiceLifetime.Singleton)
                         .RegisterAll<IDetector>(ServiceLifetime.Singleton)
-                        .RegisterAll<ISentenceDetector>(ServiceLifetime.Singleton);
+                        .RegisterAll<ISentenceDetector>(ServiceLifetime.Singleton)
+                        .RegisterAll<IPOSTagger>(ServiceLifetime.Singleton)
+                        .RegisterAll<IPOSTaggerLanguage>(ServiceLifetime.Singleton)
+                        .RegisterAll<IEnglishTokenFinder>(ServiceLifetime.Singleton);
         }
     }
 }

@@ -32,7 +32,7 @@ namespace Enlighten.Stemmer.Languages
         /// Gets the name.
         /// </summary>
         /// <value>The name.</value>
-        public override string ISOCode => StemmerLanguage.EnglishPorter2;
+        public override string ISOCode { get; } = StemmerLanguage.EnglishPorter2;
 
         /// <summary>
         /// Gets the vowels.

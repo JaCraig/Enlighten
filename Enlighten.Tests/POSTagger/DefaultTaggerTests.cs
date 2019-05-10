@@ -1,4 +1,6 @@
 ﻿using BigBook;
+using Enlighten.POSTagger;
+using Enlighten.POSTagger.Enum;
 using Enlighten.POSTagger.Taggers;
 using Enlighten.Tests.BaseClasses;
 using Enlighten.Tokenizer;
@@ -10,23 +12,23 @@ using Enlighten.Tokenizer.Languages.Interfaces;
 using System.Linq;
 using Xunit;
 
-namespace Enlighten.Tests.POSTagger.Taggers
+namespace Enlighten.Tests.POSTagger
 {
-    public class BrillTaggerTests : TestBaseClass
+    public class DefaultTaggerTests : TestBaseClass
     {
         [Fact]
         public void Setup()
         {
-            var TestObject = new BrillTagger();
-            Assert.Equal(98822, TestObject.Lexicon.Keys.Count);
+            var TestObject = new DefaultTagger(new[] { new BrillTagger() });
+            Assert.NotNull(TestObject);
         }
 
         [Fact]
         public void Tag()
         {
-            var TestObject = new BrillTagger();
+            var TestObject = new DefaultTagger(new[] { new BrillTagger() });
             var Tokenizer = new DefaultTokenizer(new[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) });
-            var Results = TestObject.Tag(Tokenizer.Tokenize("I would go buy a computer.", TokenizerLanguage.EnglishRuleBased));
+            var Results = TestObject.Tag(Tokenizer.Tokenize("I would go buy a computer.", TokenizerLanguage.EnglishRuleBased), POSTaggerLanguage.BrillTagger);
             Assert.Equal("NN VM VVB NN RR NN", Results.Where(x => x.TokenType == TokenType.Word).ToString(x => x.PartOfSpeech, " "));
         }
     }

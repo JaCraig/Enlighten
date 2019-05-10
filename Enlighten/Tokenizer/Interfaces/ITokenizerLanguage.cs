@@ -14,6 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+using Enlighten.Tokenizer.Utils;
+
 namespace Enlighten.Tokenizer.Interfaces
 {
     /// <summary>
@@ -28,9 +30,17 @@ namespace Enlighten.Tokenizer.Interfaces
         string ISOCode { get; }
 
         /// <summary>
-        /// Gets the token finders.
+        /// Detokenizes the specified tokens.
         /// </summary>
-        /// <value>The token finders.</value>
-        ITokenFinder[] TokenFinders { get; }
+        /// <param name="tokens">The tokens.</param>
+        /// <returns>Converts the tokens into the equivalent string.</returns>
+        string Detokenize(Token[] tokens);
+
+        /// <summary>
+        /// Tokenizes the specified text.
+        /// </summary>
+        /// <param name="text">The text.</param>
+        /// <returns>The tokenized version of the text.</returns>
+        Token[] Tokenize(TokenizableStream<char> text);
     }
 }

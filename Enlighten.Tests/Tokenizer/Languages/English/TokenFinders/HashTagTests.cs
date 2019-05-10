@@ -8,20 +8,20 @@ using Xunit;
 
 namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
 {
-    public class EllipsisTests : TestBaseClass
+    public class HashTagTests : TestBaseClass
     {
         public static TheoryData<string, Token> Data = new TheoryData<string, Token>
         {
-            { "This has no ellipsis",null },
-            { "...This has ellipsis",new Token{EndPosition=2,StartPosition=0,TokenType=TokenType.Ellipsis,Value="..." } },
-            { "This has no ellipsis..",null },
-            { "This. has. no. ellipsis.",null },
-            { ".This. has. no. ellipsis.",null },
-            { "..This. has. no. ellipsis.",null },
-            { ". . . . . . .This has an ellipsis.",new Token{EndPosition=4,StartPosition=0,TokenType=TokenType.Ellipsis,Value=". . ." } },
-            { "... This has an ellipsis.",new Token{EndPosition=2,StartPosition=0,TokenType=TokenType.Ellipsis,Value="..." } },
-            {"… This has an ellipsis.",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.Ellipsis,Value="…" } },
-            { " ... This has no ellipsis.",null },
+            { "This has no HashTag",null },
+            { "#something This has HashTag",new Token{EndPosition=9,StartPosition=0,TokenType=TokenType.HashTag,Value="#something" } },
+            { "This has no HashTag..",null },
+            { "This. has. no. HashTag.",null },
+            { ".This. has. no. HashTag.",null },
+            { "..This. has. no. HashTag.",null },
+            { "#another@a.tr . . . . . . .This has an HashTag.",new Token{EndPosition=7,StartPosition=0,TokenType=TokenType.HashTag,Value="#another" } },
+            { "#boop... This has an HashTag.",new Token{EndPosition=4,StartPosition=0,TokenType=TokenType.HashTag,Value="#boop" } },
+            {"#SOMETHING_Is_Here This has an HashTag.",new Token{EndPosition=17,StartPosition=0,TokenType=TokenType.HashTag,Value="#SOMETHING_Is_Here" } },
+            { " ... This has no HashTag.",null },
             { "",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
             { null,new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
         };
@@ -30,7 +30,7 @@ namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
         [MemberData(nameof(Data))]
         public void IsMatch(string input, Token expectedValue)
         {
-            var Result = new Ellipsis().IsMatch(new TokenizableStream<char>(input?.ToCharArray() ?? Array.Empty<char>()));
+            var Result = new HashTag().IsMatch(new TokenizableStream<char>(input?.ToCharArray() ?? Array.Empty<char>()));
             Assert.Equal(expectedValue?.EndPosition, Result?.EndPosition);
             Assert.Equal(expectedValue?.StartPosition, Result?.StartPosition);
             Assert.Equal(expectedValue?.TokenType, Result?.TokenType);
