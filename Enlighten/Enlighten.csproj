@@ -14,7 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="NameFinder\" />
     <Folder Include="ML\" />
     <Folder Include="Lemmatizer\" />
     <Folder Include="LanguageModel\" />

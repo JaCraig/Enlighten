@@ -23,7 +23,7 @@ namespace Enlighten.Tokenizer.BaseClasses
     /// <summary>
     /// Token finder base class
     /// </summary>
-    /// <seealso cref="ITokenFinder"/>
+    /// <seealso cref="IEnglishTokenFinder"/>
     public abstract class TokenFinderBaseClass : IEnglishTokenFinder
     {
         /// <summary>
