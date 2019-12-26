@@ -12,18 +12,18 @@ namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
     {
         public static TheoryData<string, Token> Data = new TheoryData<string, Token>
         {
-            { "This has no new line",new Token{EndPosition=3,StartPosition=0,TokenType=TokenType.Other,Value="This" } },
+            { "This has no new line",new Token(3,0,TokenType.Other,"This" ) },
             { "\r\nThis has new line",null },
-            { "This has no new line..",new Token{EndPosition=3,StartPosition=0,TokenType=TokenType.Other,Value="This" } },
-            { "This. has. no. new line.",new Token{EndPosition=4,StartPosition=0,TokenType=TokenType.Other,Value="This." } },
-            { ".This. has. no. new line.",new Token{EndPosition=5,StartPosition=0,TokenType=TokenType.Other,Value=".This." } },
-            { "..This. has. no. new line.",new Token{EndPosition=6,StartPosition=0,TokenType=TokenType.Other,Value="..This." } },
+            { "This has no new line..",new Token(3,0,TokenType.Other,"This" ) },
+            { "This. has. no. new line.",new Token(4,0,TokenType.Other,"This." ) },
+            { ".This. has. no. new line.",new Token(5,0,TokenType.Other,".This." ) },
+            { "..This. has. no. new line.",new Token(6,0,TokenType.Other,"..This." ) },
             { "\n\n\n\n\n\nThis has an new line.",null },
             { "\n This has an new line.",null },
             { "\r This has an new line.",null },
             { " ... This has no new line.",null },
-            { "",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
-            { null,new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
+            { "",new Token(0,0,TokenType.EOF,string.Empty ) },
+            { null,new Token(0,0,TokenType.EOF,string.Empty ) },
         };
 
         [Theory]

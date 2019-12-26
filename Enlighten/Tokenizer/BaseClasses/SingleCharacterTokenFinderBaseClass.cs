@@ -48,20 +48,19 @@ namespace Enlighten.Tokenizer.BaseClasses
         /// </summary>
         /// <param name="tokenizer">The tokenizer.</param>
         /// <returns>The token.</returns>
-        protected override Token IsMatchImpl(TokenizableStream<char> tokenizer)
+        protected override Token? IsMatchImpl(TokenizableStream<char> tokenizer)
         {
             if (!tokenizer.End() && tokenizer.Current == Character)
             {
                 var StartPos = tokenizer.Index;
                 tokenizer.Consume();
                 var EndPos = tokenizer.Index;
-                return new Token
-                {
-                    EndPosition = EndPos,
-                    StartPosition = StartPos,
-                    TokenType = TokenType,
-                    Value = Character.ToString()
-                };
+                return new Token(
+                    EndPos,
+                    StartPos,
+                    TokenType,
+                    Character.ToString()
+                );
             }
             return null;
         }

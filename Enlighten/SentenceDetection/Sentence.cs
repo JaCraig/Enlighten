@@ -25,6 +25,19 @@ namespace Enlighten.SentenceDetection
     public class Sentence
     {
         /// <summary>
+        /// Initializes a new instance of the <see cref="Sentence"/> class.
+        /// </summary>
+        /// <param name="endPosition">The end position.</param>
+        /// <param name="startPosition">The start position.</param>
+        /// <param name="tokens">The tokens.</param>
+        public Sentence(int endPosition, int startPosition, Token[] tokens)
+        {
+            EndPosition = endPosition;
+            StartPosition = startPosition;
+            Tokens = tokens;
+        }
+
+        /// <summary>
         /// Gets or sets the end position. (inclusive)
         /// </summary>
         /// <value>The end position.</value>

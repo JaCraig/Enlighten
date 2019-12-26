@@ -13,17 +13,17 @@ namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
         public static TheoryData<string, Token> Data = new TheoryData<string, Token>
         {
             { "This has no ellipsis",null },
-            { "...This has ellipsis",new Token{EndPosition=2,StartPosition=0,TokenType=TokenType.Ellipsis,Value="..." } },
+            { "...This has ellipsis",new Token(2,0,TokenType.Ellipsis,"..."  ) },
             { "This has no ellipsis..",null },
             { "This. has. no. ellipsis.",null },
             { ".This. has. no. ellipsis.",null },
             { "..This. has. no. ellipsis.",null },
-            { ". . . . . . .This has an ellipsis.",new Token{EndPosition=4,StartPosition=0,TokenType=TokenType.Ellipsis,Value=". . ." } },
-            { "... This has an ellipsis.",new Token{EndPosition=2,StartPosition=0,TokenType=TokenType.Ellipsis,Value="..." } },
-            {"… This has an ellipsis.",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.Ellipsis,Value="…" } },
+            { ". . . . . . .This has an ellipsis.",new Token(4,0,TokenType.Ellipsis,". . ." ) },
+            { "... This has an ellipsis.",new Token(2,0,TokenType.Ellipsis,"..." ) },
+            {"… This has an ellipsis.",new Token(0,0,TokenType.Ellipsis,"…" ) },
             { " ... This has no ellipsis.",null },
-            { "",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
-            { null,new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
+            { "",new Token(0,0,TokenType.EOF,string.Empty ) },
+            { null,new Token(0,0,TokenType.EOF,string.Empty ) },
         };
 
         [Theory]

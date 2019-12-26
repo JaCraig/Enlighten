@@ -12,18 +12,18 @@ namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
     {
         public static TheoryData<string, Token> Data = new TheoryData<string, Token>
         {
-            { "⚾ 100 0",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.Emoji,Value="⚾" } },
-            { "💕\r\nThis has new line",new Token{EndPosition=1,StartPosition=0,TokenType=TokenType.Emoji,Value="💕" } },
-            { "💯 1234",new Token{EndPosition=1,StartPosition=0,TokenType=TokenType.Emoji,Value="💯" } },
-            { "🏫. 43",new Token{EndPosition=1,StartPosition=0,TokenType=TokenType.Emoji,Value="🏫" } },
+            { "⚾ 100 0",new Token(0,0,TokenType.Emoji,"⚾" ) },
+            { "💕\r\nThis has new line",new Token(1,0,TokenType.Emoji,"💕" ) },
+            { "💯 1234",new Token(1,0,TokenType.Emoji,"💯" ) },
+            { "🏫. 43",new Token(1,0,TokenType.Emoji,"🏫" ) },
             { ".This. has. no. new line.",null },
             { "..This. has. no. new line.",null },
             { "\n\n\n\n\n\nThis has an new line.",null },
             { "\n This has an new line.",null },
             { "\r This has an new line.",null },
             { " ... This has no new line.",null },
-            { "",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
-            { null,new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
+            { "",new Token(0,0,TokenType.EOF,string.Empty ) },
+            { null,new Token(0,0,TokenType.EOF,string.Empty ) },
         };
 
         [Theory]

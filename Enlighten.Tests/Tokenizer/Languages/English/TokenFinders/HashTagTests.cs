@@ -13,17 +13,17 @@ namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
         public static TheoryData<string, Token> Data = new TheoryData<string, Token>
         {
             { "This has no HashTag",null },
-            { "#something This has HashTag",new Token{EndPosition=9,StartPosition=0,TokenType=TokenType.HashTag,Value="#something" } },
+            { "#something This has HashTag",new Token(9,0,TokenType.HashTag,"#something" ) },
             { "This has no HashTag..",null },
             { "This. has. no. HashTag.",null },
             { ".This. has. no. HashTag.",null },
             { "..This. has. no. HashTag.",null },
-            { "#another@a.tr . . . . . . .This has an HashTag.",new Token{EndPosition=7,StartPosition=0,TokenType=TokenType.HashTag,Value="#another" } },
-            { "#boop... This has an HashTag.",new Token{EndPosition=4,StartPosition=0,TokenType=TokenType.HashTag,Value="#boop" } },
-            {"#SOMETHING_Is_Here This has an HashTag.",new Token{EndPosition=17,StartPosition=0,TokenType=TokenType.HashTag,Value="#SOMETHING_Is_Here" } },
+            { "#another@a.tr . . . . . . .This has an HashTag.",new Token(7,0,TokenType.HashTag,"#another" ) },
+            { "#boop... This has an HashTag.",new Token(4,0,TokenType.HashTag,"#boop" ) },
+            {"#SOMETHING_Is_Here This has an HashTag.",new Token(17,0,TokenType.HashTag,"#SOMETHING_Is_Here" ) },
             { " ... This has no HashTag.",null },
-            { "",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
-            { null,new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
+            { "",new Token(0,0,TokenType.EOF,string.Empty ) },
+            { null,new Token(0,0,TokenType.EOF,string.Empty ) },
         };
 
         [Theory]

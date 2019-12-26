@@ -74,7 +74,7 @@ namespace Enlighten.Tokenizer
             if (!Languages.ContainsKey(language))
                 return Array.Empty<Token>();
             var Language = Languages[language];
-            var Stream = new TokenizableStream<char>(text?.ToCharArray());
+            var Stream = new TokenizableStream<char>(text?.ToCharArray() ?? Array.Empty<char>());
             return Language.Tokenize(Stream);
         }
     }

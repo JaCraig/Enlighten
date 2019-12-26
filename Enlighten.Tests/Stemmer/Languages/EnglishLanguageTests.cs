@@ -16,7 +16,7 @@ namespace Enlighten.Tests.Stemmer.Languages
             for (int x = 0; x < Input.Length; ++x)
             {
                 var Result = Stemmer.StemWords(new string[] { Input[x] })[0];
-                Assert.Equal(Expected[x], Result);
+                Assert.Equal(Expected[x].Trim(), Result);
             }
         }
     }

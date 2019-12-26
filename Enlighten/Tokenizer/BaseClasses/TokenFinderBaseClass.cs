@@ -44,17 +44,16 @@ namespace Enlighten.Tokenizer.BaseClasses
         /// </summary>
         /// <param name="stream">The stream.</param>
         /// <returns>The token.</returns>
-        public Token IsMatch(TokenizableStream<char> stream)
+        public Token? IsMatch(TokenizableStream<char> stream)
         {
             if (stream.End())
             {
-                return new Token
-                {
-                    StartPosition = stream.Index,
-                    EndPosition = stream.Index,
-                    TokenType = TokenType.EOF,
-                    Value = string.Empty
-                };
+                return new Token(
+                    stream.Index,
+                    stream.Index,
+                    TokenType.EOF,
+                    string.Empty
+                );
             }
 
             stream.TakeSnapshot();
@@ -78,6 +77,6 @@ namespace Enlighten.Tokenizer.BaseClasses
         /// </summary>
         /// <param name="tokenizer">The tokenizer.</param>
         /// <returns>The token.</returns>
-        protected abstract Token IsMatchImpl(TokenizableStream<char> tokenizer);
+        protected abstract Token? IsMatchImpl(TokenizableStream<char> tokenizer);
     }
 }

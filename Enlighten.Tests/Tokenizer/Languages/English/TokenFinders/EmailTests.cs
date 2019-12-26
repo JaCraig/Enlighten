@@ -13,17 +13,17 @@ namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
         public static TheoryData<string, Token> Data = new TheoryData<string, Token>
         {
             { "This has no Email",null },
-            { "someone@somewhere.com This has Email",new Token{EndPosition=20,StartPosition=0,TokenType=TokenType.Email,Value="someone@somewhere.com" } },
+            { "someone@somewhere.com This has Email",new Token(20,0,TokenType.Email,"someone@somewhere.com" ) },
             { "This has no Email..",null },
             { "This. has. no. Email.",null },
             { ".This. has. no. Email.",null },
             { "..This. has. no. Email.",null },
-            { "another@a.tr . . . . . . .This has an Email.",new Token{EndPosition=11,StartPosition=0,TokenType=TokenType.Email,Value="another@a.tr" } },
-            { "boop@gmail.com... This has an Email.",new Token{EndPosition=13,StartPosition=0,TokenType=TokenType.Email,Value="boop@gmail.com" } },
-            {"BLAH@GmAiL.fr.com This has an Email.",new Token{EndPosition=16,StartPosition=0,TokenType=TokenType.Email,Value="BLAH@GmAiL.fr.com" } },
+            { "another@a.tr . . . . . . .This has an Email.",new Token(11,0,TokenType.Email,"another@a.tr" ) },
+            { "boop@gmail.com... This has an Email.",new Token(13,0,TokenType.Email,"boop@gmail.com" ) },
+            {"BLAH@GmAiL.fr.com This has an Email.",new Token(16,0,TokenType.Email,"BLAH@GmAiL.fr.com" ) },
             { " ... This has no Email.",null },
-            { "",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
-            { null,new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
+            { "",new Token(0,0,TokenType.EOF,string.Empty ) },
+            { null,new Token(0,0,TokenType.EOF,string.Empty ) },
         };
 
         [Theory]

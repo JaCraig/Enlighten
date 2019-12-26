@@ -12,18 +12,18 @@ namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
     {
         public static TheoryData<string, Token> Data = new TheoryData<string, Token>
         {
-            { "200 100 0",new Token{EndPosition=2,StartPosition=0,TokenType=TokenType.Number,Value="200" } },
+            { "200 100 0",new Token(2,0,TokenType.Number,"200" ) },
             { "\r\nThis has new line",null },
-            { "2,023.23 1234",new Token{EndPosition=7,StartPosition=0,TokenType=TokenType.Number,Value="2,023.23" } },
-            { "1000. 43",new Token{EndPosition=3,StartPosition=0,TokenType=TokenType.Number,Value="1000" } },
+            { "2,023.23 1234",new Token(7,0,TokenType.Number,"2,023.23" ) },
+            { "1000. 43",new Token(3,0,TokenType.Number,"1000" ) },
             { ".This. has. no. new line.",null },
             { "..This. has. no. new line.",null },
             { "\n\n\n\n\n\nThis has an new line.",null },
             { "\n This has an new line.",null },
             { "\r This has an new line.",null },
             { " ... This has no new line.",null },
-            { "",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
-            { null,new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
+            { "",new Token(0,0,TokenType.EOF,string.Empty ) },
+            { null,new Token(0,0,TokenType.EOF,string.Empty ) },
         };
 
         [Theory]

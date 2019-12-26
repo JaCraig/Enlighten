@@ -13,17 +13,17 @@ namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
         public static TheoryData<string, Token> Data = new TheoryData<string, Token>
         {
             { "This has no Username",null },
-            { "@something This has Username",new Token{EndPosition=9,StartPosition=0,TokenType=TokenType.Username,Value="@something" } },
+            { "@something This has Username",new Token(9,0,TokenType.Username,"@something" ) },
             { "This has no Username..",null },
             { "This. has. no. Username.",null },
             { ".This. has. no. Username.",null },
             { "..This. has. no. Username.",null },
-            { "@another@a.tr . . . . . . .This has an Username.",new Token{EndPosition=7,StartPosition=0,TokenType=TokenType.Username,Value="@another" } },
-            { "@boop... This has an Username.",new Token{EndPosition=4,StartPosition=0,TokenType=TokenType.Username,Value="@boop" } },
-            { "@SOMETHING_Is_Here This has an Username.",new Token{EndPosition=17,StartPosition=0,TokenType=TokenType.Username,Value="@SOMETHING_Is_Here" } },
+            { "@another@a.tr . . . . . . .This has an Username.",new Token(7,0,TokenType.Username,"@another" ) },
+            { "@boop... This has an Username.",new Token(4,0,TokenType.Username,"@boop" ) },
+            { "@SOMETHING_Is_Here This has an Username.",new Token(17,0,TokenType.Username,"@SOMETHING_Is_Here" ) },
             { " ... This has no Username.",null },
-            { "",new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
-            { null,new Token{EndPosition=0,StartPosition=0,TokenType=TokenType.EOF,Value=string.Empty } },
+            { "",new Token(0,0,TokenType.EOF,string.Empty ) },
+            { null,new Token(0,0,TokenType.EOF,string.Empty ) },
         };
 
         [Theory]

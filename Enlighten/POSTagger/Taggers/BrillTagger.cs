@@ -21,7 +21,6 @@ using Enlighten.Tokenizer;
 using Enlighten.Tokenizer.Languages.English.Enums;
 using FileCurator;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Enlighten.POSTagger.Taggers
@@ -60,13 +59,13 @@ namespace Enlighten.POSTagger.Taggers
         /// <returns>The tokens tagged.</returns>
         public Token[] Tag(Token[] tokens)
         {
-            Token PreviousToken = null;
+            Token? PreviousToken = null;
             for (int i = 0, tokensLength = tokens.Length; i < tokensLength; i++)
             {
                 var Token = tokens[i];
                 if (Token.TokenType == TokenType.Word)
                 {
-                    if (Lexicon.TryGetValue(Token.Value, out IEnumerable<string> POS) || Lexicon.TryGetValue(Token.Value.ToLowerInvariant(), out POS))
+                    if (Lexicon.TryGetValue(Token.Value, out var POS) || Lexicon.TryGetValue(Token.Value.ToLowerInvariant(), out POS))
                     {
                     }
                     else if (Token.Value.Length == 1)
@@ -78,7 +77,7 @@ namespace Enlighten.POSTagger.Taggers
                         POS = new string[] { "NN" };
                     }
 
-                    string Word = Token.PartOfSpeech = POS.First();
+                    var Word = Token.PartOfSpeech = POS.First();
 
                     if (PreviousToken?.PartOfSpeech == "DT")
                     {

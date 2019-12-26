@@ -37,7 +37,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
         /// </summary>
         /// <param name="tokenizer">The tokenizer.</param>
         /// <returns>The token.</returns>
-        protected override Token IsMatchImpl(TokenizableStream<char> tokenizer)
+        protected override Token? IsMatchImpl(TokenizableStream<char> tokenizer)
         {
             if (tokenizer.End() || (tokenizer.Current != '.' && tokenizer.Current != '…'))
                 return null;
@@ -74,13 +74,12 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
             if (!FoundEllipsis)
                 return null;
 
-            return new Token
-            {
-                EndPosition = EndPosition,
-                StartPosition = StartPosition,
-                TokenType = TokenType.Ellipsis,
-                Value = new string(tokenizer.Slice(StartPosition, EndPosition).ToArray())
-            };
+            return new Token(
+                EndPosition,
+                StartPosition,
+                TokenType.Ellipsis,
+                new string(tokenizer.Slice(StartPosition, EndPosition).ToArray())
+            );
         }
     }
 }

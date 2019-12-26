@@ -73,7 +73,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
         /// </summary>
         /// <param name="tokenizer">The tokenizer.</param>
         /// <returns></returns>
-        protected override Token IsMatchImpl(TokenizableStream<char> tokenizer)
+        protected override Token? IsMatchImpl(TokenizableStream<char> tokenizer)
         {
             if (tokenizer.End() || !Symbols.ContainsKey(tokenizer.Current))
                 return null;
@@ -85,13 +85,12 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
 
             var EndPosition = tokenizer.Index - 1;
 
-            return new Token
-            {
-                EndPosition = EndPosition,
-                StartPosition = StartPosition,
-                TokenType = Symbols[Value],
-                Value = new string(new char[] { Value })
-            };
+            return new Token(
+                EndPosition,
+                StartPosition,
+                Symbols[Value],
+                new string(new char[] { Value })
+            );
         }
     }
 }

@@ -58,7 +58,7 @@ namespace Enlighten.Stemmer.BaseClasses
             var ReturnValue = new string[words.Length];
             for (int x = 0; x < words.Length; ++x)
             {
-                ReturnValue[x] = StemWord(words[x]);
+                ReturnValue[x] = StemWord(words[x].Trim());
             }
             return ReturnValue;
         }

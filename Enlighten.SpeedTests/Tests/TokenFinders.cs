@@ -77,13 +77,12 @@ namespace Enlighten.SpeedTests.Tests
                 if (!FoundEllipsis)
                     return null;
 
-                return new Token
-                {
-                    EndPosition = EndPosition,
-                    StartPosition = StartPosition,
-                    TokenType = TokenType.Ellipsis,
-                    Value = new string(FinalValue.Trim())
-                };
+                return new Token(
+                    EndPosition,
+                    StartPosition,
+                    TokenType.Ellipsis,
+                    new string(FinalValue.Trim())
+                );
             }
         }
     }

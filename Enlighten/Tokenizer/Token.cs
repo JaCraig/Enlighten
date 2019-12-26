@@ -22,6 +22,21 @@ namespace Enlighten.Tokenizer
     public class Token
     {
         /// <summary>
+        /// Initializes a new instance of the <see cref="Token"/> class.
+        /// </summary>
+        /// <param name="endPosition">The end position.</param>
+        /// <param name="startPosition">The start position.</param>
+        /// <param name="tokenType">Type of the token.</param>
+        /// <param name="value">The value.</param>
+        public Token(int endPosition, int startPosition, string tokenType, string value)
+        {
+            EndPosition = endPosition;
+            StartPosition = startPosition;
+            TokenType = tokenType;
+            Value = value;
+        }
+
+        /// <summary>
         /// Gets or sets the end position. (inclusive)
         /// </summary>
         /// <value>The end position.</value>
@@ -31,7 +46,7 @@ namespace Enlighten.Tokenizer
         /// Gets or sets the part of speech.
         /// </summary>
         /// <value>The part of speech.</value>
-        public string PartOfSpeech { get; set; }
+        public string? PartOfSpeech { get; set; }
 
         /// <summary>
         /// Gets or sets the start position. (inclusive)

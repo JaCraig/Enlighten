@@ -77,7 +77,7 @@ namespace Enlighten.Tokenizer.Languages.English
         /// <param name="tokenizableStream">The tokenizable stream.</param>
         /// <param name="tokenFinders">The token finders.</param>
         /// <returns>The next token.</returns>
-        private static Token Next(TokenizableStream<char> tokenizableStream, IEnglishTokenFinder[] tokenFinders)
+        private static Token? Next(TokenizableStream<char> tokenizableStream, IEnglishTokenFinder[] tokenFinders)
         {
             if (tokenizableStream.End())
             {
@@ -101,13 +101,12 @@ namespace Enlighten.Tokenizer.Languages.English
                 yield return CurrentToken;
                 CurrentToken = Next(tokenizableStream, tokenFinders);
             }
-            yield return new Token
-            {
-                EndPosition = tokenizableStream.Index,
-                StartPosition = tokenizableStream.Index,
-                TokenType = TokenType.EOF,
-                Value = string.Empty
-            };
+            yield return new Token(
+                tokenizableStream.Index,
+                tokenizableStream.Index,
+                TokenType.EOF,
+                string.Empty
+            );
         }
     }
 }

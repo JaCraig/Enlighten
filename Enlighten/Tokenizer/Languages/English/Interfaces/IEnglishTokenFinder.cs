@@ -34,6 +34,6 @@ namespace Enlighten.Tokenizer.Languages.Interfaces
         /// </summary>
         /// <param name="stream">The stream.</param>
         /// <returns>The token.</returns>
-        Token IsMatch(TokenizableStream<char> stream);
+        Token? IsMatch(TokenizableStream<char> stream);
     }
 }

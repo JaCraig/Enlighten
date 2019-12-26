@@ -57,7 +57,7 @@ namespace Enlighten.SentenceDetection.Detectors
                 {
                     if (TempTokens.Count > 1)
                     {
-                        ReturnValue.Add(new Sentence { StartPosition = CurrentStart, EndPosition = i, Tokens = TempTokens.ToArray() });
+                        ReturnValue.Add(new Sentence(i, CurrentStart, TempTokens.ToArray()));
                     }
                     CurrentStart = i + 1;
                 }
