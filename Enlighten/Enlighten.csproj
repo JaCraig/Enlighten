@@ -1,8 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <BuildNumber Condition=" '$(APPVEYOR_BUILD_NUMBER)' != '' ">$(APPVEYOR_BUILD_NUMBER)</BuildNumber>
+    <!-- for AppVeyor -->
+    <BuildNumber Condition=" '$(BUILD_NUMBER)' != '' ">$(BUILD_NUMBER)</BuildNumber>
+    <!-- for Team City -->
+    <BuildNumber Condition=" '$(BuildNumber)' == '' ">0</BuildNumber>
+    <!-- if not set -->
+    <Description>Enlighten is a set of tools to help with natural language processing.</Description>
+    <AssemblyTitle>Enlighten</AssemblyTitle>
+    <Authors>James Craig</Authors>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <LangVersion>latest</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>Enlighten</AssemblyName>
+    <PackageId>Enlighten</PackageId>
+    <PackageTags>NLP;ML;Natural language processing;machine learning</PackageTags>
+    <PackageProjectUrl>https://github.com/JaCraig/Enlighten</PackageProjectUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.0.$(BuildNumber)</Version>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
@@ -15,24 +34,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ML\" />
-    <Folder Include="Lemmatizer\" />
-    <Folder Include="LanguageModel\" />
-    <Folder Include="LanguageDetection\" />
-    <Folder Include="Formats\" />
-    <Folder Include="EntityLinker\" />
-    <Folder Include="DocCat\" />
-    <Folder Include="Dictionary\" />
-    <Folder Include="CmdLine\" />
-    <Folder Include="Chunker\" />
-    <Folder Include="NGram\" />
-    <Folder Include="Parser\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="BigBook" Version="3.0.32" />
+    <PackageReference Include="BigBook" Version="3.0.36" />
     <PackageReference Include="FileCurator" Version="3.1.6" />
     <PackageReference Include="System.Memory" Version="4.5.4" />
   </ItemGroup>
-
 </Project>

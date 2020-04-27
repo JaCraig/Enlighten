@@ -36,7 +36,7 @@ namespace Enlighten.NameFinder.Enums
         /// <summary>
         /// Initializes a new instance of the <see cref="NameFinderLanguage"/> class.
         /// </summary>
-        public NameFinderLanguage() : base("")
+        public NameFinderLanguage() : base(string.Empty)
         {
         }
 

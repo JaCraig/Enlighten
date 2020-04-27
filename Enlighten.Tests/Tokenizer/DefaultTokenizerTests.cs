@@ -15,7 +15,7 @@ namespace Enlighten.Tests.Tokenizer
         [Fact]
         public void Detokenize()
         {
-            var Tokenizer = new DefaultTokenizer(new ITokenizerLanguage[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) });
+            var Tokenizer = new DefaultTokenizer(new ITokenizerLanguage[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }, ObjectPool);
             var Result = Tokenizer.Tokenize("This is a test.", TokenizerLanguage.EnglishRuleBased);
             Assert.Equal("This is a test.", Tokenizer.Detokenize(Result, TokenizerLanguage.EnglishRuleBased));
         }
@@ -23,7 +23,7 @@ namespace Enlighten.Tests.Tokenizer
         [Fact]
         public void Tokenize()
         {
-            var Result = new DefaultTokenizer(new ITokenizerLanguage[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }).Tokenize("This is a test.", TokenizerLanguage.EnglishRuleBased);
+            var Result = new DefaultTokenizer(new ITokenizerLanguage[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }, ObjectPool).Tokenize("This is a test.", TokenizerLanguage.EnglishRuleBased);
             Assert.Equal(9, Result.Length);
 
             Assert.Equal(3, Result[0].EndPosition);
@@ -75,7 +75,7 @@ namespace Enlighten.Tests.Tokenizer
         [Fact]
         public void TokenizeEmptyString()
         {
-            var Result = new DefaultTokenizer(new ITokenizerLanguage[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }).Tokenize("", TokenizerLanguage.EnglishRuleBased);
+            var Result = new DefaultTokenizer(new ITokenizerLanguage[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }, ObjectPool).Tokenize("", TokenizerLanguage.EnglishRuleBased);
             Assert.Single(Result);
 
             Assert.Equal(0, Result[0].EndPosition);
@@ -87,7 +87,7 @@ namespace Enlighten.Tests.Tokenizer
         [Fact]
         public void TokenizeLongerText()
         {
-            var Result = new DefaultTokenizer(new ITokenizerLanguage[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }).Tokenize(@"""I said, 'what're you? Crazy?'"" said Sandowsky. ""I can't afford to do that.""", TokenizerLanguage.EnglishRuleBased);
+            var Result = new DefaultTokenizer(new ITokenizerLanguage[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }, ObjectPool).Tokenize(@"""I said, 'what're you? Crazy?'"" said Sandowsky. ""I can't afford to do that.""", TokenizerLanguage.EnglishRuleBased);
 
             Assert.Equal(37, Result.Length);
         }
@@ -95,7 +95,7 @@ namespace Enlighten.Tests.Tokenizer
         [Fact]
         public void TokenizeNull()
         {
-            var Result = new DefaultTokenizer(new ITokenizerLanguage[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }).Tokenize(null, TokenizerLanguage.EnglishRuleBased);
+            var Result = new DefaultTokenizer(new ITokenizerLanguage[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }, ObjectPool).Tokenize(null, TokenizerLanguage.EnglishRuleBased);
             Assert.Single(Result);
 
             Assert.Equal(0, Result[0].EndPosition);

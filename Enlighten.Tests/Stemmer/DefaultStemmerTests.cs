@@ -34,7 +34,7 @@ namespace Enlighten.Tests.Stemmer
         [Fact]
         public void StemTokens()
         {
-            var Result = new DefaultStemmer(new IStemmerLanguage[] { new EnglishLanguage() }).Stem(new DefaultTokenizer(new ITokenizerLanguage[] { new Enlighten.Tokenizer.Languages.English.EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }).Tokenize("This is a test.", TokenizerLanguage.EnglishRuleBased), StemmerLanguage.EnglishPorter2);
+            var Result = new DefaultStemmer(new IStemmerLanguage[] { new EnglishLanguage() }).Stem(new DefaultTokenizer(new ITokenizerLanguage[] { new Enlighten.Tokenizer.Languages.English.EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }, ObjectPool).Tokenize("This is a test.", TokenizerLanguage.EnglishRuleBased), StemmerLanguage.EnglishPorter2);
             Assert.Equal("this", Result[0].Value);
             Assert.Equal(" ", Result[1].Value);
             Assert.Equal("is", Result[2].Value);
@@ -44,7 +44,7 @@ namespace Enlighten.Tests.Stemmer
             Assert.Equal("test", Result[6].Value);
             Assert.Equal(".", Result[7].Value);
 
-            Result = new DefaultStemmer(new IStemmerLanguage[] { new EnglishLanguage() }).Stem(new DefaultTokenizer(new ITokenizerLanguage[] { new Enlighten.Tokenizer.Languages.English.EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }).Tokenize("These are some more tests.", TokenizerLanguage.EnglishRuleBased), StemmerLanguage.EnglishPorter2);
+            Result = new DefaultStemmer(new IStemmerLanguage[] { new EnglishLanguage() }).Stem(new DefaultTokenizer(new ITokenizerLanguage[] { new Enlighten.Tokenizer.Languages.English.EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }, ObjectPool).Tokenize("These are some more tests.", TokenizerLanguage.EnglishRuleBased), StemmerLanguage.EnglishPorter2);
             Assert.Equal("these", Result[0].Value);
             Assert.Equal(" ", Result[1].Value);
             Assert.Equal("are", Result[2].Value);

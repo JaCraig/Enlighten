@@ -36,7 +36,7 @@ namespace Enlighten.POSTagger.Enum
         /// <summary>
         /// Initializes a new instance of the <see cref="POSTaggerLanguage"/> class.
         /// </summary>
-        public POSTaggerLanguage() : base("")
+        public POSTaggerLanguage() : base(string.Empty)
         {
         }
 

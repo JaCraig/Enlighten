@@ -36,7 +36,7 @@ namespace Enlighten.Stemmer.Enums
         /// <summary>
         /// Initializes a new instance of the <see cref="StemmerLanguage"/> class.
         /// </summary>
-        public StemmerLanguage() : base("")
+        public StemmerLanguage() : base(string.Empty)
         {
         }
 

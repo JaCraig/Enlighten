@@ -36,9 +36,15 @@ namespace Enlighten.Tokenizer.Languages.English.Enums
         /// Initializes a new instance of the <see cref="TokenType"/> class.
         /// </summary>
         public TokenType()
-            : this("")
+            : this(string.Empty)
         {
         }
+
+        /// <summary>
+        /// Gets the abbreviation.
+        /// </summary>
+        /// <value>The abbreviation.</value>
+        public static TokenType Abbreviation { get; } = new TokenType("Abbreviation");
 
         /// <summary>
         /// Gets the ampersand.

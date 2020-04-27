@@ -19,6 +19,14 @@ namespace Enlighten.Tests.Tokenizer.Languages.English
         }
 
         [Fact]
+        public void RemoveStopWords()
+        {
+            var Tokenizer = new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() });
+            var Result = Tokenizer.RemoveStopWords(Tokenizer.Tokenize(new TokenizableStream<char>("This is a test.".ToCharArray())));
+            Assert.Equal("This   test.", Tokenizer.Detokenize(Result));
+        }
+
+        [Fact]
         public void Tokenize()
         {
             var Result = new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }).Tokenize(new TokenizableStream<char>("This is a test.".ToCharArray()));

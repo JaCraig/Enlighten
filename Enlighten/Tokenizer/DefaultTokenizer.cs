@@ -15,12 +15,15 @@ limitations under the License.
 */
 
 using BigBook;
+using Enlighten.SentenceDetection;
 using Enlighten.Tokenizer.Enums;
 using Enlighten.Tokenizer.Interfaces;
 using Enlighten.Tokenizer.Utils;
+using Microsoft.Extensions.ObjectPool;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace Enlighten.Tokenizer
 {
@@ -34,7 +37,8 @@ namespace Enlighten.Tokenizer
         /// Initializes a new instance of the <see cref="DefaultTokenizer"/> class.
         /// </summary>
         /// <param name="languages">The languages.</param>
-        public DefaultTokenizer(IEnumerable<ITokenizerLanguage> languages)
+        /// <param name="objectPool">The object pool.</param>
+        public DefaultTokenizer(IEnumerable<ITokenizerLanguage> languages, ObjectPool<StringBuilder> objectPool)
         {
             Languages = languages.Where(x => x.GetType().Assembly != typeof(DefaultTokenizer).Assembly).ToDictionary(x => x.ISOCode);
             foreach (var Language in languages.Where(x => x.GetType().Assembly == typeof(DefaultTokenizer).Assembly
@@ -42,6 +46,7 @@ namespace Enlighten.Tokenizer
             {
                 Languages.Add(Language.ISOCode, Language);
             }
+            ObjectPool = objectPool;
         }
 
         /// <summary>
@@ -51,6 +56,12 @@ namespace Enlighten.Tokenizer
         public Dictionary<string, ITokenizerLanguage> Languages { get; }
 
         /// <summary>
+        /// Gets the object pool.
+        /// </summary>
+        /// <value>The object pool.</value>
+        private ObjectPool<StringBuilder> ObjectPool { get; }
+
+        /// <summary>
         /// Detokenizes the specified tokens.
         /// </summary>
         /// <param name="tokens">The tokens.</param>
@@ -58,9 +69,43 @@ namespace Enlighten.Tokenizer
         /// <returns>The resulting text.</returns>
         public string Detokenize(Token[] tokens, TokenizerLanguage language)
         {
-            if (!Languages.ContainsKey(language))
-                return "";
-            return Languages[language].Detokenize(tokens);
+            if (!Languages.TryGetValue(language, out var Tokenizer) || tokens is null || tokens.Length == 0)
+                return string.Empty;
+            return Tokenizer.Detokenize(tokens);
+        }
+
+        /// <summary>
+        /// Detokenizes the specified sentences.
+        /// </summary>
+        /// <param name="sentences">The sentences.</param>
+        /// <param name="language">The language.</param>
+        /// <returns>The resulting text.</returns>
+        public string Detokenize(Sentence[] sentences, TokenizerLanguage language)
+        {
+            if (!Languages.TryGetValue(language, out var Tokenizer) || sentences is null || sentences.Length == 0)
+                return string.Empty;
+            var Builder = ObjectPool.Get();
+            Builder.Append(Tokenizer.Detokenize(sentences[0].Tokens));
+            for (int x = 1; x < sentences.Length; ++x)
+            {
+                Builder.Append(" ").Append(Tokenizer.Detokenize(sentences[x].Tokens));
+            }
+            var ReturnValue = Builder.ToString();
+            ObjectPool.Return(Builder);
+            return ReturnValue;
+        }
+
+        /// <summary>
+        /// Removes the stop words.
+        /// </summary>
+        /// <param name="tokens">The tokens.</param>
+        /// <param name="language">The language.</param>
+        /// <returns>The tokens without the stop words.</returns>
+        public Token[] RemoveStopWords(Token[] tokens, TokenizerLanguage language)
+        {
+            if (!Languages.TryGetValue(language, out var Tokenizer) || tokens is null || tokens.Length == 0)
+                return Array.Empty<Token>();
+            return Tokenizer.RemoveStopWords(tokens);
         }
 
         /// <summary>
@@ -71,11 +116,10 @@ namespace Enlighten.Tokenizer
         /// <returns>The tokens found.</returns>
         public Token[] Tokenize(string text, TokenizerLanguage language)
         {
-            if (!Languages.ContainsKey(language))
+            if (!Languages.TryGetValue(language, out var Tokenizer))
                 return Array.Empty<Token>();
-            var Language = Languages[language];
             var Stream = new TokenizableStream<char>(text?.ToCharArray() ?? Array.Empty<char>());
-            return Language.Tokenize(Stream);
+            return Tokenizer.Tokenize(Stream);
         }
     }
 }

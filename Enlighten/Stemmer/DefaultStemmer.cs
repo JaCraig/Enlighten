@@ -57,9 +57,9 @@ namespace Enlighten.Stemmer
         /// <returns>The resulting stemmed words.</returns>
         public string[] Stem(string[] words, StemmerLanguage language)
         {
-            if (!Languages.ContainsKey(language))
+            if (!Languages.TryGetValue(language, out var Stemmer))
                 return words;
-            return Languages[language].StemWords(words);
+            return Stemmer.StemWords(words);
         }
 
         /// <summary>

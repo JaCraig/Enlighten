@@ -36,7 +36,7 @@ namespace Enlighten.Tokenizer.Enums
         /// <summary>
         /// Initializes a new instance of the <see cref="TokenizerLanguage"/> class.
         /// </summary>
-        public TokenizerLanguage() : base("")
+        public TokenizerLanguage() : base(string.Empty)
         {
         }
 

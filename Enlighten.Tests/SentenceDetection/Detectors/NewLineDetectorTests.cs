@@ -1,4 +1,5 @@
 ﻿using Enlighten.SentenceDetection.Detectors;
+using Enlighten.Tests.BaseClasses;
 using Enlighten.Tokenizer;
 using Enlighten.Tokenizer.Enums;
 using Enlighten.Tokenizer.Languages.English;
@@ -8,7 +9,7 @@ using Xunit;
 
 namespace Enlighten.Tests.SentenceDetection.Detectors
 {
-    public class NewLineDetectorTests
+    public class NewLineDetectorTests : TestBaseClass
     {
         [Fact]
         public void Detect()
@@ -42,7 +43,7 @@ So by his father lost: and this, I take it,
 Is the main motive of our preparations,
 The source of this our watch and the chief head
 Of this post-haste and romage in the land.";
-            var Tokenizer = new DefaultTokenizer(new[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol(), new NewLine() }) });
+            var Tokenizer = new DefaultTokenizer(new[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol(), new NewLine() }) }, ObjectPool);
             var Results = new NewLineDetector().DetectSentences(Tokenizer.Tokenize(Text, TokenizerLanguage.EnglishRuleBased));
             Assert.Equal(29, Results.Length);
         }

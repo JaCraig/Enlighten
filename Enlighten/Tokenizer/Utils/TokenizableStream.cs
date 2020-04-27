@@ -41,7 +41,7 @@ namespace Enlighten.Tokenizer.Utils
         /// Gets the current item.
         /// </summary>
         /// <value>The current item.</value>
-        public TData Current => EOF(0) ? default : Content[Index];
+        public TData Current => EOF(0) ? default! : Content[Index];
 
         /// <summary>
         /// Gets or sets the current index.
@@ -99,7 +99,7 @@ namespace Enlighten.Tokenizer.Utils
         /// <returns>The item at the spot specified.</returns>
         public TData Peek(int lookahead)
         {
-            return EOF(lookahead) ? default : Content[Index + lookahead];
+            return EOF(lookahead) ? default! : Content[Index + lookahead];
         }
 
         /// <summary>

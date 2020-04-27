@@ -13,9 +13,18 @@ namespace Enlighten.Tests.SentenceDetection
     public class DefaultSentenceDetectorTests : TestBaseClass
     {
         [Fact]
+        public void AbbreviationDetection()
+        {
+            const string Text = "I wish G.M. made slightly better products.";
+            var Results = new DefaultSentenceDetector(new[] { new DefaultDetector() }, new DefaultTokenizer(new[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol(), new Abbreviation() }) }, ObjectPool)).Detect(Text, SentenceDetectorLanguage.Default);
+            Assert.Single(Results);
+            Assert.Equal("I wish G.M. made slightly better products.", Results[0].ToString());
+        }
+
+        [Fact]
         public void Detect()
         {
-            string Text = @"That can I;
+            const string Text = @"That can I;
 At least, the whisper goes so. Our last king,
 Whose image even but now appear'd to us,
 Was, as you know, by Fortinbras of Norway,
@@ -45,7 +54,7 @@ Is the main motive of our preparations,
 The source of this our watch and the chief head
 Of this post-haste and romage in the land.";
 
-            var Results = new DefaultSentenceDetector(new[] { new DefaultDetector() }, new DefaultTokenizer(new[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol(), new NewLine() }) })).Detect(Text, SentenceDetectorLanguage.Default);
+            var Results = new DefaultSentenceDetector(new[] { new DefaultDetector() }, new DefaultTokenizer(new[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol(), new NewLine() }) }, ObjectPool)).Detect(Text, SentenceDetectorLanguage.Default);
             Assert.Equal(3, Results.Length);
             Assert.Equal(@"That can I;
 At least, the whisper goes so.", Results[0].ToString());
@@ -83,8 +92,8 @@ Of this post-haste and romage in the land.", Results[2].ToString());
         [Fact]
         public void DetectWithinQuote()
         {
-            string Text = "\"Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that.\"";
-            var Results = new DefaultSentenceDetector(new[] { new DefaultDetector() }, new DefaultTokenizer(new[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) })).Detect(Text, SentenceDetectorLanguage.Default);
+            const string Text = "\"Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that.\"";
+            var Results = new DefaultSentenceDetector(new[] { new DefaultDetector() }, new DefaultTokenizer(new[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }, ObjectPool)).Detect(Text, SentenceDetectorLanguage.Default);
             Assert.Equal(2, Results.Length);
             Assert.Equal("Darkness cannot drive out darkness: only light can do that.", Results[0].ToString());
             Assert.Equal("Hate cannot drive out hate: only love can do that.", Results[1].ToString());

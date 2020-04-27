@@ -67,6 +67,18 @@ namespace Enlighten.Tokenizer
         public string Value { get; set; }
 
         /// <summary>
+        /// Copies this instance.
+        /// </summary>
+        /// <returns>A copy of this instance.</returns>
+        public Token Copy()
+        {
+            return new Token(EndPosition, StartPosition, TokenType, Value)
+            {
+                PartOfSpeech = PartOfSpeech
+            };
+        }
+
+        /// <summary>
         /// Returns a <see cref="System.String"/> that represents this instance.
         /// </summary>
         /// <returns>A <see cref="System.String"/> that represents this instance.</returns>

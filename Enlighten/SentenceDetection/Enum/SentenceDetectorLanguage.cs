@@ -36,7 +36,7 @@ namespace Enlighten.SentenceDetection.Enum
         /// <summary>
         /// Initializes a new instance of the <see cref="SentenceDetectorLanguage"/> class.
         /// </summary>
-        public SentenceDetectorLanguage() : base("")
+        public SentenceDetectorLanguage() : base(string.Empty)
         {
         }
 

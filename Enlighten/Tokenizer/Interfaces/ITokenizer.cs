@@ -14,6 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+using Enlighten.SentenceDetection;
 using Enlighten.Tokenizer.Enums;
 
 namespace Enlighten.Tokenizer.Interfaces
@@ -30,6 +31,22 @@ namespace Enlighten.Tokenizer.Interfaces
         /// <param name="language">The language.</param>
         /// <returns>The resulting text.</returns>
         string Detokenize(Token[] tokens, TokenizerLanguage language);
+
+        /// <summary>
+        /// Detokenizes the specified sentences.
+        /// </summary>
+        /// <param name="sentences">The sentences.</param>
+        /// <param name="language">The language.</param>
+        /// <returns>The resulting text.</returns>
+        string Detokenize(Sentence[] sentences, TokenizerLanguage language);
+
+        /// <summary>
+        /// Removes the stop words.
+        /// </summary>
+        /// <param name="tokens">The tokens.</param>
+        /// <param name="language">The language.</param>
+        /// <returns>The tokens without the stop words.</returns>
+        Token[] RemoveStopWords(Token[] tokens, TokenizerLanguage language);
 
         /// <summary>
         /// Tokenizes the specified text.

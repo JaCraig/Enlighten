@@ -52,13 +52,65 @@ namespace Enlighten.Tokenizer.Languages.English
         public IEnglishTokenFinder[] TokenFinders { get; }
 
         /// <summary>
+        /// The stop words
+        /// </summary>
+        private string[] StopWords = new string[]
+        {
+            "a",
+"an",
+"and",
+"are",
+"as",
+"at",
+"be",
+"but",
+"by",
+"for",
+"if",
+"in",
+"into",
+"is",
+"it",
+"no",
+"not",
+"of",
+"on",
+"or",
+"s",
+"such",
+"t",
+"that",
+"the",
+"their",
+"then",
+"there",
+"these",
+"they",
+"this",
+"to",
+"was",
+"will",
+"with"
+        };
+
+        /// <summary>
         /// Detokenizes the specified tokens.
         /// </summary>
         /// <param name="tokens">The tokens.</param>
         /// <returns>Converts the tokens into the equivalent string.</returns>
         public string Detokenize(Token[] tokens)
         {
-            return tokens.ToString(x => x.Value, "");
+            return tokens.ToString(x => x.Value, string.Empty);
+        }
+
+        /// <summary>
+        /// Removes the stop words.
+        /// </summary>
+        /// <param name="tokens">The tokens.</param>
+        /// <returns>The tokens with the stop words removed.</returns>
+        public Token[] RemoveStopWords(Token[] tokens)
+        {
+            return tokens.Where(x => !StopWords.Contains(x.Value)).ToArray();
         }
 
         /// <summary>

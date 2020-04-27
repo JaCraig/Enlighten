@@ -31,11 +31,11 @@ namespace Enlighten
         /// </summary>
         /// <param name="bootstrapper">The bootstrapper.</param>
         /// <returns>The bootstrapper</returns>
-        public static IBootstrapper RegisterEnlighten(this IBootstrapper bootstrapper)
+        public static IBootstrapper? RegisterEnlighten(this IBootstrapper? bootstrapper)
         {
-            return bootstrapper.AddAssembly(typeof(CanisterRegistration).GetTypeInfo().Assembly)
-                               .RegisterBigBookOfDataTypes()
-                               .RegisterFileCurator();
+            return bootstrapper?.AddAssembly(typeof(CanisterRegistration).GetTypeInfo().Assembly)
+                               ?.RegisterBigBookOfDataTypes()
+                               ?.RegisterFileCurator();
         }
     }
 }
