@@ -55,6 +55,18 @@ namespace Enlighten.Tokenizer
         public int StartPosition { get; set; }
 
         /// <summary>
+        /// Gets or sets the stemmed value.
+        /// </summary>
+        /// <value>The stemmed value.</value>
+        public string StemmedValue { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether [stop word].
+        /// </summary>
+        /// <value><c>true</c> if [stop word]; otherwise, <c>false</c>.</value>
+        public bool StopWord { get; set; }
+
+        /// <summary>
         /// Gets or sets the type of the token.
         /// </summary>
         /// <value>The type of the token.</value>
@@ -74,7 +86,9 @@ namespace Enlighten.Tokenizer
         {
             return new Token(EndPosition, StartPosition, TokenType, Value)
             {
-                PartOfSpeech = PartOfSpeech
+                PartOfSpeech = PartOfSpeech,
+                StemmedValue = StemmedValue,
+                StopWord = StopWord
             };
         }
 

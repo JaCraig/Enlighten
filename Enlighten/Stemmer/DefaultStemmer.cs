@@ -74,7 +74,11 @@ namespace Enlighten.Stemmer
             var Results = Stem(FinalTokens.Select(x => x.Value).ToArray(), language);
             for (int x = 0; x < Results.Length; ++x)
             {
-                FinalTokens[x].Value = Results[x];
+                FinalTokens[x].StemmedValue = Results[x];
+            }
+            foreach (var Token in tokens.Where(x => x.TokenType != TokenType.Word))
+            {
+                Token.StemmedValue = Token.Value;
             }
             return tokens;
         }

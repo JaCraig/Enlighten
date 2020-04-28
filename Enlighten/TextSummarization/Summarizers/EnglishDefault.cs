@@ -108,13 +108,13 @@ namespace Enlighten.TextSummarization.Languages
             for (int x = 0; x < tokens.Length; ++x)
             {
                 var Token = tokens[x];
-                var Key = Token.Value.ToLower();
+                var Key = Token.StemmedValue.ToLower();
                 if (!ReturnValue.TryGetValue(Key, out var _))
                 {
                     ReturnValue.Add(Key, 0);
                     for (int y = 0; y < sentences.Length; ++y)
                     {
-                        if (sentences[y].Tokens.Any(z => z.Value.ToLower() == Key))
+                        if (sentences[y].Tokens.Any(z => z.StemmedValue.ToLower() == Key))
                         {
                             ReturnValue[Key]++;
                         }
@@ -132,39 +132,40 @@ namespace Enlighten.TextSummarization.Languages
         private List<Tuple<Sentence, double, int>> FindSentences(string input)
         {
             var Tokens = Tokenizer.Tokenize(input, TokenizerLanguage.EnglishRuleBased);
-
-            var OriginalSentences = SentenceDetector.Detect(Tokens.ToArray(x => x.Copy()), SentenceDetectorLanguage.Default);
-
-            Tokens = Tokenizer.RemoveStopWords(Tokens, TokenizerLanguage.EnglishRuleBased);
-
+            Tokens = Tokenizer.MarkStopWords(Tokens, TokenizerLanguage.EnglishRuleBased);
             Tokens = Stemmer.Stem(Tokens, StemmerLanguage.EnglishPorter2);
+
             var Sentences = SentenceDetector.Detect(Tokens, SentenceDetectorLanguage.Default);
-            var DocumentTotalCount = Tokens.Count(x => x.TokenType == TokenType.Abbreviation || x.TokenType == TokenType.Word);
+
+            var WordTokens = Tokens.Where(x => (x.TokenType == TokenType.Abbreviation || x.TokenType == TokenType.Word) && !x.StopWord).ToArray();
+
+            var DocumentTotalCount = WordTokens.Length;
             var DocumentFrequencies = FrequencyAnalyzer.Analyze(Tokens, DocumentTotalCount);
 
-            var SentenceFrequency = FindSentenceFrequencies(Tokens.Where(x => x.TokenType == TokenType.Abbreviation || x.TokenType == TokenType.Word).ToArray(), Sentences);
+            var SentenceFrequency = FindSentenceFrequencies(WordTokens, Sentences);
 
             List<double> SentenceScore = new List<double>();
 
             for (int x = 0; x < Sentences.Length; ++x)
             {
                 SentenceScore.Add(0);
-                var SentenceTotalTokens = Sentences[x].Tokens.Count(x => x.TokenType == TokenType.Abbreviation || x.TokenType == TokenType.Word);
-                var TermFrequencies = FrequencyAnalyzer.Analyze(Sentences[x].Tokens, SentenceTotalTokens);
+                WordTokens = Sentences[x].Tokens.Where(x => (x.TokenType == TokenType.Abbreviation || x.TokenType == TokenType.Word) && !x.StopWord).ToArray();
+                var SentenceTotalTokens = WordTokens.Length;
+                var TermFrequencies = FrequencyAnalyzer.Analyze(WordTokens, SentenceTotalTokens);
 
                 foreach (var Key in TermFrequencies.WordCount.Keys)
                 {
                     double TermFrequency = TermFrequencies.WordCount[Key] / (double)TermFrequencies.NumberOfWords;
 
                     double InverseDocumentFrequency = Math.Log(Sentences.Length / (1 + (double)SentenceFrequency[Key]));
-                    SentenceScore[x] += InverseDocumentFrequency;
+                    SentenceScore[x] += (TermFrequency * InverseDocumentFrequency);
                 }
             }
 
             List<Tuple<Sentence, double, int>> SentenceScoresFinal = new List<Tuple<Sentence, double, int>>();
-            for (int x = 0; x < OriginalSentences.Length; ++x)
+            for (int x = 0; x < Sentences.Length; ++x)
             {
-                SentenceScoresFinal.Add(new Tuple<Sentence, double, int>(OriginalSentences[x], SentenceScore[x], x));
+                SentenceScoresFinal.Add(new Tuple<Sentence, double, int>(Sentences[x], SentenceScore[x], x));
             }
 
             return SentenceScoresFinal;

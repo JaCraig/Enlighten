@@ -40,7 +40,8 @@ namespace Enlighten.Frequency
                 var TempWordCount = new SortedDictionary<string, int>();
                 for (int y = 0; y < returnValue.WindowSize; ++y)
                 {
-                    var TempWord = tokens[x + y].Value.ToLower();
+                    var CurrentToken = tokens[x + y];
+                    var TempWord = (CurrentToken.StemmedValue ?? CurrentToken.Value).ToLower();
                     if (TempWordCount.ContainsKey(TempWord))
                     {
                         ++TempWordCount[TempWord];
@@ -64,7 +65,7 @@ namespace Enlighten.Frequency
         {
             foreach (var CurrentToken in tokens)
             {
-                var CurrentWord = CurrentToken.Value.ToLower();
+                var CurrentWord = (CurrentToken.StemmedValue ?? CurrentToken.Value).ToLower();
                 if (wordCount.ContainsKey(CurrentWord))
                 {
                     ++wordCount[CurrentWord];

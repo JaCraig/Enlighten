@@ -108,9 +108,13 @@ namespace Enlighten.Tokenizer.Languages.English
         /// </summary>
         /// <param name="tokens">The tokens.</param>
         /// <returns>The tokens with the stop words removed.</returns>
-        public Token[] RemoveStopWords(Token[] tokens)
+        public Token[] MarkStopWords(Token[] tokens)
         {
-            return tokens.Where(x => !StopWords.Contains(x.Value)).ToArray();
+            foreach (var Token in tokens.Where(x => StopWords.Contains(x.Value)))
+            {
+                Token.StopWord = true;
+            }
+            return tokens;
         }
 
         /// <summary>

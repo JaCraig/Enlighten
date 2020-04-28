@@ -41,7 +41,7 @@ namespace Enlighten.Tokenizer.Interfaces
         /// </summary>
         /// <param name="tokens">The tokens.</param>
         /// <returns>The tokens with the stop words removed.</returns>
-        Token[] RemoveStopWords(Token[] tokens);
+        Token[] MarkStopWords(Token[] tokens);
 
         /// <summary>
         /// Tokenizes the specified text.

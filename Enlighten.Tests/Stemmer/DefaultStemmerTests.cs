@@ -35,26 +35,26 @@ namespace Enlighten.Tests.Stemmer
         public void StemTokens()
         {
             var Result = new DefaultStemmer(new IStemmerLanguage[] { new EnglishLanguage() }).Stem(new DefaultTokenizer(new ITokenizerLanguage[] { new Enlighten.Tokenizer.Languages.English.EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }, ObjectPool).Tokenize("This is a test.", TokenizerLanguage.EnglishRuleBased), StemmerLanguage.EnglishPorter2);
-            Assert.Equal("this", Result[0].Value);
-            Assert.Equal(" ", Result[1].Value);
-            Assert.Equal("is", Result[2].Value);
-            Assert.Equal(" ", Result[3].Value);
-            Assert.Equal("a", Result[4].Value);
-            Assert.Equal(" ", Result[5].Value);
-            Assert.Equal("test", Result[6].Value);
-            Assert.Equal(".", Result[7].Value);
+            Assert.Equal("this", Result[0].StemmedValue);
+            Assert.Equal(" ", Result[1].StemmedValue);
+            Assert.Equal("is", Result[2].StemmedValue);
+            Assert.Equal(" ", Result[3].StemmedValue);
+            Assert.Equal("a", Result[4].StemmedValue);
+            Assert.Equal(" ", Result[5].StemmedValue);
+            Assert.Equal("test", Result[6].StemmedValue);
+            Assert.Equal(".", Result[7].StemmedValue);
 
             Result = new DefaultStemmer(new IStemmerLanguage[] { new EnglishLanguage() }).Stem(new DefaultTokenizer(new ITokenizerLanguage[] { new Enlighten.Tokenizer.Languages.English.EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }, ObjectPool).Tokenize("These are some more tests.", TokenizerLanguage.EnglishRuleBased), StemmerLanguage.EnglishPorter2);
-            Assert.Equal("these", Result[0].Value);
-            Assert.Equal(" ", Result[1].Value);
-            Assert.Equal("are", Result[2].Value);
-            Assert.Equal(" ", Result[3].Value);
-            Assert.Equal("some", Result[4].Value);
-            Assert.Equal(" ", Result[5].Value);
-            Assert.Equal("more", Result[6].Value);
-            Assert.Equal(" ", Result[7].Value);
-            Assert.Equal("test", Result[8].Value);
-            Assert.Equal(".", Result[9].Value);
+            Assert.Equal("these", Result[0].StemmedValue);
+            Assert.Equal(" ", Result[1].StemmedValue);
+            Assert.Equal("are", Result[2].StemmedValue);
+            Assert.Equal(" ", Result[3].StemmedValue);
+            Assert.Equal("some", Result[4].StemmedValue);
+            Assert.Equal(" ", Result[5].StemmedValue);
+            Assert.Equal("more", Result[6].StemmedValue);
+            Assert.Equal(" ", Result[7].StemmedValue);
+            Assert.Equal("test", Result[8].StemmedValue);
+            Assert.Equal(".", Result[9].StemmedValue);
         }
     }
 }
