@@ -29,5 +29,14 @@ namespace Enlighten.Tests.POSTagger.Taggers
             var Results = TestObject.Tag(Tokenizer.Tokenize("I would go buy a computer.", TokenizerLanguage.EnglishRuleBased));
             Assert.Equal("NN VM VVB NN RR NN", Results.Where(x => x.TokenType == TokenType.Word).ToString(x => x.PartOfSpeech, " "));
         }
+
+        [Fact]
+        public void TagProperNoun()
+        {
+            var TestObject = new BrillTagger();
+            var Tokenizer = new DefaultTokenizer(new[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }, ObjectPool);
+            var Results = TestObject.Tag(Tokenizer.Tokenize("I want to go to New York City.", TokenizerLanguage.EnglishRuleBased));
+            Assert.Equal("NN VM VVB NN RR NN", Results.Where(x => x.TokenType == TokenType.Word).ToString(x => x.PartOfSpeech, " "));
+        }
     }
 }

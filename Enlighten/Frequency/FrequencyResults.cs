@@ -26,6 +26,12 @@ namespace Enlighten.Frequency
         public int NumberOfWords { get; internal set; }
 
         /// <summary>
+        /// Gets the term frequency.
+        /// </summary>
+        /// <value>The term frequency.</value>
+        public SortedDictionary<string, double> TermFrequency { get; } = new SortedDictionary<string, double>();
+
+        /// <summary>
         /// Gets the type token ratio (Types/Words).
         /// </summary>
         /// <value>The type token ratio (Types/Words).</value>

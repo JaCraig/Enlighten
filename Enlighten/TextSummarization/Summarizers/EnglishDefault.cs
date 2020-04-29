@@ -155,7 +155,7 @@ namespace Enlighten.TextSummarization.Languages
 
                 foreach (var Key in TermFrequencies.WordCount.Keys)
                 {
-                    double TermFrequency = TermFrequencies.WordCount[Key] / (double)TermFrequencies.NumberOfWords;
+                    double TermFrequency = TermFrequencies.TermFrequency[Key];
 
                     double InverseDocumentFrequency = Math.Log(Sentences.Length / (1 + (double)SentenceFrequency[Key]));
                     SentenceScore[x] += (TermFrequency * InverseDocumentFrequency);

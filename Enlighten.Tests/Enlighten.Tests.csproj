@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Data\Birches.txt" />
+    <None Remove="Data\DailyMailArticle.txt" />
     <None Remove="Data\MotherJonesArticle.txt" />
     <None Remove="Data\StemmerExpected.txt" />
     <None Remove="Data\StemmerStart.txt" />
@@ -14,6 +16,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Data\Birches.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\DailyMailArticle.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\MotherJonesArticle.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

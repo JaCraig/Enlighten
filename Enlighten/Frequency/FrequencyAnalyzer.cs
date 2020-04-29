@@ -20,11 +20,12 @@ namespace Enlighten.Frequency
         {
             var ReturnValue = new FrequencyResults();
             ReturnValue.WindowSize = windowSize <= 0 ? 1 : windowSize;
-            var WordTokens = tokens.Where(x => x.TokenType == TokenType.Word || x.TokenType == TokenType.Abbreviation);
+            var WordTokens = tokens.Where(x => x.TokenType == TokenType.Word || x.TokenType == TokenType.Abbreviation).ToArray();
             CalculateWordCount(WordTokens, ReturnValue.WordCount);
-            ReturnValue.NumberOfWords = WordTokens.Count();
+            ReturnValue.NumberOfWords = WordTokens.Length;
             ReturnValue.NumberOfTypes = ReturnValue.WordCount.Keys.Count;
-            CalculateAverageTypeTokenRatio(ReturnValue, WordTokens.ToArray());
+            CalculateAverageTypeTokenRatio(ReturnValue, WordTokens);
+            CalculateTermFrequency(ReturnValue);
             return ReturnValue;
         }
 
@@ -55,6 +56,18 @@ namespace Enlighten.Frequency
             }
             if (TTRValues.Count > 0)
                 returnValue.AverageTypeTokenRatio = TTRValues.Average();
+        }
+
+        /// <summary>
+        /// Calculates the term frequency.
+        /// </summary>
+        /// <param name="returnValue">The return value.</param>
+        private void CalculateTermFrequency(FrequencyResults returnValue)
+        {
+            foreach (var Key in returnValue.WordCount.Keys)
+            {
+                returnValue.TermFrequency.Add(Key, returnValue.WordCount[Key] / (double)returnValue.NumberOfWords);
+            }
         }
 
         /// <summary>
