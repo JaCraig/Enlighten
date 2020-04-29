@@ -228,6 +228,8 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
             "WI.",
             "WY.",
             "PR.",
+            "INC.",
+            "INC"
         };
 
         /// <summary>
