@@ -26,11 +26,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="POSTagger\Resources\English\rules.txt" />
+    <None Remove="POSTagger\Resources\English\synonyms.txt" />
     <None Remove="POSTagger\Resources\lexicon.txt" />
+    <None Remove="POSTagger\Resources\suffixes.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="POSTagger\Resources\lexicon.txt" />
+    <EmbeddedResource Include="POSTagger\Resources\English\lexicon.txt" />
+    <EmbeddedResource Include="POSTagger\Resources\English\rules.txt" />
+    <EmbeddedResource Include="POSTagger\Resources\English\suffixes.txt" />
+    <EmbeddedResource Include="SynonymFinder\Resources\English\synonyms.txt" />
   </ItemGroup>
 
   <ItemGroup>

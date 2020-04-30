@@ -16,9 +16,11 @@ limitations under the License.
 
 using Canister.Interfaces;
 using Enlighten.Frequency;
+using Enlighten.Inflector.Interfaces;
 using Enlighten.POSTagger.Interfaces;
 using Enlighten.SentenceDetection.Interfaces;
 using Enlighten.Stemmer.Interfaces;
+using Enlighten.SynonymFinder.Interfaces;
 using Enlighten.TextSummarization.Interfaces;
 using Enlighten.Tokenizer.Interfaces;
 using Enlighten.Tokenizer.Languages.Interfaces;
@@ -39,10 +41,7 @@ namespace Enlighten.CanisterModules
 
         public void Load(IBootstrapper bootstrapper)
         {
-            if (bootstrapper == null)
-                return;
-
-            bootstrapper.RegisterAll<ITokenizerLanguage>(ServiceLifetime.Singleton)
+            bootstrapper?.RegisterAll<ITokenizerLanguage>(ServiceLifetime.Singleton)
                         .RegisterAll<ITokenizer>(ServiceLifetime.Singleton)
                         .RegisterAll<IStemmerLanguage>(ServiceLifetime.Singleton)
                         .RegisterAll<IStemmer>(ServiceLifetime.Singleton)
@@ -53,7 +52,11 @@ namespace Enlighten.CanisterModules
                         .RegisterAll<IEnglishTokenFinder>(ServiceLifetime.Singleton)
                         .Register<FrequencyAnalyzer>(ServiceLifetime.Singleton)
                         .RegisterAll<ITextSummarizer>(ServiceLifetime.Singleton)
-                        .RegisterAll<ITextSummarizerLanguage>(ServiceLifetime.Singleton);
+                        .RegisterAll<ITextSummarizerLanguage>(ServiceLifetime.Singleton)
+                        .RegisterAll<IInflector>(ServiceLifetime.Singleton)
+                        .RegisterAll<IInflectorLanguage>(ServiceLifetime.Singleton)
+                        .RegisterAll<ISynonymFinder>(ServiceLifetime.Singleton)
+                        .RegisterAll<ISynonymFinderLanguage>(ServiceLifetime.Singleton);
         }
     }
 }
