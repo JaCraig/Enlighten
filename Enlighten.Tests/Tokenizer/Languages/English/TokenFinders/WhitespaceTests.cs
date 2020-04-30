@@ -21,11 +21,11 @@ namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
             { "\n\n\n\n\n\nThis has an new line.",null },
             { "\n This has an new line.",null },
             { "\r This has an new line.",null },
-            { " ... This has no new line.",new Token(0,0,TokenType.WhiteSpace," " ) },
-            { "\t... This has no new line.",new Token(0,0,TokenType.WhiteSpace,"\t" ) },
-            { "\t \t... This has no new line.",new Token(2,0,TokenType.WhiteSpace,"\t \t" ) },
-            { "",new Token(0,0,TokenType.EOF,string.Empty ) },
-            { null,new Token(0,0,TokenType.EOF,string.Empty ) },
+            { " ... This has no new line.",new Token(0,0,TokenType.WhiteSpace," "," " ) },
+            { "\t... This has no new line.",new Token(0,0,TokenType.WhiteSpace,"\t","\t" ) },
+            { "\t \t... This has no new line.",new Token(2,0,TokenType.WhiteSpace,"\t \t","\t \t" ) },
+            { "",new Token(0,0,TokenType.EOF,string.Empty,string.Empty ) },
+            { null,new Token(0,0,TokenType.EOF,string.Empty,string.Empty ) },
         };
 
         [Theory]

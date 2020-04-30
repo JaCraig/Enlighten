@@ -16,7 +16,7 @@ namespace Enlighten.SynonymFinder.BaseClasses
         /// </summary>
         protected SynonymFinderBase()
         {
-            var Data = new FileInfo($"resource://Enlighten/Enlighten.SynonymFinder.Resources.{Name}/synonyms.txt").Read();
+            var Data = new FileInfo($"resource://Enlighten/Enlighten.SynonymFinder.Resources.{Name.Replace("-", "_", StringComparison.Ordinal)}.synonyms.txt").Read();
             var Lines = Data.Split(new char[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0, LinesLength = Lines.Length; i < LinesLength; i++)
             {

@@ -74,11 +74,14 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
             if (!FoundEllipsis)
                 return null;
 
+            var Result = new string(tokenizer.Slice(StartPosition, EndPosition).ToArray());
+
             return new Token(
                 EndPosition,
                 StartPosition,
                 TokenType.Ellipsis,
-                new string(tokenizer.Slice(StartPosition, EndPosition).ToArray())
+                Result,
+                Result
             );
         }
     }

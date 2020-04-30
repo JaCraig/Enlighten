@@ -39,7 +39,7 @@ namespace Enlighten.SynonymFinder
         /// <returns>The synonym or the input if it doesn't exist.</returns>
         public string FindSynonym(string input, SynonymFinderLanguage language)
         {
-            if (!Languages.TryGetValue(input, out var Language))
+            if (!Languages.TryGetValue(language, out var Language))
                 return input;
             return Language.FindSynonym(input);
         }

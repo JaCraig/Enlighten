@@ -24,6 +24,12 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
     public class Symbol : TokenFinderBaseClass
     {
         /// <summary>
+        /// Gets the order.
+        /// </summary>
+        /// <value>The order.</value>
+        public override int Order { get; } = 3;
+
+        /// <summary>
         /// The symbols
         /// </summary>
         private readonly Dictionary<char, TokenType> Symbols = new Dictionary<char, TokenType>
@@ -63,12 +69,6 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
         };
 
         /// <summary>
-        /// Gets the order.
-        /// </summary>
-        /// <value>The order.</value>
-        public override int Order { get; } = 3;
-
-        /// <summary>
         /// Determines whether [is match implementation] [the specified tokenizer].
         /// </summary>
         /// <param name="tokenizer">The tokenizer.</param>
@@ -85,11 +85,14 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
 
             var EndPosition = tokenizer.Index - 1;
 
+            var Result = new string(new char[] { Value });
+
             return new Token(
                 EndPosition,
                 StartPosition,
                 Symbols[Value],
-                new string(new char[] { Value })
+                Result,
+                Result
             );
         }
     }

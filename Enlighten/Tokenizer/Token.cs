@@ -28,12 +28,26 @@ namespace Enlighten.Tokenizer
         /// <param name="startPosition">The start position.</param>
         /// <param name="tokenType">Type of the token.</param>
         /// <param name="value">The value.</param>
-        public Token(int endPosition, int startPosition, string tokenType, string value)
+        /// <param name="normalizedValue">The normalized value.</param>
+        public Token(int endPosition, int startPosition, string tokenType, string value, string normalizedValue)
         {
             EndPosition = endPosition;
             StartPosition = startPosition;
             TokenType = tokenType;
             Value = value;
+            NormalizedValue = normalizedValue;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Token"/> class.
+        /// </summary>
+        /// <param name="endPosition">The end position.</param>
+        /// <param name="startPosition">The start position.</param>
+        /// <param name="tokenType">Type of the token.</param>
+        /// <param name="value">The value.</param>
+        public Token(int endPosition, int startPosition, string tokenType, string value)
+            : this(endPosition, startPosition, tokenType, value, value.ToLowerInvariant())
+        {
         }
 
         /// <summary>
@@ -41,6 +55,12 @@ namespace Enlighten.Tokenizer
         /// </summary>
         /// <value>The end position.</value>
         public int EndPosition { get; set; }
+
+        /// <summary>
+        /// Gets or sets the normalized value.
+        /// </summary>
+        /// <value>The normalized value.</value>
+        public string NormalizedValue { get; set; }
 
         /// <summary>
         /// Gets or sets the part of speech.
@@ -58,7 +78,7 @@ namespace Enlighten.Tokenizer
         /// Gets or sets the stemmed value.
         /// </summary>
         /// <value>The stemmed value.</value>
-        public string StemmedValue { get; set; }
+        public string? StemmedValue { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether [stop word].
@@ -84,7 +104,7 @@ namespace Enlighten.Tokenizer
         /// <returns>A copy of this instance.</returns>
         public Token Copy()
         {
-            return new Token(EndPosition, StartPosition, TokenType, Value)
+            return new Token(EndPosition, StartPosition, TokenType, Value, NormalizedValue)
             {
                 PartOfSpeech = PartOfSpeech,
                 StemmedValue = StemmedValue,

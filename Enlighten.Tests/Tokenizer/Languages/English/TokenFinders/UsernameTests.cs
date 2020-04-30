@@ -13,17 +13,17 @@ namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
         public static TheoryData<string, Token> Data = new TheoryData<string, Token>
         {
             { "This has no Username",null },
-            { "@something This has Username",new Token(9,0,TokenType.Username,"@something" ) },
+            { "@something This has Username",new Token(9,0,TokenType.Username,"@something","@something" ) },
             { "This has no Username..",null },
             { "This. has. no. Username.",null },
             { ".This. has. no. Username.",null },
             { "..This. has. no. Username.",null },
-            { "@another@a.tr . . . . . . .This has an Username.",new Token(7,0,TokenType.Username,"@another" ) },
-            { "@boop... This has an Username.",new Token(4,0,TokenType.Username,"@boop" ) },
-            { "@SOMETHING_Is_Here This has an Username.",new Token(17,0,TokenType.Username,"@SOMETHING_Is_Here" ) },
+            { "@another@a.tr . . . . . . .This has an Username.",new Token(7,0,TokenType.Username,"@another","@another" ) },
+            { "@boop... This has an Username.",new Token(4,0,TokenType.Username,"@boop","@boop" ) },
+            { "@SOMETHING_Is_Here This has an Username.",new Token(17,0,TokenType.Username,"@SOMETHING_Is_Here","@something_is_here" ) },
             { " ... This has no Username.",null },
-            { "",new Token(0,0,TokenType.EOF,string.Empty ) },
-            { null,new Token(0,0,TokenType.EOF,string.Empty ) },
+            { "",new Token(0,0,TokenType.EOF,string.Empty ,string.Empty ) },
+            { null,new Token(0,0,TokenType.EOF,string.Empty,string.Empty  ) },
         };
 
         [Theory]

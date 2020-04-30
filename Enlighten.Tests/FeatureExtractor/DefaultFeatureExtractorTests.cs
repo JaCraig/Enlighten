@@ -23,12 +23,11 @@ namespace Enlighten.Tests.FeatureExtractor
             string Text = new FileInfo("./Data/MotherJonesArticle.txt");
             var TestObject = new DefaultFeatureExtractor(new IFeatureExtractorLanguage[] { new EnglishDefault(Canister.Builder.Bootstrapper.Resolve<ITokenizer>(), Canister.Builder.Bootstrapper.Resolve<IStemmer>(), Canister.Builder.Bootstrapper.Resolve<FrequencyAnalyzer>()) });
             var Results = TestObject.Extract(Text, Docs, 5, FeatureExtractionType.EnglishDefault);
-            Assert.Equal("A", Results[0]);
-            Assert.Equal("A", Results[1]);
-            Assert.Equal("A", Results[2]);
-            Assert.Equal("A", Results[3]);
-            Assert.Equal("A", Results[4]);
-            Assert.Equal("A", Results[5]);
+            Assert.Equal("City", Results[0]);
+            Assert.Equal("New", Results[1]);
+            Assert.Equal("miles", Results[2]);
+            Assert.Equal("York", Results[3]);
+            Assert.Equal("Mayor", Results[4]);
         }
     }
 }

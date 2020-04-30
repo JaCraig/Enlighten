@@ -59,7 +59,8 @@ namespace Enlighten.Tokenizer.BaseClasses
                     EndPos,
                     StartPos,
                     TokenType,
-                    Character.ToString()
+                    Character.ToString(),
+                    Character.ToString().ToLowerInvariant()
                 );
             }
             return null;

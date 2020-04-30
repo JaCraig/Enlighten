@@ -58,11 +58,14 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
 
             var EndPosition = tokenizer.Index - 1;
 
+            var Result = new string(tokenizer.Slice(StartPosition, EndPosition).ToArray());
+
             return new Token(
                 EndPosition,
                 StartPosition,
                 TokenType.HashTag,
-                new string(tokenizer.Slice(StartPosition, EndPosition).ToArray())
+                Result,
+                Result.ToLowerInvariant()
             );
         }
     }

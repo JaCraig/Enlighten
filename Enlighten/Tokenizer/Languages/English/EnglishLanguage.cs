@@ -161,6 +161,7 @@ namespace Enlighten.Tokenizer.Languages.English
                 tokenizableStream.Index,
                 tokenizableStream.Index,
                 TokenType.EOF,
+                string.Empty,
                 string.Empty
             );
         }

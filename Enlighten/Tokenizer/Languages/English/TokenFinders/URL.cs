@@ -69,11 +69,14 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
 
             EndPosition = tokenizer.Index - 1;
 
+            var TempResult = new string(tokenizer.Slice(StartPosition, EndPosition).ToArray());
+
             return new Token(
                 EndPosition,
                 StartPosition,
                 TokenType.Url,
-                new string(tokenizer.Slice(StartPosition, EndPosition).ToArray())
+                TempResult,
+                TempResult.ToLowerInvariant()
             );
         }
     }
