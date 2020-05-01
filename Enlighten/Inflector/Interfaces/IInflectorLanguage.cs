@@ -24,7 +24,7 @@
         /// </summary>
         /// <param name="input">The input.</param>
         /// <returns></returns>
-        string Infinitive(string input);
+        string? Infinitive(string input);
 
         /// <summary>
         /// Determines whether the specified input is gerund.
