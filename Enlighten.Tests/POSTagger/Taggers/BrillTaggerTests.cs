@@ -20,7 +20,7 @@ namespace Enlighten.Tests.POSTagger.Taggers
         public void Setup()
         {
             var TestObject = new SimpleTagger(Canister.Builder.Bootstrapper.Resolve<IInflector>(), Canister.Builder.Bootstrapper.Resolve<ISynonymFinder>());
-            Assert.Equal(98822, TestObject.Lexicon.Keys.Count);
+            Assert.Equal(93368, TestObject.Lexicon.Keys.Count);
         }
 
         [Fact]
@@ -29,7 +29,7 @@ namespace Enlighten.Tests.POSTagger.Taggers
             var TestObject = new SimpleTagger(Canister.Builder.Bootstrapper.Resolve<IInflector>(), Canister.Builder.Bootstrapper.Resolve<ISynonymFinder>());
             var Tokenizer = new DefaultTokenizer(new[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }, ObjectPool);
             var Results = TestObject.Tag(Tokenizer.Tokenize("I would go buy a computer.", TokenizerLanguage.EnglishRuleBased));
-            Assert.Equal("NN VM VVB NN RR NN", Results.Where(x => x.TokenType == TokenType.Word).ToString(x => x.PartOfSpeech, " "));
+            Assert.Equal("NNP MD VB VB DT NN", Results.Where(x => x.TokenType == TokenType.Word).ToString(x => x.PartOfSpeech, " "));
         }
 
         [Fact]
@@ -38,7 +38,7 @@ namespace Enlighten.Tests.POSTagger.Taggers
             var TestObject = new SimpleTagger(Canister.Builder.Bootstrapper.Resolve<IInflector>(), Canister.Builder.Bootstrapper.Resolve<ISynonymFinder>());
             var Tokenizer = new DefaultTokenizer(new[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }, ObjectPool);
             var Results = TestObject.Tag(Tokenizer.Tokenize("I want to go to New York City.", TokenizerLanguage.EnglishRuleBased));
-            Assert.Equal("NN VM VVB NN RR NN", Results.Where(x => x.TokenType == TokenType.Word).ToString(x => x.PartOfSpeech, " "));
+            Assert.Equal("NNP VBP TO VB TO NNP NNP NNP", Results.Where(x => x.TokenType == TokenType.Word).ToString(x => x.PartOfSpeech, " "));
         }
     }
 }

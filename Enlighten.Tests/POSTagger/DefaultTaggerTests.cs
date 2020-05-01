@@ -21,7 +21,7 @@ namespace Enlighten.Tests.POSTagger
         [Fact]
         public void Setup()
         {
-            var TestObject = new DefaultTagger(new[] { new BrillTagger() });
+            var TestObject = new DefaultTagger(new[] { new SimpleTagger(Canister.Builder.Bootstrapper.Resolve<IInflector>(), Canister.Builder.Bootstrapper.Resolve<ISynonymFinder>()) });
             Assert.NotNull(TestObject);
         }
 
@@ -31,7 +31,7 @@ namespace Enlighten.Tests.POSTagger
             var TestObject = new DefaultTagger(new[] { new SimpleTagger(Canister.Builder.Bootstrapper.Resolve<IInflector>(), Canister.Builder.Bootstrapper.Resolve<ISynonymFinder>()) });
             var Tokenizer = new DefaultTokenizer(new[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }, ObjectPool);
             var Results = TestObject.Tag(Tokenizer.Tokenize("I would go buy a computer.", TokenizerLanguage.EnglishRuleBased), POSTaggerLanguage.BrillTagger);
-            Assert.Equal("NN VM VVB NN RR NN", Results.Where(x => x.TokenType == TokenType.Word).ToString(x => x.PartOfSpeech, " "));
+            Assert.Equal("NNP MD VB VB DT NN", Results.Where(x => x.TokenType == TokenType.Word).ToString(x => x.PartOfSpeech, " "));
         }
     }
 }

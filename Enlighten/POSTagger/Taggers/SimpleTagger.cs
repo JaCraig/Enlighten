@@ -9,6 +9,7 @@ using Enlighten.Tokenizer.Languages.English.Enums;
 using FileCurator;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace Enlighten.POSTagger.Taggers
@@ -33,31 +34,6 @@ namespace Enlighten.POSTagger.Taggers
             BuildRules();
             BuildNationalities();
         }
-
-        /// <summary>
-        /// The is capitalized
-        /// </summary>
-        private static readonly Regex IsCapitalized = new Regex("^[A-Z]", RegexOptions.Compiled);
-
-        /// <summary>
-        /// Creates new linesplitter.
-        /// </summary>
-        private static readonly char[] NewLineSplitter = new char[] { '\n', '\r' };
-
-        /// <summary>
-        /// The potential proper noun
-        /// </summary>
-        private static readonly Regex PotentialProperNoun = new Regex(@"(^[A-Z][a-z\.]+$)|^[A-Z]+[0-9]+$|^[A-Z][a-z]+[A-Z][a-z]+$", RegexOptions.Compiled);
-
-        /// <summary>
-        /// The repetitive chars
-        /// </summary>
-        private static readonly Regex RepetitiveChars = new Regex(@"(.)\1{2,}", RegexOptions.IgnoreCase | RegexOptions.Compiled);
-
-        /// <summary>
-        /// The repetitive chars2
-        /// </summary>
-        private static readonly Regex RepetitiveChars2 = new Regex(@"(.)\1{1,}", RegexOptions.IgnoreCase | RegexOptions.Compiled);
 
         /// <summary>
         /// Gets the infinitives.
@@ -108,27 +84,51 @@ namespace Enlighten.POSTagger.Taggers
         private List<string> Nationalities { get; } = new List<string>();
 
         /// <summary>
+        /// The is capitalized
+        /// </summary>
+        private static readonly Regex IsCapitalized = new Regex("^[A-Z]", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Creates new linesplitter.
+        /// </summary>
+        private static readonly char[] NewLineSplitter = new char[] { '\n', '\r' };
+
+        /// <summary>
+        /// The potential proper noun
+        /// </summary>
+        private static readonly Regex PotentialProperNoun = new Regex(@"(^[A-Z][a-z\.]+$)|^[A-Z]+[0-9]+$|^[A-Z][a-z]+[A-Z][a-z]+$", RegexOptions.Compiled);
+
+        /// <summary>
+        /// The repetitive chars
+        /// </summary>
+        private static readonly Regex RepetitiveChars = new Regex(@"(.)\1{2,}", RegexOptions.IgnoreCase | RegexOptions.Compiled);
+
+        /// <summary>
+        /// The repetitive chars2
+        /// </summary>
+        private static readonly Regex RepetitiveChars2 = new Regex(@"(.)\1{1,}", RegexOptions.IgnoreCase | RegexOptions.Compiled);
+
+        /// <summary>
         /// Applies the rule.
         /// </summary>
         /// <param name="rule">The rule.</param>
-        /// <param name="input">The input.</param>
+        /// <param name="token">The input.</param>
         /// <param name="tag">The tag.</param>
         /// <param name="index">The index.</param>
         /// <param name="tokens">The tokens.</param>
         /// <param name="tags">The tags.</param>
         /// <param name="run">The run.</param>
-        public static void ApplyRule(BrillRule rule, string input, TagProbability tag, int index, Token[] tokens, TagProbability[] tags, int run)
+        public static void ApplyRule(BrillRule rule, Token token, TagProbability tag, int index, Token[] tokens, TagProbability[] tags, int run)
         {
             if (rule.From != tag.Tag || (rule.SecondRun && run == 0))
                 return;
 
             var type = rule.Type;
-            string tmp, tmp2;
 
             // Start word rule is case sensitive
             if (type == BrillConditions.STARTWORD)
             {
-                if (index == 0 && input == rule.C1)
+                if (index == 0 && token.Value == rule.C1)
                 {
                     tags[index].Tag = rule.To;
                     return;
@@ -136,296 +136,281 @@ namespace Enlighten.POSTagger.Taggers
                 return;
             }
 
-            input = input.ToLowerInvariant();
             switch (type)
             {
                 case BrillConditions.PREVTAG:
-                {
-                    if (index > 0 && tags[index - 1].Tag == rule.C1)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if (index > 0 && tags[index - 1].Tag == rule.C1)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.PREVWORDPREVTAG:
-                {
-                    tmp = tokens[index - 1].NormalizedValue ?? string.Empty;
-                    if (tags[index - 1].Tag == rule.C2 && tmp == rule.C1)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
+                        if (index > 0 && tags[index - 1].Tag == rule.C2 && tokens[index - 1].NormalizedValue == rule.C1)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
+                        break;
                     }
-
-                    break;
-                }
 
                 case BrillConditions.NEXTTAG:
-                {
-                    if (tags[index + 1].Tag == rule.C1)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if (index < tags.Length - 1 && tags[index + 1].Tag == rule.C1)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.NEXTTAG2:
-                {
-                    if (tags[index + 2].Tag == rule.C1)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if (index < tags.Length - 2 && tags[index + 2].Tag == rule.C1)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.PREVTAG2:
-                {
-                    if (tags[index - 2].Tag == rule.C1)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if (index > 1 && tags[index - 2].Tag == rule.C1)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.PREV1OR2TAG:
-                {
-                    tmp = tags[index - 1].Tag ?? string.Empty;
-                    tmp2 = tags[index - 2].Tag ?? string.Empty;
-                    if (tmp == rule.C1 || tmp2 == rule.C1)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if ((index > 0 && tags[index - 1].Tag == rule.C1) || (index > 1 && tags[index - 2].Tag == rule.C1))
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.PREVWORD:
-                {
-                    tmp = tokens[index - 1].NormalizedValue ?? string.Empty;
-                    if (tmp == rule.C1)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if (index > 0 && tokens[index - 1].NormalizedValue == rule.C1)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.CURRENTWD:
-                {
-                    if (input == rule.C1)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if (token.NormalizedValue == rule.C1)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.WDPREVTAG:
-                {
-                    if (input == rule.C2 && tags[index - 1].Tag == rule.C1)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if (index > 0 && token.NormalizedValue == rule.C2 && tags[index - 1].Tag == rule.C1)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.WDPREVWD:
-                {
-                    tmp = tokens[index - 1].NormalizedValue ?? string.Empty;
-                    if (input == rule.C2 && tmp == rule.C1)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if (index > 0 && token.NormalizedValue == rule.C2 && tokens[index - 1].NormalizedValue == rule.C1)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.NEXT1OR2OR3TAG:
-                {
-                    if (tags[index + 1].Tag == rule.C1 || tags[index + 2].Tag == rule.C1 || tags[index + 3].Tag == rule.C1)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if ((index < tags.Length - 1 && tags[index + 1].Tag == rule.C1) || (index < tags.Length - 2 && tags[index + 2].Tag == rule.C1) || (index < tags.Length - 3 && tags[index + 3].Tag == rule.C1))
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.NEXT2WD:
-                {
-                    tmp = tokens[index + 2].NormalizedValue ?? string.Empty;
-                    if (tmp == rule.C1)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if (index < tokens.Length - 2 && tokens[index + 2].NormalizedValue == rule.C1)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.WDNEXTWD:
-                {
-                    tmp = tokens[index + 1].NormalizedValue ?? string.Empty;
-                    if (input == rule.C1 && tmp == rule.C2)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if (index < tokens.Length - 1 && token.NormalizedValue == rule.C1 && tokens[index + 1].NormalizedValue == rule.C2)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.WDNEXTTAG:
-                {
-                    if (input == rule.C1 && tags[index + 1].Tag == rule.C2)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if (index < tags.Length - 1 && token.NormalizedValue == rule.C1 && tags[index + 1].Tag == rule.C2)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.PREV1OR2OR3TAG:
-                {
-                    if (tags[index - 1].Tag == rule.C1 || tags[index - 2].Tag == rule.C1 || tags[index - 3].Tag == rule.C1)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if ((index > 0 && tags[index - 1].Tag == rule.C1) || (index > 1 && tags[index - 2].Tag == rule.C1) || (index > 2 && tags[index - 3].Tag == rule.C1))
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.SURROUNDTAG:
-                {
-                    if (tags[index - 1].Tag == rule.C1 && tags[index + 1].Tag == rule.C2)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if (index > 0 && tags[index - 1].Tag == rule.C1 && index < tags.Length - 1 && tags[index + 1].Tag == rule.C2)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.SURROUNDTAGWD:
-                {
-                    if (input == rule.C1 && tags[index - 1].Tag == rule.C2 && tags[index + 1].Tag == rule.C3)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if (token.NormalizedValue == rule.C1 && index > 0 && tags[index - 1].Tag == rule.C2 && index < tags.Length - 1 && tags[index + 1].Tag == rule.C3)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.NEXTWD:
-                {
-                    tmp = tokens[index + 1].NormalizedValue ?? string.Empty;
-                    if (tmp == rule.C1)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if (index < tokens.Length - 1 && tokens[index + 1].NormalizedValue == rule.C1)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.NEXT1OR2TAG:
-                {
-                    if (tags[index + 1].Tag == rule.C1 || tags[index + 2].Tag == rule.C1)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if ((index < tags.Length - 1 && tags[index + 1].Tag == rule.C1) || (index < tags.Length - 2 && tags[index + 2].Tag == rule.C1))
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.PREV2TAG:
-                {
-                    if (tags[index - 2].Tag == rule.C1 && tags[index - 1].Tag == rule.C2)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if (index > 1 && tags[index - 2].Tag == rule.C1 && tags[index - 1].Tag == rule.C2)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.PREV2TAGNEXTTAG:
-                {
-                    if (tags[index - 2].Tag == rule.C1 && tags[index - 1].Tag == rule.C2 && tags[index + 1].Tag == rule.C3)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if (index > 1 && tags[index - 2].Tag == rule.C1 && tags[index - 1].Tag == rule.C2 && index < tags.Length - 1 && tags[index + 1].Tag == rule.C3)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.NEXT2TAG:
-                {
-                    if (tags[index + 1].Tag == rule.C1 && tags[index + 2].Tag == rule.C2)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if (index < tags.Length - 2 && tags[index + 1].Tag == rule.C1 && tags[index + 2].Tag == rule.C2)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.NEXT1OR2WD:
-                {
-                    tmp = tokens[index + 1].NormalizedValue ?? string.Empty;
-                    tmp2 = tokens[index + 2].NormalizedValue ?? string.Empty;
-                    if (tmp == rule.C1 || tmp2 == rule.C1)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if ((index < tokens.Length - 1 && tokens[index + 1].NormalizedValue == rule.C1) || (index < tokens.Length - 2 && tokens[index + 2].NormalizedValue == rule.C1))
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.PREV2WD:
-                {
-                    tmp2 = tokens[index - 2].NormalizedValue ?? string.Empty;
-                    if (tmp2 == rule.C1)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if (index > 1 && tokens[index - 2].NormalizedValue == rule.C1)
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case BrillConditions.PREV1OR2WD:
-                {
-                    tmp = tokens[index - 1].NormalizedValue ?? string.Empty;
-                    tmp2 = tokens[index - 2].NormalizedValue ?? string.Empty;
-                    if (tmp == rule.C1 || tmp2 == rule.C1)
                     {
-                        tags[index].Tag = rule.To;
-                        return;
-                    }
+                        if ((index > 0 && tokens[index - 1].NormalizedValue == rule.C1) || (index > 1 && tokens[index - 2].NormalizedValue == rule.C1))
+                        {
+                            tags[index].Tag = rule.To;
+                            return;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
             }
         }
 
@@ -464,7 +449,7 @@ namespace Enlighten.POSTagger.Taggers
         {
             for (var i = 0; i < Rules.Count; i++)
             {
-                ApplyRule(Rules[i], input.Value, tags[index], index, tokens, tags, run);
+                ApplyRule(Rules[i], input, tags[index], index, tokens, tags, run);
             }
         }
 
@@ -492,30 +477,31 @@ namespace Enlighten.POSTagger.Taggers
         /// <returns>The tokens tagged.</returns>
         public Token[] Tag(Token[] tokens)
         {
-            var Tags = new TagProbability[tokens.Length];
+            var TempTokens = tokens.Where(x => x.TokenType != TokenType.WhiteSpace).ToArray();
+            var Tags = new TagProbability[TempTokens.Length];
             bool InNNP = false;
-            for (int x = 0; x < tokens.Length; ++x)
+            for (int x = 0; x < TempTokens.Length; ++x)
             {
-                Tags[x] = GetTag(tokens[x]);
+                Tags[x] = GetTag(TempTokens[x]);
             }
             TagProbability? Previous = null;
             Token? PreviousToken = null;
-            for (int x = 0; x < tokens.Length; ++x)
+            for (int x = 0; x < TempTokens.Length; ++x)
             {
                 var Tag = Tags[x];
-                var Token = tokens[x];
+                var Token = TempTokens[x];
                 InNNP = ManualTagConversions(Tag, Previous, Token, PreviousToken, x, InNNP);
                 Previous = Tag;
                 PreviousToken = Token;
             }
 
-            Apply(tokens, Tags);
+            Apply(TempTokens, Tags);
 
             Previous = null;
-            for (int x = 0; x < tokens.Length; ++x)
+            for (int x = 0; x < TempTokens.Length; ++x)
             {
                 var Tag = Tags[x];
-                var Token = tokens[x];
+                var Token = TempTokens[x];
                 if (Token.NormalizedValue.EndsWith("ed", StringComparison.Ordinal))
                 {
                     if (Tag.Tag == "JJ" && (Previous?.Tag == "VBZ" || Previous?.Tag == "VBP") && Tags[x + 1].Tag == "TO")
@@ -527,9 +513,9 @@ namespace Enlighten.POSTagger.Taggers
                 Previous = Tag;
             }
 
-            for (int x = 0; x < tokens.Length; ++x)
+            for (int x = 0; x < TempTokens.Length; ++x)
             {
-                tokens[x].PartOfSpeech = Tags[x].Tag;
+                TempTokens[x].PartOfSpeech = Tags[x].Tag;
             }
 
             return tokens;
@@ -558,7 +544,7 @@ namespace Enlighten.POSTagger.Taggers
         /// </summary>
         private void BuildLexicon()
         {
-            var Data = new FileInfo("resource://Enlighten/Enlighten.POSTagger.Resources.English/lexicon.txt").Read();
+            var Data = new FileInfo("resource://Enlighten/Enlighten.Resources.en_us.lexicon.txt").Read();
             var Lines = Data.Split(NewLineSplitter, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0, LinesLength = Lines.Length; i < LinesLength; i++)
             {
@@ -568,10 +554,10 @@ namespace Enlighten.POSTagger.Taggers
                 var LineData = Line.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 var Key = LineData[0];
                 var Item = LineData[1];
-                Lexicon.Add(Key, new LexiconRule(Key, Item));
+                Lexicon.TryAdd(Key, new LexiconRule(Key, Item));
             }
 
-            Data = new FileInfo("resource://Enlighten/Enlighten.POSTagger.Resources.English/regularverbs.txt").Read();
+            Data = new FileInfo("resource://Enlighten/Enlighten.Resources.en_us.regularverbs.txt").Read();
             Lines = Data.Split(NewLineSplitter, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0, LinesLength = Lines.Length; i < LinesLength; i++)
             {
@@ -588,7 +574,7 @@ namespace Enlighten.POSTagger.Taggers
                 Lexicon.TryAdd(Item, new LexiconRule(Item, "VBG"));
             }
 
-            Data = new FileInfo("resource://Enlighten/Enlighten.POSTagger.Resources.English/irregularverbs.txt").Read();
+            Data = new FileInfo("resource://Enlighten/Enlighten.Resources.en_us.irregularverbs.txt").Read();
             Lines = Data.Split(NewLineSplitter, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0, LinesLength = Lines.Length; i < LinesLength; i++)
             {
@@ -607,7 +593,7 @@ namespace Enlighten.POSTagger.Taggers
 
         private void BuildNationalities()
         {
-            var Data = new FileInfo("resource://Enlighten/Enlighten.POSTagger.Resources.English/nationalities.txt").Read();
+            var Data = new FileInfo("resource://Enlighten/Enlighten.Resources.en_us.nationalities.txt").Read();
             var Lines = Data.Split(NewLineSplitter, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0, LinesLength = Lines.Length; i < LinesLength; i++)
             {
@@ -623,7 +609,7 @@ namespace Enlighten.POSTagger.Taggers
         /// </summary>
         private void BuildRules()
         {
-            var Data = new FileInfo("resource://Enlighten/Enlighten.POSTagger.Resources.English/rules.txt").Read();
+            var Data = new FileInfo("resource://Enlighten/Enlighten.Resources.en_us.rules.txt").Read();
             var Lines = Data.Split(NewLineSplitter, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0, LinesLength = Lines.Length; i < LinesLength; i++)
             {
@@ -652,7 +638,7 @@ namespace Enlighten.POSTagger.Taggers
         /// </summary>
         private void BuildSuffixes()
         {
-            var Data = new FileInfo("resource://Enlighten/Enlighten.POSTagger.Resources.English/suffixes.txt").Read();
+            var Data = new FileInfo("resource://Enlighten/Enlighten.Resources.en_us.suffixes.txt").Read();
             var Lines = Data.Split(NewLineSplitter, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0, LinesLength = Lines.Length; i < LinesLength; i++)
             {
