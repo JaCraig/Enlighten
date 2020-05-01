@@ -15,6 +15,7 @@ limitations under the License.
 */
 
 using Canister.Interfaces;
+using Enlighten.FeatureExtraction.Interfaces;
 using Enlighten.Frequency;
 using Enlighten.Inflector.Interfaces;
 using Enlighten.POSTagger.Interfaces;
@@ -39,6 +40,10 @@ namespace Enlighten.CanisterModules
         /// </summary>
         public int Order => 1;
 
+        /// <summary>
+        /// Loads the module using the bootstrapper
+        /// </summary>
+        /// <param name="bootstrapper">The bootstrapper.</param>
         public void Load(IBootstrapper bootstrapper)
         {
             bootstrapper?.RegisterAll<ITokenizerLanguage>(ServiceLifetime.Singleton)
@@ -56,7 +61,9 @@ namespace Enlighten.CanisterModules
                         .RegisterAll<IInflector>(ServiceLifetime.Singleton)
                         .RegisterAll<IInflectorLanguage>(ServiceLifetime.Singleton)
                         .RegisterAll<ISynonymFinder>(ServiceLifetime.Singleton)
-                        .RegisterAll<ISynonymFinderLanguage>(ServiceLifetime.Singleton);
+                        .RegisterAll<ISynonymFinderLanguage>(ServiceLifetime.Singleton)
+                        .RegisterAll<IFeatureExtractor>(ServiceLifetime.Singleton)
+                        .RegisterAll<IFeatureExtractorLanguage>(ServiceLifetime.Singleton);
         }
     }
 }
