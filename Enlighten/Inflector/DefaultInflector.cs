@@ -43,6 +43,33 @@ namespace Enlighten.Inflector
                 return input;
             return Language.Infinitive(input);
         }
+
+        /// <summary>
+        /// Determines whether the specified input is gerund.
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <param name="language">The language.</param>
+        /// <returns><c>true</c> if the specified input is gerund; otherwise, <c>false</c>.</returns>
+        public bool IsGerund(string input, InflectorLanguage language)
+        {
+            if (!Languages.TryGetValue(language, out var Language))
+                return false;
+            return Language.IsGerund(input);
+        }
+
+        /// <summary>
+        /// Determines whether the specified input is past.
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <param name="language">The language.</param>
+        /// <returns><c>true</c> if the specified input is past; otherwise, <c>false</c>.</returns>
+        public bool IsPast(string input, InflectorLanguage language)
+        {
+            if (!Languages.TryGetValue(language, out var Language))
+                return false;
+            return Language.IsPast(input);
+        }
+
         /// <summary>
         /// Determines whether the specified input is plural.
         /// </summary>
@@ -55,6 +82,7 @@ namespace Enlighten.Inflector
                 return false;
             return Language.IsPlural(input);
         }
+
         /// <summary>
         /// Determines whether the specified input is singular.
         /// </summary>
@@ -67,6 +95,7 @@ namespace Enlighten.Inflector
                 return false;
             return Language.IsSingular(input);
         }
+
         /// <summary>
         /// Determines whether the specified input is uncountable.
         /// </summary>
@@ -79,6 +108,7 @@ namespace Enlighten.Inflector
                 return false;
             return Language.IsUncountable(input);
         }
+
         /// <summary>
         /// Pluralizes the specified input.
         /// </summary>
@@ -91,6 +121,7 @@ namespace Enlighten.Inflector
                 return input;
             return Language.Pluralize(input);
         }
+
         /// <summary>
         /// Singularizes the specified input.
         /// </summary>
@@ -103,6 +134,7 @@ namespace Enlighten.Inflector
                 return input;
             return Language.Singularize(input);
         }
+
         /// <summary>
         /// Converts to gerund.
         /// </summary>
@@ -115,6 +147,7 @@ namespace Enlighten.Inflector
                 return input;
             return Language.ToGerund(input);
         }
+
         /// <summary>
         /// Converts to past.
         /// </summary>
@@ -127,6 +160,7 @@ namespace Enlighten.Inflector
                 return input;
             return Language.ToPast(input);
         }
+
         /// <summary>
         /// Converts to present.
         /// </summary>

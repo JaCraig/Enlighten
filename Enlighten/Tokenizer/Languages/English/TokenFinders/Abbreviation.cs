@@ -28,12 +28,6 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
     public class Abbreviation : TokenFinderBaseClass
     {
         /// <summary>
-        /// Gets the order.
-        /// </summary>
-        /// <value>The order.</value>
-        public override int Order { get; } = 2;
-
-        /// <summary>
         /// The common abbreviations
         /// </summary>
         private string[] CommonAbbreviations = new string[]
@@ -231,6 +225,12 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
             "INC.",
             "INC"
         };
+
+        /// <summary>
+        /// Gets the order.
+        /// </summary>
+        /// <value>The order.</value>
+        public override int Order { get; } = 1;
 
         /// <summary>
         /// The actual implementation of the IsMatch done by the individual classes.

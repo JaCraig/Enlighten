@@ -1,4 +1,5 @@
 ﻿using Enlighten.Inflector.Interfaces;
+using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -44,6 +45,19 @@ namespace Enlighten.Inflector
         private static readonly Regex EE = new Regex("(ee)$", RegexOptions.IgnoreCase | RegexOptions.Compiled);
 
         /// <summary>
+        /// The gerund exceptions
+        /// </summary>
+        private static readonly string[] GerundExceptions = new string[]
+        {
+            "anything",
+            "spring",
+            "something",
+            "thing",
+            "king",
+            "nothing"
+        };
+
+        /// <summary>
         /// The ie
         /// </summary>
         private static readonly Regex IE = new Regex("(ie)$", RegexOptions.IgnoreCase | RegexOptions.Compiled);
@@ -63,29 +77,24 @@ namespace Enlighten.Inflector
         /// </summary>
         private static readonly (Regex, string)[] PluralRules = new (Regex, string)[]
         {
-            (new Regex("^index$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "indices"),
-            (new Regex("^criterion$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "criteria"),
-            (new Regex("dix$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "dices"),
-            (new Regex("(a|o)ch$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1chs"),
-            (new Regex("(m)an$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1en"),
-            (new Regex("(pe)rson$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1ople"),
-            (new Regex("(child)$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1ren"),
-            (new Regex("^(ox)$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1en"),
-            (new Regex("(ax|test)is$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1es"),
-            (new Regex("(octop|vir)us$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1i"),
-            (new Regex("(alias|status)$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1es"),
-            (new Regex("(bu)s$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1ses"),
-            (new Regex("(buffal|tomat|potat|her)o$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1oes"),
-            (new Regex("([ti])um$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1a"),
-            (new Regex("sis$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "ses"),
-            (new Regex("(?:([^f])fe|([lr])f)$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1$2ves"),
-            (new Regex("(hive)$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1s"),
-            (new Regex("([^aeiouy]|qu)y$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1ies"),
-            (new Regex("(x|ch|ss|sh)$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1es"),
-            (new Regex("(matr|vert|ind)ix|ex$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1ices"),
-            (new Regex("([m|l])ouse$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1ice"),
+            (new Regex("(criteri|phenomen)on$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1a"),
+            (new Regex("(alumn|alg|larv|vertebr)a$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1ae"),
+            (new Regex("(hoo|lea|loa|thie)f$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1ves"),
+            (new Regex("(buz|blit|walt)z$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1zes"),
             (new Regex("(quiz)$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1zes"),
-            (new Regex("^gas$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "gases"),
+            (new Regex("^(ox)$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1en"),
+            (new Regex("(^[m|l])ouse$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1ice"),
+            (new Regex("(matr|vert|ind|d)ix|ex$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1ices"),
+            (new Regex("(x|ch|ss|sh)$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1es"),
+            (new Regex("([^aeiouy]|qu)y$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1ies"),
+            (new Regex("(hive)$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1s"),
+            (new Regex("(?:([^f])fe|([lr])f)$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1$2ves"),
+            (new Regex("sis$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "ses"),
+            (new Regex("([dti])um$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1a"),
+            (new Regex("(buffal|tomat|volcan|ech|embarg|her|mosquit|potat|torped|vet)o$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1oes"),
+            (new Regex("(alias|bias|iris|status|campus|apparatus|virus|walrus|trellis)$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1es"),
+            (new Regex("(octop|vir|alumn|fung|cact|foc|hippopotam|radi|stimul|syllab|nucle)us$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1i"),
+            (new Regex("(ax|test)is$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "$1es"),
             (new Regex("s$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "s"),
             (new Regex("$",RegexOptions.IgnoreCase|RegexOptions.Compiled), "s")
         };
@@ -205,6 +214,28 @@ namespace Enlighten.Inflector
         public string Infinitive(string input)
         {
             return input == "are" || input == "am" ? "be" : input;
+        }
+
+        /// <summary>
+        /// Determines whether the specified input is gerund.
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <returns><c>true</c> if the specified input is gerund; otherwise, <c>false</c>.</returns>
+        public bool IsGerund(string input)
+        {
+            var Lower = input.ToLowerInvariant();
+            return Lower.EndsWith("ing", StringComparison.Ordinal) && !GerundExceptions.Contains(Lower);
+        }
+
+        /// <summary>
+        /// Determines whether the specified input is past.
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <returns><c>true</c> if the specified input is past; otherwise, <c>false</c>.</returns>
+        public bool IsPast(string input)
+        {
+            var Lower = input.ToLowerInvariant();
+            return Lower.EndsWith("ed", StringComparison.Ordinal) && !Lower.EndsWith("eed", StringComparison.Ordinal);
         }
 
         /// <summary>

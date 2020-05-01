@@ -62,7 +62,7 @@ namespace Enlighten.Tests.Inflector
         public void ToPresent()
         {
             var TestObject = new DefaultInflector(new IInflectorLanguage[] { new EnglishInflector() });
-            Assert.Equal("work", TestObject.ToPresent("working", InflectorLanguage.English));
+            Assert.Equal("works", TestObject.ToPresent("work", InflectorLanguage.English));
         }
     }
 }

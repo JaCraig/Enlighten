@@ -16,6 +16,22 @@ namespace Enlighten.Inflector.Interfaces
         string Infinitive(string input, InflectorLanguage language);
 
         /// <summary>
+        /// Determines whether the specified input is gerund.
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <param name="language">The language.</param>
+        /// <returns><c>true</c> if the specified input is gerund; otherwise, <c>false</c>.</returns>
+        bool IsGerund(string input, InflectorLanguage language);
+
+        /// <summary>
+        /// Determines whether the specified input is past.
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <param name="language">The language.</param>
+        /// <returns><c>true</c> if the specified input is past; otherwise, <c>false</c>.</returns>
+        bool IsPast(string input, InflectorLanguage language);
+
+        /// <summary>
         /// Determines whether the specified input is plural.
         /// </summary>
         /// <param name="input">The input.</param>

@@ -1,7 +1,9 @@
 ﻿using BigBook;
+using Enlighten.Inflector.Interfaces;
 using Enlighten.POSTagger;
 using Enlighten.POSTagger.Enum;
 using Enlighten.POSTagger.Taggers;
+using Enlighten.SynonymFinder.Interfaces;
 using Enlighten.Tests.BaseClasses;
 using Enlighten.Tokenizer;
 using Enlighten.Tokenizer.Enums;
@@ -26,7 +28,7 @@ namespace Enlighten.Tests.POSTagger
         [Fact]
         public void Tag()
         {
-            var TestObject = new DefaultTagger(new[] { new BrillTagger() });
+            var TestObject = new DefaultTagger(new[] { new SimpleTagger(Canister.Builder.Bootstrapper.Resolve<IInflector>(), Canister.Builder.Bootstrapper.Resolve<ISynonymFinder>()) });
             var Tokenizer = new DefaultTokenizer(new[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }, ObjectPool);
             var Results = TestObject.Tag(Tokenizer.Tokenize("I would go buy a computer.", TokenizerLanguage.EnglishRuleBased), POSTaggerLanguage.BrillTagger);
             Assert.Equal("NN VM VVB NN RR NN", Results.Where(x => x.TokenType == TokenType.Word).ToString(x => x.PartOfSpeech, " "));

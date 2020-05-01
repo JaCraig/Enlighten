@@ -27,6 +27,20 @@
         string Infinitive(string input);
 
         /// <summary>
+        /// Determines whether the specified input is gerund.
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <returns><c>true</c> if the specified input is gerund; otherwise, <c>false</c>.</returns>
+        bool IsGerund(string input);
+
+        /// <summary>
+        /// Determines whether the specified input is past.
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <returns><c>true</c> if the specified input is past; otherwise, <c>false</c>.</returns>
+        bool IsPast(string input);
+
+        /// <summary>
         /// Determines whether the specified input is plural.
         /// </summary>
         /// <param name="input">The input.</param>

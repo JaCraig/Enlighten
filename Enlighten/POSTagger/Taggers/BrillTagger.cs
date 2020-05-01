@@ -15,7 +15,6 @@ limitations under the License.
 */
 
 using BigBook;
-using Enlighten.POSTagger.Enum;
 using Enlighten.POSTagger.Interfaces;
 using Enlighten.Tokenizer;
 using Enlighten.Tokenizer.Languages.English.Enums;
@@ -44,7 +43,7 @@ namespace Enlighten.POSTagger.Taggers
         /// Gets the name.
         /// </summary>
         /// <value>The name.</value>
-        public string ISOCode { get; } = POSTaggerLanguage.BrillTagger;
+        public string ISOCode { get; } = "BOOP";//POSTaggerLanguage.BrillTagger;
 
         /// <summary>
         /// Gets the lexicon.
@@ -128,7 +127,7 @@ namespace Enlighten.POSTagger.Taggers
         /// </summary>
         private void BuildLexicon()
         {
-            var Data = new FileInfo("resource://Enlighten/Enlighten.POSTagger.Resources/lexicon.txt").Read();
+            var Data = new FileInfo("resource://Enlighten/Enlighten.POSTagger.Resources.English.lexicon.txt").Read();
             var Lines = Data.Split(new char[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0, LinesLength = Lines.Length; i < LinesLength; i++)
             {
