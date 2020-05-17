@@ -96,19 +96,6 @@ namespace Enlighten.Tokenizer
         }
 
         /// <summary>
-        /// Removes the stop words.
-        /// </summary>
-        /// <param name="tokens">The tokens.</param>
-        /// <param name="language">The language.</param>
-        /// <returns>The tokens without the stop words.</returns>
-        public Token[] MarkStopWords(Token[] tokens, TokenizerLanguage language)
-        {
-            if (!Languages.TryGetValue(language, out var Tokenizer) || tokens is null || tokens.Length == 0)
-                return Array.Empty<Token>();
-            return Tokenizer.MarkStopWords(tokens);
-        }
-
-        /// <summary>
         /// Tokenizes the specified text.
         /// </summary>
         /// <param name="text">The text.</param>

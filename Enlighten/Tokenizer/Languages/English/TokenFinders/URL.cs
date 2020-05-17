@@ -75,8 +75,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
                 EndPosition,
                 StartPosition,
                 TokenType.Url,
-                TempResult,
-                TempResult.ToLowerInvariant()
+                TempResult
             );
         }
     }

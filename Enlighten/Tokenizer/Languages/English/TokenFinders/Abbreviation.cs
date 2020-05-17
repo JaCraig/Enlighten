@@ -272,8 +272,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
                     EndPosition,
                     StartPosition,
                     TokenType.Abbreviation,
-                    Result,
-                    Result.ToLowerInvariant()
+                    Result
                 );
             }
 
@@ -285,8 +284,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
                     EndPosition,
                     StartPosition,
                     TokenType.Abbreviation,
-                    Result,
-                    Result.ToLowerInvariant()
+                    Result
                 );
             }
 
@@ -297,8 +295,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
                 EndPosition,
                 StartPosition,
                 TokenType.Abbreviation,
-                Result,
-                Result.ToLowerInvariant()
+                Result
             );
         }
     }

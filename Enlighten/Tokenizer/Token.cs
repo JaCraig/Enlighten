@@ -28,26 +28,14 @@ namespace Enlighten.Tokenizer
         /// <param name="startPosition">The start position.</param>
         /// <param name="tokenType">Type of the token.</param>
         /// <param name="value">The value.</param>
-        /// <param name="normalizedValue">The normalized value.</param>
-        public Token(int endPosition, int startPosition, string tokenType, string value, string normalizedValue)
+        public Token(int endPosition, int startPosition, string tokenType, string value)
         {
             EndPosition = endPosition;
             StartPosition = startPosition;
             TokenType = tokenType;
             Value = value;
-            NormalizedValue = normalizedValue;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Token"/> class.
-        /// </summary>
-        /// <param name="endPosition">The end position.</param>
-        /// <param name="startPosition">The start position.</param>
-        /// <param name="tokenType">Type of the token.</param>
-        /// <param name="value">The value.</param>
-        public Token(int endPosition, int startPosition, string tokenType, string value)
-            : this(endPosition, startPosition, tokenType, value, value.ToLowerInvariant())
-        {
+            NormalizedValue = value;
+            ReplacementValue = value;
         }
 
         /// <summary>
@@ -67,6 +55,12 @@ namespace Enlighten.Tokenizer
         /// </summary>
         /// <value>The part of speech.</value>
         public string? PartOfSpeech { get; set; }
+
+        /// <summary>
+        /// Gets or sets the replacement value.
+        /// </summary>
+        /// <value>The replacement value.</value>
+        public string? ReplacementValue { get; set; }
 
         /// <summary>
         /// Gets or sets the start position. (inclusive)
@@ -104,11 +98,13 @@ namespace Enlighten.Tokenizer
         /// <returns>A copy of this instance.</returns>
         public Token Copy()
         {
-            return new Token(EndPosition, StartPosition, TokenType, Value, NormalizedValue)
+            return new Token(EndPosition, StartPosition, TokenType, Value)
             {
                 PartOfSpeech = PartOfSpeech,
                 StemmedValue = StemmedValue,
-                StopWord = StopWord
+                StopWord = StopWord,
+                NormalizedValue = NormalizedValue,
+                ReplacementValue = ReplacementValue
             };
         }
 

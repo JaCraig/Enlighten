@@ -21,6 +21,7 @@ using Enlighten.Inflector.Interfaces;
 using Enlighten.POSTagger.Interfaces;
 using Enlighten.SentenceDetection.Interfaces;
 using Enlighten.Stemmer.Interfaces;
+using Enlighten.StopWords.Interfaces;
 using Enlighten.SynonymFinder.Interfaces;
 using Enlighten.TextSummarization.Interfaces;
 using Enlighten.Tokenizer.Interfaces;
@@ -63,7 +64,9 @@ namespace Enlighten.CanisterModules
                         .RegisterAll<ISynonymFinder>(ServiceLifetime.Singleton)
                         .RegisterAll<ISynonymFinderLanguage>(ServiceLifetime.Singleton)
                         .RegisterAll<IFeatureExtractor>(ServiceLifetime.Singleton)
-                        .RegisterAll<IFeatureExtractorLanguage>(ServiceLifetime.Singleton);
+                        .RegisterAll<IFeatureExtractorLanguage>(ServiceLifetime.Singleton)
+                        .RegisterAll<IStopWordsManager>(ServiceLifetime.Singleton)
+                        .RegisterAll<IStopWordsLanguage>(ServiceLifetime.Singleton);
         }
     }
 }

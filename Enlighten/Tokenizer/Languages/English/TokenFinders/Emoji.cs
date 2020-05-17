@@ -899,9 +899,11 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
                 EndPosition,
                 StartPosition,
                 TokenType.Emoji,
-                Result,
                 Result
-            );
+            )
+            {
+                ReplacementValue = "<SYM>"
+            };
         }
 
         /// <summary>

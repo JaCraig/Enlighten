@@ -64,8 +64,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
                 EndPosition,
                 StartPosition,
                 TokenType.Username,
-                Result,
-                Result.ToLowerInvariant()
+                Result
             );
         }
     }

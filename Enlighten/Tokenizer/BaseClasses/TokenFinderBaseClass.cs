@@ -52,7 +52,6 @@ namespace Enlighten.Tokenizer.BaseClasses
                     stream.Index,
                     stream.Index,
                     TokenType.EOF,
-                    string.Empty,
                     string.Empty
                 );
             }

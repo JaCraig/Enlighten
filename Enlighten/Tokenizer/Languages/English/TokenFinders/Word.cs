@@ -57,8 +57,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
                 EndPosition,
                 StartPosition,
                 TokenType.Word,
-                Result,
-                Result.ToLowerInvariant()
+                Result
             );
         }
     }

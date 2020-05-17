@@ -57,9 +57,11 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
                 EndPosition,
                 StartPosition,
                 TokenType.NewLine,
-                Result,
                 Result
-            );
+            )
+            {
+                ReplacementValue = "<WHITE_SPACE>"
+            };
         }
     }
 }

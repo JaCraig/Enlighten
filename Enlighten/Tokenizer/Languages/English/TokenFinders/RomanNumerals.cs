@@ -18,6 +18,7 @@ using Enlighten.Tokenizer.BaseClasses;
 using Enlighten.Tokenizer.Languages.English.Enums;
 using Enlighten.Tokenizer.Utils;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace Enlighten.Tokenizer.Languages.English.TokenFinders
 {
@@ -30,7 +31,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
         /// <summary>
         /// The roman map
         /// </summary>
-        private static Dictionary<char, int> RomanMap = new Dictionary<char, int>()
+        private static readonly Dictionary<char, int> RomanMap = new Dictionary<char, int>()
         {
             {'I', 1},
             {'V', 5},
@@ -42,10 +43,37 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
         };
 
         /// <summary>
+        /// The roman numerals
+        /// </summary>
+        private readonly HashSet<char> RomanNumeralCharacters = new HashSet<char>(new char[] { 'I', 'V', 'X', 'L', 'C', 'D', 'M' });
+
+        /// <summary>
         /// Gets the order.
         /// </summary>
         /// <value>The order.</value>
         public override int Order => 2;
+
+        /// <summary>
+        /// Converts to number.
+        /// </summary>
+        /// <param name="value">The result.</param>
+        /// <returns>The number value.</returns>
+        public string ConvertToNumber(string value)
+        {
+            int number = 0;
+            for (int i = 0; i < value.Length; i++)
+            {
+                if (i + 1 < value.Length && RomanMap[value[i]] < RomanMap[value[i + 1]])
+                {
+                    number -= RomanMap[value[i]];
+                }
+                else
+                {
+                    number += RomanMap[value[i]];
+                }
+            }
+            return number.ToString();
+        }
 
         /// <summary>
         /// The actual implementation of the IsMatch done by the individual classes.
@@ -54,18 +82,12 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
         /// <returns>The token.</returns>
         protected override Token? IsMatchImpl(TokenizableStream<char> tokenizer)
         {
-            if (tokenizer.End() || !(tokenizer.Current == 'I'
-                || tokenizer.Current == 'V'
-                || tokenizer.Current == 'X'
-                || tokenizer.Current == 'L'
-                || tokenizer.Current == 'C'
-                || tokenizer.Current == 'D'
-                || tokenizer.Current == 'M'))
+            if (tokenizer.End() || !RomanNumeralCharacters.Contains(tokenizer.Current))
                 return null;
 
             var StartPosition = tokenizer.Index;
 
-            ConsumeNumbers(tokenizer);
+            ConsumeNumbers(tokenizer, RomanNumeralCharacters);
 
             if (!tokenizer.End() && char.IsLetter(tokenizer.Current))
                 return null;
@@ -74,56 +96,136 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
 
             var Result = new string(tokenizer.Slice(StartPosition, EndPosition).ToArray());
 
-            if (Result == "I")
+            if (Result == "I" || !Validate(Result))
                 return null;
 
             return new Token(
                 EndPosition,
                 StartPosition,
                 TokenType.Number,
-                Result,
-                ConvertToNumber(Result)
-            );
+                Result
+            )
+            {
+                NormalizedValue = ConvertToNumber(Result),
+                ReplacementValue = "<NUMBER>"
+            };
         }
 
         /// <summary>
         /// Consumes the numbers.
         /// </summary>
         /// <param name="tokenizer">The tokenizer.</param>
-        private static void ConsumeNumbers(TokenizableStream<char> tokenizer)
+        /// <param name="romanNumeralChars">The roman numeral chars.</param>
+        private static void ConsumeNumbers(TokenizableStream<char> tokenizer, HashSet<char> romanNumeralChars)
         {
-            while (!tokenizer.End() && (tokenizer.Current == 'I'
-                || tokenizer.Current == 'V'
-                || tokenizer.Current == 'X'
-                || tokenizer.Current == 'L'
-                || tokenizer.Current == 'C'
-                || tokenizer.Current == 'D'
-                || tokenizer.Current == 'M'))
+            while (!tokenizer.End() && romanNumeralChars.Contains(tokenizer.Current))
             {
                 tokenizer.Consume();
             }
         }
 
         /// <summary>
-        /// Converts to number.
+        /// Validates the specified value.
         /// </summary>
-        /// <param name="result">The result.</param>
-        /// <returns></returns>
-        private string ConvertToNumber(string result)
+        /// <param name="value">The value.</param>
+        /// <returns>True if it</returns>
+        private static bool Validate(string value)
         {
-            int number = 0;
-            for (int i = 0; i < result.Length; i++)
+            return ValidateSameSymbolUpToThreeTimesInARow(value)
+                && ValidateSubtractionRelatedRules(value);
+        }
+
+        /// <summary>
+        /// Validates at most one number in a row is subtracted from another.
+        /// </summary>
+        /// <param name="clusterLength">Length of the cluster.</param>
+        /// <returns>True if it is correct, false otherwise.</returns>
+        private static bool ValidateAtMostOneNumberInARowIsSubtractedFromAnother(int clusterLength)
+        {
+            return clusterLength <= 1;
+        }
+
+        /// <summary>
+        /// Validates the numbers smaller than ten times cannot be subtracted.
+        /// </summary>
+        /// <param name="previousSymbolValue">The previous symbol value.</param>
+        /// <param name="currentSymbolValue">The current symbol value.</param>
+        /// <returns>True if it is correct, false otherwise.</returns>
+        private static bool ValidateNumbersSmallerThanTenTimesCannotBeSubtracted(int previousSymbolValue, int currentSymbolValue)
+        {
+            var currentDecreasedTenTimes = currentSymbolValue / 10;
+            var currentIsBiggerThanTenTimes = currentDecreasedTenTimes > previousSymbolValue;
+
+            if (currentIsBiggerThanTenTimes)
             {
-                if (i + 1 < result.Length && RomanMap[result[i]] < RomanMap[result[i + 1]])
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Validates the powers other than ten cannot be subtracted.
+        /// </summary>
+        /// <param name="previous">The previous symbol value.</param>
+        /// <returns>True if it is correct, false otherwise.</returns>
+        private static bool ValidatePowersOtherThanTenCannotBeSubtracted(
+            int previous)
+        {
+            return previous == 1 || previous == 10 || previous == 100;
+        }
+
+        /// <summary>
+        /// Validates the same symbol up to three times in a row.
+        /// </summary>
+        /// <param name="value">The string representation.</param>
+        /// <returns>True if it is correct, false otherwise.</returns>
+        private static bool ValidateSameSymbolUpToThreeTimesInARow(string value)
+        {
+            return !Regex.IsMatch(value, @"(.)\1{3,}");
+        }
+
+        /// <summary>
+        /// Validates the subtraction related rules.
+        /// </summary>
+        /// <param name="value">The string representation.</param>
+        /// <returns>True if it is valid, false otherwise.</returns>
+        private static bool ValidateSubtractionRelatedRules(string value)
+        {
+            int previous = int.MaxValue;
+            int clusterLength = 0;
+
+            foreach (char currentSymbol in value)
+            {
+                RomanMap.TryGetValue(currentSymbol, out var CurrentSymbolValue);
+                if (CurrentSymbolValue < previous)
                 {
-                    number -= RomanMap[result[i]];
+                    //new cluster
+                    previous = CurrentSymbolValue;
+                    clusterLength = 1;
                 }
-                else
+                else if (CurrentSymbolValue == previous)
                 {
-                    number += RomanMap[result[i]];
+                    //old cluster grows
+                    clusterLength++;
+                }
+                else if (CurrentSymbolValue > previous)
+                {
+                    //subtraction attempted
+
+                    if (!ValidateAtMostOneNumberInARowIsSubtractedFromAnother(clusterLength))
+                        return false;
+
+                    if (!ValidatePowersOtherThanTenCannotBeSubtracted(previous))
+                        return false;
+
+                    if (!ValidateNumbersSmallerThanTenTimesCannotBeSubtracted(previous, CurrentSymbolValue))
+                        return false;
+
+                    clusterLength = 1;
+                    previous = CurrentSymbolValue;
                 }
             }
-            return number.ToString();
+            return true;
         }
     }
 }

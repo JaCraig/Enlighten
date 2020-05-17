@@ -80,9 +80,11 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
                 EndPosition,
                 StartPosition,
                 TokenType.Ellipsis,
-                Result,
                 Result
-            );
+            )
+            {
+                ReplacementValue = "<SYM>"
+            };
         }
     }
 }

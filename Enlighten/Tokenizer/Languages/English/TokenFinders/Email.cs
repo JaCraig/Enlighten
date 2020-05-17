@@ -72,8 +72,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
                 EndPosition,
                 StartPosition,
                 TokenType.Email,
-                Result,
-                Result.ToLowerInvariant()
+                Result
             );
         }
     }

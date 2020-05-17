@@ -62,9 +62,11 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
                 EndPosition,
                 StartPosition,
                 TokenType.Number,
-                Result,
                 Result
-            );
+            )
+            {
+                ReplacementValue = "<NUMBER>"
+            };
         }
 
         private static void ConsumeNumbers(TokenizableStream<char> tokenizer)

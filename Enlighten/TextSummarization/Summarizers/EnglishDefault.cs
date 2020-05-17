@@ -5,6 +5,8 @@ using Enlighten.SentenceDetection.Enum;
 using Enlighten.SentenceDetection.Interfaces;
 using Enlighten.Stemmer.Enums;
 using Enlighten.Stemmer.Interfaces;
+using Enlighten.StopWords.Enum;
+using Enlighten.StopWords.Interfaces;
 using Enlighten.TextSummarization.Interfaces;
 using Enlighten.Tokenizer;
 using Enlighten.Tokenizer.Enums;
@@ -29,12 +31,17 @@ namespace Enlighten.TextSummarization.Languages
         /// <param name="stemmer">The stemmer.</param>
         /// <param name="sentenceDetector">The sentence detector.</param>
         /// <param name="frequencyAnalyzer">The frequency analyzer.</param>
-        public EnglishDefault(ITokenizer tokenizer, IStemmer stemmer, ISentenceDetector sentenceDetector, FrequencyAnalyzer frequencyAnalyzer)
+        /// <param name="stopWordsManager">The stop words manager.</param>
+        /// <exception cref="ArgumentNullException">
+        /// tokenizer or stemmer or sentenceDetector or frequencyAnalyzer
+        /// </exception>
+        public EnglishDefault(ITokenizer tokenizer, IStemmer stemmer, ISentenceDetector sentenceDetector, FrequencyAnalyzer frequencyAnalyzer, IStopWordsManager stopWordsManager)
         {
             Tokenizer = tokenizer ?? throw new ArgumentNullException(nameof(tokenizer));
             Stemmer = stemmer ?? throw new ArgumentNullException(nameof(stemmer));
             SentenceDetector = sentenceDetector ?? throw new ArgumentNullException(nameof(sentenceDetector));
             FrequencyAnalyzer = frequencyAnalyzer ?? throw new ArgumentNullException(nameof(frequencyAnalyzer));
+            StopWordsManager = stopWordsManager ?? throw new ArgumentNullException(nameof(stopWordsManager));
         }
 
         /// <summary>
@@ -60,6 +67,12 @@ namespace Enlighten.TextSummarization.Languages
         /// </summary>
         /// <value>The stemmer.</value>
         public IStemmer Stemmer { get; }
+
+        /// <summary>
+        /// Gets the stop words manager.
+        /// </summary>
+        /// <value>The stop words manager.</value>
+        public IStopWordsManager StopWordsManager { get; }
 
         /// <summary>
         /// Gets the tokenizer.
@@ -132,7 +145,7 @@ namespace Enlighten.TextSummarization.Languages
         private List<Tuple<Sentence, double, int>> FindSentences(string input)
         {
             var Tokens = Tokenizer.Tokenize(input, TokenizerLanguage.EnglishRuleBased);
-            Tokens = Tokenizer.MarkStopWords(Tokens, TokenizerLanguage.EnglishRuleBased);
+            Tokens = StopWordsManager.MarkStopWords(Tokens, StopWordsLanguage.English);
             Tokens = Stemmer.Stem(Tokens, StemmerLanguage.EnglishPorter2);
 
             var Sentences = SentenceDetector.Detect(Tokens, SentenceDetectorLanguage.Default);

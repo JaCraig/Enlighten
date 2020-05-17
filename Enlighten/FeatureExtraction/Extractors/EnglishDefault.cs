@@ -3,6 +3,8 @@ using Enlighten.FeatureExtraction.Interfaces;
 using Enlighten.Frequency;
 using Enlighten.Stemmer.Enums;
 using Enlighten.Stemmer.Interfaces;
+using Enlighten.StopWords.Enum;
+using Enlighten.StopWords.Interfaces;
 using Enlighten.Tokenizer.Enums;
 using Enlighten.Tokenizer.Interfaces;
 using Enlighten.Tokenizer.Languages.English.Enums;
@@ -23,11 +25,13 @@ namespace Enlighten.FeatureExtraction.Extractors
         /// <param name="tokenizer">The tokenizer.</param>
         /// <param name="stemmer">The stemmer.</param>
         /// <param name="frequencyAnalyzer">The frequency analyzer.</param>
-        public EnglishDefault(ITokenizer tokenizer, IStemmer stemmer, FrequencyAnalyzer frequencyAnalyzer)
+        /// <param name="stopWordsManager">The stop words manager.</param>
+        public EnglishDefault(ITokenizer tokenizer, IStemmer stemmer, FrequencyAnalyzer frequencyAnalyzer, IStopWordsManager stopWordsManager)
         {
             FrequencyAnalyzer = frequencyAnalyzer;
             Stemmer = stemmer;
             Tokenizer = tokenizer;
+            StopWordsManager = stopWordsManager;
         }
 
         /// <summary>
@@ -49,6 +53,12 @@ namespace Enlighten.FeatureExtraction.Extractors
         public IStemmer Stemmer { get; }
 
         /// <summary>
+        /// Gets the stop words manager.
+        /// </summary>
+        /// <value>The stop words manager.</value>
+        public IStopWordsManager StopWordsManager { get; }
+
+        /// <summary>
         /// Gets the tokenizer.
         /// </summary>
         /// <value>The tokenizer.</value>
@@ -65,7 +75,7 @@ namespace Enlighten.FeatureExtraction.Extractors
         {
             var DocsCopy = docs.ToArray();
             var Tokens = Tokenizer.Tokenize(doc, TokenizerLanguage.EnglishRuleBased);
-            Tokens = Tokenizer.MarkStopWords(Tokens, TokenizerLanguage.EnglishRuleBased);
+            Tokens = StopWordsManager.MarkStopWords(Tokens, StopWordsLanguage.English);
             Tokens = Stemmer.Stem(Tokens, StemmerLanguage.EnglishPorter2);
 
             for (int i = 0; i < docs.Length; i++)
@@ -73,7 +83,7 @@ namespace Enlighten.FeatureExtraction.Extractors
                 var TempDoc = DocsCopy[i];
                 var TempTokens = Tokenizer.Tokenize(TempDoc, TokenizerLanguage.EnglishRuleBased);
                 TempTokens = Stemmer.Stem(TempTokens, StemmerLanguage.EnglishPorter2).ForEach(x => { x.Value = x.StemmedValue; }).ToArray();
-                TempTokens = Tokenizer.MarkStopWords(TempTokens, TokenizerLanguage.EnglishRuleBased).Where(x => !x.StopWord).ToArray();
+                TempTokens = StopWordsManager.MarkStopWords(Tokens, StopWordsLanguage.English).Where(x => !x.StopWord).ToArray();
                 DocsCopy[i] = Tokenizer.Detokenize(TempTokens, TokenizerLanguage.EnglishRuleBased);
             }
 
