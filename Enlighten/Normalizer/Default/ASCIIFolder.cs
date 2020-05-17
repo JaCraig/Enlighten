@@ -1301,7 +1301,7 @@ namespace Enlighten.Normalizer.Default
                 var Value = tokens[x].NormalizedValue;
                 for (int y = 0; y < Value.Length; ++y)
                 {
-                    var TempChar = Value[x];
+                    var TempChar = Value[y];
                     var ReplacementValue = ReplaceUnicodeChar(TempChar);
                     Builder.Append(ReplacementValue);
                 }

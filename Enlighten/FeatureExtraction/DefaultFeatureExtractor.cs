@@ -39,7 +39,7 @@ namespace Enlighten.FeatureExtraction
         /// <param name="featureCount">The number of features/terms to return.</param>
         /// <param name="language">The language/extraction algorithm to use.</param>
         /// <returns>The important features/terms of the doc.</returns>
-        public string[] Extract(string doc, string[] docs, int featureCount, FeatureExtractionType language)
+        public string[] Extract(Document doc, Document[] docs, int featureCount, FeatureExtractionType language)
         {
             if (!Extractors.TryGetValue(language, out var Extractor))
                 return Array.Empty<string>();

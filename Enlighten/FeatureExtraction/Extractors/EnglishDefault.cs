@@ -1,12 +1,6 @@
 ﻿using BigBook;
 using Enlighten.FeatureExtraction.Interfaces;
 using Enlighten.Frequency;
-using Enlighten.Stemmer.Enums;
-using Enlighten.Stemmer.Interfaces;
-using Enlighten.StopWords.Enum;
-using Enlighten.StopWords.Interfaces;
-using Enlighten.Tokenizer.Enums;
-using Enlighten.Tokenizer.Interfaces;
 using Enlighten.Tokenizer.Languages.English.Enums;
 using System;
 using System.Linq;
@@ -22,16 +16,10 @@ namespace Enlighten.FeatureExtraction.Extractors
         /// <summary>
         /// Initializes a new instance of the <see cref="EnglishDefault"/> class.
         /// </summary>
-        /// <param name="tokenizer">The tokenizer.</param>
-        /// <param name="stemmer">The stemmer.</param>
         /// <param name="frequencyAnalyzer">The frequency analyzer.</param>
-        /// <param name="stopWordsManager">The stop words manager.</param>
-        public EnglishDefault(ITokenizer tokenizer, IStemmer stemmer, FrequencyAnalyzer frequencyAnalyzer, IStopWordsManager stopWordsManager)
+        public EnglishDefault(FrequencyAnalyzer frequencyAnalyzer)
         {
             FrequencyAnalyzer = frequencyAnalyzer;
-            Stemmer = stemmer;
-            Tokenizer = tokenizer;
-            StopWordsManager = stopWordsManager;
         }
 
         /// <summary>
@@ -47,54 +35,22 @@ namespace Enlighten.FeatureExtraction.Extractors
         public string Name => "default";
 
         /// <summary>
-        /// Gets the stemmer.
-        /// </summary>
-        /// <value>The stemmer.</value>
-        public IStemmer Stemmer { get; }
-
-        /// <summary>
-        /// Gets the stop words manager.
-        /// </summary>
-        /// <value>The stop words manager.</value>
-        public IStopWordsManager StopWordsManager { get; }
-
-        /// <summary>
-        /// Gets the tokenizer.
-        /// </summary>
-        /// <value>The tokenizer.</value>
-        public ITokenizer Tokenizer { get; }
-
-        /// <summary>
         /// Extracts features from the doc specified.
         /// </summary>
         /// <param name="doc">The document.</param>
         /// <param name="docs">The docs to use to compare.</param>
         /// <param name="featureCount">The number of features/terms to return.</param>
         /// <returns>The important features/terms of the doc.</returns>
-        public string[] Extract(string doc, string[] docs, int featureCount)
+        public string[] Extract(Document doc, Document[] docs, int featureCount)
         {
-            var DocsCopy = docs.ToArray();
-            var Tokens = Tokenizer.Tokenize(doc, TokenizerLanguage.EnglishRuleBased);
-            Tokens = StopWordsManager.MarkStopWords(Tokens, StopWordsLanguage.English);
-            Tokens = Stemmer.Stem(Tokens, StemmerLanguage.EnglishPorter2);
-
-            for (int i = 0; i < docs.Length; i++)
-            {
-                var TempDoc = DocsCopy[i];
-                var TempTokens = Tokenizer.Tokenize(TempDoc, TokenizerLanguage.EnglishRuleBased);
-                TempTokens = Stemmer.Stem(TempTokens, StemmerLanguage.EnglishPorter2).ForEach(x => { x.Value = x.StemmedValue; }).ToArray();
-                TempTokens = StopWordsManager.MarkStopWords(Tokens, StopWordsLanguage.English).Where(x => !x.StopWord).ToArray();
-                DocsCopy[i] = Tokenizer.Detokenize(TempTokens, TokenizerLanguage.EnglishRuleBased);
-            }
-
-            var WordTokens = Tokens.Where(x => (x.TokenType == TokenType.Abbreviation || x.TokenType == TokenType.Word) && !x.StopWord).ToArray();
+            var WordTokens = doc.Tokens.Where(x => (x.TokenType == TokenType.Abbreviation || x.TokenType == TokenType.Word) && !x.StopWord).ToArray();
 
             var DocumentFrequencies = FrequencyAnalyzer.Analyze(WordTokens, WordTokens.Length);
 
             return WordTokens.Distinct((x, y) => x.StemmedValue == y.StemmedValue).OrderByDescending(WordToken =>
                 {
                     var TermFrequency = DocumentFrequencies.TermFrequency[WordToken.StemmedValue.ToLower()];
-                    var InverseDocFrequency = Math.Log(DocsCopy.Length / (1 + DocsCopy.Where(x => x.Contains(WordToken.Value)).Count()));
+                    var InverseDocFrequency = Math.Log(docs.Length / (1 + docs.Count(x => x.Tokens.Any(token => token.StemmedValue == WordToken.StemmedValue))));
                     return TermFrequency * InverseDocFrequency;
                 })
                 .Select(x => x.Value)

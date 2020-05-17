@@ -15,6 +15,6 @@ namespace Enlighten.FeatureExtraction.Interfaces
         /// <param name="featureCount">The number of features/terms to return.</param>
         /// <param name="language">The language/extraction algorithm to use.</param>
         /// <returns>The important features/terms of the doc.</returns>
-        string[] Extract(string doc, string[] docs, int featureCount, FeatureExtractionType language);
+        string[] Extract(Document doc, Document[] docs, int featureCount, FeatureExtractionType language);
     }
 }

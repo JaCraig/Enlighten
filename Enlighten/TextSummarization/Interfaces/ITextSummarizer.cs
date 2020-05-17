@@ -14,7 +14,7 @@ namespace Enlighten.TextSummarization.Interfaces
         /// <param name="sentenceCount">The number of sentences to have in the final text.</param>
         /// <param name="language">The language.</param>
         /// <returns>The summarized text</returns>
-        string Summarize(string text, int sentenceCount, TextSummarizationLanguage language);
+        Document Summarize(Document text, int sentenceCount, TextSummarizationLanguage language);
 
         /// <summary>
         /// Summarizes the specified text.
@@ -23,6 +23,6 @@ namespace Enlighten.TextSummarization.Interfaces
         /// <param name="percentage">The percentage of sentences to have in the final text.</param>
         /// <param name="language">The language.</param>
         /// <returns>The summarized text</returns>
-        string Summarize(string text, float percentage, TextSummarizationLanguage language);
+        Document Summarize(Document text, float percentage, TextSummarizationLanguage language);
     }
 }

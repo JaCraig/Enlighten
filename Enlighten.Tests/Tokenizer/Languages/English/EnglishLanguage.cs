@@ -1,11 +1,9 @@
-﻿using BigBook;
-using Enlighten.Tests.BaseClasses;
+﻿using Enlighten.Tests.BaseClasses;
 using Enlighten.Tokenizer.Languages.English;
 using Enlighten.Tokenizer.Languages.English.Enums;
 using Enlighten.Tokenizer.Languages.English.TokenFinders;
 using Enlighten.Tokenizer.Languages.Interfaces;
 using Enlighten.Tokenizer.Utils;
-using System.Linq;
 using Xunit;
 
 namespace Enlighten.Tests.Tokenizer.Languages.English
@@ -18,14 +16,6 @@ namespace Enlighten.Tests.Tokenizer.Languages.English
             var Tokenizer = new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() });
             var Result = Tokenizer.Tokenize(new TokenizableStream<char>("This is a test.".ToCharArray()));
             Assert.Equal("This is a test.", Tokenizer.Detokenize(Result));
-        }
-
-        [Fact]
-        public void MarkStopWords()
-        {
-            var Tokenizer = new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() });
-            var Result = Tokenizer.MarkStopWords(Tokenizer.Tokenize(new TokenizableStream<char>("This is a test.".ToCharArray()))).Where(x => !x.StopWord).ToArray();
-            Assert.Equal("This   test.", Tokenizer.Detokenize(Result));
         }
 
         [Fact]

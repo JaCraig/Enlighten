@@ -17,7 +17,7 @@
         /// <param name="input">The input.</param>
         /// <param name="percentage">The percentage.</param>
         /// <returns>The summary</returns>
-        string Summarize(string input, float percentage);
+        Document Summarize(Document input, float percentage);
 
         /// <summary>
         /// Summarizes the specified input.
@@ -25,6 +25,6 @@
         /// <param name="input">The input.</param>
         /// <param name="numberOfSentences">The number of sentences.</param>
         /// <returns>The summary</returns>
-        string Summarize(string input, int numberOfSentences);
+        Document Summarize(Document input, int numberOfSentences);
     }
 }

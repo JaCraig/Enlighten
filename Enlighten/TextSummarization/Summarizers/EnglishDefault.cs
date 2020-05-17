@@ -1,16 +1,8 @@
 ﻿using BigBook;
 using Enlighten.Frequency;
 using Enlighten.SentenceDetection;
-using Enlighten.SentenceDetection.Enum;
-using Enlighten.SentenceDetection.Interfaces;
-using Enlighten.Stemmer.Enums;
-using Enlighten.Stemmer.Interfaces;
-using Enlighten.StopWords.Enum;
-using Enlighten.StopWords.Interfaces;
 using Enlighten.TextSummarization.Interfaces;
 using Enlighten.Tokenizer;
-using Enlighten.Tokenizer.Enums;
-using Enlighten.Tokenizer.Interfaces;
 using Enlighten.Tokenizer.Languages.English.Enums;
 using System;
 using System.Collections.Generic;
@@ -27,21 +19,13 @@ namespace Enlighten.TextSummarization.Languages
         /// <summary>
         /// Initializes a new instance of the <see cref="EnglishDefault"/> class.
         /// </summary>
-        /// <param name="tokenizer">The tokenizer.</param>
-        /// <param name="stemmer">The stemmer.</param>
-        /// <param name="sentenceDetector">The sentence detector.</param>
         /// <param name="frequencyAnalyzer">The frequency analyzer.</param>
-        /// <param name="stopWordsManager">The stop words manager.</param>
         /// <exception cref="ArgumentNullException">
         /// tokenizer or stemmer or sentenceDetector or frequencyAnalyzer
         /// </exception>
-        public EnglishDefault(ITokenizer tokenizer, IStemmer stemmer, ISentenceDetector sentenceDetector, FrequencyAnalyzer frequencyAnalyzer, IStopWordsManager stopWordsManager)
+        public EnglishDefault(FrequencyAnalyzer frequencyAnalyzer)
         {
-            Tokenizer = tokenizer ?? throw new ArgumentNullException(nameof(tokenizer));
-            Stemmer = stemmer ?? throw new ArgumentNullException(nameof(stemmer));
-            SentenceDetector = sentenceDetector ?? throw new ArgumentNullException(nameof(sentenceDetector));
             FrequencyAnalyzer = frequencyAnalyzer ?? throw new ArgumentNullException(nameof(frequencyAnalyzer));
-            StopWordsManager = stopWordsManager ?? throw new ArgumentNullException(nameof(stopWordsManager));
         }
 
         /// <summary>
@@ -57,41 +41,17 @@ namespace Enlighten.TextSummarization.Languages
         public string Name { get; } = "default";
 
         /// <summary>
-        /// Gets the sentence detector.
-        /// </summary>
-        /// <value>The sentence detector.</value>
-        public ISentenceDetector SentenceDetector { get; }
-
-        /// <summary>
-        /// Gets the stemmer.
-        /// </summary>
-        /// <value>The stemmer.</value>
-        public IStemmer Stemmer { get; }
-
-        /// <summary>
-        /// Gets the stop words manager.
-        /// </summary>
-        /// <value>The stop words manager.</value>
-        public IStopWordsManager StopWordsManager { get; }
-
-        /// <summary>
-        /// Gets the tokenizer.
-        /// </summary>
-        /// <value>The tokenizer.</value>
-        public ITokenizer Tokenizer { get; }
-
-        /// <summary>
         /// Summarizes the specified input.
         /// </summary>
         /// <param name="input">The input.</param>
         /// <param name="numberOfSentences">The number of sentences.</param>
         /// <returns>The summary</returns>
-        public string Summarize(string input, int numberOfSentences)
+        public Document Summarize(Document input, int numberOfSentences)
         {
-            if (string.IsNullOrWhiteSpace(input))
-                return input;
+            if (input is null)
+                return input!;
             List<Tuple<Sentence, double, int>> SentenceScoresFinal = FindSentences(input);
-            return Tokenizer.Detokenize(SentenceScoresFinal.OrderByDescending(x => x.Item2).Take(numberOfSentences).OrderBy(x => x.Item3).Select(x => x.Item1).ToArray(), TokenizerLanguage.EnglishRuleBased);
+            return GetFinalDocument(input, SentenceScoresFinal, numberOfSentences);
         }
 
         /// <summary>
@@ -100,13 +60,30 @@ namespace Enlighten.TextSummarization.Languages
         /// <param name="input">The input.</param>
         /// <param name="percentage">The percentage.</param>
         /// <returns>The summary</returns>
-        public string Summarize(string input, float percentage)
+        public Document Summarize(Document input, float percentage)
         {
-            if (string.IsNullOrWhiteSpace(input))
-                return input;
+            if (input is null)
+                return input!;
             List<Tuple<Sentence, double, int>> SentenceScoresFinal = FindSentences(input);
             int NumberOfSentences = (int)Math.Round(SentenceScoresFinal.Count * percentage, MidpointRounding.AwayFromZero);
-            return Tokenizer.Detokenize(SentenceScoresFinal.OrderByDescending(x => x.Item2).Take(NumberOfSentences).OrderBy(x => x.Item3).Select(x => x.Item1).ToArray(), TokenizerLanguage.EnglishRuleBased);
+            return GetFinalDocument(input, SentenceScoresFinal, NumberOfSentences);
+        }
+
+        /// <summary>
+        /// Gets the final document.
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <param name="SentenceScoresFinal">The sentence scores final.</param>
+        /// <param name="NumberOfSentences">The number of sentences.</param>
+        /// <returns>The final document</returns>
+        private static Document GetFinalDocument(Document input, List<Tuple<Sentence, double, int>> SentenceScoresFinal, int NumberOfSentences)
+        {
+            if (NumberOfSentences <= 0)
+                NumberOfSentences = 1;
+            var FinalSentences = SentenceScoresFinal.OrderByDescending(x => x.Item2).Take(NumberOfSentences).OrderBy(x => x.Item3).Select(x => x.Item1).ToArray();
+            var FinalTokens = FinalSentences.SelectMany(x => x.Tokens).ToArray();
+            var FinalText = FinalTokens.Select(x => x.Value).ToString(x => x, string.Empty);
+            return new Document(FinalSentences, FinalTokens, FinalText, input.FeatureExtractor, input.TextSummarizer, input.Tokenizer, input.TokenizerLanguage);
         }
 
         /// <summary>
@@ -142,27 +119,21 @@ namespace Enlighten.TextSummarization.Languages
         /// </summary>
         /// <param name="input">The input.</param>
         /// <returns>The sentences</returns>
-        private List<Tuple<Sentence, double, int>> FindSentences(string input)
+        private List<Tuple<Sentence, double, int>> FindSentences(Document input)
         {
-            var Tokens = Tokenizer.Tokenize(input, TokenizerLanguage.EnglishRuleBased);
-            Tokens = StopWordsManager.MarkStopWords(Tokens, StopWordsLanguage.English);
-            Tokens = Stemmer.Stem(Tokens, StemmerLanguage.EnglishPorter2);
-
-            var Sentences = SentenceDetector.Detect(Tokens, SentenceDetectorLanguage.Default);
-
-            var WordTokens = Tokens.Where(x => (x.TokenType == TokenType.Abbreviation || x.TokenType == TokenType.Word) && !x.StopWord).ToArray();
+            var WordTokens = input.Tokens.Where(x => (x.TokenType == TokenType.Abbreviation || x.TokenType == TokenType.Word) && !x.StopWord).ToArray();
 
             var DocumentTotalCount = WordTokens.Length;
-            var DocumentFrequencies = FrequencyAnalyzer.Analyze(Tokens, DocumentTotalCount);
+            var DocumentFrequencies = FrequencyAnalyzer.Analyze(input.Tokens, DocumentTotalCount);
 
-            var SentenceFrequency = FindSentenceFrequencies(WordTokens, Sentences);
+            var SentenceFrequency = FindSentenceFrequencies(WordTokens, input.Sentences);
 
             List<double> SentenceScore = new List<double>();
 
-            for (int x = 0; x < Sentences.Length; ++x)
+            for (int x = 0; x < input.Sentences.Length; ++x)
             {
                 SentenceScore.Add(0);
-                WordTokens = Sentences[x].Tokens.Where(x => (x.TokenType == TokenType.Abbreviation || x.TokenType == TokenType.Word) && !x.StopWord).ToArray();
+                WordTokens = input.Sentences[x].Tokens.Where(x => (x.TokenType == TokenType.Abbreviation || x.TokenType == TokenType.Word) && !x.StopWord).ToArray();
                 var SentenceTotalTokens = WordTokens.Length;
                 var TermFrequencies = FrequencyAnalyzer.Analyze(WordTokens, SentenceTotalTokens);
 
@@ -170,15 +141,15 @@ namespace Enlighten.TextSummarization.Languages
                 {
                     double TermFrequency = TermFrequencies.TermFrequency[Key];
 
-                    double InverseDocumentFrequency = Math.Log(Sentences.Length / (1 + (double)SentenceFrequency[Key]));
+                    double InverseDocumentFrequency = Math.Log(input.Sentences.Length / (1 + (double)SentenceFrequency[Key]));
                     SentenceScore[x] += (TermFrequency * InverseDocumentFrequency);
                 }
             }
 
             List<Tuple<Sentence, double, int>> SentenceScoresFinal = new List<Tuple<Sentence, double, int>>();
-            for (int x = 0; x < Sentences.Length; ++x)
+            for (int x = 0; x < input.Sentences.Length; ++x)
             {
-                SentenceScoresFinal.Add(new Tuple<Sentence, double, int>(Sentences[x], SentenceScore[x], x));
+                SentenceScoresFinal.Add(new Tuple<Sentence, double, int>(input.Sentences[x], SentenceScore[x], x));
             }
 
             return SentenceScoresFinal;

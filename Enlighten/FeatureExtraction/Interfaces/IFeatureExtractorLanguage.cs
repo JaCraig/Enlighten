@@ -18,6 +18,6 @@
         /// <param name="docs">The docs to use to compare.</param>
         /// <param name="featureCount">The number of features/terms to return.</param>
         /// <returns>The important features/terms of the doc.</returns>
-        string[] Extract(string doc, string[] docs, int featureCount);
+        string[] Extract(Document doc, Document[] docs, int featureCount);
     }
 }

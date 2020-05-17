@@ -81,7 +81,6 @@ namespace Enlighten.SpeedTests.Tests
                     EndPosition,
                     StartPosition,
                     TokenType.Ellipsis,
-                    new string(FinalValue.Trim()),
                     new string(FinalValue.Trim())
                 );
             }

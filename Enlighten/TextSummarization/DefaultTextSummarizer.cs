@@ -37,7 +37,7 @@ namespace Enlighten.TextSummarization
         /// <param name="sentenceCount">The number of sentences to have in the final text.</param>
         /// <param name="language">The language.</param>
         /// <returns>The summarized text</returns>
-        public string Summarize(string text, int sentenceCount, TextSummarizationLanguage language)
+        public Document Summarize(Document text, int sentenceCount, TextSummarizationLanguage language)
         {
             if (!Summarizers.TryGetValue(language, out var Summarizer))
                 return text;
@@ -51,7 +51,7 @@ namespace Enlighten.TextSummarization
         /// <param name="percentage">The percentage of sentences to have in the final text.</param>
         /// <param name="language">The language.</param>
         /// <returns>The summarized text</returns>
-        public string Summarize(string text, float percentage, TextSummarizationLanguage language)
+        public Document Summarize(Document text, float percentage, TextSummarizationLanguage language)
         {
             if (!Summarizers.TryGetValue(language, out var Summarizer))
                 return text;

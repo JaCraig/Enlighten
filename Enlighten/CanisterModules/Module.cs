@@ -18,6 +18,7 @@ using Canister.Interfaces;
 using Enlighten.FeatureExtraction.Interfaces;
 using Enlighten.Frequency;
 using Enlighten.Inflector.Interfaces;
+using Enlighten.Normalizer.Interfaces;
 using Enlighten.POSTagger.Interfaces;
 using Enlighten.SentenceDetection.Interfaces;
 using Enlighten.Stemmer.Interfaces;
@@ -66,7 +67,11 @@ namespace Enlighten.CanisterModules
                         .RegisterAll<IFeatureExtractor>(ServiceLifetime.Singleton)
                         .RegisterAll<IFeatureExtractorLanguage>(ServiceLifetime.Singleton)
                         .RegisterAll<IStopWordsManager>(ServiceLifetime.Singleton)
-                        .RegisterAll<IStopWordsLanguage>(ServiceLifetime.Singleton);
+                        .RegisterAll<IStopWordsLanguage>(ServiceLifetime.Singleton)
+                        .RegisterAll<INormalizer>(ServiceLifetime.Singleton)
+                        .RegisterAll<ITextNormalizer>(ServiceLifetime.Singleton)
+                        .RegisterAll<INormalizerManager>(ServiceLifetime.Singleton)
+                        .Register<Pipeline>(ServiceLifetime.Transient);
         }
     }
 }

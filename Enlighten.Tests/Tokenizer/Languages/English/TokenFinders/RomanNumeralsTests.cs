@@ -12,10 +12,10 @@ namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
     {
         public static TheoryData<string, Token> Data = new TheoryData<string, Token>
         {
-            { "IV 100 0",new Token(1,0,TokenType.Number,"IV","4" ) },
+            { "IV 100 0",new Token(1,0,TokenType.Number,"IV" ) },
             { "XOXO\r\nThis has new line",null },
-            { "XV 1234",new Token(1,0,TokenType.Number,"XV","15" ) },
-            { "III. 43",new Token(2,0,TokenType.Number,"III","3" ) },
+            { "XV 1234",new Token(1,0,TokenType.Number,"XV" ) },
+            { "III. 43",new Token(2,0,TokenType.Number,"III" ) },
             { ".This. has. no. new line.",null },
             { "..This. has. no. new line.",null },
             { "\n\n\n\n\n\nThis has an new line.",null },
