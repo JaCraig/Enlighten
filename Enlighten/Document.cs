@@ -6,6 +6,7 @@ using Enlighten.TextSummarization.Interfaces;
 using Enlighten.Tokenizer;
 using Enlighten.Tokenizer.Enums;
 using Enlighten.Tokenizer.Interfaces;
+using System;
 
 namespace Enlighten
 {
@@ -24,7 +25,14 @@ namespace Enlighten
         /// <param name="textSummarizer">The text summarizer.</param>
         /// <param name="tokenizer">The tokenizer.</param>
         /// <param name="tokenizerLanguage">The tokenizer language.</param>
-        public Document(Sentence[] sentences, Token[] tokens, string originalText, IFeatureExtractor featureExtractor, ITextSummarizer textSummarizer, ITokenizer tokenizer, TokenizerLanguage tokenizerLanguage)
+        public Document(
+            Sentence[] sentences,
+            Token[] tokens,
+            string originalText,
+            IFeatureExtractor featureExtractor,
+            ITextSummarizer textSummarizer,
+            ITokenizer tokenizer,
+            TokenizerLanguage tokenizerLanguage)
         {
             Sentences = sentences;
             OriginalText = originalText;
@@ -33,7 +41,14 @@ namespace Enlighten
             FeatureExtractor = featureExtractor;
             TokenizerLanguage = tokenizerLanguage;
             Tokenizer = tokenizer;
+            ID = Guid.NewGuid();
         }
+
+        /// <summary>
+        /// Gets the identifier.
+        /// </summary>
+        /// <value>The identifier.</value>
+        public Guid ID { get; }
 
         /// <summary>
         /// Gets the text.

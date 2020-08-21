@@ -17,6 +17,7 @@ limitations under the License.
 using Canister.Interfaces;
 using Enlighten.FeatureExtraction.Interfaces;
 using Enlighten.Frequency;
+using Enlighten.Indexer.Interfaces;
 using Enlighten.Inflector.Interfaces;
 using Enlighten.Normalizer.Interfaces;
 using Enlighten.POSTagger.Interfaces;
@@ -71,7 +72,10 @@ namespace Enlighten.CanisterModules
                         .RegisterAll<INormalizer>(ServiceLifetime.Singleton)
                         .RegisterAll<ITextNormalizer>(ServiceLifetime.Singleton)
                         .RegisterAll<INormalizerManager>(ServiceLifetime.Singleton)
-                        .Register<Pipeline>(ServiceLifetime.Transient);
+                        .Register<Pipeline>(ServiceLifetime.Transient)
+                        .RegisterAll<IIndexer>(ServiceLifetime.Singleton)
+                        .RegisterAll<IIndexCreator>(ServiceLifetime.Singleton)
+                        .Register<Index>(ServiceLifetime.Transient);
         }
     }
 }
