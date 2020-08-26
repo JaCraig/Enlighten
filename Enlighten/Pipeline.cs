@@ -72,7 +72,7 @@ namespace Enlighten
         /// Gets the type of the entity finder.
         /// </summary>
         /// <value>The type of the entity finder.</value>
-        private string? EntityFinderType { get; set; }
+        private EntityFinderLanguage EntityFinderType { get; set; }
 
         /// <summary>
         /// Gets the feature extractor.

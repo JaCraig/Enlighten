@@ -79,7 +79,7 @@ namespace Enlighten.NameFinder.Finders
                 tokens[start].Entity = true;
                 return tokens;
             }
-            Token NewToken = null;
+            Token? NewToken = null;
             for (int x = 0; x < tokens.Length; ++x)
             {
                 if (x >= Start && x < End)
@@ -93,7 +93,7 @@ namespace Enlighten.NameFinder.Finders
                         NewToken = NewToken.Join(tokens[x]);
                     }
                 }
-                else if (x == End)
+                else if (x == End && !(NewToken is null))
                 {
                     NewToken = NewToken.Join(tokens[x]);
                     NewToken.Entity = true;

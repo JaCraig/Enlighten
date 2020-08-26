@@ -98,13 +98,13 @@ namespace Enlighten.TextSummarization.Languages
             for (int x = 0; x < tokens.Length; ++x)
             {
                 var Token = tokens[x];
-                var Key = Token.StemmedValue.ToLower();
+                var Key = Token.StemmedValue?.ToLower() ?? string.Empty;
                 if (!ReturnValue.TryGetValue(Key, out var _))
                 {
                     ReturnValue.Add(Key, 0);
                     for (int y = 0; y < sentences.Length; ++y)
                     {
-                        if (sentences[y].Tokens.Any(z => z.StemmedValue.ToLower() == Key))
+                        if (sentences[y].Tokens.Any(z => z.StemmedValue?.ToLower() == Key))
                         {
                             ReturnValue[Key]++;
                         }

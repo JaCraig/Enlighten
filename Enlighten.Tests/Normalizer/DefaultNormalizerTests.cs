@@ -16,7 +16,6 @@ namespace Enlighten.Tests.Normalizer
         [Fact]
         public void NormalizeText()
         {
-            var Tokenizer = new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() });
             var TestObject = new DefaultNormalizer(new INormalizer[] { new ASCIIFolder(ObjectPool), new LowerCase() }, new ITextNormalizer[] { new HTMLToText(ObjectPool) });
             var Result = TestObject.Normalize("Testing out <p>this stuff</p>");
             Assert.Equal("Testing out this stuff \r\n", Result);
