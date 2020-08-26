@@ -15,7 +15,9 @@ limitations under the License.
 */
 
 using Enlighten.NameFinder.Interfaces;
+using Enlighten.Tokenizer;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Enlighten.NameFinder
 {
@@ -31,13 +33,31 @@ namespace Enlighten.NameFinder
         /// <param name="finders">The finders.</param>
         public DefaultEntityFinder(IEnumerable<IFinder> finders)
         {
-            Finders = finders;
+            Finders = finders.Where(x => x.GetType().Assembly != typeof(DefaultEntityFinder).Assembly).ToDictionary(x => x.Name);
+            foreach (var Finder in finders.Where(x => x.GetType().Assembly == typeof(DefaultEntityFinder).Assembly
+                && !Finders.ContainsKey(x.Name)))
+            {
+                Finders.Add(Finder.Name, Finder);
+            }
         }
 
         /// <summary>
         /// Gets the finders.
         /// </summary>
         /// <value>The finders.</value>
-        public IEnumerable<IFinder> Finders { get; }
+        private Dictionary<string, IFinder> Finders { get; }
+
+        /// <summary>
+        /// Finds the entities in the specified document.
+        /// </summary>
+        /// <param name="tokens">The tokens.</param>
+        /// <param name="entityFinder">The entity finder.</param>
+        /// <returns>The document after it is processed.</returns>
+        public Token[] Find(Token[] tokens, string entityFinder)
+        {
+            if (!Finders.TryGetValue(entityFinder, out var Finder))
+                return tokens;
+            return Finder.Find(tokens);
+        }
     }
 }

@@ -14,6 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+using Enlighten.Tokenizer;
+
 namespace Enlighten.NameFinder.Interfaces
 {
     /// <summary>
@@ -26,5 +28,12 @@ namespace Enlighten.NameFinder.Interfaces
         /// </summary>
         /// <value>The name.</value>
         string Name { get; }
+
+        /// <summary>
+        /// Finds the entities in the specified document.
+        /// </summary>
+        /// <param name="tokens">The tokens.</param>
+        /// <returns>The document after it is processed.</returns>
+        Token[] Find(Token[] tokens);
     }
 }

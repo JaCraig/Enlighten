@@ -1,5 +1,7 @@
 ﻿using Enlighten.Enums;
 using Enlighten.FeatureExtraction.Interfaces;
+using Enlighten.NameFinder.Enums;
+using Enlighten.NameFinder.Interfaces;
 using Enlighten.Normalizer.Interfaces;
 using Enlighten.POSTagger.Enum;
 using Enlighten.POSTagger.Interfaces;
@@ -32,6 +34,7 @@ namespace Enlighten
         /// <param name="tokenizer">The tokenizer.</param>
         /// <param name="featureExtractor">The feature extractor.</param>
         /// <param name="textSummarizer">The text summarizer.</param>
+        /// <param name="entityFinder">The entity finder.</param>
         /// <exception cref="ArgumentNullException">
         /// normalizerManager or pOSTagger or sentenceDetector or stemmer or stopWordsManager or
         /// tokenizer or featureExtractor or textSummarizer
@@ -44,7 +47,8 @@ namespace Enlighten
             IStopWordsManager stopWordsManager,
             ITokenizer tokenizer,
             IFeatureExtractor featureExtractor,
-            ITextSummarizer textSummarizer)
+            ITextSummarizer textSummarizer,
+            IEntityFinder entityFinder)
         {
             NormalizerManager = normalizerManager ?? throw new ArgumentNullException(nameof(normalizerManager));
             POSTagger = pOSTagger ?? throw new ArgumentNullException(nameof(pOSTagger));
@@ -54,8 +58,21 @@ namespace Enlighten
             Tokenizer = tokenizer ?? throw new ArgumentNullException(nameof(tokenizer));
             FeatureExtractor = featureExtractor ?? throw new ArgumentNullException(nameof(featureExtractor));
             TextSummarizer = textSummarizer ?? throw new ArgumentNullException(nameof(textSummarizer));
+            EntityFinder = entityFinder ?? throw new ArgumentNullException(nameof(entityFinder));
             SetLanguage(Languages.English);
         }
+
+        /// <summary>
+        /// Gets the entity finder.
+        /// </summary>
+        /// <value>The entity finder.</value>
+        private IEntityFinder EntityFinder { get; }
+
+        /// <summary>
+        /// Gets the type of the entity finder.
+        /// </summary>
+        /// <value>The type of the entity finder.</value>
+        private string? EntityFinderType { get; set; }
 
         /// <summary>
         /// Gets the feature extractor.
@@ -154,6 +171,8 @@ namespace Enlighten
                 var Sentence = Sentences[x];
                 Sentence.Tokens = POSTagger.Tag(Sentence.Tokens, POSTaggerLanguage);
             }
+            Tokens = EntityFinder.Find(Tokens, EntityFinderType);
+            Sentences = SentenceDetector.Detect(Tokens, SentenceDetectorLanguage);
 
             return new Document(Sentences, Tokens, text, FeatureExtractor, TextSummarizer, Tokenizer, TokenizerLanguage);
         }
@@ -171,7 +190,8 @@ namespace Enlighten
                     .With(SentenceDetectorLanguage.Default)
                     .With(TokenizerLanguage.EnglishRuleBased)
                     .With(StopWordsLanguage.EnglishSpacy)
-                    .With(StemmerLanguage.EnglishPorter2);
+                    .With(StemmerLanguage.EnglishPorter2)
+                    .With(EntityFinderLanguage.DefaultFinder);
             }
             return this;
         }
@@ -185,6 +205,18 @@ namespace Enlighten
         public Pipeline With(POSTaggerLanguage posTagger)
         {
             POSTaggerLanguage = posTagger ?? throw new ArgumentNullException(nameof(posTagger));
+            return this;
+        }
+
+        /// <summary>
+        /// Withes the specified entity finder language.
+        /// </summary>
+        /// <param name="entityFinderLanguage">The entity finder language.</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException">entityFinderLanguage</exception>
+        public Pipeline With(EntityFinderLanguage entityFinderLanguage)
+        {
+            EntityFinderType = entityFinderLanguage ?? throw new ArgumentNullException(nameof(entityFinderLanguage));
             return this;
         }
 

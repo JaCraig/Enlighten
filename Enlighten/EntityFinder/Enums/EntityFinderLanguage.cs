@@ -44,6 +44,6 @@ namespace Enlighten.NameFinder.Enums
         /// Gets the default finder.
         /// </summary>
         /// <value>The default finder.</value>
-        public static EntityFinderLanguage DefaultFinder { get; } = new EntityFinderLanguage("en-us");
+        public static EntityFinderLanguage DefaultFinder { get; } = new EntityFinderLanguage("naive");
     }
 }

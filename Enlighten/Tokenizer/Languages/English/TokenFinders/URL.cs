@@ -48,7 +48,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
 
             var TempSlice = tokenizer.Slice(StartPosition, StartPosition + 7);
 
-            if (TempSlice[0] != 'f' && TempSlice[0] != 'h' && TempSlice[0] != 's')
+            if (TempSlice[0] != 'f' && TempSlice[0] != 'h' && TempSlice[0] != 's' && TempSlice[0] != 'w')
                 return null;
 
             while (!tokenizer.End() && !char.IsWhiteSpace(tokenizer.Current))
@@ -64,8 +64,15 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
 
             tokenizer.Index = StartPosition + Result.Length;
 
-            if (!Uri.IsWellFormedUriString(Result, UriKind.RelativeOrAbsolute))
+            if (!Uri.IsWellFormedUriString(Result, UriKind.RelativeOrAbsolute)
+                || (!Result.StartsWith("ftp:", StringComparison.OrdinalIgnoreCase) &&
+                !Result.StartsWith("sftp:", StringComparison.OrdinalIgnoreCase) &&
+                !Result.StartsWith("http:", StringComparison.OrdinalIgnoreCase) &&
+                !Result.StartsWith("https:", StringComparison.OrdinalIgnoreCase) &&
+                !Result.StartsWith("www.", StringComparison.OrdinalIgnoreCase)))
+            {
                 return null;
+            }
 
             EndPosition = tokenizer.Index - 1;
 

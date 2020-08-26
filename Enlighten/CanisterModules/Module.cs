@@ -19,6 +19,7 @@ using Enlighten.FeatureExtraction.Interfaces;
 using Enlighten.Frequency;
 using Enlighten.Indexer.Interfaces;
 using Enlighten.Inflector.Interfaces;
+using Enlighten.NameFinder.Interfaces;
 using Enlighten.Normalizer.Interfaces;
 using Enlighten.POSTagger.Interfaces;
 using Enlighten.SentenceDetection.Interfaces;
@@ -75,7 +76,9 @@ namespace Enlighten.CanisterModules
                         .Register<Pipeline>(ServiceLifetime.Transient)
                         .RegisterAll<IIndexer>(ServiceLifetime.Singleton)
                         .RegisterAll<IIndexCreator>(ServiceLifetime.Singleton)
-                        .Register<Index>(ServiceLifetime.Transient);
+                        .Register<Index>(ServiceLifetime.Transient)
+                        .RegisterAll<IFinder>(ServiceLifetime.Singleton)
+                        .RegisterAll<IEntityFinder>(ServiceLifetime.Singleton);
         }
     }
 }

@@ -22,10 +22,10 @@ namespace Enlighten.Tests.Frequency
             Assert.Equal("the", TopTen[0].Key);
             Assert.Equal(196, TopTen[0].Value);
 
-            Assert.Equal(1750, Result.NumberOfWords);
-            Assert.Equal(452, Result.NumberOfTypes);
-            Assert.Equal(0.2582857142857142857142857143m, Result.TypeTokenRatio);
-            Assert.Equal(0.6204121212121212121212121212m, Result.AverageTypeTokenRatio);
+            Assert.Equal(2040, Result.NumberOfWords);
+            Assert.Equal(565, Result.NumberOfTypes);
+            Assert.Equal(0.2769607843137254901960784314m, Result.TypeTokenRatio);
+            Assert.Equal(0.6612371134020618556701030928m, Result.AverageTypeTokenRatio);
         }
     }
 }

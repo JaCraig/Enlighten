@@ -22,11 +22,11 @@ namespace Enlighten.Tests.FeatureExtractor
             Document Text = Pipeline.Process(new FileInfo("./Data/MotherJonesArticle.txt"));
             var TestObject = new DefaultFeatureExtractor(new IFeatureExtractorLanguage[] { new EnglishDefault(Canister.Builder.Bootstrapper.Resolve<FrequencyAnalyzer>()) });
             var Results = TestObject.Extract(Text, Docs, 5, FeatureExtractionType.EnglishDefault);
-            Assert.Equal("New", Results[0]);
-            Assert.Equal("York", Results[1]);
-            Assert.Equal("Mayor", Results[2]);
-            Assert.Equal("de", Results[3]);
-            Assert.Equal("Blasio", Results[4]);
+            Assert.Equal("de", Results[0]);
+            Assert.Equal("Blasio", Results[1]);
+            Assert.Equal("closing", Results[2]);
+            Assert.Equal("closures", Results[3]);
+            Assert.Equal("announced", Results[4]);
         }
     }
 }

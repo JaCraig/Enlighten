@@ -45,6 +45,18 @@ namespace Enlighten.Tokenizer
         public int EndPosition { get; set; }
 
         /// <summary>
+        /// Gets or sets a value indicating whether this instance is entity.
+        /// </summary>
+        /// <value><c>true</c> if this instance is entity; otherwise, <c>false</c>.</value>
+        public bool Entity { get; set; }
+
+        /// <summary>
+        /// Gets or sets the type of the entity.
+        /// </summary>
+        /// <value>The type of the entity.</value>
+        public string? EntityType { get; set; }
+
+        /// <summary>
         /// Gets or sets the normalized value.
         /// </summary>
         /// <value>The normalized value.</value>
@@ -104,7 +116,41 @@ namespace Enlighten.Tokenizer
                 StemmedValue = StemmedValue,
                 StopWord = StopWord,
                 NormalizedValue = NormalizedValue,
-                ReplacementValue = ReplacementValue
+                ReplacementValue = ReplacementValue,
+                Entity = Entity,
+                EntityType = EntityType
+            };
+        }
+
+        /// <summary>
+        /// Joins the specified token with this one.
+        /// </summary>
+        /// <param name="token">The token.</param>
+        /// <returns>A new instance of the token.</returns>
+        public Token Join(Token token)
+        {
+            if (token.StartPosition < StartPosition)
+            {
+                return new Token(EndPosition, token.StartPosition, TokenType, token.Value + Value)
+                {
+                    PartOfSpeech = PartOfSpeech,
+                    StemmedValue = token.StemmedValue + StemmedValue,
+                    StopWord = StopWord,
+                    NormalizedValue = token.NormalizedValue + NormalizedValue,
+                    ReplacementValue = token.ReplacementValue + ReplacementValue,
+                    Entity = Entity,
+                    EntityType = EntityType
+                };
+            }
+            return new Token(token.EndPosition, StartPosition, TokenType, Value + token.Value)
+            {
+                PartOfSpeech = PartOfSpeech,
+                StemmedValue = StemmedValue + token.StemmedValue,
+                StopWord = StopWord,
+                NormalizedValue = NormalizedValue + token.NormalizedValue,
+                ReplacementValue = ReplacementValue + token.ReplacementValue,
+                Entity = Entity,
+                EntityType = EntityType
             };
         }
 
