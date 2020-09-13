@@ -25,7 +25,6 @@ namespace Enlighten.Tests.Frequency
             Assert.Equal(2040, Result.NumberOfWords);
             Assert.Equal(565, Result.NumberOfTypes);
             Assert.Equal(0.2769607843137254901960784314m, Result.TypeTokenRatio);
-            Assert.Equal(0.6612371134020618556701030928m, Result.AverageTypeTokenRatio);
         }
     }
 }
