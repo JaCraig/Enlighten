@@ -7,11 +7,11 @@ namespace Enlighten.Frequency
     /// </summary>
     public class FrequencyResults
     {
-        /// <summary>
-        /// Gets the average type token ratio.
-        /// </summary>
-        /// <value>The average type token ratio.</value>
-        public decimal AverageTypeTokenRatio { get; internal set; }
+        ///// <summary>
+        ///// Gets the average type token ratio.
+        ///// </summary>
+        ///// <value>The average type token ratio.</value>
+        //public decimal AverageTypeTokenRatio { get; internal set; }
 
         /// <summary>
         /// Gets the number of types (distinct words).

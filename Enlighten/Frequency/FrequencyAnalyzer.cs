@@ -24,7 +24,7 @@ namespace Enlighten.Frequency
             CalculateWordCount(WordTokens, ReturnValue.WordCount);
             ReturnValue.NumberOfWords = WordTokens.Length;
             ReturnValue.NumberOfTypes = ReturnValue.WordCount.Keys.Count;
-            CalculateAverageTypeTokenRatio(ReturnValue, WordTokens);
+            //CalculateAverageTypeTokenRatio(ReturnValue, WordTokens);
             CalculateTermFrequency(ReturnValue);
             return ReturnValue;
         }
@@ -33,30 +33,30 @@ namespace Enlighten.Frequency
         /// Calculates the average type token ratio.
         /// </summary>
         /// <param name="tokens">The tokens.</param>
-        private void CalculateAverageTypeTokenRatio(FrequencyResults returnValue, Token[] tokens)
-        {
-            List<decimal> TTRValues = new List<decimal>();
-            for (int x = 0; x < tokens.Length - returnValue.WindowSize; ++x)
-            {
-                var TempWordCount = new SortedDictionary<string, int>();
-                for (int y = 0; y < returnValue.WindowSize; ++y)
-                {
-                    var CurrentToken = tokens[x + y];
-                    var TempWord = (CurrentToken.StemmedValue ?? CurrentToken.Value).ToLower();
-                    if (TempWordCount.ContainsKey(TempWord))
-                    {
-                        ++TempWordCount[TempWord];
-                    }
-                    else
-                    {
-                        TempWordCount.Add(TempWord, 1);
-                    }
-                }
-                TTRValues.Add((decimal)TempWordCount.Keys.Count / returnValue.WindowSize);
-            }
-            if (TTRValues.Count > 0)
-                returnValue.AverageTypeTokenRatio = TTRValues.Average();
-        }
+        //private void CalculateAverageTypeTokenRatio(FrequencyResults returnValue, Token[] tokens)
+        //{
+        //    List<decimal> TTRValues = new List<decimal>();
+        //    for (int x = 0; x < tokens.Length - returnValue.WindowSize; ++x)
+        //    {
+        //        var TempWordCount = new SortedDictionary<string, int>();
+        //        for (int y = 0; y < returnValue.WindowSize; ++y)
+        //        {
+        //            var CurrentToken = tokens[x + y];
+        //            var TempWord = (CurrentToken.StemmedValue ?? CurrentToken.Value).ToLower();
+        //            if (TempWordCount.ContainsKey(TempWord))
+        //            {
+        //                ++TempWordCount[TempWord];
+        //            }
+        //            else
+        //            {
+        //                TempWordCount.Add(TempWord, 1);
+        //            }
+        //        }
+        //        TTRValues.Add((decimal)TempWordCount.Keys.Count / returnValue.WindowSize);
+        //    }
+        //    if (TTRValues.Count > 0)
+        //        returnValue.AverageTypeTokenRatio = TTRValues.Average();
+        //}
 
         /// <summary>
         /// Calculates the term frequency.
