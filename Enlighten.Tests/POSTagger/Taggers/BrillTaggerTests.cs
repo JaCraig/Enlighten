@@ -23,7 +23,7 @@ namespace Enlighten.Tests.POSTagger.Taggers
         public void Setup()
         {
             var TestObject = new SimpleTagger(Canister.Builder.Bootstrapper.Resolve<IInflector>(), Canister.Builder.Bootstrapper.Resolve<ISynonymFinder>());
-            Assert.Equal(93361, TestObject.Lexicon.Keys.Count);
+            Assert.Equal(93360, TestObject.Lexicon.Keys.Count);
         }
 
         [Fact]

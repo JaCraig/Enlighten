@@ -14,12 +14,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-using BigBook.Registration;
 using Canister.Interfaces;
-using FileCurator.Registration;
-using System.Reflection;
 
-namespace Enlighten
+namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
     /// Canister registration
@@ -31,9 +28,9 @@ namespace Enlighten
         /// </summary>
         /// <param name="bootstrapper">The bootstrapper.</param>
         /// <returns>The bootstrapper</returns>
-        public static IBootstrapper? RegisterEnlighten(this IBootstrapper? bootstrapper)
+        public static ICanisterConfiguration? RegisterEnlighten(this ICanisterConfiguration? bootstrapper)
         {
-            return bootstrapper?.AddAssembly(typeof(CanisterRegistration).GetTypeInfo().Assembly)
+            return bootstrapper?.AddAssembly(typeof(CanisterRegistration).Assembly)
                                ?.RegisterBigBookOfDataTypes()
                                ?.RegisterFileCurator();
         }

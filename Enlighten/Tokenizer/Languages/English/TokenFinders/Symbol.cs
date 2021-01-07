@@ -21,8 +21,18 @@ using System.Collections.Generic;
 
 namespace Enlighten.Tokenizer.Languages.English.TokenFinders
 {
+    /// <summary>
+    /// Symbol class
+    /// </summary>
+    /// <seealso cref="TokenFinderBaseClass"/>
     public class Symbol : TokenFinderBaseClass
     {
+        /// <summary>
+        /// Gets the order.
+        /// </summary>
+        /// <value>The order.</value>
+        public override int Order { get; } = 3;
+
         /// <summary>
         /// The symbols
         /// </summary>
@@ -61,12 +71,6 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
             ['~'] = TokenType.Tilde,
             ['_'] = TokenType.Underscore
         };
-
-        /// <summary>
-        /// Gets the order.
-        /// </summary>
-        /// <value>The order.</value>
-        public override int Order { get; } = 3;
 
         /// <summary>
         /// Determines whether [is match implementation] [the specified tokenizer].
