@@ -11,7 +11,7 @@ using Xunit;
 
 namespace Enlighten.Tests.Normalizer
 {
-    public class DefaultNormalizerTests : TestBaseClass
+    public class DefaultNormalizerTests : TestBaseClass<DefaultNormalizer>
     {
         [Fact]
         public void NormalizeText()

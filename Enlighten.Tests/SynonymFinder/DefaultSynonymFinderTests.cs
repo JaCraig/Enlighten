@@ -7,7 +7,7 @@ using Xunit;
 
 namespace Enlighten.Tests.SynonymFinder
 {
-    public class DefaultSynonymFinderTests : TestBaseClass
+    public class DefaultSynonymFinderTests : TestBaseClass<DefaultSynonymFinder>
     {
         [Fact]
         public void BasicTest()

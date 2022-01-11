@@ -10,7 +10,7 @@ using Xunit;
 
 namespace Enlighten.Tests.Tokenizer
 {
-    public class DefaultTokenizerTests : TestBaseClass
+    public class DefaultTokenizerTests : TestBaseClass<DefaultTokenizer>
     {
         [Fact]
         public void Detokenize()

@@ -17,7 +17,7 @@ using Xunit;
 
 namespace Enlighten.Tests.POSTagger.Taggers
 {
-    public class BrillTaggerTests : TestBaseClass
+    public class BrillTaggerTests : TestBaseClass<SimpleTagger>
     {
         [Fact]
         public void Setup()

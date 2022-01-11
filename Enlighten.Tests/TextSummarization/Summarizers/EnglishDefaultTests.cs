@@ -6,7 +6,7 @@ using Xunit;
 
 namespace Enlighten.Tests.TextSummarization.Summarizers
 {
-    public class EnglishDefaultTests : TestBaseClass
+    public class EnglishDefaultTests : TestBaseClass<EnglishDefault>
     {
         [Fact]
         public void NewsArticleTest()

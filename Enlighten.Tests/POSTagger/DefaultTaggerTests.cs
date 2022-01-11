@@ -19,7 +19,7 @@ using Xunit;
 
 namespace Enlighten.Tests.POSTagger
 {
-    public class DefaultTaggerTests : TestBaseClass
+    public class DefaultTaggerTests : TestBaseClass<DefaultTagger>
     {
         [Fact]
         public void Setup()

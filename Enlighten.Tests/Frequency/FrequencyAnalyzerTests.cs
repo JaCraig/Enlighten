@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Enlighten.Tests.Frequency
 {
-    public class FrequencyAnalyzerTests : TestBaseClass
+    public class FrequencyAnalyzerTests : TestBaseClass<FrequencyAnalyzer>
     {
         [Fact]
         public void TheDoorTest()

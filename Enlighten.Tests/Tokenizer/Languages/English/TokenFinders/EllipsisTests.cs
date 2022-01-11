@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
 {
-    public class EllipsisTests : TestBaseClass
+    public class EllipsisTests : TestBaseClass<Ellipsis>
     {
         public static TheoryData<string, Token> Data = new TheoryData<string, Token>
         {

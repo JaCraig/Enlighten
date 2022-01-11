@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Enlighten.Tests.Tokenizer.Languages.English
 {
-    public class EnglishLanguageTests : TestBaseClass
+    public class EnglishLanguageTests : TestBaseClass<EnglishLanguage>
     {
         [Fact]
         public void Detokenize()

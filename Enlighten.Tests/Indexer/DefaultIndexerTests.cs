@@ -9,7 +9,7 @@ using Xunit;
 
 namespace Enlighten.Tests.Indexer
 {
-    public class DefaultIndexerTests : TestBaseClass
+    public class DefaultIndexerTests : TestBaseClass<DefaultIndexer>
     {
         [Fact]
         public void AddDocument()

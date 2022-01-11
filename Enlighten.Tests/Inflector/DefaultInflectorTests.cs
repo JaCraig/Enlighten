@@ -6,7 +6,7 @@ using Xunit;
 
 namespace Enlighten.Tests.Inflector
 {
-    public class DefaultInflectorTests : TestBaseClass
+    public class DefaultInflectorTests : TestBaseClass<DefaultInflector>
     {
         [Fact]
         public void IsPlural()

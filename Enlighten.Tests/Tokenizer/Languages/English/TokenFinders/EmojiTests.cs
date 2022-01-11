@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
 {
-    public class EmojiTests : TestBaseClass
+    public class EmojiTests : TestBaseClass<Emoji>
     {
         public static TheoryData<string, Token> Data = new TheoryData<string, Token>
         {

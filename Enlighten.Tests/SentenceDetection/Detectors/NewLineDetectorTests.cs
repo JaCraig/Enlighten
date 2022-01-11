@@ -9,7 +9,7 @@ using Xunit;
 
 namespace Enlighten.Tests.SentenceDetection.Detectors
 {
-    public class NewLineDetectorTests : TestBaseClass
+    public class NewLineDetectorTests : TestBaseClass<NewLineDetector>
     {
         [Fact]
         public void Detect()

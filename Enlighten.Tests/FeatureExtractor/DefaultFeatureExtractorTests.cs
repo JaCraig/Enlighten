@@ -9,7 +9,7 @@ using Xunit;
 
 namespace Enlighten.Tests.FeatureExtractor
 {
-    public class DefaultFeatureExtractorTests : TestBaseClass
+    public class DefaultFeatureExtractorTests : TestBaseClass<DefaultFeatureExtractor>
     {
         [Fact]
         public void NewsArticleTest()

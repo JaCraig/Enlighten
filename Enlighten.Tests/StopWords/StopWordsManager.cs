@@ -12,7 +12,7 @@ using Xunit;
 
 namespace Enlighten.Tests.StopWords
 {
-    public class StopWordsManagerTests : TestBaseClass
+    public class StopWordsManagerTests : TestBaseClass<StopWordsManager>
     {
         [Fact]
         public void MarkStopWords()

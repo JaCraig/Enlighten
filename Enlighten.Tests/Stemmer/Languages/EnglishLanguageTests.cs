@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Enlighten.Tests.Stemmer.Languages
 {
-    public class EnglishLanguageTests : TestBaseClass
+    public class EnglishLanguageTests : TestBaseClass<EnglishLanguage>
     {
         [Fact]
         public void IsMatch()

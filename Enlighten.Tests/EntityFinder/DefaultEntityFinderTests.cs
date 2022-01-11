@@ -23,7 +23,7 @@ using Xunit;
 
 namespace Enlighten.Tests.EntityFinder
 {
-    public class DefaultEntityFinderTests : TestBaseClass
+    public class DefaultEntityFinderTests : TestBaseClass<DefaultEntityFinder>
     {
         [Fact]
         public void BasicTest()

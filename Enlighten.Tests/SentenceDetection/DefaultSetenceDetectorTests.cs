@@ -10,7 +10,7 @@ using Xunit;
 
 namespace Enlighten.Tests.SentenceDetection
 {
-    public class DefaultSentenceDetectorTests : TestBaseClass
+    public class DefaultSentenceDetectorTests : TestBaseClass<DefaultSentenceDetector>
     {
         [Fact]
         public void AbbreviationDetection()

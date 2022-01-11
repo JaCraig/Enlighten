@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Enlighten.Tests.Tokenizer.Languages.English.TokenFinders
 {
-    public class HashTagTests : TestBaseClass
+    public class HashTagTests : TestBaseClass<HashTag>
     {
         public static TheoryData<string, Token> Data = new TheoryData<string, Token>
         {

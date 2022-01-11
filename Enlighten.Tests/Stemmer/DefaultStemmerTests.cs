@@ -12,7 +12,7 @@ using Xunit;
 
 namespace Enlighten.Tests.Stemmer
 {
-    public class DefaultStemmerTests : TestBaseClass
+    public class DefaultStemmerTests : TestBaseClass<DefaultStemmer>
     {
         [Fact]
         public void Stem()

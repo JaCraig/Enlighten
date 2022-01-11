@@ -9,7 +9,7 @@ using Xunit;
 
 namespace Enlighten.Tests.TextSummarization
 {
-    public class DefaultTextSummarizerTests : TestBaseClass
+    public class DefaultTextSummarizerTests : TestBaseClass<DefaultTextSummarizer>
     {
         [Fact]
         public void NewsArticleTest()
