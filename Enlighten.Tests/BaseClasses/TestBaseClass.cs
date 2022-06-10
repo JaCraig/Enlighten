@@ -32,7 +32,7 @@ namespace Enlighten.Tests.BaseClasses
         /// Gets or sets the test object.
         /// </summary>
         /// <value>The test object.</value>
-        protected TTestObject? TestObject { get; set; }
+        protected TTestObject TestObject { get; set; }
 
         /// <summary>
         /// Attempts to break the object.
@@ -83,7 +83,7 @@ namespace Enlighten.Tests.BaseClasses
         /// <summary>
         /// The lock object
         /// </summary>
-        private static readonly object LockObject = new();
+        private static readonly object LockObject = new object();
 
         /// <summary>
         /// Attempts to break the object.

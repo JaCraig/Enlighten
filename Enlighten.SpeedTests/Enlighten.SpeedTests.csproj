@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
-    <PackageReference Include="FileCurator" Version="3.1.40" />
+    <PackageReference Include="FileCurator" Version="3.1.44" />
   </ItemGroup>
 
   <ItemGroup>

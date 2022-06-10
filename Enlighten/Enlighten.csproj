@@ -10,7 +10,7 @@
     <Description>Enlighten is a set of tools to help with natural language processing.</Description>
     <AssemblyTitle>Enlighten</AssemblyTitle>
     <Authors>James Craig</Authors>
-    <TargetFramework>netstandard2.1</TargetFramework>
+	  <TargetFrameworks>netstandard2.1;net5.0;net6.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>Enlighten</AssemblyName>
     <PackageId>Enlighten</PackageId>
@@ -41,8 +41,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="BigBook" Version="4.0.16" />
-    <PackageReference Include="FileCurator" Version="3.1.40" />
-    <PackageReference Include="System.Memory" Version="4.5.4" />
+    <PackageReference Include="BigBook" Version="4.0.18" />
+    <PackageReference Include="FileCurator" Version="3.1.44" />
+    <PackageReference Include="System.Memory" Version="4.5.5" />
   </ItemGroup>
 </Project>
