@@ -1,4 +1,5 @@
 ﻿using Mecha.Core;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.ObjectPool;
 using System;
 using System.IO;
@@ -72,7 +73,7 @@ namespace Enlighten.Tests.BaseClasses
             }
         }
 
-        protected ObjectPool<StringBuilder> ObjectPool => Canister.Builder.Bootstrapper.Resolve<ObjectPool<StringBuilder>>();
+        protected ObjectPool<StringBuilder> ObjectPool => new ServiceCollection().AddCanisterModules().BuildServiceProvider().GetService<ObjectPool<StringBuilder>>();
 
         /// <summary>
         /// Gets the type of the object.
@@ -84,6 +85,16 @@ namespace Enlighten.Tests.BaseClasses
         /// The lock object
         /// </summary>
         private static readonly object LockObject = new object();
+
+        /// <summary>
+        /// The service provider lock
+        /// </summary>
+        private static readonly object ServiceProviderLock = new object();
+
+        /// <summary>
+        /// The service provider
+        /// </summary>
+        private static IServiceProvider ServiceProvider;
 
         /// <summary>
         /// Attempts to break the object.
@@ -106,6 +117,23 @@ namespace Enlighten.Tests.BaseClasses
                     .IgnoreException<EndOfStreamException>((_, __) => true)
                     .IgnoreException<OutOfMemoryException>((_, __) => true)
             });
+        }
+
+        /// <summary>
+        /// Gets the service provider.
+        /// </summary>
+        /// <returns></returns>
+        protected static IServiceProvider GetServiceProvider()
+        {
+            if (ServiceProvider is not null)
+                return ServiceProvider;
+            lock (ServiceProviderLock)
+            {
+                if (ServiceProvider is not null)
+                    return ServiceProvider;
+                ServiceProvider = new ServiceCollection().AddCanisterModules()?.BuildServiceProvider();
+            }
+            return ServiceProvider;
         }
     }
 }

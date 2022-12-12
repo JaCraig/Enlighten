@@ -4,6 +4,7 @@ using Enlighten.Indexer.Indexers;
 using Enlighten.Indexer.Interfaces;
 using Enlighten.Tests.BaseClasses;
 using FileCurator;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using Xunit;
 
@@ -15,7 +16,7 @@ namespace Enlighten.Tests.Indexer
         public void AddDocument()
         {
             string Text = new FileInfo("./Data/MotherJonesArticle.txt");
-            var Pipeline = Canister.Builder.Bootstrapper.Resolve<Pipeline>();
+            var Pipeline = GetServiceProvider().GetService<Pipeline>();
             var TestObject = new DefaultIndexer(new IIndexCreator[] { new InvertedIndexCreator() });
             var Index = TestObject.CreateIndex(IndexerType.InvertedIndex, Array.Empty<Document>());
             Index.AddDoc(Pipeline.Process(Text));
@@ -33,7 +34,7 @@ namespace Enlighten.Tests.Indexer
         {
             string MJText = new FileInfo("./Data/MotherJonesArticle.txt");
             string DoorText = new FileInfo("./Data/TheDoor.txt");
-            var Pipeline = Canister.Builder.Bootstrapper.Resolve<Pipeline>();
+            var Pipeline = GetServiceProvider().GetService<Pipeline>();
             var TestObject = new DefaultIndexer(new IIndexCreator[] { new InvertedIndexCreator() });
             var Index = TestObject.CreateIndex(IndexerType.InvertedIndex, Array.Empty<Document>());
             var TestDoc = Pipeline.Process(MJText);

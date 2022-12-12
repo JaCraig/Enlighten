@@ -12,6 +12,7 @@ using Enlighten.Tokenizer.Languages.English;
 using Enlighten.Tokenizer.Languages.English.Enums;
 using Enlighten.Tokenizer.Languages.English.TokenFinders;
 using Enlighten.Tokenizer.Languages.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 using System.Linq;
 using Xunit;
 
@@ -22,14 +23,14 @@ namespace Enlighten.Tests.POSTagger.Taggers
         [Fact]
         public void Setup()
         {
-            var TestObject = new SimpleTagger(Canister.Builder.Bootstrapper.Resolve<IInflector>(), Canister.Builder.Bootstrapper.Resolve<ISynonymFinder>());
+            var TestObject = new SimpleTagger(GetServiceProvider().GetService<IInflector>(), GetServiceProvider().GetService<ISynonymFinder>());
             Assert.InRange(TestObject.Lexicon.Keys.Count, 93360, 93361);
         }
 
         [Fact]
         public void Tag()
         {
-            var TestObject = new SimpleTagger(Canister.Builder.Bootstrapper.Resolve<IInflector>(), Canister.Builder.Bootstrapper.Resolve<ISynonymFinder>());
+            var TestObject = new SimpleTagger(GetServiceProvider().GetService<IInflector>(), GetServiceProvider().GetService<ISynonymFinder>());
             var Normalizer = new DefaultNormalizer(new INormalizer[] { new ASCIIFolder(ObjectPool), new LowerCase() }, new ITextNormalizer[] { new HTMLToText(ObjectPool) });
             var Tokenizer = new DefaultTokenizer(new[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }, ObjectPool);
             var Results = TestObject.Tag(Normalizer.Normalize(Tokenizer.Tokenize(Normalizer.Normalize("I would go buy a computer."), TokenizerLanguage.EnglishRuleBased)));
@@ -39,7 +40,7 @@ namespace Enlighten.Tests.POSTagger.Taggers
         [Fact]
         public void TagProperNoun()
         {
-            var TestObject = new SimpleTagger(Canister.Builder.Bootstrapper.Resolve<IInflector>(), Canister.Builder.Bootstrapper.Resolve<ISynonymFinder>());
+            var TestObject = new SimpleTagger(GetServiceProvider().GetService<IInflector>(), GetServiceProvider().GetService<ISynonymFinder>());
             var Normalizer = new DefaultNormalizer(new INormalizer[] { new ASCIIFolder(ObjectPool), new LowerCase() }, new ITextNormalizer[] { new HTMLToText(ObjectPool) });
             var Tokenizer = new DefaultTokenizer(new[] { new EnglishLanguage(new IEnglishTokenFinder[] { new Word(), new Whitespace(), new Symbol() }) }, ObjectPool);
             var Results = TestObject.Tag(Normalizer.Normalize(Tokenizer.Tokenize(Normalizer.Normalize("I want to go to New York City."), TokenizerLanguage.EnglishRuleBased)));

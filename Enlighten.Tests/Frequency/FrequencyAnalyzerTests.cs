@@ -3,6 +3,7 @@ using Enlighten.Tests.BaseClasses;
 using Enlighten.Tokenizer.Enums;
 using Enlighten.Tokenizer.Interfaces;
 using FileCurator;
+using Microsoft.Extensions.DependencyInjection;
 using System.Linq;
 using Xunit;
 
@@ -14,7 +15,7 @@ namespace Enlighten.Tests.Frequency
         public void TheDoorTest()
         {
             string Text = new FileInfo("./Data/TheDoor.txt");
-            var Tokenizer = Canister.Builder.Bootstrapper.Resolve<ITokenizer>();
+            var Tokenizer = GetServiceProvider().GetService<ITokenizer>();
             var Tokens = Tokenizer.Tokenize(Text, TokenizerLanguage.EnglishRuleBased);
             var TempFreq = new FrequencyAnalyzer();
             var Result = TempFreq.Analyze(Tokens, 100);
