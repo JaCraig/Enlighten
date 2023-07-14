@@ -5,9 +5,9 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Enlighten | Enlighten API Reference </title>
+      <title>Enlighten - NLP Library | Enlighten API Reference </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Enlighten | Enlighten API Reference ">
+      <meta name="title" content="Enlighten - NLP Library | Enlighten API Reference ">
       <meta name="generator" content="docfx ">
   
       <link rel="shortcut icon" href="favicon.ico">
@@ -92,10 +92,45 @@
                          </div>
 
                     <article class="content wrap" id="_content" data-uid="">
-<h1 id="enlighten">Enlighten</h1>
+<h1 id="enlighten---nlp-library">Enlighten - NLP Library</h1>
 
-<p>Set of natural language processing (NLP) tools to help with tokenization, sentence detection, summarization, stemming, etc.</p>
-<p><a href="https://ci.appveyor.com/project/JaCraig/enlighten"><img src="https://ci.appveyor.com/api/projects/status/y98rq3xi037yfv2j?svg=true" alt="Build status"></a></p>
+<p>Enlighten is a simple C# library designed to assist with natural language processing (NLP) tasks. It provides a pipeline based set of tools for various NLP operations, including tokenization, sentence detection, summarization, stemming, and feature extraction.</p>
+<h2 id="features">Features</h2>
+<p>Enlighten offers the following key features:</p>
+<ol>
+<li><p><strong>Tokenization</strong>: Efficiently break down text into individual tokens or words, making it easier to analyze and process textual data.</p>
+</li>
+<li><p><strong>Sentence Detection</strong>: Identify and extract sentences from a given piece of text.</p>
+</li>
+<li><p><strong>Summarization</strong>: Generate concise summaries of longer texts, allowing you to extract the most important information and reduce the overall length of the content.</p>
+</li>
+<li><p><strong>Stemming</strong>: Reduce words to their base or root form, enabling effective analysis by grouping variations of a word together.</p>
+</li>
+<li><p><strong>Feature Extraction</strong>: Extract relevant features using term frequency-inverse document frequency (TF-IDF) values, for use in machine learning or text mining tasks.</p>
+</li>
+<li><p><strong>Part-of-Speech (POS) Tagging</strong>: Assign linguistic tags to words in a sentence, indicating their grammatical properties, which can aid in tasks like named entity recognition or syntactic parsing.</p>
+</li>
+</ol>
+<h2 id="getting-started">Getting Started</h2>
+<p>To use Enlighten in your C# project, follow these steps:</p>
+<ol>
+<li><p><strong>Installation</strong>: Use NuGet to pull down the package.</p>
+<p>dotnet add package Enlighten</p>
+</li>
+<li><p><strong>Initializing the Library</strong>: Create an instance of the Enlighten class to start using its methods and features:</p>
+<pre><code class="lang-csharp">// Add the library and dependencies to your ServiceCollection using the AddCanisterModules method
+var Services = new ServiceCollection()?.AddCanisterModules()?.BuildServiceProvider();
+// Get the Pipeline service from the ServiceCollection
+var DefaultPipeline = Services.GetService&lt;Pipeline&gt;();
+</code></pre>
+</li>
+<li><p><strong>Utilizing the NLP Tools</strong>: Once you have initialized the Enlighten library, you can utilize its various methods for tokenization, sentence detection, summarization, stemming, feature extraction, POS tagging, and more. Refer to the library's documentation or source code for detailed usage instructions and examples.</p>
+</li>
+</ol>
+<h2 id="documentation">Documentation</h2>
+<p>For more detailed information on using Enlighten and its available methods, please refer to the official documentation. It provides usage examples and class documentation.</p>
+<h2 id="contributing">Contributing</h2>
+<p>Enlighten is an open-source project, and contributions are welcome! If you find a bug, have a feature request, or would like to contribute code improvements, please follow the guidelines in the project's GitHub repository.</p>
 </article>
                 </div>
 
