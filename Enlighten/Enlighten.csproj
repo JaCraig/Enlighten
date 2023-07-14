@@ -1,12 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <BuildNumber Condition=" '$(APPVEYOR_BUILD_NUMBER)' != '' ">$(APPVEYOR_BUILD_NUMBER)</BuildNumber>
-    <!-- for AppVeyor -->
-    <BuildNumber Condition=" '$(BUILD_NUMBER)' != '' ">$(BUILD_NUMBER)</BuildNumber>
-    <!-- for Team City -->
-    <BuildNumber Condition=" '$(BuildNumber)' == '' ">0</BuildNumber>
-    <!-- if not set -->
     <Description>Enlighten is a set of tools to help with natural language processing.</Description>
     <AssemblyTitle>Enlighten</AssemblyTitle>
     <Authors>James Craig</Authors>
@@ -30,6 +24,12 @@
     <RepositoryUrl>https://github.com/JaCraig/Enlighten</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>https://github.com/JaCraig/Enlighten/blob/master/CHANGELOG.md</PackageReleaseNotes>
+	  <PublishRepositoryUrl>true</PublishRepositoryUrl>
+	  <EmbedUntrackedSources>true</EmbedUntrackedSources>
+	  <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+	  <IncludeSymbols>true</IncludeSymbols>
+	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	  <EnableNETAnalyzers>true</EnableNETAnalyzers>
   </PropertyGroup>
 
   <ItemGroup>
@@ -46,7 +46,9 @@
     <EmbeddedResource Include="Resources\en-us\suffixes.txt" />
     <EmbeddedResource Include="Resources\en-us\synonyms.txt" />
   </ItemGroup>
-
+	<PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	</PropertyGroup>
   <ItemGroup>
     <None Include="..\Icon.png">
       <Pack>True</Pack>
@@ -61,5 +63,14 @@
   <ItemGroup>
     <PackageReference Include="FileCurator" Version="4.0.4" />
     <PackageReference Include="System.Memory" Version="4.5.5" />
+	  <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+	  <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="7.0.3">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
   </ItemGroup>
+	<Target Name="Husky" BeforeTargets="Restore;CollectPackageReferences" Condition="'$(HUSKY)' != 0">
+		<Exec Command="dotnet tool restore" StandardOutputImportance="Low" StandardErrorImportance="High" />
+		<Exec Command="dotnet husky install" StandardOutputImportance="Low" StandardErrorImportance="High" WorkingDirectory=".." />
+	</Target>
 </Project>

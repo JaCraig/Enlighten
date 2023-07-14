@@ -7,6 +7,7 @@ using Enlighten.Tokenizer.Languages.English;
 using Enlighten.Tokenizer.Languages.English.TokenFinders;
 using Enlighten.Tokenizer.Languages.Interfaces;
 using Enlighten.Tokenizer.Utils;
+using System;
 using Xunit;
 
 namespace Enlighten.Tests.Normalizer
@@ -18,7 +19,7 @@ namespace Enlighten.Tests.Normalizer
         {
             var TestObject = new DefaultNormalizer(new INormalizer[] { new ASCIIFolder(ObjectPool), new LowerCase() }, new ITextNormalizer[] { new HTMLToText(ObjectPool) });
             var Result = TestObject.Normalize("Testing out <p>this stuff</p>");
-            Assert.Equal("Testing out this stuff \r\n", Result);
+            Assert.Equal("Testing out this stuff " + Environment.NewLine, Result);
         }
 
         [Fact]
