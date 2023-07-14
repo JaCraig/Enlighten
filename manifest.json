@@ -1,0 +1,1751 @@
+{
+  "homepages": [],
+  "source_base_path": "/home/runner/work/Enlighten/Enlighten/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.CanisterModules.Module.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.CanisterModules.Module.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.CanisterModules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.CanisterModules.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Document.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Document.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Enums.Languages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Enums.Languages.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Enums.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.FeatureExtraction.DefaultFeatureExtractor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.FeatureExtraction.DefaultFeatureExtractor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.FeatureExtraction.Enum.FeatureExtractionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.FeatureExtraction.Enum.FeatureExtractionType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.FeatureExtraction.Enum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.FeatureExtraction.Enum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.FeatureExtraction.Extractors.EnglishDefault.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.FeatureExtraction.Extractors.EnglishDefault.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.FeatureExtraction.Extractors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.FeatureExtraction.Extractors.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.FeatureExtraction.Interfaces.IFeatureExtractorLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.FeatureExtraction.Interfaces.IFeatureExtractorLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.FeatureExtraction.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.FeatureExtraction.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.FeatureExtraction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.FeatureExtraction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Frequency.FrequencyAnalyzer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Frequency.FrequencyAnalyzer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Frequency.FrequencyResults.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Frequency.FrequencyResults.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Frequency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Frequency.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Index.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Indexer.DefaultIndexer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Indexer.DefaultIndexer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Indexer.Enums.IndexerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Indexer.Enums.IndexerType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Indexer.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Indexer.Enums.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Indexer.Indexers.InvertedIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Indexer.Indexers.InvertedIndex.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Indexer.Indexers.InvertedIndexCreator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Indexer.Indexers.InvertedIndexCreator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Indexer.Indexers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Indexer.Indexers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Indexer.Interfaces.IIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Indexer.Interfaces.IIndex.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Indexer.Interfaces.IIndexCreator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Indexer.Interfaces.IIndexCreator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Indexer.Interfaces.IIndexer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Indexer.Interfaces.IIndexer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Indexer.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Indexer.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Indexer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Indexer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Inflector.BaseClasses.InflectorBaseClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Inflector.BaseClasses.InflectorBaseClass.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Inflector.BaseClasses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Inflector.BaseClasses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Inflector.DefaultInflector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Inflector.DefaultInflector.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Inflector.EnglishInflector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Inflector.EnglishInflector.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Inflector.Enums.InflectorLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Inflector.Enums.InflectorLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Inflector.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Inflector.Enums.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Inflector.Inflectors.ConjugationRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Inflector.Inflectors.ConjugationRule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Inflector.Inflectors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Inflector.Inflectors.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Inflector.Interfaces.IInflector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Inflector.Interfaces.IInflector.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Inflector.Interfaces.IInflectorLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Inflector.Interfaces.IInflectorLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Inflector.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Inflector.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Inflector.Rule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Inflector.Rule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Inflector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Inflector.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.NameFinder.DefaultEntityFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.NameFinder.DefaultEntityFinder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.NameFinder.Enums.EntityFinderLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.NameFinder.Enums.EntityFinderLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.NameFinder.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.NameFinder.Enums.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.NameFinder.Finders.DefaultFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.NameFinder.Finders.DefaultFinder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.NameFinder.Finders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.NameFinder.Finders.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.NameFinder.Interfaces.IEntityFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.NameFinder.Interfaces.IEntityFinder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.NameFinder.Interfaces.IFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.NameFinder.Interfaces.IFinder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.NameFinder.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.NameFinder.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.NameFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.NameFinder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Normalizer.Default.ASCIIFolder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Normalizer.Default.ASCIIFolder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Normalizer.Default.HTMLToText.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Normalizer.Default.HTMLToText.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Normalizer.Default.LowerCase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Normalizer.Default.LowerCase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Normalizer.Default.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Normalizer.Default.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Normalizer.DefaultNormalizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Normalizer.DefaultNormalizer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Normalizer.Interfaces.INormalizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Normalizer.Interfaces.INormalizer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Normalizer.Interfaces.INormalizerManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Normalizer.Interfaces.INormalizerManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Normalizer.Interfaces.ITextNormalizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Normalizer.Interfaces.ITextNormalizer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Normalizer.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Normalizer.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Normalizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Normalizer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.POSTagger.DefaultTagger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.POSTagger.DefaultTagger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.POSTagger.Enum.BrillConditions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.POSTagger.Enum.BrillConditions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.POSTagger.Enum.POSTaggerLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.POSTagger.Enum.POSTaggerLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.POSTagger.Enum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.POSTagger.Enum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.POSTagger.Interfaces.IPOSTagger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.POSTagger.Interfaces.IPOSTagger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.POSTagger.Interfaces.IPOSTaggerLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.POSTagger.Interfaces.IPOSTaggerLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.POSTagger.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.POSTagger.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.POSTagger.Taggers.BrillRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.POSTagger.Taggers.BrillRule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.POSTagger.Taggers.LexiconRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.POSTagger.Taggers.LexiconRule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.POSTagger.Taggers.SimpleTagger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.POSTagger.Taggers.SimpleTagger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.POSTagger.Taggers.TagProbability.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.POSTagger.Taggers.TagProbability.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.POSTagger.Taggers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.POSTagger.Taggers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.POSTagger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.POSTagger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Pipeline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Pipeline.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SentenceDetection.DefaultSentenceDetector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SentenceDetection.DefaultSentenceDetector.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SentenceDetection.Detectors.DefaultDetector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SentenceDetection.Detectors.DefaultDetector.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SentenceDetection.Detectors.NewLineDetector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SentenceDetection.Detectors.NewLineDetector.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SentenceDetection.Detectors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SentenceDetection.Detectors.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SentenceDetection.Enum.SentenceDetectorLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SentenceDetection.Enum.SentenceDetectorLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SentenceDetection.Enum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SentenceDetection.Enum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SentenceDetection.Interfaces.IDetector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SentenceDetection.Interfaces.IDetector.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SentenceDetection.Interfaces.ISentenceDetector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SentenceDetection.Interfaces.ISentenceDetector.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SentenceDetection.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SentenceDetection.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SentenceDetection.Sentence.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SentenceDetection.Sentence.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SentenceDetection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SentenceDetection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Stemmer.BaseClasses.StemmerLanguageBaseClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Stemmer.BaseClasses.StemmerLanguageBaseClass.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Stemmer.BaseClasses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Stemmer.BaseClasses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Stemmer.DefaultStemmer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Stemmer.DefaultStemmer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Stemmer.Enums.StemmerLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Stemmer.Enums.StemmerLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Stemmer.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Stemmer.Enums.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Stemmer.Interfaces.IStemmer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Stemmer.Interfaces.IStemmer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Stemmer.Interfaces.IStemmerLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Stemmer.Interfaces.IStemmerLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Stemmer.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Stemmer.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Stemmer.Languages.EnglishLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Stemmer.Languages.EnglishLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Stemmer.Languages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Stemmer.Languages.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Stemmer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Stemmer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.StopWords.BaseClasses.StopWordsBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.StopWords.BaseClasses.StopWordsBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.StopWords.BaseClasses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.StopWords.BaseClasses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.StopWords.Enum.StopWordsLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.StopWords.Enum.StopWordsLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.StopWords.Enum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.StopWords.Enum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.StopWords.Interfaces.IStopWordsLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.StopWords.Interfaces.IStopWordsLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.StopWords.Interfaces.IStopWordsManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.StopWords.Interfaces.IStopWordsManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.StopWords.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.StopWords.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.StopWords.Languages.EnglishDefault.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.StopWords.Languages.EnglishDefault.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.StopWords.Languages.EnglishSpacy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.StopWords.Languages.EnglishSpacy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.StopWords.Languages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.StopWords.Languages.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.StopWords.StopWordsManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.StopWords.StopWordsManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.StopWords.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.StopWords.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SynonymFinder.BaseClasses.SynonymFinderBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SynonymFinder.BaseClasses.SynonymFinderBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SynonymFinder.BaseClasses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SynonymFinder.BaseClasses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SynonymFinder.DefaultSynonymFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SynonymFinder.DefaultSynonymFinder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SynonymFinder.Enum.SynonymFinderLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SynonymFinder.Enum.SynonymFinderLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SynonymFinder.Enum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SynonymFinder.Enum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SynonymFinder.Finders.EnglishFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SynonymFinder.Finders.EnglishFinder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SynonymFinder.Finders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SynonymFinder.Finders.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SynonymFinder.Interfaces.ISynonymFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SynonymFinder.Interfaces.ISynonymFinder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SynonymFinder.Interfaces.ISynonymFinderLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SynonymFinder.Interfaces.ISynonymFinderLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SynonymFinder.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SynonymFinder.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.SynonymFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.SynonymFinder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.TextSummarization.DefaultTextSummarizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.TextSummarization.DefaultTextSummarizer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.TextSummarization.Enum.TextSummarizationLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.TextSummarization.Enum.TextSummarizationLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.TextSummarization.Enum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.TextSummarization.Enum.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.TextSummarization.Interfaces.ITextSummarizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.TextSummarization.Interfaces.ITextSummarizer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.TextSummarization.Interfaces.ITextSummarizerLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.TextSummarization.Interfaces.ITextSummarizerLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.TextSummarization.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.TextSummarization.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.TextSummarization.Languages.EnglishDefault.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.TextSummarization.Languages.EnglishDefault.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.TextSummarization.Languages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.TextSummarization.Languages.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.TextSummarization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.TextSummarization.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.BaseClasses.SingleCharacterTokenFinderBaseClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.BaseClasses.SingleCharacterTokenFinderBaseClass.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.BaseClasses.TokenFinderBaseClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.BaseClasses.TokenFinderBaseClass.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.BaseClasses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.BaseClasses.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.DefaultTokenizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.DefaultTokenizer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Enums.TokenizerLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Enums.TokenizerLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Enums.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Interfaces.ITokenizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Interfaces.ITokenizer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Interfaces.ITokenizerLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Interfaces.ITokenizerLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.EnglishLanguage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.EnglishLanguage.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.Enums.TokenType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.Enums.TokenType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.Enums.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Abbreviation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Abbreviation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Ellipsis.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Ellipsis.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Email.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Email.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Emoji.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Emoji.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.HashTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.HashTag.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.NewLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.NewLine.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Number.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Number.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.OtherTokenFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.OtherTokenFinder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.RomanNumerals.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.RomanNumerals.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Symbol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Symbol.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.URL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.URL.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Username.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Username.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Whitespace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Whitespace.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Word.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Word.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.English.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.English.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.Interfaces.IEnglishTokenFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.Interfaces.IEnglishTokenFinder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Languages.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Languages.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Token.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Token.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Utils.TokenizableStream-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Utils.TokenizableStream-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.Utils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.Tokenizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.Tokenizer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Enlighten.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Enlighten.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.CanisterRegistration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.CanisterRegistration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/icon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
