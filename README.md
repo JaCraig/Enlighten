@@ -1,5 +1,7 @@
 # Enlighten - NLP Library
 
+[![.NET Publish](https://github.com/JaCraig/Enlighten/actions/workflows/dotnet-publish.yml/badge.svg)](https://github.com/JaCraig/Enlighten/actions/workflows/dotnet-publish.yml)
+
 Enlighten is a simple C# library designed to assist with natural language processing (NLP) tasks. It provides a pipeline based set of tools for various NLP operations, including tokenization, sentence detection, summarization, stemming, and feature extraction.
 
 ## Features
