@@ -9,7 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enlighten.Tests", "Enlighte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enlighten.SpeedTests", "Enlighten.SpeedTests\Enlighten.SpeedTests.csproj", "{F42955EC-FC87-4094-908D-7BBCBE82EA3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enlighten.Example", "Enlighten.Example\Enlighten.Example.csproj", "{A1781585-5822-41A3-A715-D1C19FEBF880}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enlighten.Example", "Enlighten.Example\Enlighten.Example.csproj", "{A1781585-5822-41A3-A715-D1C19FEBF880}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{0F8D0C8F-7EDB-48B5-95C8-BE354DBB4352}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
