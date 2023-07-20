@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.2"></a>
+## [2.0.2](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.2) (2023-7-20)
+
+### Bug Fixes
+
+* bump the dependencies group with 1 update ([cc6bb98](https://www.github.com/JaCraig/Enlighten/commit/cc6bb9807ec88b23e48d0b8276c5953481a510e9))
+
+### Other
+
+* Merge pull request #1 from JaCraig/dependabot/github_actions/dependencies-0717129e0a ([4815a23](https://www.github.com/JaCraig/Enlighten/commit/4815a23bd63b0a87063765794a971eb45d3006b3))
+* Merge pull request #2 from JaCraig/dependabot/nuget/dependencies-dd930e6650 ([cdc5812](https://www.github.com/JaCraig/Enlighten/commit/cdc5812740f67c75037bd723020134d539b228c6))
+* Adding editorconfig ([b8c37bc](https://www.github.com/JaCraig/Enlighten/commit/b8c37bcc4fb86ee9a5aeacf9c431d03b46f65fe7))
+* bump the dependencies group with 2 updates ([9318ee6](https://www.github.com/JaCraig/Enlighten/commit/9318ee63d8f2510d3aab08ea1a51d6cba884ca9c))
+* dependabot update ([424bf36](https://www.github.com/JaCraig/Enlighten/commit/424bf3644922ce566630fa325dbfb07121731ed0))
+* Update README.md ([c09758d](https://www.github.com/JaCraig/Enlighten/commit/c09758dd6ffb8a17cb0ebdd0bf66a4547e387134))
+* Update README.md ([f8089df](https://www.github.com/JaCraig/Enlighten/commit/f8089dfee4e1c099dd5326aec726d2c85e09b4e7))
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.1) (2023-7-14)
 
