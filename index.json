@@ -1,28 +1,28 @@
 {
-  "api/Enlighten.CanisterModules.html": {
-    "href": "api/Enlighten.CanisterModules.html",
-    "title": "Namespace Enlighten.CanisterModules | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.CanisterModules Classes Module Canister module"
-  },
   "api/Enlighten.CanisterModules.Module.html": {
     "href": "api/Enlighten.CanisterModules.Module.html",
     "title": "Class Module | Enlighten API Reference",
     "keywords": "Class Module Canister module Inheritance object Module Implements IModule Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.CanisterModules Assembly: Enlighten.dll Syntax public class Module : IModule Properties | Improve this Doc View Source Order Order to run this in Declaration public int Order { get; } Property Value Type Description int See Also IModule Methods | Improve this Doc View Source Load(IServiceCollection) Loads the module using the bootstrapper Declaration public void Load(IServiceCollection bootstrapper) Parameters Type Name Description IServiceCollection bootstrapper The bootstrapper. See Also IModule Implements IModule See Also IModule"
+  },
+  "api/Enlighten.CanisterModules.html": {
+    "href": "api/Enlighten.CanisterModules.html",
+    "title": "Namespace Enlighten.CanisterModules | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.CanisterModules Classes Module Canister module"
   },
   "api/Enlighten.Document.html": {
     "href": "api/Enlighten.Document.html",
     "title": "Class Document | Enlighten API Reference",
     "keywords": "Class Document Document information holder Inheritance object Document Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten Assembly: Enlighten.dll Syntax public class Document Constructors | Improve this Doc View Source Document(Sentence[], Token[], string, IFeatureExtractor, ITextSummarizer, ITokenizer, TokenizerLanguage) Initializes a new instance of the Document class. Declaration public Document(Sentence[] sentences, Token[] tokens, string originalText, IFeatureExtractor featureExtractor, ITextSummarizer textSummarizer, ITokenizer tokenizer, TokenizerLanguage tokenizerLanguage) Parameters Type Name Description Sentence[] sentences The sentences. Token[] tokens The tokens. string originalText The original text. IFeatureExtractor featureExtractor The feature extractor. ITextSummarizer textSummarizer The text summarizer. ITokenizer tokenizer The tokenizer. TokenizerLanguage tokenizerLanguage The tokenizer language. Properties | Improve this Doc View Source ID Gets the identifier. Declaration public Guid ID { get; } Property Value Type Description Guid The identifier. | Improve this Doc View Source OriginalText Gets the text. Declaration public string OriginalText { get; } Property Value Type Description string The text. | Improve this Doc View Source Sentences Gets the sentences. Declaration public Sentence[] Sentences { get; } Property Value Type Description Sentence[] The sentences. | Improve this Doc View Source Tokens Gets the tokens. Declaration public Token[] Tokens { get; } Property Value Type Description Token[] The tokens. Methods | Improve this Doc View Source Detokenize() Detokenizes this instance. Declaration public string Detokenize() Returns Type Description string The string version of this instance. | Improve this Doc View Source GetFeatures(Document[], int, FeatureExtractionType) Gets the topics important in this document Declaration public string[] GetFeatures(Document[] comparisonDocuments, int featureCount, FeatureExtractionType featureExtractionType) Parameters Type Name Description Document[] comparisonDocuments The comparison documents. int featureCount The feature count. FeatureExtractionType featureExtractionType Type of the feature extraction. Returns Type Description string[] The features/topics important in this document. | Improve this Doc View Source Summarize(int, TextSummarizationLanguage) Summarizes the specified sentence count. Declaration public Document Summarize(int sentenceCount, TextSummarizationLanguage textSummarizationLanguage) Parameters Type Name Description int sentenceCount The sentence count. TextSummarizationLanguage textSummarizationLanguage The text summarization language. Returns Type Description Document The summarized text | Improve this Doc View Source Summarize(float, TextSummarizationLanguage) Summarizes the specified percentage. Declaration public Document Summarize(float percentage, TextSummarizationLanguage textSummarizationLanguage) Parameters Type Name Description float percentage The percentage of the text to use. TextSummarizationLanguage textSummarizationLanguage The text summarization language. Returns Type Description Document The summarized text"
   },
-  "api/Enlighten.Enums.html": {
-    "href": "api/Enlighten.Enums.html",
-    "title": "Namespace Enlighten.Enums | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Enums Enums Languages Languages"
-  },
   "api/Enlighten.Enums.Languages.html": {
     "href": "api/Enlighten.Enums.Languages.html",
     "title": "Enum Languages | Enlighten API Reference",
     "keywords": "Enum Languages Languages Namespace: Enlighten.Enums Assembly: Enlighten.dll Syntax public enum Languages Fields Name Description English The english language"
+  },
+  "api/Enlighten.Enums.html": {
+    "href": "api/Enlighten.Enums.html",
+    "title": "Namespace Enlighten.Enums | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Enums Enums Languages Languages"
   },
   "api/Enlighten.FeatureExtraction.DefaultFeatureExtractor.html": {
     "href": "api/Enlighten.FeatureExtraction.DefaultFeatureExtractor.html",
@@ -49,16 +49,6 @@
     "title": "Namespace Enlighten.FeatureExtraction.Extractors | Enlighten API Reference",
     "keywords": "Namespace Enlighten.FeatureExtraction.Extractors Classes EnglishDefault English default extractor (uses TF-IDF)"
   },
-  "api/Enlighten.FeatureExtraction.html": {
-    "href": "api/Enlighten.FeatureExtraction.html",
-    "title": "Namespace Enlighten.FeatureExtraction | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.FeatureExtraction Classes DefaultFeatureExtractor Class handles basic text"
-  },
-  "api/Enlighten.FeatureExtraction.Interfaces.html": {
-    "href": "api/Enlighten.FeatureExtraction.Interfaces.html",
-    "title": "Namespace Enlighten.FeatureExtraction.Interfaces | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.FeatureExtraction.Interfaces Interfaces IFeatureExtractor Feature extractor interface IFeatureExtractorLanguage Feature extractor language interface"
-  },
   "api/Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor.html": {
     "href": "api/Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor.html",
     "title": "Interface IFeatureExtractor | Enlighten API Reference",
@@ -68,6 +58,16 @@
     "href": "api/Enlighten.FeatureExtraction.Interfaces.IFeatureExtractorLanguage.html",
     "title": "Interface IFeatureExtractorLanguage | Enlighten API Reference",
     "keywords": "Interface IFeatureExtractorLanguage Feature extractor language interface Namespace: Enlighten.FeatureExtraction.Interfaces Assembly: Enlighten.dll Syntax public interface IFeatureExtractorLanguage Properties | Improve this Doc View Source Name Gets the name. Declaration string Name { get; } Property Value Type Description string The name. Methods | Improve this Doc View Source Extract(Document, Document[], int) Extracts features from the doc specified. Declaration string[] Extract(Document doc, Document[] docs, int featureCount) Parameters Type Name Description Document doc The document. Document[] docs The docs to use to compare. int featureCount The number of features/terms to return. Returns Type Description string[] The important features/terms of the doc."
+  },
+  "api/Enlighten.FeatureExtraction.Interfaces.html": {
+    "href": "api/Enlighten.FeatureExtraction.Interfaces.html",
+    "title": "Namespace Enlighten.FeatureExtraction.Interfaces | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.FeatureExtraction.Interfaces Interfaces IFeatureExtractor Feature extractor interface IFeatureExtractorLanguage Feature extractor language interface"
+  },
+  "api/Enlighten.FeatureExtraction.html": {
+    "href": "api/Enlighten.FeatureExtraction.html",
+    "title": "Namespace Enlighten.FeatureExtraction | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.FeatureExtraction Classes DefaultFeatureExtractor Class handles basic text"
   },
   "api/Enlighten.Frequency.FrequencyAnalyzer.html": {
     "href": "api/Enlighten.Frequency.FrequencyAnalyzer.html",
@@ -84,11 +84,6 @@
     "title": "Namespace Enlighten.Frequency | Enlighten API Reference",
     "keywords": "Namespace Enlighten.Frequency Classes FrequencyAnalyzer Frequency Analyzer FrequencyResults Frequency results"
   },
-  "api/Enlighten.html": {
-    "href": "api/Enlighten.html",
-    "title": "Namespace Enlighten | Enlighten API Reference",
-    "keywords": "Namespace Enlighten Classes Document Document information holder Index Index Pipeline Main pipeline class"
-  },
   "api/Enlighten.Index.html": {
     "href": "api/Enlighten.Index.html",
     "title": "Class Index | Enlighten API Reference",
@@ -99,25 +94,15 @@
     "title": "Class DefaultIndexer | Enlighten API Reference",
     "keywords": "Class DefaultIndexer Default indexer Inheritance object DefaultIndexer Implements IIndexer Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.Indexer Assembly: Enlighten.dll Syntax public class DefaultIndexer : IIndexer Constructors | Improve this Doc View Source DefaultIndexer(IEnumerable<IIndexCreator>) Initializes a new instance of the DefaultIndexer class. Declaration public DefaultIndexer(IEnumerable<IIndexCreator> indexCreators) Parameters Type Name Description IEnumerable<IIndexCreator> indexCreators The index creators. See Also IIndexer Properties | Improve this Doc View Source Languages Gets the languages. Declaration public Dictionary<string, IIndexCreator> Languages { get; } Property Value Type Description Dictionary<string, IIndexCreator> The languages. See Also IIndexer Methods | Improve this Doc View Source CreateIndex(string, Document[]) Creates an index. Declaration public IIndex CreateIndex(string type, Document[] docs) Parameters Type Name Description string type The type. Document[] docs The docs. Returns Type Description IIndex The index. See Also IIndexer Implements IIndexer See Also IIndexer"
   },
-  "api/Enlighten.Indexer.Enums.html": {
-    "href": "api/Enlighten.Indexer.Enums.html",
-    "title": "Namespace Enlighten.Indexer.Enums | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Indexer.Enums Classes IndexerType Indexer language"
-  },
   "api/Enlighten.Indexer.Enums.IndexerType.html": {
     "href": "api/Enlighten.Indexer.Enums.IndexerType.html",
     "title": "Class IndexerType | Enlighten API Reference",
     "keywords": "Class IndexerType Indexer language Inheritance object StringEnumBaseClass<IndexerType> IndexerType Inherited Members StringEnumBaseClass<IndexerType>.ToStringEnumBaseClass(string) StringEnumBaseClass<IndexerType>.ToString() StringEnumBaseClass<IndexerType>.Name object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) Namespace: Enlighten.Indexer.Enums Assembly: Enlighten.dll Syntax public class IndexerType : StringEnumBaseClass<IndexerType> Constructors | Improve this Doc View Source IndexerType() Initializes a new instance of the IndexerType class. Declaration public IndexerType() | Improve this Doc View Source IndexerType(string) Initializes a new instance of the IndexerType class. Declaration public IndexerType(string name) Parameters Type Name Description string name The name. Properties | Improve this Doc View Source InvertedIndex Gets the index of the inverted. Declaration public static IndexerType InvertedIndex { get; } Property Value Type Description IndexerType The index of the inverted."
   },
-  "api/Enlighten.Indexer.html": {
-    "href": "api/Enlighten.Indexer.html",
-    "title": "Namespace Enlighten.Indexer | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Indexer Classes DefaultIndexer Default indexer"
-  },
-  "api/Enlighten.Indexer.Indexers.html": {
-    "href": "api/Enlighten.Indexer.Indexers.html",
-    "title": "Namespace Enlighten.Indexer.Indexers | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Indexer.Indexers Classes InvertedIndex Inverted index InvertedIndexCreator Inverted index builder"
+  "api/Enlighten.Indexer.Enums.html": {
+    "href": "api/Enlighten.Indexer.Enums.html",
+    "title": "Namespace Enlighten.Indexer.Enums | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Indexer.Enums Classes IndexerType Indexer language"
   },
   "api/Enlighten.Indexer.Indexers.InvertedIndex.html": {
     "href": "api/Enlighten.Indexer.Indexers.InvertedIndex.html",
@@ -129,10 +114,10 @@
     "title": "Class InvertedIndexCreator | Enlighten API Reference",
     "keywords": "Class InvertedIndexCreator Inverted index builder Inheritance object InvertedIndexCreator Implements IIndexCreator Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.Indexer.Indexers Assembly: Enlighten.dll Syntax public class InvertedIndexCreator : IIndexCreator Properties | Improve this Doc View Source Name Gets the name. Declaration public string Name { get; } Property Value Type Description string The name. See Also IIndexCreator Methods | Improve this Doc View Source CreateIndex(Document[]) Creates the index. Declaration public IIndex CreateIndex(Document[] docs) Parameters Type Name Description Document[] docs The docs. Returns Type Description IIndex The index See Also IIndexCreator Implements IIndexCreator See Also IIndexCreator"
   },
-  "api/Enlighten.Indexer.Interfaces.html": {
-    "href": "api/Enlighten.Indexer.Interfaces.html",
-    "title": "Namespace Enlighten.Indexer.Interfaces | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Indexer.Interfaces Interfaces IIndex Index interface IIndexCreator Index creator IIndexer Indexer interface"
+  "api/Enlighten.Indexer.Indexers.html": {
+    "href": "api/Enlighten.Indexer.Indexers.html",
+    "title": "Namespace Enlighten.Indexer.Indexers | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Indexer.Indexers Classes InvertedIndex Inverted index InvertedIndexCreator Inverted index builder"
   },
   "api/Enlighten.Indexer.Interfaces.IIndex.html": {
     "href": "api/Enlighten.Indexer.Interfaces.IIndex.html",
@@ -149,15 +134,25 @@
     "title": "Interface IIndexer | Enlighten API Reference",
     "keywords": "Interface IIndexer Indexer interface Namespace: Enlighten.Indexer.Interfaces Assembly: Enlighten.dll Syntax public interface IIndexer Methods | Improve this Doc View Source CreateIndex(string, Document[]) Creates an index. Declaration IIndex CreateIndex(string type, Document[] docs) Parameters Type Name Description string type The type. Document[] docs The docs. Returns Type Description IIndex The index."
   },
-  "api/Enlighten.Inflector.BaseClasses.html": {
-    "href": "api/Enlighten.Inflector.BaseClasses.html",
-    "title": "Namespace Enlighten.Inflector.BaseClasses | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Inflector.BaseClasses Classes InflectorBaseClass Inflector base class"
+  "api/Enlighten.Indexer.Interfaces.html": {
+    "href": "api/Enlighten.Indexer.Interfaces.html",
+    "title": "Namespace Enlighten.Indexer.Interfaces | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Indexer.Interfaces Interfaces IIndex Index interface IIndexCreator Index creator IIndexer Indexer interface"
+  },
+  "api/Enlighten.Indexer.html": {
+    "href": "api/Enlighten.Indexer.html",
+    "title": "Namespace Enlighten.Indexer | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Indexer Classes DefaultIndexer Default indexer"
   },
   "api/Enlighten.Inflector.BaseClasses.InflectorBaseClass.html": {
     "href": "api/Enlighten.Inflector.BaseClasses.InflectorBaseClass.html",
     "title": "Class InflectorBaseClass | Enlighten API Reference",
     "keywords": "Class InflectorBaseClass Inflector base class Inheritance object InflectorBaseClass EnglishInflector Implements IInflectorLanguage Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.Inflector.BaseClasses Assembly: Enlighten.dll Syntax public abstract class InflectorBaseClass : IInflectorLanguage Constructors | Improve this Doc View Source InflectorBaseClass() Initializes a new instance of the InflectorBaseClass class. Declaration protected InflectorBaseClass() See Also IInflectorLanguage Fields | Improve this Doc View Source VBG Gets the VBG. Declaration protected const string VBG = \"VBG\" Field Value Type Description string The VBG. See Also IInflectorLanguage | Improve this Doc View Source VBN Gets the VBN. Declaration protected const string VBN = \"VBN\" Field Value Type Description string The VBN. See Also IInflectorLanguage | Improve this Doc View Source VBZ Gets the VBZ. Declaration protected const string VBZ = \"VBZ\" Field Value Type Description string The VBZ. See Also IInflectorLanguage Properties | Improve this Doc View Source Name Gets the name. Declaration public abstract string Name { get; } Property Value Type Description string The name. See Also IInflectorLanguage Methods | Improve this Doc View Source AddConjugationRule(string, Func<string, string, string>) Adds the conjugation rule. Declaration protected void AddConjugationRule(string rule, Func<string, string, string> replacement) Parameters Type Name Description string rule The rule. Func<string, string, string> replacement The replacement. See Also IInflectorLanguage | Improve this Doc View Source AddGerundException(string) Adds the gerund exception. Declaration protected void AddGerundException(string word) Parameters Type Name Description string word The word. See Also IInflectorLanguage | Improve this Doc View Source AddGerundRule(string) Adds the gerund rule. Declaration protected void AddGerundRule(string rule) Parameters Type Name Description string rule The rule. See Also IInflectorLanguage | Improve this Doc View Source AddInfinitive(string, string) Adds the infinitive. Declaration protected void AddInfinitive(string rule, string replacement) Parameters Type Name Description string rule The rule. string replacement The replacement. See Also IInflectorLanguage | Improve this Doc View Source AddIrregular(string, string, bool) Adds the irregular. Declaration protected void AddIrregular(string singular, string plural, bool matchEnding = true) Parameters Type Name Description string singular The singular. string plural The plural. bool matchEnding if set to true [match ending]. See Also IInflectorLanguage | Improve this Doc View Source AddPastRule(string) Adds the gerund rule. Declaration protected void AddPastRule(string rule) Parameters Type Name Description string rule The rule. See Also IInflectorLanguage | Improve this Doc View Source AddPlural(string, string) Adds the plural. Declaration protected void AddPlural(string rule, string replacement) Parameters Type Name Description string rule The rule. string replacement The replacement. See Also IInflectorLanguage | Improve this Doc View Source AddSingular(string, string) Adds the singular. Declaration protected void AddSingular(string rule, string replacement) Parameters Type Name Description string rule The rule. string replacement The replacement. See Also IInflectorLanguage | Improve this Doc View Source AddUncountable(string) Adds an uncountable word. Declaration protected void AddUncountable(string word) Parameters Type Name Description string word The word. See Also IInflectorLanguage | Improve this Doc View Source Conjugate(string, string) Conjugates the specified input. Declaration public string Conjugate(string input, string partOfSpeechTo) Parameters Type Name Description string input The input. string partOfSpeechTo The part of speech to. Returns Type Description string See Also IInflectorLanguage | Improve this Doc View Source Infinitive(string) Infinitives the specified input. Declaration public string? Infinitive(string input) Parameters Type Name Description string input The input. Returns Type Description string The infinitive tense of the verb. See Also IInflectorLanguage | Improve this Doc View Source IsGerund(string) Determines whether the specified input is gerund. Declaration public bool IsGerund(string input) Parameters Type Name Description string input The input. Returns Type Description bool true if the specified input is gerund; otherwise, false. See Also IInflectorLanguage | Improve this Doc View Source IsGerundException(string) Determines whether [is gerund exception] [the specified word]. Declaration protected bool IsGerundException(string word) Parameters Type Name Description string word The word. Returns Type Description bool true if [is gerund exception] [the specified word]; otherwise, false. See Also IInflectorLanguage | Improve this Doc View Source IsPast(string) Determines whether the specified input is past. Declaration public bool IsPast(string input) Parameters Type Name Description string input The input. Returns Type Description bool true if the specified input is past; otherwise, false. See Also IInflectorLanguage | Improve this Doc View Source IsPlural(string) Determines whether the specified input is plural. Declaration public bool IsPlural(string input) Parameters Type Name Description string input The input. Returns Type Description bool true if the specified input is plural; otherwise, false. See Also IInflectorLanguage | Improve this Doc View Source IsSingular(string) Determines whether the specified input is singular. Declaration public bool IsSingular(string input) Parameters Type Name Description string input The input. Returns Type Description bool true if the specified input is singular; otherwise, false. See Also IInflectorLanguage | Improve this Doc View Source IsUncountable(string) Determines whether the specified input is uncountable. Declaration public bool IsUncountable(string input) Parameters Type Name Description string input The input. Returns Type Description bool true if the specified input is uncountable; otherwise, false. See Also IInflectorLanguage | Improve this Doc View Source Pluralize(string) Pluralizes the specified input. Declaration public string Pluralize(string input) Parameters Type Name Description string input The input. Returns Type Description string The plural form of the word. See Also IInflectorLanguage | Improve this Doc View Source Singularize(string) Singularizes the specified input. Declaration public string Singularize(string input) Parameters Type Name Description string input The input. Returns Type Description string The singular form of the word. See Also IInflectorLanguage | Improve this Doc View Source ToGerund(string) Converts to gerund. Declaration public string ToGerund(string input) Parameters Type Name Description string input The input. Returns Type Description string See Also IInflectorLanguage | Improve this Doc View Source ToPast(string) Converts to past. Declaration public string ToPast(string input) Parameters Type Name Description string input The input. Returns Type Description string See Also IInflectorLanguage | Improve this Doc View Source ToPresent(string) Converts to present. Declaration public string ToPresent(string input) Parameters Type Name Description string input The input. Returns Type Description string See Also IInflectorLanguage Implements IInflectorLanguage See Also IInflectorLanguage"
+  },
+  "api/Enlighten.Inflector.BaseClasses.html": {
+    "href": "api/Enlighten.Inflector.BaseClasses.html",
+    "title": "Namespace Enlighten.Inflector.BaseClasses | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Inflector.BaseClasses Classes InflectorBaseClass Inflector base class"
   },
   "api/Enlighten.Inflector.DefaultInflector.html": {
     "href": "api/Enlighten.Inflector.DefaultInflector.html",
@@ -169,20 +164,15 @@
     "title": "Class EnglishInflector | Enlighten API Reference",
     "keywords": "Class EnglishInflector Default inflector Inheritance object InflectorBaseClass EnglishInflector Implements IInflectorLanguage Inherited Members InflectorBaseClass.VBG InflectorBaseClass.VBN InflectorBaseClass.VBZ InflectorBaseClass.Conjugate(string, string) InflectorBaseClass.Infinitive(string) InflectorBaseClass.IsGerund(string) InflectorBaseClass.IsPast(string) InflectorBaseClass.IsPlural(string) InflectorBaseClass.IsSingular(string) InflectorBaseClass.IsUncountable(string) InflectorBaseClass.Pluralize(string) InflectorBaseClass.Singularize(string) InflectorBaseClass.ToGerund(string) InflectorBaseClass.ToPast(string) InflectorBaseClass.ToPresent(string) InflectorBaseClass.AddConjugationRule(string, Func<string, string, string>) InflectorBaseClass.AddGerundException(string) InflectorBaseClass.AddGerundRule(string) InflectorBaseClass.AddInfinitive(string, string) InflectorBaseClass.AddIrregular(string, string, bool) InflectorBaseClass.AddPastRule(string) InflectorBaseClass.AddPlural(string, string) InflectorBaseClass.AddSingular(string, string) InflectorBaseClass.AddUncountable(string) InflectorBaseClass.IsGerundException(string) object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.Inflector Assembly: Enlighten.dll Syntax public class EnglishInflector : InflectorBaseClass, IInflectorLanguage Constructors | Improve this Doc View Source EnglishInflector() Initializes a new instance of the EnglishInflector class. Declaration public EnglishInflector() See Also IInflector Properties | Improve this Doc View Source Name Gets the name. Declaration public override string Name { get; } Property Value Type Description string The name. Overrides InflectorBaseClass.Name See Also IInflector Implements IInflectorLanguage See Also IInflector"
   },
-  "api/Enlighten.Inflector.Enums.html": {
-    "href": "api/Enlighten.Inflector.Enums.html",
-    "title": "Namespace Enlighten.Inflector.Enums | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Inflector.Enums Classes InflectorLanguage Inflector language"
-  },
   "api/Enlighten.Inflector.Enums.InflectorLanguage.html": {
     "href": "api/Enlighten.Inflector.Enums.InflectorLanguage.html",
     "title": "Class InflectorLanguage | Enlighten API Reference",
     "keywords": "Class InflectorLanguage Inflector language Inheritance object StringEnumBaseClass<InflectorLanguage> InflectorLanguage Inherited Members StringEnumBaseClass<InflectorLanguage>.ToStringEnumBaseClass(string) StringEnumBaseClass<InflectorLanguage>.ToString() StringEnumBaseClass<InflectorLanguage>.Name object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) Namespace: Enlighten.Inflector.Enums Assembly: Enlighten.dll Syntax public class InflectorLanguage : StringEnumBaseClass<InflectorLanguage> Constructors | Improve this Doc View Source InflectorLanguage() Initializes a new instance of the InflectorLanguage class. Declaration public InflectorLanguage() | Improve this Doc View Source InflectorLanguage(string) Initializes a new instance of the InflectorLanguage class. Declaration public InflectorLanguage(string name) Parameters Type Name Description string name The name. Properties | Improve this Doc View Source English Gets the english. Declaration public static InflectorLanguage English { get; } Property Value Type Description InflectorLanguage The english."
   },
-  "api/Enlighten.Inflector.html": {
-    "href": "api/Enlighten.Inflector.html",
-    "title": "Namespace Enlighten.Inflector | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Inflector Classes DefaultInflector Default inflector EnglishInflector Default inflector Rule Inflector rule"
+  "api/Enlighten.Inflector.Enums.html": {
+    "href": "api/Enlighten.Inflector.Enums.html",
+    "title": "Namespace Enlighten.Inflector.Enums | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Inflector.Enums Classes InflectorLanguage Inflector language"
   },
   "api/Enlighten.Inflector.Inflectors.ConjugationRule.html": {
     "href": "api/Enlighten.Inflector.Inflectors.ConjugationRule.html",
@@ -194,11 +184,6 @@
     "title": "Namespace Enlighten.Inflector.Inflectors | Enlighten API Reference",
     "keywords": "Namespace Enlighten.Inflector.Inflectors Classes ConjugationRule Inflector rule"
   },
-  "api/Enlighten.Inflector.Interfaces.html": {
-    "href": "api/Enlighten.Inflector.Interfaces.html",
-    "title": "Namespace Enlighten.Inflector.Interfaces | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Inflector.Interfaces Interfaces IInflector Inflector interface IInflectorLanguage Inflector language interface"
-  },
   "api/Enlighten.Inflector.Interfaces.IInflector.html": {
     "href": "api/Enlighten.Inflector.Interfaces.IInflector.html",
     "title": "Interface IInflector | Enlighten API Reference",
@@ -209,10 +194,20 @@
     "title": "Interface IInflectorLanguage | Enlighten API Reference",
     "keywords": "Interface IInflectorLanguage Inflector language interface Namespace: Enlighten.Inflector.Interfaces Assembly: Enlighten.dll Syntax public interface IInflectorLanguage Properties | Improve this Doc View Source Name Gets the name. Declaration string Name { get; } Property Value Type Description string The name. Methods | Improve this Doc View Source Conjugate(string, string) Conjugates the specified input. Declaration string Conjugate(string input, string partOfSpeechTo) Parameters Type Name Description string input The input. string partOfSpeechTo The part of speech to. Returns Type Description string | Improve this Doc View Source Infinitive(string) Infinitives the specified input. Declaration string? Infinitive(string input) Parameters Type Name Description string input The input. Returns Type Description string | Improve this Doc View Source IsGerund(string) Determines whether the specified input is gerund. Declaration bool IsGerund(string input) Parameters Type Name Description string input The input. Returns Type Description bool true if the specified input is gerund; otherwise, false. | Improve this Doc View Source IsPast(string) Determines whether the specified input is past. Declaration bool IsPast(string input) Parameters Type Name Description string input The input. Returns Type Description bool true if the specified input is past; otherwise, false. | Improve this Doc View Source IsPlural(string) Determines whether the specified input is plural. Declaration bool IsPlural(string input) Parameters Type Name Description string input The input. Returns Type Description bool true if the specified input is plural; otherwise, false. | Improve this Doc View Source IsSingular(string) Determines whether the specified input is singular. Declaration bool IsSingular(string input) Parameters Type Name Description string input The input. Returns Type Description bool true if the specified input is singular; otherwise, false. | Improve this Doc View Source IsUncountable(string) Determines whether the specified input is uncountable. Declaration bool IsUncountable(string input) Parameters Type Name Description string input The input. Returns Type Description bool true if the specified input is uncountable; otherwise, false. | Improve this Doc View Source Pluralize(string) Pluralizes the specified input. Declaration string Pluralize(string input) Parameters Type Name Description string input The input. Returns Type Description string | Improve this Doc View Source Singularize(string) Singularizes the specified input. Declaration string Singularize(string input) Parameters Type Name Description string input The input. Returns Type Description string | Improve this Doc View Source ToGerund(string) Converts to gerund. Declaration string ToGerund(string input) Parameters Type Name Description string input The input. Returns Type Description string | Improve this Doc View Source ToPast(string) Converts to past. Declaration string ToPast(string input) Parameters Type Name Description string input The input. Returns Type Description string | Improve this Doc View Source ToPresent(string) Converts to present. Declaration string ToPresent(string input) Parameters Type Name Description string input The input. Returns Type Description string"
   },
+  "api/Enlighten.Inflector.Interfaces.html": {
+    "href": "api/Enlighten.Inflector.Interfaces.html",
+    "title": "Namespace Enlighten.Inflector.Interfaces | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Inflector.Interfaces Interfaces IInflector Inflector interface IInflectorLanguage Inflector language interface"
+  },
   "api/Enlighten.Inflector.Rule.html": {
     "href": "api/Enlighten.Inflector.Rule.html",
     "title": "Class Rule | Enlighten API Reference",
     "keywords": "Class Rule Inflector rule Inheritance object Rule Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.Inflector Assembly: Enlighten.dll Syntax public class Rule Constructors | Improve this Doc View Source Rule(string, string) Initializes a new instance of the Rule class. Declaration public Rule(string pattern, string replacement) Parameters Type Name Description string pattern The pattern. string replacement The replacement. Methods | Improve this Doc View Source Apply(string) Applies the rule to the specified word. Declaration public string Apply(string word) Parameters Type Name Description string word The word. Returns Type Description string The resulting word. | Improve this Doc View Source CanApply(string) Determines whether this instance can be applied to the specified word. Declaration public bool CanApply(string word) Parameters Type Name Description string word The word. Returns Type Description bool true if this instance can apply the specified word; otherwise, false."
+  },
+  "api/Enlighten.Inflector.html": {
+    "href": "api/Enlighten.Inflector.html",
+    "title": "Namespace Enlighten.Inflector | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Inflector Classes DefaultInflector Default inflector EnglishInflector Default inflector Rule Inflector rule"
   },
   "api/Enlighten.NameFinder.DefaultEntityFinder.html": {
     "href": "api/Enlighten.NameFinder.DefaultEntityFinder.html",
@@ -239,16 +234,6 @@
     "title": "Namespace Enlighten.NameFinder.Finders | Enlighten API Reference",
     "keywords": "Namespace Enlighten.NameFinder.Finders Classes DefaultFinder Default name finder"
   },
-  "api/Enlighten.NameFinder.html": {
-    "href": "api/Enlighten.NameFinder.html",
-    "title": "Namespace Enlighten.NameFinder | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.NameFinder Classes DefaultEntityFinder Default name finder"
-  },
-  "api/Enlighten.NameFinder.Interfaces.html": {
-    "href": "api/Enlighten.NameFinder.Interfaces.html",
-    "title": "Namespace Enlighten.NameFinder.Interfaces | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.NameFinder.Interfaces Interfaces IEntityFinder Name finder interface IFinder Finder interface"
-  },
   "api/Enlighten.NameFinder.Interfaces.IEntityFinder.html": {
     "href": "api/Enlighten.NameFinder.Interfaces.IEntityFinder.html",
     "title": "Interface IEntityFinder | Enlighten API Reference",
@@ -259,15 +244,20 @@
     "title": "Interface IFinder | Enlighten API Reference",
     "keywords": "Interface IFinder Finder interface Namespace: Enlighten.NameFinder.Interfaces Assembly: Enlighten.dll Syntax public interface IFinder Properties | Improve this Doc View Source Name Gets the name. Declaration string Name { get; } Property Value Type Description string The name. Methods | Improve this Doc View Source Find(Token[]) Finds the entities in the specified document. Declaration Token[] Find(Token[] tokens) Parameters Type Name Description Token[] tokens The tokens. Returns Type Description Token[] The document after it is processed."
   },
+  "api/Enlighten.NameFinder.Interfaces.html": {
+    "href": "api/Enlighten.NameFinder.Interfaces.html",
+    "title": "Namespace Enlighten.NameFinder.Interfaces | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.NameFinder.Interfaces Interfaces IEntityFinder Name finder interface IFinder Finder interface"
+  },
+  "api/Enlighten.NameFinder.html": {
+    "href": "api/Enlighten.NameFinder.html",
+    "title": "Namespace Enlighten.NameFinder | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.NameFinder Classes DefaultEntityFinder Default name finder"
+  },
   "api/Enlighten.Normalizer.Default.ASCIIFolder.html": {
     "href": "api/Enlighten.Normalizer.Default.ASCIIFolder.html",
     "title": "Class ASCIIFolder | Enlighten API Reference",
     "keywords": "Class ASCIIFolder ASCII folder Inheritance object ASCIIFolder Implements INormalizer Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.Normalizer.Default Assembly: Enlighten.dll Syntax public class ASCIIFolder : INormalizer Constructors | Improve this Doc View Source ASCIIFolder(ObjectPool<StringBuilder>) Initializes a new instance of the ASCIIFolder class. Declaration public ASCIIFolder(ObjectPool<StringBuilder> objectPool) Parameters Type Name Description ObjectPool<StringBuilder> objectPool The object pool. See Also INormalizer Properties | Improve this Doc View Source Name Gets the name. Declaration public string Name { get; } Property Value Type Description string The name. See Also INormalizer | Improve this Doc View Source ObjectPool Gets the object pool. Declaration public ObjectPool<StringBuilder> ObjectPool { get; } Property Value Type Description ObjectPool<StringBuilder> The object pool. See Also INormalizer | Improve this Doc View Source Order Gets the order. Declaration public int Order { get; } Property Value Type Description int The order. See Also INormalizer Methods | Improve this Doc View Source Normalize(Token[]) Normalizes the specified tokens. Declaration public Token[] Normalize(Token[] tokens) Parameters Type Name Description Token[] tokens The tokens. Returns Type Description Token[] The normalized tokens. See Also INormalizer Implements INormalizer See Also INormalizer"
-  },
-  "api/Enlighten.Normalizer.Default.html": {
-    "href": "api/Enlighten.Normalizer.Default.html",
-    "title": "Namespace Enlighten.Normalizer.Default | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Normalizer.Default Classes ASCIIFolder ASCII folder HTMLToText HTML to text normalizer LowerCase Lower case normalizer"
   },
   "api/Enlighten.Normalizer.Default.HTMLToText.html": {
     "href": "api/Enlighten.Normalizer.Default.HTMLToText.html",
@@ -279,20 +269,15 @@
     "title": "Class LowerCase | Enlighten API Reference",
     "keywords": "Class LowerCase Lower case normalizer Inheritance object LowerCase Implements INormalizer Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.Normalizer.Default Assembly: Enlighten.dll Syntax public class LowerCase : INormalizer Properties | Improve this Doc View Source Name Gets the name. Declaration public string Name { get; } Property Value Type Description string The name. See Also INormalizer | Improve this Doc View Source Order Gets the order. Declaration public int Order { get; } Property Value Type Description int The order. See Also INormalizer Methods | Improve this Doc View Source Normalize(Token[]) Normalizes the specified tokens. Declaration public Token[] Normalize(Token[] tokens) Parameters Type Name Description Token[] tokens The tokens. Returns Type Description Token[] The normalized tokens. See Also INormalizer Implements INormalizer See Also INormalizer"
   },
+  "api/Enlighten.Normalizer.Default.html": {
+    "href": "api/Enlighten.Normalizer.Default.html",
+    "title": "Namespace Enlighten.Normalizer.Default | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Normalizer.Default Classes ASCIIFolder ASCII folder HTMLToText HTML to text normalizer LowerCase Lower case normalizer"
+  },
   "api/Enlighten.Normalizer.DefaultNormalizer.html": {
     "href": "api/Enlighten.Normalizer.DefaultNormalizer.html",
     "title": "Class DefaultNormalizer | Enlighten API Reference",
     "keywords": "Class DefaultNormalizer Default normalizer Inheritance object DefaultNormalizer Implements INormalizerManager Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.Normalizer Assembly: Enlighten.dll Syntax public class DefaultNormalizer : INormalizerManager Constructors | Improve this Doc View Source DefaultNormalizer(IEnumerable<INormalizer>, IEnumerable<ITextNormalizer>) Initializes a new instance of the DefaultNormalizer class. Declaration public DefaultNormalizer(IEnumerable<INormalizer> normalizers, IEnumerable<ITextNormalizer> textNormalizers) Parameters Type Name Description IEnumerable<INormalizer> normalizers The normalizers. IEnumerable<ITextNormalizer> textNormalizers The text normalizers. See Also INormalizerManager Properties | Improve this Doc View Source Normalizers Gets the normalizers. Declaration public IEnumerable<INormalizer> Normalizers { get; } Property Value Type Description IEnumerable<INormalizer> The normalizers. See Also INormalizerManager | Improve this Doc View Source TextNormalizers Gets the text normalizers. Declaration public IEnumerable<ITextNormalizer> TextNormalizers { get; } Property Value Type Description IEnumerable<ITextNormalizer> The text normalizers. See Also INormalizerManager Methods | Improve this Doc View Source Normalize(Token[]) Normalizes the specified tokens. Declaration public Token[] Normalize(Token[] tokens) Parameters Type Name Description Token[] tokens The tokens. Returns Type Description Token[] The normalized tokens. See Also INormalizerManager | Improve this Doc View Source Normalize(string) Normalizes the specified text. Declaration public string Normalize(string text) Parameters Type Name Description string text The text. Returns Type Description string The normalized text. See Also INormalizerManager Implements INormalizerManager See Also INormalizerManager"
-  },
-  "api/Enlighten.Normalizer.html": {
-    "href": "api/Enlighten.Normalizer.html",
-    "title": "Namespace Enlighten.Normalizer | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Normalizer Classes DefaultNormalizer Default normalizer"
-  },
-  "api/Enlighten.Normalizer.Interfaces.html": {
-    "href": "api/Enlighten.Normalizer.Interfaces.html",
-    "title": "Namespace Enlighten.Normalizer.Interfaces | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Normalizer.Interfaces Interfaces INormalizer Normalizer interface INormalizerManager Normalizer manager interface ITextNormalizer Text normalizer interface"
   },
   "api/Enlighten.Normalizer.Interfaces.INormalizer.html": {
     "href": "api/Enlighten.Normalizer.Interfaces.INormalizer.html",
@@ -309,10 +294,15 @@
     "title": "Interface ITextNormalizer | Enlighten API Reference",
     "keywords": "Interface ITextNormalizer Text normalizer interface Namespace: Enlighten.Normalizer.Interfaces Assembly: Enlighten.dll Syntax public interface ITextNormalizer Properties | Improve this Doc View Source Name Gets the name. Declaration string Name { get; } Property Value Type Description string The name. | Improve this Doc View Source Order Gets the order. Declaration int Order { get; } Property Value Type Description int The order. Methods | Improve this Doc View Source Normalize(string) Normalizes the specified text. Declaration string Normalize(string text) Parameters Type Name Description string text The text. Returns Type Description string The normalized text."
   },
-  "api/Enlighten.Pipeline.html": {
-    "href": "api/Enlighten.Pipeline.html",
-    "title": "Class Pipeline | Enlighten API Reference",
-    "keywords": "Class Pipeline Main pipeline class Inheritance object Pipeline Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten Assembly: Enlighten.dll Syntax public class Pipeline Constructors | Improve this Doc View Source Pipeline(INormalizerManager, IPOSTagger, ISentenceDetector, IStemmer, IStopWordsManager, ITokenizer, IFeatureExtractor, ITextSummarizer, IEntityFinder) Initializes a new instance of the Pipeline class. Declaration public Pipeline(INormalizerManager normalizerManager, IPOSTagger pOSTagger, ISentenceDetector sentenceDetector, IStemmer stemmer, IStopWordsManager stopWordsManager, ITokenizer tokenizer, IFeatureExtractor featureExtractor, ITextSummarizer textSummarizer, IEntityFinder entityFinder) Parameters Type Name Description INormalizerManager normalizerManager The normalizer manager. IPOSTagger pOSTagger The p os tagger. ISentenceDetector sentenceDetector The sentence detector. IStemmer stemmer The stemmer. IStopWordsManager stopWordsManager The stop words manager. ITokenizer tokenizer The tokenizer. IFeatureExtractor featureExtractor The feature extractor. ITextSummarizer textSummarizer The text summarizer. IEntityFinder entityFinder The entity finder. Exceptions Type Condition ArgumentNullException normalizerManager or pOSTagger or sentenceDetector or stemmer or stopWordsManager or tokenizer or featureExtractor or textSummarizer Methods | Improve this Doc View Source Process(string) Processes the specified text. Declaration public Document Process(string text) Parameters Type Name Description string text The text. Returns Type Description Document The resulting document object. | Improve this Doc View Source SetLanguage(Languages) Sets the language. Declaration public Pipeline SetLanguage(Languages languages) Parameters Type Name Description Languages languages The languages. Returns Type Description Pipeline This. | Improve this Doc View Source With(EntityFinderLanguage) Withes the specified entity finder language. Declaration public Pipeline With(EntityFinderLanguage entityFinderLanguage) Parameters Type Name Description EntityFinderLanguage entityFinderLanguage The entity finder language. Returns Type Description Pipeline Exceptions Type Condition ArgumentNullException entityFinderLanguage | Improve this Doc View Source With(POSTaggerLanguage) Withes the specified position tagger. Declaration public Pipeline With(POSTaggerLanguage posTagger) Parameters Type Name Description POSTaggerLanguage posTagger The position tagger. Returns Type Description Pipeline This. Exceptions Type Condition ArgumentNullException posTagger | Improve this Doc View Source With(SentenceDetectorLanguage) Withes the specified sentence detector. Declaration public Pipeline With(SentenceDetectorLanguage sentenceDetector) Parameters Type Name Description SentenceDetectorLanguage sentenceDetector The sentence detector. Returns Type Description Pipeline This. Exceptions Type Condition ArgumentNullException sentenceDetector | Improve this Doc View Source With(StemmerLanguage) Withes the specified stemmer. Declaration public Pipeline With(StemmerLanguage stemmer) Parameters Type Name Description StemmerLanguage stemmer The stemmer. Returns Type Description Pipeline This. Exceptions Type Condition ArgumentNullException stemmer | Improve this Doc View Source With(StopWordsLanguage) Withes the specified stop words. Declaration public Pipeline With(StopWordsLanguage stopWords) Parameters Type Name Description StopWordsLanguage stopWords The stop words. Returns Type Description Pipeline This. Exceptions Type Condition ArgumentNullException stopWords | Improve this Doc View Source With(TokenizerLanguage) Withes the specified tokenizer language. Declaration public Pipeline With(TokenizerLanguage tokenizer) Parameters Type Name Description TokenizerLanguage tokenizer The tokenizer to use. Returns Type Description Pipeline This. Exceptions Type Condition ArgumentNullException tokenizerLanguage"
+  "api/Enlighten.Normalizer.Interfaces.html": {
+    "href": "api/Enlighten.Normalizer.Interfaces.html",
+    "title": "Namespace Enlighten.Normalizer.Interfaces | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Normalizer.Interfaces Interfaces INormalizer Normalizer interface INormalizerManager Normalizer manager interface ITextNormalizer Text normalizer interface"
+  },
+  "api/Enlighten.Normalizer.html": {
+    "href": "api/Enlighten.Normalizer.html",
+    "title": "Namespace Enlighten.Normalizer | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Normalizer Classes DefaultNormalizer Default normalizer"
   },
   "api/Enlighten.POSTagger.DefaultTagger.html": {
     "href": "api/Enlighten.POSTagger.DefaultTagger.html",
@@ -324,25 +314,15 @@
     "title": "Enum BrillConditions | Enlighten API Reference",
     "keywords": "Enum BrillConditions Brill conditions Namespace: Enlighten.POSTagger.Enum Assembly: Enlighten.dll Syntax public enum BrillConditions Fields Name Description CURRENTWD The currentwd NEXT1OR2OR3TAG The nex t1 o r2 o r3 tag NEXT1OR2TAG The nex t1 o r2 tag NEXT1OR2WD The nex t1 o r2 wd NEXT2TAG The nex t2 tag NEXT2WD The nex t2 wd NEXTBIGRAM The nextbigram NEXTTAG The nexttag NEXTTAG2 The nextta g2 NEXTWD The nextwd PREV1OR2OR3TAG The pre v1 o r2 o r3 tag PREV1OR2TAG The pre v1 o r2 tag PREV1OR2WD The pre v1 o r2 wd PREV2TAG The pre v2 tag PREV2TAGNEXTTAG The pre v2 tagnexttag PREV2WD The pre v2 wd PREVTAG The prevtag PREVTAG2 The prevta g2 PREVWORD The prevword PREVWORDPREVTAG The prevwordprevtag RBIGRAM The rbigram STARTWORD The startword SURROUNDTAG The surroundtag SURROUNDTAGWD The surroundtagwd WDNEXTTAG The wdnexttag WDNEXTWD The wdnextwd WDPREVTAG The wdprevtag WDPREVWD The wdprevwd"
   },
-  "api/Enlighten.POSTagger.Enum.html": {
-    "href": "api/Enlighten.POSTagger.Enum.html",
-    "title": "Namespace Enlighten.POSTagger.Enum | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.POSTagger.Enum Classes POSTaggerLanguage Part of speech tagger language Enums BrillConditions Brill conditions"
-  },
   "api/Enlighten.POSTagger.Enum.POSTaggerLanguage.html": {
     "href": "api/Enlighten.POSTagger.Enum.POSTaggerLanguage.html",
     "title": "Class POSTaggerLanguage | Enlighten API Reference",
     "keywords": "Class POSTaggerLanguage Part of speech tagger language Inheritance object StringEnumBaseClass<POSTaggerLanguage> POSTaggerLanguage Inherited Members StringEnumBaseClass<POSTaggerLanguage>.ToStringEnumBaseClass(string) StringEnumBaseClass<POSTaggerLanguage>.ToString() StringEnumBaseClass<POSTaggerLanguage>.Name object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) Namespace: Enlighten.POSTagger.Enum Assembly: Enlighten.dll Syntax public class POSTaggerLanguage : StringEnumBaseClass<POSTaggerLanguage> Constructors | Improve this Doc View Source POSTaggerLanguage() Initializes a new instance of the POSTaggerLanguage class. Declaration public POSTaggerLanguage() See Also StringEnumBaseClass<TClass> | Improve this Doc View Source POSTaggerLanguage(string) Initializes a new instance of the POSTaggerLanguage class. Declaration public POSTaggerLanguage(string name) Parameters Type Name Description string name The name. See Also StringEnumBaseClass<TClass> Properties | Improve this Doc View Source BrillTagger Gets the brill tagger. Declaration public static POSTaggerLanguage BrillTagger { get; } Property Value Type Description POSTaggerLanguage The brill tagger. See Also StringEnumBaseClass<TClass> See Also StringEnumBaseClass<TClass>"
   },
-  "api/Enlighten.POSTagger.html": {
-    "href": "api/Enlighten.POSTagger.html",
-    "title": "Namespace Enlighten.POSTagger | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.POSTagger Classes DefaultTagger Default part of speech tagger"
-  },
-  "api/Enlighten.POSTagger.Interfaces.html": {
-    "href": "api/Enlighten.POSTagger.Interfaces.html",
-    "title": "Namespace Enlighten.POSTagger.Interfaces | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.POSTagger.Interfaces Interfaces IPOSTagger Part of speech tagger IPOSTaggerLanguage Part of speech language tagger"
+  "api/Enlighten.POSTagger.Enum.html": {
+    "href": "api/Enlighten.POSTagger.Enum.html",
+    "title": "Namespace Enlighten.POSTagger.Enum | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.POSTagger.Enum Classes POSTaggerLanguage Part of speech tagger language Enums BrillConditions Brill conditions"
   },
   "api/Enlighten.POSTagger.Interfaces.IPOSTagger.html": {
     "href": "api/Enlighten.POSTagger.Interfaces.IPOSTagger.html",
@@ -354,15 +334,15 @@
     "title": "Interface IPOSTaggerLanguage | Enlighten API Reference",
     "keywords": "Interface IPOSTaggerLanguage Part of speech language tagger Namespace: Enlighten.POSTagger.Interfaces Assembly: Enlighten.dll Syntax public interface IPOSTaggerLanguage Properties | Improve this Doc View Source ISOCode Gets the name. Declaration string ISOCode { get; } Property Value Type Description string The name. Methods | Improve this Doc View Source Tag(Token[]) Tags the specified tokens. Declaration Token[] Tag(Token[] tokens) Parameters Type Name Description Token[] tokens The tokens. Returns Type Description Token[] The tokens tagged."
   },
+  "api/Enlighten.POSTagger.Interfaces.html": {
+    "href": "api/Enlighten.POSTagger.Interfaces.html",
+    "title": "Namespace Enlighten.POSTagger.Interfaces | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.POSTagger.Interfaces Interfaces IPOSTagger Part of speech tagger IPOSTaggerLanguage Part of speech language tagger"
+  },
   "api/Enlighten.POSTagger.Taggers.BrillRule.html": {
     "href": "api/Enlighten.POSTagger.Taggers.BrillRule.html",
     "title": "Class BrillRule | Enlighten API Reference",
     "keywords": "Class BrillRule Brill rule Inheritance object BrillRule Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.POSTagger.Taggers Assembly: Enlighten.dll Syntax public class BrillRule Constructors | Improve this Doc View Source BrillRule(string, string, BrillConditions, string?, string?, string?, bool) Initializes a new instance of the BrillRule class. Declaration public BrillRule(string from, string to, BrillConditions type, string? c1, string? c2, string? c3, bool secondRun) Parameters Type Name Description string from From. string to To. BrillConditions type The type. string c1 The c1. string c2 The c2. string c3 The c3. bool secondRun if set to true [second run]. Properties | Improve this Doc View Source C1 Gets or sets the c1. Declaration public string? C1 { get; set; } Property Value Type Description string The c1. | Improve this Doc View Source C2 Gets or sets the c2. Declaration public string? C2 { get; set; } Property Value Type Description string The c2. | Improve this Doc View Source C3 Gets or sets the c3. Declaration public string? C3 { get; set; } Property Value Type Description string The c3. | Improve this Doc View Source From Gets or sets from. Declaration public string From { get; set; } Property Value Type Description string From. | Improve this Doc View Source SecondRun Gets or sets a value indicating whether [second run]. Declaration public bool SecondRun { get; set; } Property Value Type Description bool true if [second run]; otherwise, false. | Improve this Doc View Source To Gets or sets to. Declaration public string To { get; set; } Property Value Type Description string To. | Improve this Doc View Source Type Gets or sets the type. Declaration public BrillConditions Type { get; set; } Property Value Type Description BrillConditions The type."
-  },
-  "api/Enlighten.POSTagger.Taggers.html": {
-    "href": "api/Enlighten.POSTagger.Taggers.html",
-    "title": "Namespace Enlighten.POSTagger.Taggers | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.POSTagger.Taggers Classes BrillRule Brill rule LexiconRule Lexicon rule SimpleTagger Simple POS tagger TagProbability Tag probability"
   },
   "api/Enlighten.POSTagger.Taggers.LexiconRule.html": {
     "href": "api/Enlighten.POSTagger.Taggers.LexiconRule.html",
@@ -379,6 +359,21 @@
     "title": "Class TagProbability | Enlighten API Reference",
     "keywords": "Class TagProbability Tag probability Inheritance object TagProbability Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.POSTagger.Taggers Assembly: Enlighten.dll Syntax public class TagProbability Constructors | Improve this Doc View Source TagProbability(string, string, double, bool) Initializes a new instance of the TagProbability class. Declaration public TagProbability(string tag, string norm, double confidence, bool blocked) Parameters Type Name Description string tag The tag. string norm The norm. double confidence The confidence. bool blocked if set to true [blocked]. Properties | Improve this Doc View Source Blocked Gets a value indicating whether this TagProbability is blocked. Declaration public bool Blocked { get; set; } Property Value Type Description bool true if blocked; otherwise, false. | Improve this Doc View Source Confidence Gets the confidence. Declaration public double Confidence { get; set; } Property Value Type Description double The confidence. | Improve this Doc View Source Norm Gets the norm. Declaration public string Norm { get; set; } Property Value Type Description string The norm. | Improve this Doc View Source Tag Gets the tag. Declaration public string Tag { get; set; } Property Value Type Description string The tag."
   },
+  "api/Enlighten.POSTagger.Taggers.html": {
+    "href": "api/Enlighten.POSTagger.Taggers.html",
+    "title": "Namespace Enlighten.POSTagger.Taggers | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.POSTagger.Taggers Classes BrillRule Brill rule LexiconRule Lexicon rule SimpleTagger Simple POS tagger TagProbability Tag probability"
+  },
+  "api/Enlighten.POSTagger.html": {
+    "href": "api/Enlighten.POSTagger.html",
+    "title": "Namespace Enlighten.POSTagger | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.POSTagger Classes DefaultTagger Default part of speech tagger"
+  },
+  "api/Enlighten.Pipeline.html": {
+    "href": "api/Enlighten.Pipeline.html",
+    "title": "Class Pipeline | Enlighten API Reference",
+    "keywords": "Class Pipeline Main pipeline class Inheritance object Pipeline Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten Assembly: Enlighten.dll Syntax public class Pipeline Constructors | Improve this Doc View Source Pipeline(INormalizerManager, IPOSTagger, ISentenceDetector, IStemmer, IStopWordsManager, ITokenizer, IFeatureExtractor, ITextSummarizer, IEntityFinder) Initializes a new instance of the Pipeline class. Declaration public Pipeline(INormalizerManager normalizerManager, IPOSTagger pOSTagger, ISentenceDetector sentenceDetector, IStemmer stemmer, IStopWordsManager stopWordsManager, ITokenizer tokenizer, IFeatureExtractor featureExtractor, ITextSummarizer textSummarizer, IEntityFinder entityFinder) Parameters Type Name Description INormalizerManager normalizerManager The normalizer manager. IPOSTagger pOSTagger The p os tagger. ISentenceDetector sentenceDetector The sentence detector. IStemmer stemmer The stemmer. IStopWordsManager stopWordsManager The stop words manager. ITokenizer tokenizer The tokenizer. IFeatureExtractor featureExtractor The feature extractor. ITextSummarizer textSummarizer The text summarizer. IEntityFinder entityFinder The entity finder. Exceptions Type Condition ArgumentNullException normalizerManager or pOSTagger or sentenceDetector or stemmer or stopWordsManager or tokenizer or featureExtractor or textSummarizer Methods | Improve this Doc View Source Process(string) Processes the specified text. Declaration public Document Process(string text) Parameters Type Name Description string text The text. Returns Type Description Document The resulting document object. | Improve this Doc View Source SetLanguage(Languages) Sets the language. Declaration public Pipeline SetLanguage(Languages languages) Parameters Type Name Description Languages languages The languages. Returns Type Description Pipeline This. | Improve this Doc View Source With(EntityFinderLanguage) Withes the specified entity finder language. Declaration public Pipeline With(EntityFinderLanguage entityFinderLanguage) Parameters Type Name Description EntityFinderLanguage entityFinderLanguage The entity finder language. Returns Type Description Pipeline Exceptions Type Condition ArgumentNullException entityFinderLanguage | Improve this Doc View Source With(POSTaggerLanguage) Withes the specified position tagger. Declaration public Pipeline With(POSTaggerLanguage posTagger) Parameters Type Name Description POSTaggerLanguage posTagger The position tagger. Returns Type Description Pipeline This. Exceptions Type Condition ArgumentNullException posTagger | Improve this Doc View Source With(SentenceDetectorLanguage) Withes the specified sentence detector. Declaration public Pipeline With(SentenceDetectorLanguage sentenceDetector) Parameters Type Name Description SentenceDetectorLanguage sentenceDetector The sentence detector. Returns Type Description Pipeline This. Exceptions Type Condition ArgumentNullException sentenceDetector | Improve this Doc View Source With(StemmerLanguage) Withes the specified stemmer. Declaration public Pipeline With(StemmerLanguage stemmer) Parameters Type Name Description StemmerLanguage stemmer The stemmer. Returns Type Description Pipeline This. Exceptions Type Condition ArgumentNullException stemmer | Improve this Doc View Source With(StopWordsLanguage) Withes the specified stop words. Declaration public Pipeline With(StopWordsLanguage stopWords) Parameters Type Name Description StopWordsLanguage stopWords The stop words. Returns Type Description Pipeline This. Exceptions Type Condition ArgumentNullException stopWords | Improve this Doc View Source With(TokenizerLanguage) Withes the specified tokenizer language. Declaration public Pipeline With(TokenizerLanguage tokenizer) Parameters Type Name Description TokenizerLanguage tokenizer The tokenizer to use. Returns Type Description Pipeline This. Exceptions Type Condition ArgumentNullException tokenizerLanguage"
+  },
   "api/Enlighten.SentenceDetection.DefaultSentenceDetector.html": {
     "href": "api/Enlighten.SentenceDetection.DefaultSentenceDetector.html",
     "title": "Class DefaultSentenceDetector | Enlighten API Reference",
@@ -389,35 +384,25 @@
     "title": "Class DefaultDetector | Enlighten API Reference",
     "keywords": "Class DefaultDetector Default detector Inheritance object DefaultDetector Implements IDetector Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.SentenceDetection.Detectors Assembly: Enlighten.dll Syntax public class DefaultDetector : IDetector Properties | Improve this Doc View Source Name Gets the name. Declaration public string Name { get; } Property Value Type Description string The name. See Also IDetector Methods | Improve this Doc View Source DetectSentences(Token[]) Detects the sentences. Declaration public Sentence[] DetectSentences(Token[] tokens) Parameters Type Name Description Token[] tokens The tokens. Returns Type Description Sentence[] The sentences found based on the tokens. See Also IDetector Implements IDetector See Also IDetector"
   },
-  "api/Enlighten.SentenceDetection.Detectors.html": {
-    "href": "api/Enlighten.SentenceDetection.Detectors.html",
-    "title": "Namespace Enlighten.SentenceDetection.Detectors | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.SentenceDetection.Detectors Classes DefaultDetector Default detector NewLineDetector New line detector"
-  },
   "api/Enlighten.SentenceDetection.Detectors.NewLineDetector.html": {
     "href": "api/Enlighten.SentenceDetection.Detectors.NewLineDetector.html",
     "title": "Class NewLineDetector | Enlighten API Reference",
     "keywords": "Class NewLineDetector New line detector Inheritance object NewLineDetector Implements IDetector Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.SentenceDetection.Detectors Assembly: Enlighten.dll Syntax public class NewLineDetector : IDetector Properties | Improve this Doc View Source Name Gets the name. Declaration public string Name { get; } Property Value Type Description string The name. See Also IDetector Methods | Improve this Doc View Source DetectSentences(Token[]) Detects the sentences. Declaration public Sentence[] DetectSentences(Token[] tokens) Parameters Type Name Description Token[] tokens The tokens. Returns Type Description Sentence[] The sentences found based on the tokens. See Also IDetector Implements IDetector See Also IDetector"
   },
-  "api/Enlighten.SentenceDetection.Enum.html": {
-    "href": "api/Enlighten.SentenceDetection.Enum.html",
-    "title": "Namespace Enlighten.SentenceDetection.Enum | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.SentenceDetection.Enum Classes SentenceDetectorLanguage Sentence detector language"
+  "api/Enlighten.SentenceDetection.Detectors.html": {
+    "href": "api/Enlighten.SentenceDetection.Detectors.html",
+    "title": "Namespace Enlighten.SentenceDetection.Detectors | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.SentenceDetection.Detectors Classes DefaultDetector Default detector NewLineDetector New line detector"
   },
   "api/Enlighten.SentenceDetection.Enum.SentenceDetectorLanguage.html": {
     "href": "api/Enlighten.SentenceDetection.Enum.SentenceDetectorLanguage.html",
     "title": "Class SentenceDetectorLanguage | Enlighten API Reference",
     "keywords": "Class SentenceDetectorLanguage Sentence detector language Inheritance object StringEnumBaseClass<SentenceDetectorLanguage> SentenceDetectorLanguage Inherited Members StringEnumBaseClass<SentenceDetectorLanguage>.ToStringEnumBaseClass(string) StringEnumBaseClass<SentenceDetectorLanguage>.ToString() StringEnumBaseClass<SentenceDetectorLanguage>.Name object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) Namespace: Enlighten.SentenceDetection.Enum Assembly: Enlighten.dll Syntax public class SentenceDetectorLanguage : StringEnumBaseClass<SentenceDetectorLanguage> Constructors | Improve this Doc View Source SentenceDetectorLanguage() Initializes a new instance of the SentenceDetectorLanguage class. Declaration public SentenceDetectorLanguage() See Also StringEnumBaseClass<TClass> | Improve this Doc View Source SentenceDetectorLanguage(string) Initializes a new instance of the SentenceDetectorLanguage class. Declaration public SentenceDetectorLanguage(string name) Parameters Type Name Description string name The name. See Also StringEnumBaseClass<TClass> Properties | Improve this Doc View Source Default Gets the default. Declaration public static SentenceDetectorLanguage Default { get; } Property Value Type Description SentenceDetectorLanguage The default. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source NewLine Gets the new line. Declaration public static SentenceDetectorLanguage NewLine { get; } Property Value Type Description SentenceDetectorLanguage The new line. See Also StringEnumBaseClass<TClass> See Also StringEnumBaseClass<TClass>"
   },
-  "api/Enlighten.SentenceDetection.html": {
-    "href": "api/Enlighten.SentenceDetection.html",
-    "title": "Namespace Enlighten.SentenceDetection | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.SentenceDetection Classes DefaultSentenceDetector Default sentence detector Sentence Sentence data holder"
-  },
-  "api/Enlighten.SentenceDetection.Interfaces.html": {
-    "href": "api/Enlighten.SentenceDetection.Interfaces.html",
-    "title": "Namespace Enlighten.SentenceDetection.Interfaces | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.SentenceDetection.Interfaces Interfaces IDetector Detector interface ISentenceDetector Sentence detector interface"
+  "api/Enlighten.SentenceDetection.Enum.html": {
+    "href": "api/Enlighten.SentenceDetection.Enum.html",
+    "title": "Namespace Enlighten.SentenceDetection.Enum | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.SentenceDetection.Enum Classes SentenceDetectorLanguage Sentence detector language"
   },
   "api/Enlighten.SentenceDetection.Interfaces.IDetector.html": {
     "href": "api/Enlighten.SentenceDetection.Interfaces.IDetector.html",
@@ -429,45 +414,45 @@
     "title": "Interface ISentenceDetector | Enlighten API Reference",
     "keywords": "Interface ISentenceDetector Sentence detector interface Namespace: Enlighten.SentenceDetection.Interfaces Assembly: Enlighten.dll Syntax public interface ISentenceDetector Methods | Improve this Doc View Source Detect(Token[], SentenceDetectorLanguage) Detects the sentences in the specified input. Declaration Sentence[] Detect(Token[] input, SentenceDetectorLanguage detector) Parameters Type Name Description Token[] input The input. SentenceDetectorLanguage detector The detector. Returns Type Description Sentence[] The sentences. | Improve this Doc View Source Detect(string, SentenceDetectorLanguage) Detects the sentences in the specified input. Declaration Sentence[] Detect(string input, SentenceDetectorLanguage detector) Parameters Type Name Description string input The input. SentenceDetectorLanguage detector The detector. Returns Type Description Sentence[] The sentences."
   },
+  "api/Enlighten.SentenceDetection.Interfaces.html": {
+    "href": "api/Enlighten.SentenceDetection.Interfaces.html",
+    "title": "Namespace Enlighten.SentenceDetection.Interfaces | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.SentenceDetection.Interfaces Interfaces IDetector Detector interface ISentenceDetector Sentence detector interface"
+  },
   "api/Enlighten.SentenceDetection.Sentence.html": {
     "href": "api/Enlighten.SentenceDetection.Sentence.html",
     "title": "Class Sentence | Enlighten API Reference",
     "keywords": "Class Sentence Sentence data holder Inheritance object Sentence Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) Namespace: Enlighten.SentenceDetection Assembly: Enlighten.dll Syntax public class Sentence Constructors | Improve this Doc View Source Sentence(int, int, Token[]) Initializes a new instance of the Sentence class. Declaration public Sentence(int endPosition, int startPosition, Token[] tokens) Parameters Type Name Description int endPosition The end position. int startPosition The start position. Token[] tokens The tokens. Properties | Improve this Doc View Source EndPosition Gets or sets the end position. (inclusive) Declaration public int EndPosition { get; set; } Property Value Type Description int The end position. | Improve this Doc View Source StartPosition Gets or sets the start position. (inclusive) Declaration public int StartPosition { get; set; } Property Value Type Description int The start position. | Improve this Doc View Source Tokens Gets or sets the tokens. Declaration public Token[] Tokens { get; set; } Property Value Type Description Token[] The tokens. Methods | Improve this Doc View Source ToString() Returns a string that represents this instance. Declaration public override string ToString() Returns Type Description string A string that represents this instance. Overrides object.ToString()"
   },
-  "api/Enlighten.Stemmer.BaseClasses.html": {
-    "href": "api/Enlighten.Stemmer.BaseClasses.html",
-    "title": "Namespace Enlighten.Stemmer.BaseClasses | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Stemmer.BaseClasses Classes StemmerLanguageBaseClass Stemmer language base class"
+  "api/Enlighten.SentenceDetection.html": {
+    "href": "api/Enlighten.SentenceDetection.html",
+    "title": "Namespace Enlighten.SentenceDetection | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.SentenceDetection Classes DefaultSentenceDetector Default sentence detector Sentence Sentence data holder"
   },
   "api/Enlighten.Stemmer.BaseClasses.StemmerLanguageBaseClass.html": {
     "href": "api/Enlighten.Stemmer.BaseClasses.StemmerLanguageBaseClass.html",
     "title": "Class StemmerLanguageBaseClass | Enlighten API Reference",
     "keywords": "Class StemmerLanguageBaseClass Stemmer language base class Inheritance object StemmerLanguageBaseClass EnglishLanguage Implements IStemmerLanguage Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.Stemmer.BaseClasses Assembly: Enlighten.dll Syntax public abstract class StemmerLanguageBaseClass : IStemmerLanguage Constructors | Improve this Doc View Source StemmerLanguageBaseClass() Initializes a new instance of the StemmerLanguageBaseClass class. Declaration protected StemmerLanguageBaseClass() See Also IStemmerLanguage Properties | Improve this Doc View Source ISOCode Gets the name. Declaration public abstract string ISOCode { get; } Property Value Type Description string The name. See Also IStemmerLanguage | Improve this Doc View Source Vowels Gets the vowels. Declaration protected abstract char[] Vowels { get; } Property Value Type Description char[] The vowels. See Also IStemmerLanguage Methods | Improve this Doc View Source IsVowel(char) Determines whether the specified character is a vowel. Declaration protected bool IsVowel(char character) Parameters Type Name Description char character The character. Returns Type Description bool true if the specified character is a vowel; otherwise, false. See Also IStemmerLanguage | Improve this Doc View Source StemWord(string) Stems the word. Declaration protected abstract string StemWord(string word) Parameters Type Name Description string word The word. Returns Type Description string The stemmed word. See Also IStemmerLanguage | Improve this Doc View Source StemWords(string[]) Stems the words. Declaration public string[] StemWords(string[] words) Parameters Type Name Description string[] words The words. Returns Type Description string[] The resulting stemmed words. See Also IStemmerLanguage Implements IStemmerLanguage See Also IStemmerLanguage"
   },
+  "api/Enlighten.Stemmer.BaseClasses.html": {
+    "href": "api/Enlighten.Stemmer.BaseClasses.html",
+    "title": "Namespace Enlighten.Stemmer.BaseClasses | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Stemmer.BaseClasses Classes StemmerLanguageBaseClass Stemmer language base class"
+  },
   "api/Enlighten.Stemmer.DefaultStemmer.html": {
     "href": "api/Enlighten.Stemmer.DefaultStemmer.html",
     "title": "Class DefaultStemmer | Enlighten API Reference",
     "keywords": "Class DefaultStemmer Default stemmer Inheritance object DefaultStemmer Implements IStemmer Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.Stemmer Assembly: Enlighten.dll Syntax public class DefaultStemmer : IStemmer Constructors | Improve this Doc View Source DefaultStemmer(IEnumerable<IStemmerLanguage>) Initializes a new instance of the DefaultStemmer class. Declaration public DefaultStemmer(IEnumerable<IStemmerLanguage> languages) Parameters Type Name Description IEnumerable<IStemmerLanguage> languages The languages. See Also IStemmer Properties | Improve this Doc View Source Languages Gets the languages. Declaration public Dictionary<string, IStemmerLanguage> Languages { get; } Property Value Type Description Dictionary<string, IStemmerLanguage> The languages. See Also IStemmer Methods | Improve this Doc View Source Stem(Token[], StemmerLanguage) Stems the specified tokens. Declaration public Token[] Stem(Token[] tokens, StemmerLanguage language) Parameters Type Name Description Token[] tokens The tokens. StemmerLanguage language The language. Returns Type Description Token[] The resulting stemmed tokens. See Also IStemmer | Improve this Doc View Source Stem(string[], StemmerLanguage) Stems the words. Declaration public string[] Stem(string[] words, StemmerLanguage language) Parameters Type Name Description string[] words The words. StemmerLanguage language Returns Type Description string[] The resulting stemmed words. See Also IStemmer Implements IStemmer See Also IStemmer"
-  },
-  "api/Enlighten.Stemmer.Enums.html": {
-    "href": "api/Enlighten.Stemmer.Enums.html",
-    "title": "Namespace Enlighten.Stemmer.Enums | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Stemmer.Enums Classes StemmerLanguage Language enum"
   },
   "api/Enlighten.Stemmer.Enums.StemmerLanguage.html": {
     "href": "api/Enlighten.Stemmer.Enums.StemmerLanguage.html",
     "title": "Class StemmerLanguage | Enlighten API Reference",
     "keywords": "Class StemmerLanguage Language enum Inheritance object StringEnumBaseClass<StemmerLanguage> StemmerLanguage Inherited Members StringEnumBaseClass<StemmerLanguage>.ToStringEnumBaseClass(string) StringEnumBaseClass<StemmerLanguage>.ToString() StringEnumBaseClass<StemmerLanguage>.Name object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) Namespace: Enlighten.Stemmer.Enums Assembly: Enlighten.dll Syntax public class StemmerLanguage : StringEnumBaseClass<StemmerLanguage> Constructors | Improve this Doc View Source StemmerLanguage() Initializes a new instance of the StemmerLanguage class. Declaration public StemmerLanguage() See Also StringEnumBaseClass<TClass> | Improve this Doc View Source StemmerLanguage(string) Initializes a new instance of the StemmerLanguage class. Declaration public StemmerLanguage(string name) Parameters Type Name Description string name The name. See Also StringEnumBaseClass<TClass> Properties | Improve this Doc View Source EnglishPorter2 Gets the english rule based tokenizer. Declaration public static StemmerLanguage EnglishPorter2 { get; } Property Value Type Description StemmerLanguage The english rule based tokenizer. See Also StringEnumBaseClass<TClass> See Also StringEnumBaseClass<TClass>"
   },
-  "api/Enlighten.Stemmer.html": {
-    "href": "api/Enlighten.Stemmer.html",
-    "title": "Namespace Enlighten.Stemmer | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Stemmer Classes DefaultStemmer Default stemmer"
-  },
-  "api/Enlighten.Stemmer.Interfaces.html": {
-    "href": "api/Enlighten.Stemmer.Interfaces.html",
-    "title": "Namespace Enlighten.Stemmer.Interfaces | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Stemmer.Interfaces Interfaces IStemmer Stemmer interface IStemmerLanguage Stemmer language interface"
+  "api/Enlighten.Stemmer.Enums.html": {
+    "href": "api/Enlighten.Stemmer.Enums.html",
+    "title": "Namespace Enlighten.Stemmer.Enums | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Stemmer.Enums Classes StemmerLanguage Language enum"
   },
   "api/Enlighten.Stemmer.Interfaces.IStemmer.html": {
     "href": "api/Enlighten.Stemmer.Interfaces.IStemmer.html",
@@ -479,6 +464,11 @@
     "title": "Interface IStemmerLanguage | Enlighten API Reference",
     "keywords": "Interface IStemmerLanguage Stemmer language interface Namespace: Enlighten.Stemmer.Interfaces Assembly: Enlighten.dll Syntax public interface IStemmerLanguage Properties | Improve this Doc View Source ISOCode Gets the name. Declaration string ISOCode { get; } Property Value Type Description string The name. Methods | Improve this Doc View Source StemWords(string[]) Stems the words. Declaration string[] StemWords(string[] words) Parameters Type Name Description string[] words The words. Returns Type Description string[] The resulting stemmed words."
   },
+  "api/Enlighten.Stemmer.Interfaces.html": {
+    "href": "api/Enlighten.Stemmer.Interfaces.html",
+    "title": "Namespace Enlighten.Stemmer.Interfaces | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Stemmer.Interfaces Interfaces IStemmer Stemmer interface IStemmerLanguage Stemmer language interface"
+  },
   "api/Enlighten.Stemmer.Languages.EnglishLanguage.html": {
     "href": "api/Enlighten.Stemmer.Languages.EnglishLanguage.html",
     "title": "Class EnglishLanguage | Enlighten API Reference",
@@ -489,35 +479,30 @@
     "title": "Namespace Enlighten.Stemmer.Languages | Enlighten API Reference",
     "keywords": "Namespace Enlighten.Stemmer.Languages Classes EnglishLanguage English language"
   },
-  "api/Enlighten.StopWords.BaseClasses.html": {
-    "href": "api/Enlighten.StopWords.BaseClasses.html",
-    "title": "Namespace Enlighten.StopWords.BaseClasses | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.StopWords.BaseClasses Classes StopWordsBase Stop words base"
+  "api/Enlighten.Stemmer.html": {
+    "href": "api/Enlighten.Stemmer.html",
+    "title": "Namespace Enlighten.Stemmer | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Stemmer Classes DefaultStemmer Default stemmer"
   },
   "api/Enlighten.StopWords.BaseClasses.StopWordsBase.html": {
     "href": "api/Enlighten.StopWords.BaseClasses.StopWordsBase.html",
     "title": "Class StopWordsBase | Enlighten API Reference",
     "keywords": "Class StopWordsBase Stop words base Inheritance object StopWordsBase EnglishDefault EnglishSpacy Implements IStopWordsLanguage Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.StopWords.BaseClasses Assembly: Enlighten.dll Syntax public abstract class StopWordsBase : IStopWordsLanguage Properties | Improve this Doc View Source Name Gets the name. Declaration public abstract string Name { get; } Property Value Type Description string The name. See Also IStopWordsLanguage | Improve this Doc View Source StopWords Gets the stop words. Declaration protected abstract HashSet<string> StopWords { get; } Property Value Type Description HashSet<string> The stop words. See Also IStopWordsLanguage Methods | Improve this Doc View Source IsStopWord(string) Determines whether [the specified token] [is a stop word]. Declaration public bool IsStopWord(string token) Parameters Type Name Description string token The token. Returns Type Description bool true if [the specified token] [is a stop word]; otherwise, false. See Also IStopWordsLanguage | Improve this Doc View Source MarkStopWords(Token[]) Marks the stop words. Declaration public Token[] MarkStopWords(Token[] tokens) Parameters Type Name Description Token[] tokens The tokens. Returns Type Description Token[] The tokens. See Also IStopWordsLanguage Implements IStopWordsLanguage See Also IStopWordsLanguage"
   },
-  "api/Enlighten.StopWords.Enum.html": {
-    "href": "api/Enlighten.StopWords.Enum.html",
-    "title": "Namespace Enlighten.StopWords.Enum | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.StopWords.Enum Classes StopWordsLanguage Stop words language"
+  "api/Enlighten.StopWords.BaseClasses.html": {
+    "href": "api/Enlighten.StopWords.BaseClasses.html",
+    "title": "Namespace Enlighten.StopWords.BaseClasses | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.StopWords.BaseClasses Classes StopWordsBase Stop words base"
   },
   "api/Enlighten.StopWords.Enum.StopWordsLanguage.html": {
     "href": "api/Enlighten.StopWords.Enum.StopWordsLanguage.html",
     "title": "Class StopWordsLanguage | Enlighten API Reference",
     "keywords": "Class StopWordsLanguage Stop words language Inheritance object StringEnumBaseClass<StopWordsLanguage> StopWordsLanguage Inherited Members StringEnumBaseClass<StopWordsLanguage>.ToStringEnumBaseClass(string) StringEnumBaseClass<StopWordsLanguage>.ToString() StringEnumBaseClass<StopWordsLanguage>.Name object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) Namespace: Enlighten.StopWords.Enum Assembly: Enlighten.dll Syntax public class StopWordsLanguage : StringEnumBaseClass<StopWordsLanguage> Constructors | Improve this Doc View Source StopWordsLanguage() Initializes a new instance of the StopWordsLanguage class. Declaration public StopWordsLanguage() See Also StringEnumBaseClass<TClass> | Improve this Doc View Source StopWordsLanguage(string) Initializes a new instance of the StopWordsLanguage class. Declaration public StopWordsLanguage(string name) Parameters Type Name Description string name The name. See Also StringEnumBaseClass<TClass> Properties | Improve this Doc View Source English Gets the english default stop words. Declaration public static StopWordsLanguage English { get; } Property Value Type Description StopWordsLanguage The english default stop words. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source EnglishSpacy Gets the english spacy. Declaration public static StopWordsLanguage EnglishSpacy { get; } Property Value Type Description StopWordsLanguage The english spacy. See Also StringEnumBaseClass<TClass> See Also StringEnumBaseClass<TClass>"
   },
-  "api/Enlighten.StopWords.html": {
-    "href": "api/Enlighten.StopWords.html",
-    "title": "Namespace Enlighten.StopWords | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.StopWords Classes StopWordsManager Stop words manager"
-  },
-  "api/Enlighten.StopWords.Interfaces.html": {
-    "href": "api/Enlighten.StopWords.Interfaces.html",
-    "title": "Namespace Enlighten.StopWords.Interfaces | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.StopWords.Interfaces Interfaces IStopWordsLanguage Stop words language IStopWordsManager Stop words manager interface"
+  "api/Enlighten.StopWords.Enum.html": {
+    "href": "api/Enlighten.StopWords.Enum.html",
+    "title": "Namespace Enlighten.StopWords.Enum | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.StopWords.Enum Classes StopWordsLanguage Stop words language"
   },
   "api/Enlighten.StopWords.Interfaces.IStopWordsLanguage.html": {
     "href": "api/Enlighten.StopWords.Interfaces.IStopWordsLanguage.html",
@@ -528,6 +513,11 @@
     "href": "api/Enlighten.StopWords.Interfaces.IStopWordsManager.html",
     "title": "Interface IStopWordsManager | Enlighten API Reference",
     "keywords": "Interface IStopWordsManager Stop words manager interface Namespace: Enlighten.StopWords.Interfaces Assembly: Enlighten.dll Syntax public interface IStopWordsManager Methods | Improve this Doc View Source IsStopWord(string, StopWordsLanguage) Determines whether [the specified token] [is a stop word]. Declaration bool IsStopWord(string token, StopWordsLanguage language) Parameters Type Name Description string token The token. StopWordsLanguage language The language. Returns Type Description bool true if [the specified token] [is a stop word]; otherwise, false. | Improve this Doc View Source MarkStopWords(Token[], StopWordsLanguage) Marks the stop words. Declaration Token[] MarkStopWords(Token[] tokens, StopWordsLanguage language) Parameters Type Name Description Token[] tokens The tokens. StopWordsLanguage language The language. Returns Type Description Token[] The tokens."
+  },
+  "api/Enlighten.StopWords.Interfaces.html": {
+    "href": "api/Enlighten.StopWords.Interfaces.html",
+    "title": "Namespace Enlighten.StopWords.Interfaces | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.StopWords.Interfaces Interfaces IStopWordsLanguage Stop words language IStopWordsManager Stop words manager interface"
   },
   "api/Enlighten.StopWords.Languages.EnglishDefault.html": {
     "href": "api/Enlighten.StopWords.Languages.EnglishDefault.html",
@@ -549,30 +539,35 @@
     "title": "Class StopWordsManager | Enlighten API Reference",
     "keywords": "Class StopWordsManager Stop words manager Inheritance object StopWordsManager Implements IStopWordsManager Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.StopWords Assembly: Enlighten.dll Syntax public class StopWordsManager : IStopWordsManager Constructors | Improve this Doc View Source StopWordsManager(IEnumerable<IStopWordsLanguage>) Initializes a new instance of the StopWordsManager class. Declaration public StopWordsManager(IEnumerable<IStopWordsLanguage> stopWordsLanguages) Parameters Type Name Description IEnumerable<IStopWordsLanguage> stopWordsLanguages The stop words languages. See Also IStopWordsManager Properties | Improve this Doc View Source StopWordsLanguages Gets the stop words languages. Declaration public Dictionary<string, IStopWordsLanguage> StopWordsLanguages { get; } Property Value Type Description Dictionary<string, IStopWordsLanguage> The stop words languages. See Also IStopWordsManager Methods | Improve this Doc View Source IsStopWord(string, StopWordsLanguage) Determines whether [the specified token] [is a stop word]. Declaration public bool IsStopWord(string token, StopWordsLanguage language) Parameters Type Name Description string token The token. StopWordsLanguage language The language. Returns Type Description bool true if [the specified token] [is a stop word]; otherwise, false. See Also IStopWordsManager | Improve this Doc View Source MarkStopWords(Token[], StopWordsLanguage) Marks the stop words. Declaration public Token[] MarkStopWords(Token[] tokens, StopWordsLanguage language) Parameters Type Name Description Token[] tokens The tokens. StopWordsLanguage language The language. Returns Type Description Token[] The tokens. See Also IStopWordsManager Implements IStopWordsManager See Also IStopWordsManager"
   },
-  "api/Enlighten.SynonymFinder.BaseClasses.html": {
-    "href": "api/Enlighten.SynonymFinder.BaseClasses.html",
-    "title": "Namespace Enlighten.SynonymFinder.BaseClasses | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.SynonymFinder.BaseClasses Classes SynonymFinderBase Synonym finder base class"
+  "api/Enlighten.StopWords.html": {
+    "href": "api/Enlighten.StopWords.html",
+    "title": "Namespace Enlighten.StopWords | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.StopWords Classes StopWordsManager Stop words manager"
   },
   "api/Enlighten.SynonymFinder.BaseClasses.SynonymFinderBase.html": {
     "href": "api/Enlighten.SynonymFinder.BaseClasses.SynonymFinderBase.html",
     "title": "Class SynonymFinderBase | Enlighten API Reference",
     "keywords": "Class SynonymFinderBase Synonym finder base class Inheritance object SynonymFinderBase EnglishFinder Implements ISynonymFinderLanguage Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.SynonymFinder.BaseClasses Assembly: Enlighten.dll Syntax public abstract class SynonymFinderBase : ISynonymFinderLanguage Constructors | Improve this Doc View Source SynonymFinderBase() Initializes a new instance of the SynonymFinderBase class. Declaration protected SynonymFinderBase() See Also ISynonymFinderLanguage Properties | Improve this Doc View Source Name Gets the name. Declaration public abstract string Name { get; } Property Value Type Description string The name. See Also ISynonymFinderLanguage | Improve this Doc View Source SynonymDictionary Gets the synonym dictionary. Declaration protected Dictionary<string, string> SynonymDictionary { get; } Property Value Type Description Dictionary<string, string> The synonym dictionary. See Also ISynonymFinderLanguage Methods | Improve this Doc View Source FindSynonym(string) Finds the synonym if it exists. Declaration public string FindSynonym(string input) Parameters Type Name Description string input The input. Returns Type Description string The synonym or the input if it doesn't exist. See Also ISynonymFinderLanguage Implements ISynonymFinderLanguage See Also ISynonymFinderLanguage"
   },
+  "api/Enlighten.SynonymFinder.BaseClasses.html": {
+    "href": "api/Enlighten.SynonymFinder.BaseClasses.html",
+    "title": "Namespace Enlighten.SynonymFinder.BaseClasses | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.SynonymFinder.BaseClasses Classes SynonymFinderBase Synonym finder base class"
+  },
   "api/Enlighten.SynonymFinder.DefaultSynonymFinder.html": {
     "href": "api/Enlighten.SynonymFinder.DefaultSynonymFinder.html",
     "title": "Class DefaultSynonymFinder | Enlighten API Reference",
     "keywords": "Class DefaultSynonymFinder Default synonym finder Inheritance object DefaultSynonymFinder Implements ISynonymFinder Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.SynonymFinder Assembly: Enlighten.dll Syntax public class DefaultSynonymFinder : ISynonymFinder Constructors | Improve this Doc View Source DefaultSynonymFinder(IEnumerable<ISynonymFinderLanguage>) Initializes a new instance of the DefaultSynonymFinder class. Declaration public DefaultSynonymFinder(IEnumerable<ISynonymFinderLanguage> languages) Parameters Type Name Description IEnumerable<ISynonymFinderLanguage> languages The languages. See Also ISynonymFinder Properties | Improve this Doc View Source Languages Gets the languages. Declaration public Dictionary<string, ISynonymFinderLanguage> Languages { get; } Property Value Type Description Dictionary<string, ISynonymFinderLanguage> The languages. See Also ISynonymFinder Methods | Improve this Doc View Source FindSynonym(string, SynonymFinderLanguage) Finds the synonym if it exists. Declaration public string FindSynonym(string input, SynonymFinderLanguage language) Parameters Type Name Description string input The input. SynonymFinderLanguage language The language. Returns Type Description string The synonym or the input if it doesn't exist. See Also ISynonymFinder | Improve this Doc View Source FindSynonyms(Token[], SynonymFinderLanguage) Finds the synonyms and replaces the text. Declaration public Token[] FindSynonyms(Token[] tokens, SynonymFinderLanguage language) Parameters Type Name Description Token[] tokens The tokens. SynonymFinderLanguage language The language. Returns Type Description Token[] The tokens See Also ISynonymFinder Implements ISynonymFinder See Also ISynonymFinder"
   },
-  "api/Enlighten.SynonymFinder.Enum.html": {
-    "href": "api/Enlighten.SynonymFinder.Enum.html",
-    "title": "Namespace Enlighten.SynonymFinder.Enum | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.SynonymFinder.Enum Classes SynonymFinderLanguage Part of speech tagger language"
-  },
   "api/Enlighten.SynonymFinder.Enum.SynonymFinderLanguage.html": {
     "href": "api/Enlighten.SynonymFinder.Enum.SynonymFinderLanguage.html",
     "title": "Class SynonymFinderLanguage | Enlighten API Reference",
     "keywords": "Class SynonymFinderLanguage Part of speech tagger language Inheritance object StringEnumBaseClass<SynonymFinderLanguage> SynonymFinderLanguage Inherited Members StringEnumBaseClass<SynonymFinderLanguage>.ToStringEnumBaseClass(string) StringEnumBaseClass<SynonymFinderLanguage>.ToString() StringEnumBaseClass<SynonymFinderLanguage>.Name object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) Namespace: Enlighten.SynonymFinder.Enum Assembly: Enlighten.dll Syntax public class SynonymFinderLanguage : StringEnumBaseClass<SynonymFinderLanguage> Constructors | Improve this Doc View Source SynonymFinderLanguage() Initializes a new instance of the SynonymFinderLanguage class. Declaration public SynonymFinderLanguage() See Also StringEnumBaseClass<TClass> | Improve this Doc View Source SynonymFinderLanguage(string) Initializes a new instance of the SynonymFinderLanguage class. Declaration public SynonymFinderLanguage(string name) Parameters Type Name Description string name The name. See Also StringEnumBaseClass<TClass> Properties | Improve this Doc View Source English Gets the english. Declaration public static SynonymFinderLanguage English { get; } Property Value Type Description SynonymFinderLanguage The english. See Also StringEnumBaseClass<TClass> See Also StringEnumBaseClass<TClass>"
+  },
+  "api/Enlighten.SynonymFinder.Enum.html": {
+    "href": "api/Enlighten.SynonymFinder.Enum.html",
+    "title": "Namespace Enlighten.SynonymFinder.Enum | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.SynonymFinder.Enum Classes SynonymFinderLanguage Part of speech tagger language"
   },
   "api/Enlighten.SynonymFinder.Finders.EnglishFinder.html": {
     "href": "api/Enlighten.SynonymFinder.Finders.EnglishFinder.html",
@@ -584,16 +579,6 @@
     "title": "Namespace Enlighten.SynonymFinder.Finders | Enlighten API Reference",
     "keywords": "Namespace Enlighten.SynonymFinder.Finders Classes EnglishFinder English synonym finder"
   },
-  "api/Enlighten.SynonymFinder.html": {
-    "href": "api/Enlighten.SynonymFinder.html",
-    "title": "Namespace Enlighten.SynonymFinder | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.SynonymFinder Classes DefaultSynonymFinder Default synonym finder"
-  },
-  "api/Enlighten.SynonymFinder.Interfaces.html": {
-    "href": "api/Enlighten.SynonymFinder.Interfaces.html",
-    "title": "Namespace Enlighten.SynonymFinder.Interfaces | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.SynonymFinder.Interfaces Interfaces ISynonymFinder Synonym finder ISynonymFinderLanguage Synonym finder language interface"
-  },
   "api/Enlighten.SynonymFinder.Interfaces.ISynonymFinder.html": {
     "href": "api/Enlighten.SynonymFinder.Interfaces.ISynonymFinder.html",
     "title": "Interface ISynonymFinder | Enlighten API Reference",
@@ -604,30 +589,30 @@
     "title": "Interface ISynonymFinderLanguage | Enlighten API Reference",
     "keywords": "Interface ISynonymFinderLanguage Synonym finder language interface Namespace: Enlighten.SynonymFinder.Interfaces Assembly: Enlighten.dll Syntax public interface ISynonymFinderLanguage Properties | Improve this Doc View Source Name Gets the name. Declaration string Name { get; } Property Value Type Description string The name. Methods | Improve this Doc View Source FindSynonym(string) Finds the synonym if it exists. Declaration string FindSynonym(string input) Parameters Type Name Description string input The input. Returns Type Description string The synonym or the input if it doesn't exist."
   },
+  "api/Enlighten.SynonymFinder.Interfaces.html": {
+    "href": "api/Enlighten.SynonymFinder.Interfaces.html",
+    "title": "Namespace Enlighten.SynonymFinder.Interfaces | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.SynonymFinder.Interfaces Interfaces ISynonymFinder Synonym finder ISynonymFinderLanguage Synonym finder language interface"
+  },
+  "api/Enlighten.SynonymFinder.html": {
+    "href": "api/Enlighten.SynonymFinder.html",
+    "title": "Namespace Enlighten.SynonymFinder | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.SynonymFinder Classes DefaultSynonymFinder Default synonym finder"
+  },
   "api/Enlighten.TextSummarization.DefaultTextSummarizer.html": {
     "href": "api/Enlighten.TextSummarization.DefaultTextSummarizer.html",
     "title": "Class DefaultTextSummarizer | Enlighten API Reference",
     "keywords": "Class DefaultTextSummarizer Class handles basic text Inheritance object DefaultTextSummarizer Implements ITextSummarizer Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.TextSummarization Assembly: Enlighten.dll Syntax public class DefaultTextSummarizer : ITextSummarizer Constructors | Improve this Doc View Source DefaultTextSummarizer(IEnumerable<ITextSummarizerLanguage>) Initializes a new instance of the DefaultTextSummarizer class. Declaration public DefaultTextSummarizer(IEnumerable<ITextSummarizerLanguage> summarizers) Parameters Type Name Description IEnumerable<ITextSummarizerLanguage> summarizers The summarizers. Properties | Improve this Doc View Source Summarizers Gets the summarizers. Declaration public Dictionary<string, ITextSummarizerLanguage> Summarizers { get; } Property Value Type Description Dictionary<string, ITextSummarizerLanguage> The summarizers. Methods | Improve this Doc View Source Summarize(Document, int, TextSummarizationLanguage) Summarizes the specified text. Declaration public Document Summarize(Document text, int sentenceCount, TextSummarizationLanguage language) Parameters Type Name Description Document text The text. int sentenceCount The number of sentences to have in the final text. TextSummarizationLanguage language The language. Returns Type Description Document The summarized text | Improve this Doc View Source Summarize(Document, float, TextSummarizationLanguage) Summarizes the specified text. Declaration public Document Summarize(Document text, float percentage, TextSummarizationLanguage language) Parameters Type Name Description Document text The text. float percentage The percentage of sentences to have in the final text. TextSummarizationLanguage language The language. Returns Type Description Document The summarized text Implements ITextSummarizer"
-  },
-  "api/Enlighten.TextSummarization.Enum.html": {
-    "href": "api/Enlighten.TextSummarization.Enum.html",
-    "title": "Namespace Enlighten.TextSummarization.Enum | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.TextSummarization.Enum Classes TextSummarizationLanguage Text summarization language"
   },
   "api/Enlighten.TextSummarization.Enum.TextSummarizationLanguage.html": {
     "href": "api/Enlighten.TextSummarization.Enum.TextSummarizationLanguage.html",
     "title": "Class TextSummarizationLanguage | Enlighten API Reference",
     "keywords": "Class TextSummarizationLanguage Text summarization language Inheritance object StringEnumBaseClass<TextSummarizationLanguage> TextSummarizationLanguage Inherited Members StringEnumBaseClass<TextSummarizationLanguage>.ToStringEnumBaseClass(string) StringEnumBaseClass<TextSummarizationLanguage>.ToString() StringEnumBaseClass<TextSummarizationLanguage>.Name object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) Namespace: Enlighten.TextSummarization.Enum Assembly: Enlighten.dll Syntax public class TextSummarizationLanguage : StringEnumBaseClass<TextSummarizationLanguage> Constructors | Improve this Doc View Source TextSummarizationLanguage() Initializes a new instance of the TextSummarizationLanguage class. Declaration public TextSummarizationLanguage() See Also StringEnumBaseClass<TClass> | Improve this Doc View Source TextSummarizationLanguage(string) Initializes a new instance of the TextSummarizationLanguage class. Declaration public TextSummarizationLanguage(string name) Parameters Type Name Description string name The name. See Also StringEnumBaseClass<TClass> Properties | Improve this Doc View Source EnglishDefault Gets the default for english. (Uses TF-IDF) Declaration public static TextSummarizationLanguage EnglishDefault { get; } Property Value Type Description TextSummarizationLanguage The default. See Also StringEnumBaseClass<TClass> See Also StringEnumBaseClass<TClass>"
   },
-  "api/Enlighten.TextSummarization.html": {
-    "href": "api/Enlighten.TextSummarization.html",
-    "title": "Namespace Enlighten.TextSummarization | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.TextSummarization Classes DefaultTextSummarizer Class handles basic text"
-  },
-  "api/Enlighten.TextSummarization.Interfaces.html": {
-    "href": "api/Enlighten.TextSummarization.Interfaces.html",
-    "title": "Namespace Enlighten.TextSummarization.Interfaces | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.TextSummarization.Interfaces Interfaces ITextSummarizer Text summarizer interface ITextSummarizerLanguage Text summarizer language interface"
+  "api/Enlighten.TextSummarization.Enum.html": {
+    "href": "api/Enlighten.TextSummarization.Enum.html",
+    "title": "Namespace Enlighten.TextSummarization.Enum | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.TextSummarization.Enum Classes TextSummarizationLanguage Text summarization language"
   },
   "api/Enlighten.TextSummarization.Interfaces.ITextSummarizer.html": {
     "href": "api/Enlighten.TextSummarization.Interfaces.ITextSummarizer.html",
@@ -639,6 +624,11 @@
     "title": "Interface ITextSummarizerLanguage | Enlighten API Reference",
     "keywords": "Interface ITextSummarizerLanguage Text summarizer language interface Namespace: Enlighten.TextSummarization.Interfaces Assembly: Enlighten.dll Syntax public interface ITextSummarizerLanguage Properties | Improve this Doc View Source Name Gets the name. Declaration string Name { get; } Property Value Type Description string The name. Methods | Improve this Doc View Source Summarize(Document, int) Summarizes the specified input. Declaration Document Summarize(Document input, int numberOfSentences) Parameters Type Name Description Document input The input. int numberOfSentences The number of sentences. Returns Type Description Document The summary | Improve this Doc View Source Summarize(Document, float) Summarizes the specified input. Declaration Document Summarize(Document input, float percentage) Parameters Type Name Description Document input The input. float percentage The percentage. Returns Type Description Document The summary"
   },
+  "api/Enlighten.TextSummarization.Interfaces.html": {
+    "href": "api/Enlighten.TextSummarization.Interfaces.html",
+    "title": "Namespace Enlighten.TextSummarization.Interfaces | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.TextSummarization.Interfaces Interfaces ITextSummarizer Text summarizer interface ITextSummarizerLanguage Text summarizer language interface"
+  },
   "api/Enlighten.TextSummarization.Languages.EnglishDefault.html": {
     "href": "api/Enlighten.TextSummarization.Languages.EnglishDefault.html",
     "title": "Class EnglishDefault | Enlighten API Reference",
@@ -649,10 +639,10 @@
     "title": "Namespace Enlighten.TextSummarization.Languages | Enlighten API Reference",
     "keywords": "Namespace Enlighten.TextSummarization.Languages Classes EnglishDefault English default summarizer"
   },
-  "api/Enlighten.Tokenizer.BaseClasses.html": {
-    "href": "api/Enlighten.Tokenizer.BaseClasses.html",
-    "title": "Namespace Enlighten.Tokenizer.BaseClasses | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Tokenizer.BaseClasses Classes SingleCharacterTokenFinderBaseClass Single character token finder base class TokenFinderBaseClass Token finder base class"
+  "api/Enlighten.TextSummarization.html": {
+    "href": "api/Enlighten.TextSummarization.html",
+    "title": "Namespace Enlighten.TextSummarization | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.TextSummarization Classes DefaultTextSummarizer Class handles basic text"
   },
   "api/Enlighten.Tokenizer.BaseClasses.SingleCharacterTokenFinderBaseClass.html": {
     "href": "api/Enlighten.Tokenizer.BaseClasses.SingleCharacterTokenFinderBaseClass.html",
@@ -664,30 +654,25 @@
     "title": "Class TokenFinderBaseClass | Enlighten API Reference",
     "keywords": "Class TokenFinderBaseClass Token finder base class Inheritance object TokenFinderBaseClass SingleCharacterTokenFinderBaseClass Abbreviation Ellipsis Email Emoji HashTag NewLine Number OtherTokenFinder RomanNumerals Symbol URL Username Whitespace Word Implements IEnglishTokenFinder Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.Tokenizer.BaseClasses Assembly: Enlighten.dll Syntax public abstract class TokenFinderBaseClass : IEnglishTokenFinder Constructors | Improve this Doc View Source TokenFinderBaseClass() Initializes a new instance of the TokenFinderBaseClass class. Declaration protected TokenFinderBaseClass() See Also IEnglishTokenFinder Properties | Improve this Doc View Source Order Gets the order. Declaration public abstract int Order { get; } Property Value Type Description int The order. See Also IEnglishTokenFinder Methods | Improve this Doc View Source IsMatch(TokenizableStream<char>) Determines whether the next set of item on the stream matches this finder. Declaration public Token? IsMatch(TokenizableStream<char> stream) Parameters Type Name Description TokenizableStream<char> stream The stream. Returns Type Description Token The token. See Also IEnglishTokenFinder | Improve this Doc View Source IsMatchImpl(TokenizableStream<char>) The actual implementation of the IsMatch done by the individual classes. Declaration protected abstract Token? IsMatchImpl(TokenizableStream<char> tokenizer) Parameters Type Name Description TokenizableStream<char> tokenizer The tokenizer. Returns Type Description Token The token. See Also IEnglishTokenFinder Implements IEnglishTokenFinder See Also IEnglishTokenFinder"
   },
+  "api/Enlighten.Tokenizer.BaseClasses.html": {
+    "href": "api/Enlighten.Tokenizer.BaseClasses.html",
+    "title": "Namespace Enlighten.Tokenizer.BaseClasses | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Tokenizer.BaseClasses Classes SingleCharacterTokenFinderBaseClass Single character token finder base class TokenFinderBaseClass Token finder base class"
+  },
   "api/Enlighten.Tokenizer.DefaultTokenizer.html": {
     "href": "api/Enlighten.Tokenizer.DefaultTokenizer.html",
     "title": "Class DefaultTokenizer | Enlighten API Reference",
     "keywords": "Class DefaultTokenizer Default tokenizer Inheritance object DefaultTokenizer Implements ITokenizer Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.Tokenizer Assembly: Enlighten.dll Syntax public class DefaultTokenizer : ITokenizer Constructors | Improve this Doc View Source DefaultTokenizer(IEnumerable<ITokenizerLanguage>, ObjectPool<StringBuilder>) Initializes a new instance of the DefaultTokenizer class. Declaration public DefaultTokenizer(IEnumerable<ITokenizerLanguage> languages, ObjectPool<StringBuilder> objectPool) Parameters Type Name Description IEnumerable<ITokenizerLanguage> languages The languages. ObjectPool<StringBuilder> objectPool The object pool. See Also ITokenizer Properties | Improve this Doc View Source Languages Gets the languages. Declaration public Dictionary<string, ITokenizerLanguage> Languages { get; } Property Value Type Description Dictionary<string, ITokenizerLanguage> The languages. See Also ITokenizer Methods | Improve this Doc View Source Detokenize(Sentence[], TokenizerLanguage) Detokenizes the specified sentences. Declaration public string Detokenize(Sentence[] sentences, TokenizerLanguage language) Parameters Type Name Description Sentence[] sentences The sentences. TokenizerLanguage language The language. Returns Type Description string The resulting text. See Also ITokenizer | Improve this Doc View Source Detokenize(Token[], TokenizerLanguage) Detokenizes the specified tokens. Declaration public string Detokenize(Token[] tokens, TokenizerLanguage language) Parameters Type Name Description Token[] tokens The tokens. TokenizerLanguage language The language. Returns Type Description string The resulting text. See Also ITokenizer | Improve this Doc View Source Tokenize(string, TokenizerLanguage) Tokenizes the specified text. Declaration public Token[] Tokenize(string text, TokenizerLanguage language) Parameters Type Name Description string text The text. TokenizerLanguage language The language. Returns Type Description Token[] The tokens found. See Also ITokenizer Implements ITokenizer See Also ITokenizer"
-  },
-  "api/Enlighten.Tokenizer.Enums.html": {
-    "href": "api/Enlighten.Tokenizer.Enums.html",
-    "title": "Namespace Enlighten.Tokenizer.Enums | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Tokenizer.Enums Classes TokenizerLanguage Language enum"
   },
   "api/Enlighten.Tokenizer.Enums.TokenizerLanguage.html": {
     "href": "api/Enlighten.Tokenizer.Enums.TokenizerLanguage.html",
     "title": "Class TokenizerLanguage | Enlighten API Reference",
     "keywords": "Class TokenizerLanguage Language enum Inheritance object StringEnumBaseClass<TokenizerLanguage> TokenizerLanguage Inherited Members StringEnumBaseClass<TokenizerLanguage>.ToStringEnumBaseClass(string) StringEnumBaseClass<TokenizerLanguage>.ToString() StringEnumBaseClass<TokenizerLanguage>.Name object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) Namespace: Enlighten.Tokenizer.Enums Assembly: Enlighten.dll Syntax public class TokenizerLanguage : StringEnumBaseClass<TokenizerLanguage> Constructors | Improve this Doc View Source TokenizerLanguage() Initializes a new instance of the TokenizerLanguage class. Declaration public TokenizerLanguage() See Also StringEnumBaseClass<TClass> | Improve this Doc View Source TokenizerLanguage(string) Initializes a new instance of the TokenizerLanguage class. Declaration public TokenizerLanguage(string name) Parameters Type Name Description string name The name. See Also StringEnumBaseClass<TClass> Properties | Improve this Doc View Source EnglishRuleBased Gets the english rule based tokenizer. Declaration public static TokenizerLanguage EnglishRuleBased { get; } Property Value Type Description TokenizerLanguage The english rule based tokenizer. See Also StringEnumBaseClass<TClass> See Also StringEnumBaseClass<TClass>"
   },
-  "api/Enlighten.Tokenizer.html": {
-    "href": "api/Enlighten.Tokenizer.html",
-    "title": "Namespace Enlighten.Tokenizer | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Tokenizer Classes DefaultTokenizer Default tokenizer Token Token data holder"
-  },
-  "api/Enlighten.Tokenizer.Interfaces.html": {
-    "href": "api/Enlighten.Tokenizer.Interfaces.html",
-    "title": "Namespace Enlighten.Tokenizer.Interfaces | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Tokenizer.Interfaces Interfaces ITokenizer Tokenizer interface ITokenizerLanguage Language interface"
+  "api/Enlighten.Tokenizer.Enums.html": {
+    "href": "api/Enlighten.Tokenizer.Enums.html",
+    "title": "Namespace Enlighten.Tokenizer.Enums | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Tokenizer.Enums Classes TokenizerLanguage Language enum"
   },
   "api/Enlighten.Tokenizer.Interfaces.ITokenizer.html": {
     "href": "api/Enlighten.Tokenizer.Interfaces.ITokenizer.html",
@@ -699,25 +684,25 @@
     "title": "Interface ITokenizerLanguage | Enlighten API Reference",
     "keywords": "Interface ITokenizerLanguage Language interface Namespace: Enlighten.Tokenizer.Interfaces Assembly: Enlighten.dll Syntax public interface ITokenizerLanguage Properties | Improve this Doc View Source ISOCode Gets the name. Declaration string ISOCode { get; } Property Value Type Description string The name. Methods | Improve this Doc View Source Detokenize(Token[]) Detokenizes the specified tokens. Declaration string Detokenize(Token[] tokens) Parameters Type Name Description Token[] tokens The tokens. Returns Type Description string Converts the tokens into the equivalent string. | Improve this Doc View Source Tokenize(TokenizableStream<char>) Tokenizes the specified text. Declaration Token[] Tokenize(TokenizableStream<char> text) Parameters Type Name Description TokenizableStream<char> text The text. Returns Type Description Token[] The tokenized version of the text."
   },
+  "api/Enlighten.Tokenizer.Interfaces.html": {
+    "href": "api/Enlighten.Tokenizer.Interfaces.html",
+    "title": "Namespace Enlighten.Tokenizer.Interfaces | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Tokenizer.Interfaces Interfaces ITokenizer Tokenizer interface ITokenizerLanguage Language interface"
+  },
   "api/Enlighten.Tokenizer.Languages.English.EnglishLanguage.html": {
     "href": "api/Enlighten.Tokenizer.Languages.English.EnglishLanguage.html",
     "title": "Class EnglishLanguage | Enlighten API Reference",
     "keywords": "Class EnglishLanguage English language Inheritance object EnglishLanguage Implements ITokenizerLanguage Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.Tokenizer.Languages.English Assembly: Enlighten.dll Syntax public class EnglishLanguage : ITokenizerLanguage Constructors | Improve this Doc View Source EnglishLanguage(IEnumerable<IEnglishTokenFinder>) Initializes a new instance of the EnglishLanguage class. Declaration public EnglishLanguage(IEnumerable<IEnglishTokenFinder> tokenFinders) Parameters Type Name Description IEnumerable<IEnglishTokenFinder> tokenFinders See Also ITokenizerLanguage Properties | Improve this Doc View Source ISOCode Gets the name. Declaration public string ISOCode { get; } Property Value Type Description string The name. See Also ITokenizerLanguage | Improve this Doc View Source TokenFinders Gets the token finders. Declaration public IEnglishTokenFinder[] TokenFinders { get; } Property Value Type Description IEnglishTokenFinder[] The token finders. See Also ITokenizerLanguage Methods | Improve this Doc View Source Detokenize(Token[]) Detokenizes the specified tokens. Declaration public string Detokenize(Token[] tokens) Parameters Type Name Description Token[] tokens The tokens. Returns Type Description string Converts the tokens into the equivalent string. See Also ITokenizerLanguage | Improve this Doc View Source Tokenize(TokenizableStream<char>) Tokenizes the specified text. Declaration public Token[] Tokenize(TokenizableStream<char> text) Parameters Type Name Description TokenizableStream<char> text The text. Returns Type Description Token[] The tokenized version of the text. See Also ITokenizerLanguage Implements ITokenizerLanguage See Also ITokenizerLanguage"
-  },
-  "api/Enlighten.Tokenizer.Languages.English.Enums.html": {
-    "href": "api/Enlighten.Tokenizer.Languages.English.Enums.html",
-    "title": "Namespace Enlighten.Tokenizer.Languages.English.Enums | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Tokenizer.Languages.English.Enums Classes TokenType Token type"
   },
   "api/Enlighten.Tokenizer.Languages.English.Enums.TokenType.html": {
     "href": "api/Enlighten.Tokenizer.Languages.English.Enums.TokenType.html",
     "title": "Class TokenType | Enlighten API Reference",
     "keywords": "Class TokenType Token type Inheritance object StringEnumBaseClass<TokenType> TokenType Inherited Members StringEnumBaseClass<TokenType>.ToStringEnumBaseClass(string) StringEnumBaseClass<TokenType>.ToString() StringEnumBaseClass<TokenType>.Name object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) Namespace: Enlighten.Tokenizer.Languages.English.Enums Assembly: Enlighten.dll Syntax public class TokenType : StringEnumBaseClass<TokenType> Constructors | Improve this Doc View Source TokenType() Initializes a new instance of the TokenType class. Declaration public TokenType() See Also StringEnumBaseClass<TClass> | Improve this Doc View Source TokenType(string) Initializes a new instance of the TokenType class. Declaration public TokenType(string value) Parameters Type Name Description string value The value. See Also StringEnumBaseClass<TClass> Properties | Improve this Doc View Source Abbreviation Gets the abbreviation. Declaration public static TokenType Abbreviation { get; } Property Value Type Description TokenType The abbreviation. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Ampersand Gets the ampersand. Declaration public static TokenType Ampersand { get; } Property Value Type Description TokenType The ampersand. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Asterisk Gets the asterisk. Declaration public static TokenType Asterisk { get; } Property Value Type Description TokenType The asterisk. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source AtSymbol Gets at symbol. Declaration public static TokenType AtSymbol { get; } Property Value Type Description TokenType At symbol. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Backslash Gets the backslash. Declaration public static TokenType Backslash { get; } Property Value Type Description TokenType The backslash. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Backtick Gets the backtick. Declaration public static TokenType Backtick { get; } Property Value Type Description TokenType The backtick. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Caret Gets the caret. Declaration public static TokenType Caret { get; } Property Value Type Description TokenType The caret. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Colon Gets the colon. Declaration public static TokenType Colon { get; } Property Value Type Description TokenType The colon. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Comma Gets the comma. Declaration public static TokenType Comma { get; } Property Value Type Description TokenType The comma. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source DollarSymbol Gets the dollar symbol. Declaration public static TokenType DollarSymbol { get; } Property Value Type Description TokenType The dollar symbol. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source DoubleQuote Gets the double quote. Declaration public static TokenType DoubleQuote { get; } Property Value Type Description TokenType The double quote. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source EOF Gets the EOF. Declaration public static TokenType EOF { get; } Property Value Type Description TokenType The EOF. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Ellipsis Gets the ellipsis. Declaration public static TokenType Ellipsis { get; } Property Value Type Description TokenType The ellipsis. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Email Gets the email. Declaration public static TokenType Email { get; } Property Value Type Description TokenType The email. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Emoji Gets the emoji. Declaration public static TokenType Emoji { get; } Property Value Type Description TokenType The emoji. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source EqualsToken Gets the equals. Declaration public static TokenType EqualsToken { get; } Property Value Type Description TokenType The equals. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source ExclamationMark Gets the exclamation mark. Declaration public static TokenType ExclamationMark { get; } Property Value Type Description TokenType The exclamation mark. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source GreaterThan Gets the greater than. Declaration public static TokenType GreaterThan { get; } Property Value Type Description TokenType The greater than. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source HashSymbol Gets the hash symbol. Declaration public static TokenType HashSymbol { get; } Property Value Type Description TokenType The hash symbol. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source HashTag Gets the hash tag. Declaration public static TokenType HashTag { get; } Property Value Type Description TokenType The hash tag. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Hyphen Gets the hyphen. Declaration public static TokenType Hyphen { get; } Property Value Type Description TokenType The hyphen. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source LeftBrace Gets the left brace. Declaration public static TokenType LeftBrace { get; } Property Value Type Description TokenType The left brace. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source LeftBracket Gets the left bracket. Declaration public static TokenType LeftBracket { get; } Property Value Type Description TokenType The left bracket. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source LeftParen Gets the left paren. Declaration public static TokenType LeftParen { get; } Property Value Type Description TokenType The left paren. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source LessThan Gets the less than. Declaration public static TokenType LessThan { get; } Property Value Type Description TokenType The less than. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source NewLine Gets the new line. Declaration public static TokenType NewLine { get; } Property Value Type Description TokenType The new line. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Number Gets the number. Declaration public static TokenType Number { get; } Property Value Type Description TokenType The number. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Other Gets the other. Declaration public static TokenType Other { get; } Property Value Type Description TokenType The other. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source PercentSymbol Gets the percent symbol. Declaration public static TokenType PercentSymbol { get; } Property Value Type Description TokenType The percent symbol. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Period Gets the period. Declaration public static TokenType Period { get; } Property Value Type Description TokenType The period. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Pipe Gets the pipe. Declaration public static TokenType Pipe { get; } Property Value Type Description TokenType The pipe. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Plus Gets the plus. Declaration public static TokenType Plus { get; } Property Value Type Description TokenType The plus. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source QuestionMark Gets the question mark. Declaration public static TokenType QuestionMark { get; } Property Value Type Description TokenType The question mark. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source RightBrace Gets the right brace. Declaration public static TokenType RightBrace { get; } Property Value Type Description TokenType The right brace. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source RightBracket Gets the right bracket. Declaration public static TokenType RightBracket { get; } Property Value Type Description TokenType The right bracket. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source RightParen Gets the right paren. Declaration public static TokenType RightParen { get; } Property Value Type Description TokenType The right paren. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source SemiColon Gets the semi colon. Declaration public static TokenType SemiColon { get; } Property Value Type Description TokenType The semi colon. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source SingleQuote Gets the single quote. Declaration public static TokenType SingleQuote { get; } Property Value Type Description TokenType The single quote. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Slash Gets the slash. Declaration public static TokenType Slash { get; } Property Value Type Description TokenType The slash. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Tilde Gets the tilde. Declaration public static TokenType Tilde { get; } Property Value Type Description TokenType The tilde. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Underscore Gets the underscore. Declaration public static TokenType Underscore { get; } Property Value Type Description TokenType The underscore. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Url Gets the URL. Declaration public static TokenType Url { get; } Property Value Type Description TokenType The URL. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Username Gets the username. Declaration public static TokenType Username { get; } Property Value Type Description TokenType The username. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source WhiteSpace Gets the white space. Declaration public static TokenType WhiteSpace { get; } Property Value Type Description TokenType The white space. See Also StringEnumBaseClass<TClass> | Improve this Doc View Source Word Gets the word. Declaration public static TokenType Word { get; } Property Value Type Description TokenType The word. See Also StringEnumBaseClass<TClass> See Also StringEnumBaseClass<TClass>"
   },
-  "api/Enlighten.Tokenizer.Languages.English.html": {
-    "href": "api/Enlighten.Tokenizer.Languages.English.html",
-    "title": "Namespace Enlighten.Tokenizer.Languages.English | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Tokenizer.Languages.English Classes EnglishLanguage English language"
+  "api/Enlighten.Tokenizer.Languages.English.Enums.html": {
+    "href": "api/Enlighten.Tokenizer.Languages.English.Enums.html",
+    "title": "Namespace Enlighten.Tokenizer.Languages.English.Enums | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Tokenizer.Languages.English.Enums Classes TokenType Token type"
   },
   "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Abbreviation.html": {
     "href": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Abbreviation.html",
@@ -743,11 +728,6 @@
     "href": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.HashTag.html",
     "title": "Class HashTag | Enlighten API Reference",
     "keywords": "Class HashTag HashTag finder Inheritance object TokenFinderBaseClass HashTag Implements IEnglishTokenFinder Inherited Members TokenFinderBaseClass.IsMatch(TokenizableStream<char>) object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.Tokenizer.Languages.English.TokenFinders Assembly: Enlighten.dll Syntax public class HashTag : TokenFinderBaseClass, IEnglishTokenFinder Properties | Improve this Doc View Source Order Gets the order. Declaration public override int Order { get; } Property Value Type Description int The order. Overrides TokenFinderBaseClass.Order See Also TokenFinderBaseClass Methods | Improve this Doc View Source IsMatchImpl(TokenizableStream<char>) The actual implementation of the IsMatch done by the individual classes. Declaration protected override Token? IsMatchImpl(TokenizableStream<char> tokenizer) Parameters Type Name Description TokenizableStream<char> tokenizer The tokenizer. Returns Type Description Token The token. Overrides TokenFinderBaseClass.IsMatchImpl(TokenizableStream<char>) See Also TokenFinderBaseClass Implements IEnglishTokenFinder See Also TokenFinderBaseClass"
-  },
-  "api/Enlighten.Tokenizer.Languages.English.TokenFinders.html": {
-    "href": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.html",
-    "title": "Namespace Enlighten.Tokenizer.Languages.English.TokenFinders | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Tokenizer.Languages.English.TokenFinders Classes Abbreviation Abbreviation finder. Ellipsis Finds ellipsis Email Email token finder Emoji Emoji finder HashTag HashTag finder NewLine New line finder Number Number finder OtherTokenFinder Other token finder RomanNumerals Number finder Symbol Symbol class URL URL finder Username Username finder Whitespace Whitespace token finder Word Word token finder"
   },
   "api/Enlighten.Tokenizer.Languages.English.TokenFinders.NewLine.html": {
     "href": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.NewLine.html",
@@ -794,35 +774,50 @@
     "title": "Class Word | Enlighten API Reference",
     "keywords": "Class Word Word token finder Inheritance object TokenFinderBaseClass Word Implements IEnglishTokenFinder Inherited Members TokenFinderBaseClass.IsMatch(TokenizableStream<char>) object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.Tokenizer.Languages.English.TokenFinders Assembly: Enlighten.dll Syntax public class Word : TokenFinderBaseClass, IEnglishTokenFinder Properties | Improve this Doc View Source Order Gets the order. Declaration public override int Order { get; } Property Value Type Description int The order. Overrides TokenFinderBaseClass.Order See Also TokenFinderBaseClass Methods | Improve this Doc View Source IsMatchImpl(TokenizableStream<char>) The actual implementation of the IsMatch done by the individual classes. Declaration protected override Token? IsMatchImpl(TokenizableStream<char> tokenizer) Parameters Type Name Description TokenizableStream<char> tokenizer The tokenizer. Returns Type Description Token The token. Overrides TokenFinderBaseClass.IsMatchImpl(TokenizableStream<char>) See Also TokenFinderBaseClass Implements IEnglishTokenFinder See Also TokenFinderBaseClass"
   },
-  "api/Enlighten.Tokenizer.Languages.Interfaces.html": {
-    "href": "api/Enlighten.Tokenizer.Languages.Interfaces.html",
-    "title": "Namespace Enlighten.Tokenizer.Languages.Interfaces | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Tokenizer.Languages.Interfaces Interfaces IEnglishTokenFinder English token finder"
+  "api/Enlighten.Tokenizer.Languages.English.TokenFinders.html": {
+    "href": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.html",
+    "title": "Namespace Enlighten.Tokenizer.Languages.English.TokenFinders | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Tokenizer.Languages.English.TokenFinders Classes Abbreviation Abbreviation finder. Ellipsis Finds ellipsis Email Email token finder Emoji Emoji finder HashTag HashTag finder NewLine New line finder Number Number finder OtherTokenFinder Other token finder RomanNumerals Number finder Symbol Symbol class URL URL finder Username Username finder Whitespace Whitespace token finder Word Word token finder"
+  },
+  "api/Enlighten.Tokenizer.Languages.English.html": {
+    "href": "api/Enlighten.Tokenizer.Languages.English.html",
+    "title": "Namespace Enlighten.Tokenizer.Languages.English | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Tokenizer.Languages.English Classes EnglishLanguage English language"
   },
   "api/Enlighten.Tokenizer.Languages.Interfaces.IEnglishTokenFinder.html": {
     "href": "api/Enlighten.Tokenizer.Languages.Interfaces.IEnglishTokenFinder.html",
     "title": "Interface IEnglishTokenFinder | Enlighten API Reference",
     "keywords": "Interface IEnglishTokenFinder English token finder Namespace: Enlighten.Tokenizer.Languages.Interfaces Assembly: Enlighten.dll Syntax public interface IEnglishTokenFinder Properties | Improve this Doc View Source Order Gets the order. Declaration int Order { get; } Property Value Type Description int The order. Methods | Improve this Doc View Source IsMatch(TokenizableStream<char>) Determines whether the next set of item on the stream matches this finder. Declaration Token? IsMatch(TokenizableStream<char> stream) Parameters Type Name Description TokenizableStream<char> stream The stream. Returns Type Description Token The token."
   },
+  "api/Enlighten.Tokenizer.Languages.Interfaces.html": {
+    "href": "api/Enlighten.Tokenizer.Languages.Interfaces.html",
+    "title": "Namespace Enlighten.Tokenizer.Languages.Interfaces | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Tokenizer.Languages.Interfaces Interfaces IEnglishTokenFinder English token finder"
+  },
   "api/Enlighten.Tokenizer.Token.html": {
     "href": "api/Enlighten.Tokenizer.Token.html",
     "title": "Class Token | Enlighten API Reference",
     "keywords": "Class Token Token data holder Inheritance object Token Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) Namespace: Enlighten.Tokenizer Assembly: Enlighten.dll Syntax public class Token Constructors | Improve this Doc View Source Token(int, int, string, string) Initializes a new instance of the Token class. Declaration public Token(int endPosition, int startPosition, string tokenType, string value) Parameters Type Name Description int endPosition The end position. int startPosition The start position. string tokenType Type of the token. string value The value. Properties | Improve this Doc View Source EndPosition Gets or sets the end position. (inclusive) Declaration public int EndPosition { get; set; } Property Value Type Description int The end position. | Improve this Doc View Source Entity Gets or sets a value indicating whether this instance is entity. Declaration public bool Entity { get; set; } Property Value Type Description bool true if this instance is entity; otherwise, false. | Improve this Doc View Source EntityType Gets or sets the type of the entity. Declaration public string? EntityType { get; set; } Property Value Type Description string The type of the entity. | Improve this Doc View Source NormalizedValue Gets or sets the normalized value. Declaration public string NormalizedValue { get; set; } Property Value Type Description string The normalized value. | Improve this Doc View Source PartOfSpeech Gets or sets the part of speech. Declaration public string? PartOfSpeech { get; set; } Property Value Type Description string The part of speech. | Improve this Doc View Source ReplacementValue Gets or sets the replacement value. Declaration public string? ReplacementValue { get; set; } Property Value Type Description string The replacement value. | Improve this Doc View Source StartPosition Gets or sets the start position. (inclusive) Declaration public int StartPosition { get; set; } Property Value Type Description int The start position. | Improve this Doc View Source StemmedValue Gets or sets the stemmed value. Declaration public string? StemmedValue { get; set; } Property Value Type Description string The stemmed value. | Improve this Doc View Source StopWord Gets or sets a value indicating whether [stop word]. Declaration public bool StopWord { get; set; } Property Value Type Description bool true if [stop word]; otherwise, false. | Improve this Doc View Source TokenType Gets or sets the type of the token. Declaration public string TokenType { get; set; } Property Value Type Description string The type of the token. | Improve this Doc View Source Value Gets or sets the value. Declaration public string Value { get; set; } Property Value Type Description string The value. Methods | Improve this Doc View Source Copy() Copies this instance. Declaration public Token Copy() Returns Type Description Token A copy of this instance. | Improve this Doc View Source Join(Token) Joins the specified token with this one. Declaration public Token Join(Token token) Parameters Type Name Description Token token The token. Returns Type Description Token A new instance of the token. | Improve this Doc View Source ToString() Returns a string that represents this instance. Declaration public override string ToString() Returns Type Description string A string that represents this instance. Overrides object.ToString()"
-  },
-  "api/Enlighten.Tokenizer.Utils.html": {
-    "href": "api/Enlighten.Tokenizer.Utils.html",
-    "title": "Namespace Enlighten.Tokenizer.Utils | Enlighten API Reference",
-    "keywords": "Namespace Enlighten.Tokenizer.Utils Classes TokenizableStream<TData> Tokenizable stream"
   },
   "api/Enlighten.Tokenizer.Utils.TokenizableStream-1.html": {
     "href": "api/Enlighten.Tokenizer.Utils.TokenizableStream-1.html",
     "title": "Class TokenizableStream<TData> | Enlighten API Reference",
     "keywords": "Class TokenizableStream<TData> Tokenizable stream Inheritance object TokenizableStream<TData> Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: Enlighten.Tokenizer.Utils Assembly: Enlighten.dll Syntax public class TokenizableStream<TData> Type Parameters Name Description TData The type of the data. Constructors | Improve this Doc View Source TokenizableStream(TData[]) Initializes a new instance of the TokenizableStream<TData> class. Declaration public TokenizableStream(TData[] content) Parameters Type Name Description TData[] content The content. Properties | Improve this Doc View Source Current Gets the current item. Declaration public TData Current { get; } Property Value Type Description TData The current item. | Improve this Doc View Source Index Gets or sets the current index. Declaration public int Index { get; set; } Property Value Type Description int The index. | Improve this Doc View Source Length Gets the length. Declaration public int Length { get; } Property Value Type Description int The length. Methods | Improve this Doc View Source CommitSnapshot() Commits the snapshot. Declaration public void CommitSnapshot() | Improve this Doc View Source Consume() Consumes the next item in the stream. Declaration public void Consume() | Improve this Doc View Source EOF(int) Determines if the look ahead amount would be after the end of file. Declaration protected bool EOF(int lookahead) Parameters Type Name Description int lookahead The number of items to look ahead. Returns Type Description bool True if this is the end of file, false otherwise. | Improve this Doc View Source End() Determines if this stream is done. Declaration public bool End() Returns Type Description bool True if it is done, false otherwise. | Improve this Doc View Source Peek(int) Peeks at the next item. Declaration public TData Peek(int lookahead) Parameters Type Name Description int lookahead The amount of items to look ahead. Returns Type Description TData The item at the spot specified. | Improve this Doc View Source RollbackSnapshot() Rolls back the snapshot. Declaration public void RollbackSnapshot() | Improve this Doc View Source Slice(int, int) Returns a slice of the array starting at startIndex and ending at endIndex. Declaration public Span<TData> Slice(int startIndex, int endIndex) Parameters Type Name Description int startIndex The start index. int endIndex The end index. Returns Type Description Span<TData> The span. | Improve this Doc View Source TakeSnapshot() Takes a snapshot. Declaration public void TakeSnapshot()"
   },
-  "api/index.html": {
-    "href": "api/index.html",
-    "title": "Welcome | Enlighten API Reference",
-    "keywords": "Welcome Welcome to the API browser."
+  "api/Enlighten.Tokenizer.Utils.html": {
+    "href": "api/Enlighten.Tokenizer.Utils.html",
+    "title": "Namespace Enlighten.Tokenizer.Utils | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Tokenizer.Utils Classes TokenizableStream<TData> Tokenizable stream"
+  },
+  "api/Enlighten.Tokenizer.html": {
+    "href": "api/Enlighten.Tokenizer.html",
+    "title": "Namespace Enlighten.Tokenizer | Enlighten API Reference",
+    "keywords": "Namespace Enlighten.Tokenizer Classes DefaultTokenizer Default tokenizer Token Token data holder"
+  },
+  "api/Enlighten.html": {
+    "href": "api/Enlighten.html",
+    "title": "Namespace Enlighten | Enlighten API Reference",
+    "keywords": "Namespace Enlighten Classes Document Document information holder Index Index Pipeline Main pipeline class"
   },
   "api/Microsoft.Extensions.DependencyInjection.CanisterRegistration.html": {
     "href": "api/Microsoft.Extensions.DependencyInjection.CanisterRegistration.html",
@@ -833,6 +828,11 @@
     "href": "api/Microsoft.Extensions.DependencyInjection.html",
     "title": "Namespace Microsoft.Extensions.DependencyInjection | Enlighten API Reference",
     "keywords": "Namespace Microsoft.Extensions.DependencyInjection Classes CanisterRegistration Canister registration"
+  },
+  "api/index.html": {
+    "href": "api/index.html",
+    "title": "Welcome | Enlighten API Reference",
+    "keywords": "Welcome Welcome to the API browser."
   },
   "articles/intro.html": {
     "href": "articles/intro.html",

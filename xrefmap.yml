@@ -2830,103 +2830,6 @@ references:
   isSpec: "True"
   fullName: Enlighten.Normalizer.Interfaces.ITextNormalizer.Order
   nameWithType: ITextNormalizer.Order
-- uid: Enlighten.Pipeline
-  name: Pipeline
-  href: api/Enlighten.Pipeline.html
-  commentId: T:Enlighten.Pipeline
-  fullName: Enlighten.Pipeline
-  nameWithType: Pipeline
-- uid: Enlighten.Pipeline.#ctor(Enlighten.Normalizer.Interfaces.INormalizerManager,Enlighten.POSTagger.Interfaces.IPOSTagger,Enlighten.SentenceDetection.Interfaces.ISentenceDetector,Enlighten.Stemmer.Interfaces.IStemmer,Enlighten.StopWords.Interfaces.IStopWordsManager,Enlighten.Tokenizer.Interfaces.ITokenizer,Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor,Enlighten.TextSummarization.Interfaces.ITextSummarizer,Enlighten.NameFinder.Interfaces.IEntityFinder)
-  name: Pipeline(INormalizerManager, IPOSTagger, ISentenceDetector, IStemmer, IStopWordsManager, ITokenizer, IFeatureExtractor, ITextSummarizer, IEntityFinder)
-  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline__ctor_Enlighten_Normalizer_Interfaces_INormalizerManager_Enlighten_POSTagger_Interfaces_IPOSTagger_Enlighten_SentenceDetection_Interfaces_ISentenceDetector_Enlighten_Stemmer_Interfaces_IStemmer_Enlighten_StopWords_Interfaces_IStopWordsManager_Enlighten_Tokenizer_Interfaces_ITokenizer_Enlighten_FeatureExtraction_Interfaces_IFeatureExtractor_Enlighten_TextSummarization_Interfaces_ITextSummarizer_Enlighten_NameFinder_Interfaces_IEntityFinder_
-  commentId: M:Enlighten.Pipeline.#ctor(Enlighten.Normalizer.Interfaces.INormalizerManager,Enlighten.POSTagger.Interfaces.IPOSTagger,Enlighten.SentenceDetection.Interfaces.ISentenceDetector,Enlighten.Stemmer.Interfaces.IStemmer,Enlighten.StopWords.Interfaces.IStopWordsManager,Enlighten.Tokenizer.Interfaces.ITokenizer,Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor,Enlighten.TextSummarization.Interfaces.ITextSummarizer,Enlighten.NameFinder.Interfaces.IEntityFinder)
-  name.vb: New(INormalizerManager, IPOSTagger, ISentenceDetector, IStemmer, IStopWordsManager, ITokenizer, IFeatureExtractor, ITextSummarizer, IEntityFinder)
-  fullName: Enlighten.Pipeline.Pipeline(Enlighten.Normalizer.Interfaces.INormalizerManager, Enlighten.POSTagger.Interfaces.IPOSTagger, Enlighten.SentenceDetection.Interfaces.ISentenceDetector, Enlighten.Stemmer.Interfaces.IStemmer, Enlighten.StopWords.Interfaces.IStopWordsManager, Enlighten.Tokenizer.Interfaces.ITokenizer, Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor, Enlighten.TextSummarization.Interfaces.ITextSummarizer, Enlighten.NameFinder.Interfaces.IEntityFinder)
-  fullName.vb: Enlighten.Pipeline.New(Enlighten.Normalizer.Interfaces.INormalizerManager, Enlighten.POSTagger.Interfaces.IPOSTagger, Enlighten.SentenceDetection.Interfaces.ISentenceDetector, Enlighten.Stemmer.Interfaces.IStemmer, Enlighten.StopWords.Interfaces.IStopWordsManager, Enlighten.Tokenizer.Interfaces.ITokenizer, Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor, Enlighten.TextSummarization.Interfaces.ITextSummarizer, Enlighten.NameFinder.Interfaces.IEntityFinder)
-  nameWithType: Pipeline.Pipeline(INormalizerManager, IPOSTagger, ISentenceDetector, IStemmer, IStopWordsManager, ITokenizer, IFeatureExtractor, ITextSummarizer, IEntityFinder)
-  nameWithType.vb: Pipeline.New(INormalizerManager, IPOSTagger, ISentenceDetector, IStemmer, IStopWordsManager, ITokenizer, IFeatureExtractor, ITextSummarizer, IEntityFinder)
-- uid: Enlighten.Pipeline.#ctor*
-  name: Pipeline
-  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline__ctor_
-  commentId: Overload:Enlighten.Pipeline.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: Enlighten.Pipeline.Pipeline
-  fullName.vb: Enlighten.Pipeline.New
-  nameWithType: Pipeline.Pipeline
-  nameWithType.vb: Pipeline.New
-- uid: Enlighten.Pipeline.Process(System.String)
-  name: Process(string)
-  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_Process_System_String_
-  commentId: M:Enlighten.Pipeline.Process(System.String)
-  name.vb: Process(String)
-  fullName: Enlighten.Pipeline.Process(string)
-  fullName.vb: Enlighten.Pipeline.Process(String)
-  nameWithType: Pipeline.Process(string)
-  nameWithType.vb: Pipeline.Process(String)
-- uid: Enlighten.Pipeline.Process*
-  name: Process
-  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_Process_
-  commentId: Overload:Enlighten.Pipeline.Process
-  isSpec: "True"
-  fullName: Enlighten.Pipeline.Process
-  nameWithType: Pipeline.Process
-- uid: Enlighten.Pipeline.SetLanguage(Enlighten.Enums.Languages)
-  name: SetLanguage(Languages)
-  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_SetLanguage_Enlighten_Enums_Languages_
-  commentId: M:Enlighten.Pipeline.SetLanguage(Enlighten.Enums.Languages)
-  fullName: Enlighten.Pipeline.SetLanguage(Enlighten.Enums.Languages)
-  nameWithType: Pipeline.SetLanguage(Languages)
-- uid: Enlighten.Pipeline.SetLanguage*
-  name: SetLanguage
-  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_SetLanguage_
-  commentId: Overload:Enlighten.Pipeline.SetLanguage
-  isSpec: "True"
-  fullName: Enlighten.Pipeline.SetLanguage
-  nameWithType: Pipeline.SetLanguage
-- uid: Enlighten.Pipeline.With(Enlighten.NameFinder.Enums.EntityFinderLanguage)
-  name: With(EntityFinderLanguage)
-  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_With_Enlighten_NameFinder_Enums_EntityFinderLanguage_
-  commentId: M:Enlighten.Pipeline.With(Enlighten.NameFinder.Enums.EntityFinderLanguage)
-  fullName: Enlighten.Pipeline.With(Enlighten.NameFinder.Enums.EntityFinderLanguage)
-  nameWithType: Pipeline.With(EntityFinderLanguage)
-- uid: Enlighten.Pipeline.With(Enlighten.POSTagger.Enum.POSTaggerLanguage)
-  name: With(POSTaggerLanguage)
-  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_With_Enlighten_POSTagger_Enum_POSTaggerLanguage_
-  commentId: M:Enlighten.Pipeline.With(Enlighten.POSTagger.Enum.POSTaggerLanguage)
-  fullName: Enlighten.Pipeline.With(Enlighten.POSTagger.Enum.POSTaggerLanguage)
-  nameWithType: Pipeline.With(POSTaggerLanguage)
-- uid: Enlighten.Pipeline.With(Enlighten.SentenceDetection.Enum.SentenceDetectorLanguage)
-  name: With(SentenceDetectorLanguage)
-  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_With_Enlighten_SentenceDetection_Enum_SentenceDetectorLanguage_
-  commentId: M:Enlighten.Pipeline.With(Enlighten.SentenceDetection.Enum.SentenceDetectorLanguage)
-  fullName: Enlighten.Pipeline.With(Enlighten.SentenceDetection.Enum.SentenceDetectorLanguage)
-  nameWithType: Pipeline.With(SentenceDetectorLanguage)
-- uid: Enlighten.Pipeline.With(Enlighten.Stemmer.Enums.StemmerLanguage)
-  name: With(StemmerLanguage)
-  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_With_Enlighten_Stemmer_Enums_StemmerLanguage_
-  commentId: M:Enlighten.Pipeline.With(Enlighten.Stemmer.Enums.StemmerLanguage)
-  fullName: Enlighten.Pipeline.With(Enlighten.Stemmer.Enums.StemmerLanguage)
-  nameWithType: Pipeline.With(StemmerLanguage)
-- uid: Enlighten.Pipeline.With(Enlighten.StopWords.Enum.StopWordsLanguage)
-  name: With(StopWordsLanguage)
-  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_With_Enlighten_StopWords_Enum_StopWordsLanguage_
-  commentId: M:Enlighten.Pipeline.With(Enlighten.StopWords.Enum.StopWordsLanguage)
-  fullName: Enlighten.Pipeline.With(Enlighten.StopWords.Enum.StopWordsLanguage)
-  nameWithType: Pipeline.With(StopWordsLanguage)
-- uid: Enlighten.Pipeline.With(Enlighten.Tokenizer.Enums.TokenizerLanguage)
-  name: With(TokenizerLanguage)
-  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_With_Enlighten_Tokenizer_Enums_TokenizerLanguage_
-  commentId: M:Enlighten.Pipeline.With(Enlighten.Tokenizer.Enums.TokenizerLanguage)
-  fullName: Enlighten.Pipeline.With(Enlighten.Tokenizer.Enums.TokenizerLanguage)
-  nameWithType: Pipeline.With(TokenizerLanguage)
-- uid: Enlighten.Pipeline.With*
-  name: With
-  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_With_
-  commentId: Overload:Enlighten.Pipeline.With
-  isSpec: "True"
-  fullName: Enlighten.Pipeline.With
-  nameWithType: Pipeline.With
 - uid: Enlighten.POSTagger
   name: Enlighten.POSTagger
   href: api/Enlighten.POSTagger.html
@@ -3536,6 +3439,19 @@ references:
   isSpec: "True"
   fullName: Enlighten.POSTagger.Taggers.SimpleTagger.GetTag
   nameWithType: SimpleTagger.GetTag
+- uid: Enlighten.POSTagger.Taggers.SimpleTagger.ISOCode
+  name: ISOCode
+  href: api/Enlighten.POSTagger.Taggers.SimpleTagger.html#Enlighten_POSTagger_Taggers_SimpleTagger_ISOCode
+  commentId: P:Enlighten.POSTagger.Taggers.SimpleTagger.ISOCode
+  fullName: Enlighten.POSTagger.Taggers.SimpleTagger.ISOCode
+  nameWithType: SimpleTagger.ISOCode
+- uid: Enlighten.POSTagger.Taggers.SimpleTagger.ISOCode*
+  name: ISOCode
+  href: api/Enlighten.POSTagger.Taggers.SimpleTagger.html#Enlighten_POSTagger_Taggers_SimpleTagger_ISOCode_
+  commentId: Overload:Enlighten.POSTagger.Taggers.SimpleTagger.ISOCode
+  isSpec: "True"
+  fullName: Enlighten.POSTagger.Taggers.SimpleTagger.ISOCode
+  nameWithType: SimpleTagger.ISOCode
 - uid: Enlighten.POSTagger.Taggers.SimpleTagger.Infinitives
   name: Infinitives
   href: api/Enlighten.POSTagger.Taggers.SimpleTagger.html#Enlighten_POSTagger_Taggers_SimpleTagger_Infinitives
@@ -3562,19 +3478,6 @@ references:
   isSpec: "True"
   fullName: Enlighten.POSTagger.Taggers.SimpleTagger.Inflector
   nameWithType: SimpleTagger.Inflector
-- uid: Enlighten.POSTagger.Taggers.SimpleTagger.ISOCode
-  name: ISOCode
-  href: api/Enlighten.POSTagger.Taggers.SimpleTagger.html#Enlighten_POSTagger_Taggers_SimpleTagger_ISOCode
-  commentId: P:Enlighten.POSTagger.Taggers.SimpleTagger.ISOCode
-  fullName: Enlighten.POSTagger.Taggers.SimpleTagger.ISOCode
-  nameWithType: SimpleTagger.ISOCode
-- uid: Enlighten.POSTagger.Taggers.SimpleTagger.ISOCode*
-  name: ISOCode
-  href: api/Enlighten.POSTagger.Taggers.SimpleTagger.html#Enlighten_POSTagger_Taggers_SimpleTagger_ISOCode_
-  commentId: Overload:Enlighten.POSTagger.Taggers.SimpleTagger.ISOCode
-  isSpec: "True"
-  fullName: Enlighten.POSTagger.Taggers.SimpleTagger.ISOCode
-  nameWithType: SimpleTagger.ISOCode
 - uid: Enlighten.POSTagger.Taggers.SimpleTagger.Lexicon
   name: Lexicon
   href: api/Enlighten.POSTagger.Taggers.SimpleTagger.html#Enlighten_POSTagger_Taggers_SimpleTagger_Lexicon
@@ -3736,6 +3639,103 @@ references:
   isSpec: "True"
   fullName: Enlighten.POSTagger.Taggers.TagProbability.Tag
   nameWithType: TagProbability.Tag
+- uid: Enlighten.Pipeline
+  name: Pipeline
+  href: api/Enlighten.Pipeline.html
+  commentId: T:Enlighten.Pipeline
+  fullName: Enlighten.Pipeline
+  nameWithType: Pipeline
+- uid: Enlighten.Pipeline.#ctor(Enlighten.Normalizer.Interfaces.INormalizerManager,Enlighten.POSTagger.Interfaces.IPOSTagger,Enlighten.SentenceDetection.Interfaces.ISentenceDetector,Enlighten.Stemmer.Interfaces.IStemmer,Enlighten.StopWords.Interfaces.IStopWordsManager,Enlighten.Tokenizer.Interfaces.ITokenizer,Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor,Enlighten.TextSummarization.Interfaces.ITextSummarizer,Enlighten.NameFinder.Interfaces.IEntityFinder)
+  name: Pipeline(INormalizerManager, IPOSTagger, ISentenceDetector, IStemmer, IStopWordsManager, ITokenizer, IFeatureExtractor, ITextSummarizer, IEntityFinder)
+  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline__ctor_Enlighten_Normalizer_Interfaces_INormalizerManager_Enlighten_POSTagger_Interfaces_IPOSTagger_Enlighten_SentenceDetection_Interfaces_ISentenceDetector_Enlighten_Stemmer_Interfaces_IStemmer_Enlighten_StopWords_Interfaces_IStopWordsManager_Enlighten_Tokenizer_Interfaces_ITokenizer_Enlighten_FeatureExtraction_Interfaces_IFeatureExtractor_Enlighten_TextSummarization_Interfaces_ITextSummarizer_Enlighten_NameFinder_Interfaces_IEntityFinder_
+  commentId: M:Enlighten.Pipeline.#ctor(Enlighten.Normalizer.Interfaces.INormalizerManager,Enlighten.POSTagger.Interfaces.IPOSTagger,Enlighten.SentenceDetection.Interfaces.ISentenceDetector,Enlighten.Stemmer.Interfaces.IStemmer,Enlighten.StopWords.Interfaces.IStopWordsManager,Enlighten.Tokenizer.Interfaces.ITokenizer,Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor,Enlighten.TextSummarization.Interfaces.ITextSummarizer,Enlighten.NameFinder.Interfaces.IEntityFinder)
+  name.vb: New(INormalizerManager, IPOSTagger, ISentenceDetector, IStemmer, IStopWordsManager, ITokenizer, IFeatureExtractor, ITextSummarizer, IEntityFinder)
+  fullName: Enlighten.Pipeline.Pipeline(Enlighten.Normalizer.Interfaces.INormalizerManager, Enlighten.POSTagger.Interfaces.IPOSTagger, Enlighten.SentenceDetection.Interfaces.ISentenceDetector, Enlighten.Stemmer.Interfaces.IStemmer, Enlighten.StopWords.Interfaces.IStopWordsManager, Enlighten.Tokenizer.Interfaces.ITokenizer, Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor, Enlighten.TextSummarization.Interfaces.ITextSummarizer, Enlighten.NameFinder.Interfaces.IEntityFinder)
+  fullName.vb: Enlighten.Pipeline.New(Enlighten.Normalizer.Interfaces.INormalizerManager, Enlighten.POSTagger.Interfaces.IPOSTagger, Enlighten.SentenceDetection.Interfaces.ISentenceDetector, Enlighten.Stemmer.Interfaces.IStemmer, Enlighten.StopWords.Interfaces.IStopWordsManager, Enlighten.Tokenizer.Interfaces.ITokenizer, Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor, Enlighten.TextSummarization.Interfaces.ITextSummarizer, Enlighten.NameFinder.Interfaces.IEntityFinder)
+  nameWithType: Pipeline.Pipeline(INormalizerManager, IPOSTagger, ISentenceDetector, IStemmer, IStopWordsManager, ITokenizer, IFeatureExtractor, ITextSummarizer, IEntityFinder)
+  nameWithType.vb: Pipeline.New(INormalizerManager, IPOSTagger, ISentenceDetector, IStemmer, IStopWordsManager, ITokenizer, IFeatureExtractor, ITextSummarizer, IEntityFinder)
+- uid: Enlighten.Pipeline.#ctor*
+  name: Pipeline
+  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline__ctor_
+  commentId: Overload:Enlighten.Pipeline.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Enlighten.Pipeline.Pipeline
+  fullName.vb: Enlighten.Pipeline.New
+  nameWithType: Pipeline.Pipeline
+  nameWithType.vb: Pipeline.New
+- uid: Enlighten.Pipeline.Process(System.String)
+  name: Process(string)
+  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_Process_System_String_
+  commentId: M:Enlighten.Pipeline.Process(System.String)
+  name.vb: Process(String)
+  fullName: Enlighten.Pipeline.Process(string)
+  fullName.vb: Enlighten.Pipeline.Process(String)
+  nameWithType: Pipeline.Process(string)
+  nameWithType.vb: Pipeline.Process(String)
+- uid: Enlighten.Pipeline.Process*
+  name: Process
+  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_Process_
+  commentId: Overload:Enlighten.Pipeline.Process
+  isSpec: "True"
+  fullName: Enlighten.Pipeline.Process
+  nameWithType: Pipeline.Process
+- uid: Enlighten.Pipeline.SetLanguage(Enlighten.Enums.Languages)
+  name: SetLanguage(Languages)
+  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_SetLanguage_Enlighten_Enums_Languages_
+  commentId: M:Enlighten.Pipeline.SetLanguage(Enlighten.Enums.Languages)
+  fullName: Enlighten.Pipeline.SetLanguage(Enlighten.Enums.Languages)
+  nameWithType: Pipeline.SetLanguage(Languages)
+- uid: Enlighten.Pipeline.SetLanguage*
+  name: SetLanguage
+  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_SetLanguage_
+  commentId: Overload:Enlighten.Pipeline.SetLanguage
+  isSpec: "True"
+  fullName: Enlighten.Pipeline.SetLanguage
+  nameWithType: Pipeline.SetLanguage
+- uid: Enlighten.Pipeline.With(Enlighten.NameFinder.Enums.EntityFinderLanguage)
+  name: With(EntityFinderLanguage)
+  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_With_Enlighten_NameFinder_Enums_EntityFinderLanguage_
+  commentId: M:Enlighten.Pipeline.With(Enlighten.NameFinder.Enums.EntityFinderLanguage)
+  fullName: Enlighten.Pipeline.With(Enlighten.NameFinder.Enums.EntityFinderLanguage)
+  nameWithType: Pipeline.With(EntityFinderLanguage)
+- uid: Enlighten.Pipeline.With(Enlighten.POSTagger.Enum.POSTaggerLanguage)
+  name: With(POSTaggerLanguage)
+  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_With_Enlighten_POSTagger_Enum_POSTaggerLanguage_
+  commentId: M:Enlighten.Pipeline.With(Enlighten.POSTagger.Enum.POSTaggerLanguage)
+  fullName: Enlighten.Pipeline.With(Enlighten.POSTagger.Enum.POSTaggerLanguage)
+  nameWithType: Pipeline.With(POSTaggerLanguage)
+- uid: Enlighten.Pipeline.With(Enlighten.SentenceDetection.Enum.SentenceDetectorLanguage)
+  name: With(SentenceDetectorLanguage)
+  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_With_Enlighten_SentenceDetection_Enum_SentenceDetectorLanguage_
+  commentId: M:Enlighten.Pipeline.With(Enlighten.SentenceDetection.Enum.SentenceDetectorLanguage)
+  fullName: Enlighten.Pipeline.With(Enlighten.SentenceDetection.Enum.SentenceDetectorLanguage)
+  nameWithType: Pipeline.With(SentenceDetectorLanguage)
+- uid: Enlighten.Pipeline.With(Enlighten.Stemmer.Enums.StemmerLanguage)
+  name: With(StemmerLanguage)
+  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_With_Enlighten_Stemmer_Enums_StemmerLanguage_
+  commentId: M:Enlighten.Pipeline.With(Enlighten.Stemmer.Enums.StemmerLanguage)
+  fullName: Enlighten.Pipeline.With(Enlighten.Stemmer.Enums.StemmerLanguage)
+  nameWithType: Pipeline.With(StemmerLanguage)
+- uid: Enlighten.Pipeline.With(Enlighten.StopWords.Enum.StopWordsLanguage)
+  name: With(StopWordsLanguage)
+  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_With_Enlighten_StopWords_Enum_StopWordsLanguage_
+  commentId: M:Enlighten.Pipeline.With(Enlighten.StopWords.Enum.StopWordsLanguage)
+  fullName: Enlighten.Pipeline.With(Enlighten.StopWords.Enum.StopWordsLanguage)
+  nameWithType: Pipeline.With(StopWordsLanguage)
+- uid: Enlighten.Pipeline.With(Enlighten.Tokenizer.Enums.TokenizerLanguage)
+  name: With(TokenizerLanguage)
+  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_With_Enlighten_Tokenizer_Enums_TokenizerLanguage_
+  commentId: M:Enlighten.Pipeline.With(Enlighten.Tokenizer.Enums.TokenizerLanguage)
+  fullName: Enlighten.Pipeline.With(Enlighten.Tokenizer.Enums.TokenizerLanguage)
+  nameWithType: Pipeline.With(TokenizerLanguage)
+- uid: Enlighten.Pipeline.With*
+  name: With
+  href: api/Enlighten.Pipeline.html#Enlighten_Pipeline_With_
+  commentId: Overload:Enlighten.Pipeline.With
+  isSpec: "True"
+  fullName: Enlighten.Pipeline.With
+  nameWithType: Pipeline.With
 - uid: Enlighten.SentenceDetection
   name: Enlighten.SentenceDetection
   href: api/Enlighten.SentenceDetection.html
@@ -4083,19 +4083,6 @@ references:
   isSpec: "True"
   fullName: Enlighten.SentenceDetection.Sentence.StartPosition
   nameWithType: Sentence.StartPosition
-- uid: Enlighten.SentenceDetection.Sentence.Tokens
-  name: Tokens
-  href: api/Enlighten.SentenceDetection.Sentence.html#Enlighten_SentenceDetection_Sentence_Tokens
-  commentId: P:Enlighten.SentenceDetection.Sentence.Tokens
-  fullName: Enlighten.SentenceDetection.Sentence.Tokens
-  nameWithType: Sentence.Tokens
-- uid: Enlighten.SentenceDetection.Sentence.Tokens*
-  name: Tokens
-  href: api/Enlighten.SentenceDetection.Sentence.html#Enlighten_SentenceDetection_Sentence_Tokens_
-  commentId: Overload:Enlighten.SentenceDetection.Sentence.Tokens
-  isSpec: "True"
-  fullName: Enlighten.SentenceDetection.Sentence.Tokens
-  nameWithType: Sentence.Tokens
 - uid: Enlighten.SentenceDetection.Sentence.ToString
   name: ToString()
   href: api/Enlighten.SentenceDetection.Sentence.html#Enlighten_SentenceDetection_Sentence_ToString
@@ -4109,6 +4096,19 @@ references:
   isSpec: "True"
   fullName: Enlighten.SentenceDetection.Sentence.ToString
   nameWithType: Sentence.ToString
+- uid: Enlighten.SentenceDetection.Sentence.Tokens
+  name: Tokens
+  href: api/Enlighten.SentenceDetection.Sentence.html#Enlighten_SentenceDetection_Sentence_Tokens
+  commentId: P:Enlighten.SentenceDetection.Sentence.Tokens
+  fullName: Enlighten.SentenceDetection.Sentence.Tokens
+  nameWithType: Sentence.Tokens
+- uid: Enlighten.SentenceDetection.Sentence.Tokens*
+  name: Tokens
+  href: api/Enlighten.SentenceDetection.Sentence.html#Enlighten_SentenceDetection_Sentence_Tokens_
+  commentId: Overload:Enlighten.SentenceDetection.Sentence.Tokens
+  isSpec: "True"
+  fullName: Enlighten.SentenceDetection.Sentence.Tokens
+  nameWithType: Sentence.Tokens
 - uid: Enlighten.Stemmer
   name: Enlighten.Stemmer
   href: api/Enlighten.Stemmer.html
@@ -6087,6 +6087,19 @@ references:
   isSpec: "True"
   fullName: Enlighten.Tokenizer.Languages.English.Enums.TokenType.DoubleQuote
   nameWithType: TokenType.DoubleQuote
+- uid: Enlighten.Tokenizer.Languages.English.Enums.TokenType.EOF
+  name: EOF
+  href: api/Enlighten.Tokenizer.Languages.English.Enums.TokenType.html#Enlighten_Tokenizer_Languages_English_Enums_TokenType_EOF
+  commentId: P:Enlighten.Tokenizer.Languages.English.Enums.TokenType.EOF
+  fullName: Enlighten.Tokenizer.Languages.English.Enums.TokenType.EOF
+  nameWithType: TokenType.EOF
+- uid: Enlighten.Tokenizer.Languages.English.Enums.TokenType.EOF*
+  name: EOF
+  href: api/Enlighten.Tokenizer.Languages.English.Enums.TokenType.html#Enlighten_Tokenizer_Languages_English_Enums_TokenType_EOF_
+  commentId: Overload:Enlighten.Tokenizer.Languages.English.Enums.TokenType.EOF
+  isSpec: "True"
+  fullName: Enlighten.Tokenizer.Languages.English.Enums.TokenType.EOF
+  nameWithType: TokenType.EOF
 - uid: Enlighten.Tokenizer.Languages.English.Enums.TokenType.Ellipsis
   name: Ellipsis
   href: api/Enlighten.Tokenizer.Languages.English.Enums.TokenType.html#Enlighten_Tokenizer_Languages_English_Enums_TokenType_Ellipsis
@@ -6126,19 +6139,6 @@ references:
   isSpec: "True"
   fullName: Enlighten.Tokenizer.Languages.English.Enums.TokenType.Emoji
   nameWithType: TokenType.Emoji
-- uid: Enlighten.Tokenizer.Languages.English.Enums.TokenType.EOF
-  name: EOF
-  href: api/Enlighten.Tokenizer.Languages.English.Enums.TokenType.html#Enlighten_Tokenizer_Languages_English_Enums_TokenType_EOF
-  commentId: P:Enlighten.Tokenizer.Languages.English.Enums.TokenType.EOF
-  fullName: Enlighten.Tokenizer.Languages.English.Enums.TokenType.EOF
-  nameWithType: TokenType.EOF
-- uid: Enlighten.Tokenizer.Languages.English.Enums.TokenType.EOF*
-  name: EOF
-  href: api/Enlighten.Tokenizer.Languages.English.Enums.TokenType.html#Enlighten_Tokenizer_Languages_English_Enums_TokenType_EOF_
-  commentId: Overload:Enlighten.Tokenizer.Languages.English.Enums.TokenType.EOF
-  isSpec: "True"
-  fullName: Enlighten.Tokenizer.Languages.English.Enums.TokenType.EOF
-  nameWithType: TokenType.EOF
 - uid: Enlighten.Tokenizer.Languages.English.Enums.TokenType.EqualsToken
   name: EqualsToken
   href: api/Enlighten.Tokenizer.Languages.English.Enums.TokenType.html#Enlighten_Tokenizer_Languages_English_Enums_TokenType_EqualsToken
@@ -7250,19 +7250,6 @@ references:
   isSpec: "True"
   fullName: Enlighten.Tokenizer.Token.StopWord
   nameWithType: Token.StopWord
-- uid: Enlighten.Tokenizer.Token.TokenType
-  name: TokenType
-  href: api/Enlighten.Tokenizer.Token.html#Enlighten_Tokenizer_Token_TokenType
-  commentId: P:Enlighten.Tokenizer.Token.TokenType
-  fullName: Enlighten.Tokenizer.Token.TokenType
-  nameWithType: Token.TokenType
-- uid: Enlighten.Tokenizer.Token.TokenType*
-  name: TokenType
-  href: api/Enlighten.Tokenizer.Token.html#Enlighten_Tokenizer_Token_TokenType_
-  commentId: Overload:Enlighten.Tokenizer.Token.TokenType
-  isSpec: "True"
-  fullName: Enlighten.Tokenizer.Token.TokenType
-  nameWithType: Token.TokenType
 - uid: Enlighten.Tokenizer.Token.ToString
   name: ToString()
   href: api/Enlighten.Tokenizer.Token.html#Enlighten_Tokenizer_Token_ToString
@@ -7276,6 +7263,19 @@ references:
   isSpec: "True"
   fullName: Enlighten.Tokenizer.Token.ToString
   nameWithType: Token.ToString
+- uid: Enlighten.Tokenizer.Token.TokenType
+  name: TokenType
+  href: api/Enlighten.Tokenizer.Token.html#Enlighten_Tokenizer_Token_TokenType
+  commentId: P:Enlighten.Tokenizer.Token.TokenType
+  fullName: Enlighten.Tokenizer.Token.TokenType
+  nameWithType: Token.TokenType
+- uid: Enlighten.Tokenizer.Token.TokenType*
+  name: TokenType
+  href: api/Enlighten.Tokenizer.Token.html#Enlighten_Tokenizer_Token_TokenType_
+  commentId: Overload:Enlighten.Tokenizer.Token.TokenType
+  isSpec: "True"
+  fullName: Enlighten.Tokenizer.Token.TokenType
+  nameWithType: Token.TokenType
 - uid: Enlighten.Tokenizer.Token.Value
   name: Value
   href: api/Enlighten.Tokenizer.Token.html#Enlighten_Tokenizer_Token_Value
@@ -7374,23 +7374,6 @@ references:
   fullName.vb: Enlighten.Tokenizer.Utils.TokenizableStream(Of TData).Current
   nameWithType: TokenizableStream<TData>.Current
   nameWithType.vb: TokenizableStream(Of TData).Current
-- uid: Enlighten.Tokenizer.Utils.TokenizableStream`1.End
-  name: End()
-  href: api/Enlighten.Tokenizer.Utils.TokenizableStream-1.html#Enlighten_Tokenizer_Utils_TokenizableStream_1_End
-  commentId: M:Enlighten.Tokenizer.Utils.TokenizableStream`1.End
-  fullName: Enlighten.Tokenizer.Utils.TokenizableStream<TData>.End()
-  fullName.vb: Enlighten.Tokenizer.Utils.TokenizableStream(Of TData).End()
-  nameWithType: TokenizableStream<TData>.End()
-  nameWithType.vb: TokenizableStream(Of TData).End()
-- uid: Enlighten.Tokenizer.Utils.TokenizableStream`1.End*
-  name: End
-  href: api/Enlighten.Tokenizer.Utils.TokenizableStream-1.html#Enlighten_Tokenizer_Utils_TokenizableStream_1_End_
-  commentId: Overload:Enlighten.Tokenizer.Utils.TokenizableStream`1.End
-  isSpec: "True"
-  fullName: Enlighten.Tokenizer.Utils.TokenizableStream<TData>.End
-  fullName.vb: Enlighten.Tokenizer.Utils.TokenizableStream(Of TData).End
-  nameWithType: TokenizableStream<TData>.End
-  nameWithType.vb: TokenizableStream(Of TData).End
 - uid: Enlighten.Tokenizer.Utils.TokenizableStream`1.EOF(System.Int32)
   name: EOF(int)
   href: api/Enlighten.Tokenizer.Utils.TokenizableStream-1.html#Enlighten_Tokenizer_Utils_TokenizableStream_1_EOF_System_Int32_
@@ -7409,6 +7392,23 @@ references:
   fullName.vb: Enlighten.Tokenizer.Utils.TokenizableStream(Of TData).EOF
   nameWithType: TokenizableStream<TData>.EOF
   nameWithType.vb: TokenizableStream(Of TData).EOF
+- uid: Enlighten.Tokenizer.Utils.TokenizableStream`1.End
+  name: End()
+  href: api/Enlighten.Tokenizer.Utils.TokenizableStream-1.html#Enlighten_Tokenizer_Utils_TokenizableStream_1_End
+  commentId: M:Enlighten.Tokenizer.Utils.TokenizableStream`1.End
+  fullName: Enlighten.Tokenizer.Utils.TokenizableStream<TData>.End()
+  fullName.vb: Enlighten.Tokenizer.Utils.TokenizableStream(Of TData).End()
+  nameWithType: TokenizableStream<TData>.End()
+  nameWithType.vb: TokenizableStream(Of TData).End()
+- uid: Enlighten.Tokenizer.Utils.TokenizableStream`1.End*
+  name: End
+  href: api/Enlighten.Tokenizer.Utils.TokenizableStream-1.html#Enlighten_Tokenizer_Utils_TokenizableStream_1_End_
+  commentId: Overload:Enlighten.Tokenizer.Utils.TokenizableStream`1.End
+  isSpec: "True"
+  fullName: Enlighten.Tokenizer.Utils.TokenizableStream<TData>.End
+  fullName.vb: Enlighten.Tokenizer.Utils.TokenizableStream(Of TData).End
+  nameWithType: TokenizableStream<TData>.End
+  nameWithType.vb: TokenizableStream(Of TData).End
 - uid: Enlighten.Tokenizer.Utils.TokenizableStream`1.Index
   name: Index
   href: api/Enlighten.Tokenizer.Utils.TokenizableStream-1.html#Enlighten_Tokenizer_Utils_TokenizableStream_1_Index
