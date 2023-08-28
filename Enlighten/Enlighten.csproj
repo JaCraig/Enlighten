@@ -61,10 +61,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FileCurator" Version="4.0.13" />
+    <PackageReference Include="FileCurator" Version="4.0.14" />
     <PackageReference Include="System.Memory" Version="4.5.5" />
 	  <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-	  <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="7.0.3">
+	  <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="7.0.4">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 	  </PackageReference>
