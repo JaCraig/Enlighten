@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.19"></a>
+## [2.0.19](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.19) (2023-9-6)
+
+### Bug Fixes
+
+* bump the dependencies group with 1 update ([35253e3](https://www.github.com/JaCraig/Enlighten/commit/35253e3b06ce79c56cf2ef7f33b28fa475273d49))
+
+### Other
+
+* Merge pull request #36 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-b7b1c47501 ([b6a1bc3](https://www.github.com/JaCraig/Enlighten/commit/b6a1bc360b32ae501fdc44798396ee57c8c59e66))
+* Merge pull request #37 from JaCraig/dependabot/nuget/dependencies-8320e2ca11 ([6268be0](https://www.github.com/JaCraig/Enlighten/commit/6268be012172577da561a53eb342b01e393a377b))
+* bump the dependencies group in /Enlighten.Tests with 1 update ([8b0334e](https://www.github.com/JaCraig/Enlighten/commit/8b0334ead8b908b1c0f31fcd4c18aceb8e8680bb))
+
 <a name="2.0.18"></a>
 ## [2.0.18](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.18) (2023-9-5)
 
