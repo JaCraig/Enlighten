@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.21"></a>
+## [2.0.21](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.21) (2023-9-11)
+
+### Bug Fixes
+
+* bump the dependencies group with 1 update ([dcebaa1](https://www.github.com/JaCraig/Enlighten/commit/dcebaa14cda5056838d1e63c27320e6663c5ba79))
+
+### Other
+
+* Merge pull request #40 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-a36d827776 ([df8a2f8](https://www.github.com/JaCraig/Enlighten/commit/df8a2f873767dad1a1bce2506b8e9522cc8a2765))
+* Merge pull request #41 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-2560c786da ([c9c4e9b](https://www.github.com/JaCraig/Enlighten/commit/c9c4e9b86395662d80d3ee5a093ce51cc52317dc))
+* Merge pull request #42 from JaCraig/dependabot/nuget/dependencies-61879533e9 ([16d0399](https://www.github.com/JaCraig/Enlighten/commit/16d0399247a52beeeb72282c7298f7952c44382c))
+* bump the dependencies group in /Enlighten.Tests with 1 update ([615edd6](https://www.github.com/JaCraig/Enlighten/commit/615edd6ac0c3acb699c64515d09ef3eacbe8c78f))
+* bump the dependencies group in /Enlighten.Tests with 1 update ([0d557e6](https://www.github.com/JaCraig/Enlighten/commit/0d557e66e1e9a4d7cebce0e4319516111f86cbcf))
+* Update dependabot.yml ([1db2cfd](https://www.github.com/JaCraig/Enlighten/commit/1db2cfd74c4319046bfda726e49397f2b90c113d))
+
 <a name="2.0.20"></a>
 ## [2.0.20](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.20) (2023-9-8)
 
