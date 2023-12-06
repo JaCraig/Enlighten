@@ -1,119 +1,129 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <head>
+    <meta charset="utf-8">
       <title>Class TokenType
  | Enlighten API Reference </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class TokenType
  | Enlighten API Reference ">
-      <meta name="generator" content="docfx ">
-  
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
-      <link rel="stylesheet" href="../styles/config.css">
-      <link rel="stylesheet" href="../styles/discord.css">
-      <link rel="stylesheet" href="../styles/singulink.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.json">
-      <meta property="docfx:tocrel" content="toc.json">
-  
-  <meta property="docfx:rel" content="../">
-  <meta property="docfx:newtab" content="true">
-    </head>
-    <body>
-        <div class="top-navbar">
-            <a class="burger-icon" onclick="toggleMenu()">
-                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
-            </a>
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
 
 
-            <a class="brand" href="../index.html">
-              <img src="../images/icon.png" alt="Enlighten" class="logomark">
-              <span class="brand-title">Enlighten</span>
-            </a>        </div>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/icon.png" alt="Enlighten">
+            Enlighten
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-        <div class="body-content">
-            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
 
-            <nav id="sidebar" role="navigation">
-                <div class="sidebar">
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
 
-                    <div>
-                      <div class="mobile-hide">
+          <nav id="breadcrumb"></nav>
+        </div>
 
-                        <a class="brand" href="../index.html">
-                          <img src="../images/icon.png" alt="Enlighten" class="logomark">
-                          <span class="brand-title">Enlighten</span>
-                        </a>                      </div>
-
-                      <div class="sidesearch">
-                        <form id="search" role="search" class="search">
-                            <i class="bi bi-search search-icon"></i>
-                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
-                        </form>
-                      </div>
-
-                      <div id="navbar">
-                      </div>
-                    </div>                    <div class="sidebar-item-separator"></div>
-
-                        <div id="sidetoggle">
-                          <div id="sidetoc"></div>
-                        </div>
-                </div>
-                <div class="footer">
-  <strong><a href='https://github.com/JaCraig/Enlighten'>Open in Github</a></strong>
-  
-                </div>            </nav>
-
-            <main class="main-panel">
-
-                <div id="search-results" style="display: none;">
-                  <h1 class="search-list">Search Results for <span></span></h1>
-                  <div class="sr-items">
-                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
-                  </div>
-                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
-                </div>
- 
-
-                <div role="main" class="hide-when-search">
-
-                        <div class="subnav navbar navbar-default">
-                          <div class="container hide-when-search" id="breadcrumb">
-                            <ul class="breadcrumb">
-                              <li></li>
-                            </ul>
-                          </div>
-                        </div>
-
-                         <div id="contribution">
-                               <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
-                         </div>
-
-                    <article class="content wrap" id="_content" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType">
+        <article data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType">
 
 
 
-  <h1 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType" class="text-break">Class TokenType
-</h1>
-  <div class="markdown level0 summary"><p>Token type</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;<a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a>&gt;</div>
-    <div class="level2"><span class="xref">TokenType</span></div>
+  <h1 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType" class="text-break">
+    Class TokenType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Enlighten.html">Enlighten</a>.<a class="xref" href="Enlighten.Tokenizer.html">Tokenizer</a>.<a class="xref" href="Enlighten.Tokenizer.Languages.html">Languages</a>.<a class="xref" href="Enlighten.Tokenizer.Languages.English.html">English</a>.<a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.html">Enums</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Enlighten.dll</dd></dl>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+
+  <div class="markdown summary"><p>Token type</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TokenType : StringEnumBaseClass&lt;TokenType&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;<a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a>&gt;</div>
+      <div><span class="xref">TokenType</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass&lt;TokenType&gt;.ToStringEnumBaseClass(string)</a>
     </div>
@@ -141,1719 +151,1593 @@
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
     </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Enlighten.html">Enlighten</a>.<a class="xref" href="Enlighten.Tokenizer.html">Tokenizer</a>.<a class="xref" href="Enlighten.Tokenizer.Languages.html">Languages</a>.<a class="xref" href="Enlighten.Tokenizer.Languages.English.html">English</a>.<a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.html">Enums</a></h6>
-  <h6><strong>Assembly</strong>: Enlighten.dll</h6>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TokenType : StringEnumBaseClass&lt;TokenType&gt;</code></pre>
-  </div>
-  <h3 id="constructors">Constructors
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType__ctor.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.%23ctor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L38">View Source</a>
-  </span>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType__ctor_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.#ctor*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType__ctor" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.#ctor">TokenType()</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType__ctor" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.#ctor">
+  TokenType()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TokenType()</code></pre>
   </div>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType__ctor_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType__ctor_System_String_.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.%23ctor(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L31">View Source</a>
-  </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType__ctor_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.#ctor*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType__ctor_System_String_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.#ctor(System.String)">TokenType(string)</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType__ctor_System_String_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.#ctor(System.String)">
+  TokenType(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TokenType(string value)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">value</span></td>
-        <td><p>The value.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType__ctor_System_String__seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <h3 id="properties">Properties
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Abbreviation.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Abbreviation%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L47">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Abbreviation_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Abbreviation*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Abbreviation" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Abbreviation">Abbreviation</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Abbreviation" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Abbreviation">
+  Abbreviation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the abbreviation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Abbreviation { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The abbreviation.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Abbreviation_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Ampersand.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Ampersand%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L53">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The abbreviation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Ampersand_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Ampersand*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Ampersand" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Ampersand">Ampersand</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Ampersand" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Ampersand">
+  Ampersand
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the ampersand.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Ampersand { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The ampersand.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Ampersand_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Asterisk.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Asterisk%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L59">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The ampersand.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Asterisk_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Asterisk*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Asterisk" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Asterisk">Asterisk</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Asterisk" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Asterisk">
+  Asterisk
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the asterisk.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Asterisk { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The asterisk.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Asterisk_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_AtSymbol.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.AtSymbol%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L65">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The asterisk.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_AtSymbol_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.AtSymbol*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_AtSymbol" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.AtSymbol">AtSymbol</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_AtSymbol" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.AtSymbol">
+  AtSymbol
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets at symbol.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType AtSymbol { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>At symbol.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_AtSymbol_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Backslash.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Backslash%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L71">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>At symbol.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Backslash_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Backslash*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Backslash" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Backslash">Backslash</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Backslash" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Backslash">
+  Backslash
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the backslash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Backslash { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The backslash.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Backslash_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Backtick.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Backtick%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L77">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The backslash.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Backtick_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Backtick*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Backtick" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Backtick">Backtick</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Backtick" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Backtick">
+  Backtick
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the backtick.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Backtick { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The backtick.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Backtick_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Caret.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Caret%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L83">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The backtick.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Caret_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Caret*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Caret" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Caret">Caret</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Caret" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Caret">
+  Caret
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the caret.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Caret { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The caret.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Caret_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Colon.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Colon%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L89">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The caret.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Colon_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Colon*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Colon" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Colon">Colon</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Colon" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Colon">
+  Colon
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the colon.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Colon { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The colon.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Colon_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Comma.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Comma%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L95">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The colon.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Comma_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Comma*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Comma" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Comma">Comma</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Comma" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Comma">
+  Comma
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the comma.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Comma { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The comma.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Comma_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_DollarSymbol.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.DollarSymbol%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L101">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The comma.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_DollarSymbol_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.DollarSymbol*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_DollarSymbol" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.DollarSymbol">DollarSymbol</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_DollarSymbol" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.DollarSymbol">
+  DollarSymbol
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the dollar symbol.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType DollarSymbol { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The dollar symbol.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_DollarSymbol_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_DoubleQuote.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.DoubleQuote%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L107">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The dollar symbol.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_DoubleQuote_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.DoubleQuote*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_DoubleQuote" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.DoubleQuote">DoubleQuote</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_DoubleQuote" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.DoubleQuote">
+  DoubleQuote
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the double quote.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType DoubleQuote { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The double quote.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_DoubleQuote_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_EOF.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.EOF%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L131">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The double quote.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_EOF_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.EOF*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_EOF" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.EOF">EOF</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_EOF" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.EOF">
+  EOF
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the EOF.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType EOF { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The EOF.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_EOF_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Ellipsis.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Ellipsis%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L113">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The EOF.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Ellipsis_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Ellipsis*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Ellipsis" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Ellipsis">Ellipsis</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Ellipsis" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Ellipsis">
+  Ellipsis
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the ellipsis.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Ellipsis { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The ellipsis.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Ellipsis_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Email.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Email%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L119">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The ellipsis.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Email_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Email*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Email" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Email">Email</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Email" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Email">
+  Email
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the email.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Email { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The email.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Email_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Emoji.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Emoji%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L125">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The email.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Emoji_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Emoji*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Emoji" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Emoji">Emoji</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Emoji" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Emoji">
+  Emoji
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the emoji.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Emoji { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The emoji.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Emoji_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_EqualsToken.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.EqualsToken%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L137">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The emoji.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_EqualsToken_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.EqualsToken*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_EqualsToken" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.EqualsToken">EqualsToken</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_EqualsToken" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.EqualsToken">
+  EqualsToken
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the equals.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType EqualsToken { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The equals.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_EqualsToken_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_ExclamationMark.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.ExclamationMark%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L143">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The equals.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_ExclamationMark_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.ExclamationMark*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_ExclamationMark" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.ExclamationMark">ExclamationMark</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_ExclamationMark" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.ExclamationMark">
+  ExclamationMark
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the exclamation mark.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType ExclamationMark { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The exclamation mark.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_ExclamationMark_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_GreaterThan.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.GreaterThan%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L149">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The exclamation mark.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_GreaterThan_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.GreaterThan*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_GreaterThan" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.GreaterThan">GreaterThan</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_GreaterThan" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.GreaterThan">
+  GreaterThan
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the greater than.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType GreaterThan { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The greater than.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_GreaterThan_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_HashSymbol.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.HashSymbol%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L155">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The greater than.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_HashSymbol_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.HashSymbol*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_HashSymbol" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.HashSymbol">HashSymbol</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_HashSymbol" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.HashSymbol">
+  HashSymbol
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the hash symbol.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType HashSymbol { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The hash symbol.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_HashSymbol_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_HashTag.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.HashTag%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L161">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The hash symbol.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_HashTag_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.HashTag*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_HashTag" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.HashTag">HashTag</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_HashTag" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.HashTag">
+  HashTag
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the hash tag.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType HashTag { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The hash tag.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_HashTag_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Hyphen.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Hyphen%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L167">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The hash tag.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Hyphen_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Hyphen*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Hyphen" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Hyphen">Hyphen</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Hyphen" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Hyphen">
+  Hyphen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the hyphen.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Hyphen { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The hyphen.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Hyphen_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_LeftBrace.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.LeftBrace%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L173">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The hyphen.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_LeftBrace_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.LeftBrace*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_LeftBrace" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.LeftBrace">LeftBrace</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_LeftBrace" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.LeftBrace">
+  LeftBrace
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the left brace.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType LeftBrace { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The left brace.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_LeftBrace_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_LeftBracket.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.LeftBracket%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L179">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The left brace.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_LeftBracket_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.LeftBracket*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_LeftBracket" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.LeftBracket">LeftBracket</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_LeftBracket" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.LeftBracket">
+  LeftBracket
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the left bracket.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType LeftBracket { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The left bracket.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_LeftBracket_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_LeftParen.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.LeftParen%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L185">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The left bracket.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_LeftParen_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.LeftParen*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_LeftParen" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.LeftParen">LeftParen</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_LeftParen" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.LeftParen">
+  LeftParen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the left paren.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType LeftParen { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The left paren.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_LeftParen_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_LessThan.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.LessThan%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L191">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The left paren.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_LessThan_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.LessThan*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_LessThan" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.LessThan">LessThan</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_LessThan" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.LessThan">
+  LessThan
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the less than.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType LessThan { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The less than.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_LessThan_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_NewLine.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.NewLine%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L197">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The less than.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_NewLine_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.NewLine*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_NewLine" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.NewLine">NewLine</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_NewLine" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.NewLine">
+  NewLine
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the new line.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType NewLine { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The new line.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_NewLine_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Number.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Number%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L203">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The new line.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Number_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Number*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Number" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Number">Number</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Number" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Number">
+  Number
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the number.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Number { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The number.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Number_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Other.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Other%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L209">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The number.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Other_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Other*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Other" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Other">Other</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Other" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Other">
+  Other
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the other.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Other { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The other.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Other_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_PercentSymbol.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.PercentSymbol%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L215">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The other.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_PercentSymbol_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.PercentSymbol*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_PercentSymbol" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.PercentSymbol">PercentSymbol</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_PercentSymbol" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.PercentSymbol">
+  PercentSymbol
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the percent symbol.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType PercentSymbol { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The percent symbol.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_PercentSymbol_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Period.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Period%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L221">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The percent symbol.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Period_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Period*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Period" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Period">Period</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Period" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Period">
+  Period
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the period.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Period { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The period.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Period_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Pipe.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Pipe%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L227">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The period.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Pipe_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Pipe*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Pipe" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Pipe">Pipe</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Pipe" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Pipe">
+  Pipe
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the pipe.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Pipe { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The pipe.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Pipe_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Plus.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Plus%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L233">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The pipe.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Plus_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Plus*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Plus" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Plus">Plus</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Plus" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Plus">
+  Plus
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the plus.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Plus { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The plus.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Plus_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_QuestionMark.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.QuestionMark%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L239">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The plus.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_QuestionMark_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.QuestionMark*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_QuestionMark" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.QuestionMark">QuestionMark</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_QuestionMark" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.QuestionMark">
+  QuestionMark
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the question mark.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType QuestionMark { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The question mark.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_QuestionMark_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_RightBrace.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.RightBrace%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L245">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The question mark.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_RightBrace_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.RightBrace*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_RightBrace" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.RightBrace">RightBrace</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_RightBrace" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.RightBrace">
+  RightBrace
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L245"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the right brace.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType RightBrace { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The right brace.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_RightBrace_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_RightBracket.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.RightBracket%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L251">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The right brace.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_RightBracket_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.RightBracket*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_RightBracket" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.RightBracket">RightBracket</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_RightBracket" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.RightBracket">
+  RightBracket
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the right bracket.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType RightBracket { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The right bracket.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_RightBracket_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_RightParen.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.RightParen%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L257">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The right bracket.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_RightParen_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.RightParen*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_RightParen" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.RightParen">RightParen</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_RightParen" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.RightParen">
+  RightParen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the right paren.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType RightParen { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The right paren.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_RightParen_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_SemiColon.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.SemiColon%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L263">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The right paren.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_SemiColon_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.SemiColon*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_SemiColon" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.SemiColon">SemiColon</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_SemiColon" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.SemiColon">
+  SemiColon
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the semi colon.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType SemiColon { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The semi colon.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_SemiColon_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_SingleQuote.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.SingleQuote%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L269">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The semi colon.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_SingleQuote_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.SingleQuote*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_SingleQuote" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.SingleQuote">SingleQuote</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_SingleQuote" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.SingleQuote">
+  SingleQuote
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the single quote.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType SingleQuote { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The single quote.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_SingleQuote_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Slash.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Slash%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L275">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The single quote.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Slash_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Slash*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Slash" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Slash">Slash</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Slash" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Slash">
+  Slash
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the slash.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Slash { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The slash.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Slash_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Tilde.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Tilde%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L281">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The slash.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Tilde_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Tilde*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Tilde" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Tilde">Tilde</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Tilde" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Tilde">
+  Tilde
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the tilde.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Tilde { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The tilde.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Tilde_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Underscore.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Underscore%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L287">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The tilde.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Underscore_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Underscore*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Underscore" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Underscore">Underscore</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Underscore" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Underscore">
+  Underscore
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L287"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the underscore.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Underscore { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The underscore.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Underscore_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Url.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Url%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L293">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The underscore.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Url_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Url*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Url" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Url">Url</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Url" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Url">
+  Url
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the URL.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Url { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The URL.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Url_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Username.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Username%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L299">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The URL.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Username_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Username*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Username" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Username">Username</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Username" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Username">
+  Username
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the username.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Username { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The username.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Username_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_WhiteSpace.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.WhiteSpace%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L305">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The username.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_WhiteSpace_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.WhiteSpace*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_WhiteSpace" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.WhiteSpace">WhiteSpace</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_WhiteSpace" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.WhiteSpace">
+  WhiteSpace
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L305"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the white space.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType WhiteSpace { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The white space.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_WhiteSpace_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Tokenizer_Languages_English_Enums_TokenType_Word.md&amp;value=---%0Auid%3A%20Enlighten.Tokenizer.Languages.English.Enums.TokenType.Word%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L311">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The white space.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Word_" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Word*"></a>
-  <h4 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Word" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Word">Word</h4>
+
+  <h3 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Word" data-uid="Enlighten.Tokenizer.Languages.English.Enums.TokenType.Word">
+  Word
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the word.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TokenType Word { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></td>
-        <td><p>The word.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="Enlighten_Tokenizer_Languages_English_Enums_TokenType_Word_seealso">See Also</h5>
-  <div class="seealso">
-      <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
-  </div>
-  <h3 id="seealso">See Also</h3>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Languages.English.Enums.TokenType.html">TokenType</a></dt>
+    <dd><p>The word.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 id="seealso">See Also</h2>
   <div class="seealso">
       <div><a class="xref" href="https://github.com/JaCraig/BigBookOfDataTypes/blob/master/src/BigBook/Patterns/BaseClasses/StringEnumBaseClass.cs">StringEnumBaseClass</a>&lt;TClass&gt;</div>
   </div>
 
 </article>
-                </div>
 
-                <div class="copyright-footer">
-                    <span>&#169; James Craig. All rights reserved.</span>
-                </div>
-            </main>
+        <div class="contribution d-print-none">
+          <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Tokenizer/Languages/English/Enums/TokenType.cs/#L25" class="edit-link">Edit this page</a>
         </div>
 
 
-        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-        <script type="text/javascript" src="../styles/jquery.twbsPagination.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
-        <script type="text/javascript" src="../styles/url.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
-        <script type="text/javascript" src="../styles/docfx.js"></script>
-        <script type="text/javascript" src="../styles/main.js"></script>
-        <script type="text/javascript" src="../styles/singulink.js"></script>    </body>
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <strong><a href='https://github.com/JaCraig/Enlighten'>Open in Github</a></strong>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

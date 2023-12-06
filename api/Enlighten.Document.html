@@ -1,118 +1,128 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <head>
+    <meta charset="utf-8">
       <title>Class Document
  | Enlighten API Reference </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Document
  | Enlighten API Reference ">
-      <meta name="generator" content="docfx ">
-  
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/night-owl.min.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
-      <link rel="stylesheet" href="../styles/config.css">
-      <link rel="stylesheet" href="../styles/discord.css">
-      <link rel="stylesheet" href="../styles/singulink.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.json">
-      <meta property="docfx:tocrel" content="toc.json">
-  
-  <meta property="docfx:rel" content="../">
-  <meta property="docfx:newtab" content="true">
-    </head>
-    <body>
-        <div class="top-navbar">
-            <a class="burger-icon" onclick="toggleMenu()">
-                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
-            </a>
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Document.md&amp;value=---%0Auid%3A%20Enlighten.Document%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
 
 
-            <a class="brand" href="../index.html">
-              <img src="../images/icon.png" alt="Enlighten" class="logomark">
-              <span class="brand-title">Enlighten</span>
-            </a>        </div>
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/icon.png" alt="Enlighten">
+            Enlighten
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-        <div class="body-content">
-            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
 
-            <nav id="sidebar" role="navigation">
-                <div class="sidebar">
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
 
-                    <div>
-                      <div class="mobile-hide">
+          <nav id="breadcrumb"></nav>
+        </div>
 
-                        <a class="brand" href="../index.html">
-                          <img src="../images/icon.png" alt="Enlighten" class="logomark">
-                          <span class="brand-title">Enlighten</span>
-                        </a>                      </div>
-
-                      <div class="sidesearch">
-                        <form id="search" role="search" class="search">
-                            <i class="bi bi-search search-icon"></i>
-                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
-                        </form>
-                      </div>
-
-                      <div id="navbar">
-                      </div>
-                    </div>                    <div class="sidebar-item-separator"></div>
-
-                        <div id="sidetoggle">
-                          <div id="sidetoc"></div>
-                        </div>
-                </div>
-                <div class="footer">
-  <strong><a href='https://github.com/JaCraig/Enlighten'>Open in Github</a></strong>
-  
-                </div>            </nav>
-
-            <main class="main-panel">
-
-                <div id="search-results" style="display: none;">
-                  <h1 class="search-list">Search Results for <span></span></h1>
-                  <div class="sr-items">
-                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
-                  </div>
-                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
-                </div>
- 
-
-                <div role="main" class="hide-when-search">
-
-                        <div class="subnav navbar navbar-default">
-                          <div class="container hide-when-search" id="breadcrumb">
-                            <ul class="breadcrumb">
-                              <li></li>
-                            </ul>
-                          </div>
-                        </div>
-
-                         <div id="contribution">
-                               <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Document.md&amp;value=---%0Auid%3A%20Enlighten.Document%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
-                         </div>
-
-                    <article class="content wrap" id="_content" data-uid="Enlighten.Document">
+        <article data-uid="Enlighten.Document">
 
 
 
-  <h1 id="Enlighten_Document" data-uid="Enlighten.Document" class="text-break">Class Document
-</h1>
-  <div class="markdown level0 summary"><p>Document information holder</p>
-</div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">Document</span></div>
+  <h1 id="Enlighten_Document" data-uid="Enlighten.Document" class="text-break">
+    Class Document
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Enlighten.html">Enlighten</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Enlighten.dll</dd></dl>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+
+  <div class="markdown summary"><p>Document information holder</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Document</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Document</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -134,443 +144,393 @@
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Enlighten.html">Enlighten</a></h6>
-  <h6><strong>Assembly</strong>: Enlighten.dll</h6>
-  <h5 id="Enlighten_Document_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Document</code></pre>
-  </div>
-  <h3 id="constructors">Constructors
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Document__ctor_Enlighten_SentenceDetection_Sentence___Enlighten_Tokenizer_Token___System_String_Enlighten_FeatureExtraction_Interfaces_IFeatureExtractor_Enlighten_TextSummarization_Interfaces_ITextSummarizer_Enlighten_Tokenizer_Interfaces_ITokenizer_Enlighten_Tokenizer_Enums_TokenizerLanguage_.md&amp;value=---%0Auid%3A%20Enlighten.Document.%23ctor(Enlighten.SentenceDetection.Sentence%5B%5D%2CEnlighten.Tokenizer.Token%5B%5D%2CSystem.String%2CEnlighten.FeatureExtraction.Interfaces.IFeatureExtractor%2CEnlighten.TextSummarization.Interfaces.ITextSummarizer%2CEnlighten.Tokenizer.Interfaces.ITokenizer%2CEnlighten.Tokenizer.Enums.TokenizerLanguage)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L28">View Source</a>
-  </span>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
   <a id="Enlighten_Document__ctor_" data-uid="Enlighten.Document.#ctor*"></a>
-  <h4 id="Enlighten_Document__ctor_Enlighten_SentenceDetection_Sentence___Enlighten_Tokenizer_Token___System_String_Enlighten_FeatureExtraction_Interfaces_IFeatureExtractor_Enlighten_TextSummarization_Interfaces_ITextSummarizer_Enlighten_Tokenizer_Interfaces_ITokenizer_Enlighten_Tokenizer_Enums_TokenizerLanguage_" data-uid="Enlighten.Document.#ctor(Enlighten.SentenceDetection.Sentence[],Enlighten.Tokenizer.Token[],System.String,Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor,Enlighten.TextSummarization.Interfaces.ITextSummarizer,Enlighten.Tokenizer.Interfaces.ITokenizer,Enlighten.Tokenizer.Enums.TokenizerLanguage)">Document(Sentence[], Token[], string, IFeatureExtractor, ITextSummarizer, ITokenizer, TokenizerLanguage)</h4>
+
+  <h3 id="Enlighten_Document__ctor_Enlighten_SentenceDetection_Sentence___Enlighten_Tokenizer_Token___System_String_Enlighten_FeatureExtraction_Interfaces_IFeatureExtractor_Enlighten_TextSummarization_Interfaces_ITextSummarizer_Enlighten_Tokenizer_Interfaces_ITokenizer_Enlighten_Tokenizer_Enums_TokenizerLanguage_" data-uid="Enlighten.Document.#ctor(Enlighten.SentenceDetection.Sentence[],Enlighten.Tokenizer.Token[],System.String,Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor,Enlighten.TextSummarization.Interfaces.ITextSummarizer,Enlighten.Tokenizer.Interfaces.ITokenizer,Enlighten.Tokenizer.Enums.TokenizerLanguage)">
+  Document(Sentence[], Token[], string, IFeatureExtractor, ITextSummarizer, ITokenizer, TokenizerLanguage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Enlighten.Document.html">Document</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Document(Sentence[] sentences, Token[] tokens, string originalText, IFeatureExtractor featureExtractor, ITextSummarizer textSummarizer, ITokenizer tokenizer, TokenizerLanguage tokenizerLanguage)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.SentenceDetection.Sentence.html">Sentence</a>[]</td>
-        <td><span class="parametername">sentences</span></td>
-        <td><p>The sentences.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Token.html">Token</a>[]</td>
-        <td><span class="parametername">tokens</span></td>
-        <td><p>The tokens.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">originalText</span></td>
-        <td><p>The original text.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor.html">IFeatureExtractor</a></td>
-        <td><span class="parametername">featureExtractor</span></td>
-        <td><p>The feature extractor.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Enlighten.TextSummarization.Interfaces.ITextSummarizer.html">ITextSummarizer</a></td>
-        <td><span class="parametername">textSummarizer</span></td>
-        <td><p>The text summarizer.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Interfaces.ITokenizer.html">ITokenizer</a></td>
-        <td><span class="parametername">tokenizer</span></td>
-        <td><p>The tokenizer.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Enums.TokenizerLanguage.html">TokenizerLanguage</a></td>
-        <td><span class="parametername">tokenizerLanguage</span></td>
-        <td><p>The tokenizer language.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Document_ID.md&amp;value=---%0Auid%3A%20Enlighten.Document.ID%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L51">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sentences</code> <a class="xref" href="Enlighten.SentenceDetection.Sentence.html">Sentence</a>[]</dt>
+    <dd><p>The sentences.</p>
+</dd>
+    <dt><code>tokens</code> <a class="xref" href="Enlighten.Tokenizer.Token.html">Token</a>[]</dt>
+    <dd><p>The tokens.</p>
+</dd>
+    <dt><code>originalText</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The original text.</p>
+</dd>
+    <dt><code>featureExtractor</code> <a class="xref" href="Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor.html">IFeatureExtractor</a></dt>
+    <dd><p>The feature extractor.</p>
+</dd>
+    <dt><code>textSummarizer</code> <a class="xref" href="Enlighten.TextSummarization.Interfaces.ITextSummarizer.html">ITextSummarizer</a></dt>
+    <dd><p>The text summarizer.</p>
+</dd>
+    <dt><code>tokenizer</code> <a class="xref" href="Enlighten.Tokenizer.Interfaces.ITokenizer.html">ITokenizer</a></dt>
+    <dd><p>The tokenizer.</p>
+</dd>
+    <dt><code>tokenizerLanguage</code> <a class="xref" href="Enlighten.Tokenizer.Enums.TokenizerLanguage.html">TokenizerLanguage</a></dt>
+    <dd><p>The tokenizer language.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
   <a id="Enlighten_Document_ID_" data-uid="Enlighten.Document.ID*"></a>
-  <h4 id="Enlighten_Document_ID" data-uid="Enlighten.Document.ID">ID</h4>
+
+  <h3 id="Enlighten_Document_ID" data-uid="Enlighten.Document.ID">
+  ID
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the identifier.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Guid ID { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><p>The identifier.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Document_OriginalText.md&amp;value=---%0Auid%3A%20Enlighten.Document.OriginalText%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L57">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>The identifier.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Document_OriginalText_" data-uid="Enlighten.Document.OriginalText*"></a>
-  <h4 id="Enlighten_Document_OriginalText" data-uid="Enlighten.Document.OriginalText">OriginalText</h4>
+
+  <h3 id="Enlighten_Document_OriginalText" data-uid="Enlighten.Document.OriginalText">
+  OriginalText
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the text.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string OriginalText { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><p>The text.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Document_Sentences.md&amp;value=---%0Auid%3A%20Enlighten.Document.Sentences%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L63">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The text.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Document_Sentences_" data-uid="Enlighten.Document.Sentences*"></a>
-  <h4 id="Enlighten_Document_Sentences" data-uid="Enlighten.Document.Sentences">Sentences</h4>
+
+  <h3 id="Enlighten_Document_Sentences" data-uid="Enlighten.Document.Sentences">
+  Sentences
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the sentences.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Sentence[] Sentences { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.SentenceDetection.Sentence.html">Sentence</a>[]</td>
-        <td><p>The sentences.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Document_Tokens.md&amp;value=---%0Auid%3A%20Enlighten.Document.Tokens%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L69">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.SentenceDetection.Sentence.html">Sentence</a>[]</dt>
+    <dd><p>The sentences.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="Enlighten_Document_Tokens_" data-uid="Enlighten.Document.Tokens*"></a>
-  <h4 id="Enlighten_Document_Tokens" data-uid="Enlighten.Document.Tokens">Tokens</h4>
+
+  <h3 id="Enlighten_Document_Tokens" data-uid="Enlighten.Document.Tokens">
+  Tokens
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the tokens.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Token[] Tokens { get; }</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Tokenizer.Token.html">Token</a>[]</td>
-        <td><p>The tokens.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-</h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Document_Detokenize.md&amp;value=---%0Auid%3A%20Enlighten.Document.Detokenize%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L99">View Source</a>
-  </span>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Tokenizer.Token.html">Token</a>[]</dt>
+    <dd><p>The tokens.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
   <a id="Enlighten_Document_Detokenize_" data-uid="Enlighten.Document.Detokenize*"></a>
-  <h4 id="Enlighten_Document_Detokenize" data-uid="Enlighten.Document.Detokenize">Detokenize()</h4>
+
+  <h3 id="Enlighten_Document_Detokenize" data-uid="Enlighten.Document.Detokenize">
+  Detokenize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Detokenizes this instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Detokenize()</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><p>The string version of this instance.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Document_GetFeatures_Enlighten_Document___System_Int32_Enlighten_FeatureExtraction_Enum_FeatureExtractionType_.md&amp;value=---%0Auid%3A%20Enlighten.Document.GetFeatures(Enlighten.Document%5B%5D%2CSystem.Int32%2CEnlighten.FeatureExtraction.Enum.FeatureExtractionType)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L111">View Source</a>
-  </span>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string version of this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Enlighten_Document_GetFeatures_" data-uid="Enlighten.Document.GetFeatures*"></a>
-  <h4 id="Enlighten_Document_GetFeatures_Enlighten_Document___System_Int32_Enlighten_FeatureExtraction_Enum_FeatureExtractionType_" data-uid="Enlighten.Document.GetFeatures(Enlighten.Document[],System.Int32,Enlighten.FeatureExtraction.Enum.FeatureExtractionType)">GetFeatures(Document[], int, FeatureExtractionType)</h4>
+
+  <h3 id="Enlighten_Document_GetFeatures_Enlighten_Document___System_Int32_Enlighten_FeatureExtraction_Enum_FeatureExtractionType_" data-uid="Enlighten.Document.GetFeatures(Enlighten.Document[],System.Int32,Enlighten.FeatureExtraction.Enum.FeatureExtractionType)">
+  GetFeatures(Document[], int, FeatureExtractionType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Gets the topics important in this document</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string[] GetFeatures(Document[] comparisonDocuments, int featureCount, FeatureExtractionType featureExtractionType)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Document.html">Document</a>[]</td>
-        <td><span class="parametername">comparisonDocuments</span></td>
-        <td><p>The comparison documents.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">featureCount</span></td>
-        <td><p>The feature count.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Enlighten.FeatureExtraction.Enum.FeatureExtractionType.html">FeatureExtractionType</a></td>
-        <td><span class="parametername">featureExtractionType</span></td>
-        <td><p>Type of the feature extraction.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</td>
-        <td><p>The features/topics important in this document.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Document_Summarize_System_Int32_Enlighten_TextSummarization_Enum_TextSummarizationLanguage_.md&amp;value=---%0Auid%3A%20Enlighten.Document.Summarize(System.Int32%2CEnlighten.TextSummarization.Enum.TextSummarizationLanguage)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L122">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>comparisonDocuments</code> <a class="xref" href="Enlighten.Document.html">Document</a>[]</dt>
+    <dd><p>The comparison documents.</p>
+</dd>
+    <dt><code>featureCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The feature count.</p>
+</dd>
+    <dt><code>featureExtractionType</code> <a class="xref" href="Enlighten.FeatureExtraction.Enum.FeatureExtractionType.html">FeatureExtractionType</a></dt>
+    <dd><p>Type of the feature extraction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>The features/topics important in this document.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Enlighten_Document_Summarize_" data-uid="Enlighten.Document.Summarize*"></a>
-  <h4 id="Enlighten_Document_Summarize_System_Int32_Enlighten_TextSummarization_Enum_TextSummarizationLanguage_" data-uid="Enlighten.Document.Summarize(System.Int32,Enlighten.TextSummarization.Enum.TextSummarizationLanguage)">Summarize(int, TextSummarizationLanguage)</h4>
+
+  <h3 id="Enlighten_Document_Summarize_System_Int32_Enlighten_TextSummarization_Enum_TextSummarizationLanguage_" data-uid="Enlighten.Document.Summarize(System.Int32,Enlighten.TextSummarization.Enum.TextSummarizationLanguage)">
+  Summarize(int, TextSummarizationLanguage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Summarizes the specified sentence count.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Document Summarize(int sentenceCount, TextSummarizationLanguage textSummarizationLanguage)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
-        <td><span class="parametername">sentenceCount</span></td>
-        <td><p>The sentence count.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Enlighten.TextSummarization.Enum.TextSummarizationLanguage.html">TextSummarizationLanguage</a></td>
-        <td><span class="parametername">textSummarizationLanguage</span></td>
-        <td><p>The text summarization language.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Document.html">Document</a></td>
-        <td><p>The summarized text</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/JaCraig/Enlighten/new/master/apiSpec/new?filename=Enlighten_Document_Summarize_System_Single_Enlighten_TextSummarization_Enum_TextSummarizationLanguage_.md&amp;value=---%0Auid%3A%20Enlighten.Document.Summarize(System.Single%2CEnlighten.TextSummarization.Enum.TextSummarizationLanguage)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L133">View Source</a>
-  </span>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sentenceCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The sentence count.</p>
+</dd>
+    <dt><code>textSummarizationLanguage</code> <a class="xref" href="Enlighten.TextSummarization.Enum.TextSummarizationLanguage.html">TextSummarizationLanguage</a></dt>
+    <dd><p>The text summarization language.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Document.html">Document</a></dt>
+    <dd><p>The summarized text</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Enlighten_Document_Summarize_" data-uid="Enlighten.Document.Summarize*"></a>
-  <h4 id="Enlighten_Document_Summarize_System_Single_Enlighten_TextSummarization_Enum_TextSummarizationLanguage_" data-uid="Enlighten.Document.Summarize(System.Single,Enlighten.TextSummarization.Enum.TextSummarizationLanguage)">Summarize(float, TextSummarizationLanguage)</h4>
+
+  <h3 id="Enlighten_Document_Summarize_System_Single_Enlighten_TextSummarization_Enum_TextSummarizationLanguage_" data-uid="Enlighten.Document.Summarize(System.Single,Enlighten.TextSummarization.Enum.TextSummarizationLanguage)">
+  Summarize(float, TextSummarizationLanguage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
   <div class="markdown level1 summary"><p>Summarizes the specified percentage.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
+
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Document Summarize(float percentage, TextSummarizationLanguage textSummarizationLanguage)</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
-        <td><span class="parametername">percentage</span></td>
-        <td><p>The percentage of the text to use.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Enlighten.TextSummarization.Enum.TextSummarizationLanguage.html">TextSummarizationLanguage</a></td>
-        <td><span class="parametername">textSummarizationLanguage</span></td>
-        <td><p>The text summarization language.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Enlighten.Document.html">Document</a></td>
-        <td><p>The summarized text</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>percentage</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The percentage of the text to use.</p>
+</dd>
+    <dt><code>textSummarizationLanguage</code> <a class="xref" href="Enlighten.TextSummarization.Enum.TextSummarizationLanguage.html">TextSummarizationLanguage</a></dt>
+    <dd><p>The text summarization language.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Enlighten.Document.html">Document</a></dt>
+    <dd><p>The summarized text</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
-                </div>
 
-                <div class="copyright-footer">
-                    <span>&#169; James Craig. All rights reserved.</span>
-                </div>
-            </main>
+        <div class="contribution d-print-none">
+          <a href="https://github.com/JaCraig/Enlighten/blob/master/Enlighten/Document.cs/#L16" class="edit-link">Edit this page</a>
         </div>
 
 
-        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-        <script type="text/javascript" src="../styles/jquery.twbsPagination.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js"></script>
-        <script type="text/javascript" src="../styles/url.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/anchor-js@5.0.0/anchor.min.js"></script>
-        <script type="text/javascript" src="../styles/docfx.js"></script>
-        <script type="text/javascript" src="../styles/main.js"></script>
-        <script type="text/javascript" src="../styles/singulink.js"></script>    </body>
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <strong><a href='https://github.com/JaCraig/Enlighten'>Open in Github</a></strong>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
