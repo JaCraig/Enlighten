@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.41"></a>
+## [2.0.41](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.41) (2023-12-12)
+
+### Bug Fixes
+
+* bump the dependencies group with 1 update ([e7f1bfb](https://www.github.com/JaCraig/Enlighten/commit/e7f1bfb729fb1b5be975c89071601930592a0881))
+
+### Other
+
+* Merge pull request #100 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-1725126a36 ([2ab1cd0](https://www.github.com/JaCraig/Enlighten/commit/2ab1cd001448560c1b19143260e550efb3512c72))
+* Merge pull request #101 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-6095d6a029 ([4f1bdaf](https://www.github.com/JaCraig/Enlighten/commit/4f1bdafb2756621a5e93dc2103af7d9f297135db))
+* Merge pull request #102 from JaCraig/dependabot/github_actions/dependencies-9d15ffb50c ([efe4a9d](https://www.github.com/JaCraig/Enlighten/commit/efe4a9da772a5b004ed65c89a3a7e84a53fc8215))
+* Merge pull request #103 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-9380cae661 ([878703d](https://www.github.com/JaCraig/Enlighten/commit/878703d6548f1effbd7d81ad99e33fcf79b9e5ad))
+* Merge pull request #104 from JaCraig/dependabot/nuget/dependencies-919a5fde98 ([f0e5678](https://www.github.com/JaCraig/Enlighten/commit/f0e567823796115effe96ef5405d62e06076d215))
+* Merge pull request #98 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-e099decf7a ([2c2ce9c](https://www.github.com/JaCraig/Enlighten/commit/2c2ce9cb7c565b276a79b20cc9396f8c68f635ee))
+* Merge pull request #99 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-494264589d ([ebe9882](https://www.github.com/JaCraig/Enlighten/commit/ebe98826770774cd866f9aaf9f48998c972de9d7))
+* bump the dependencies group in /Enlighten.Tests with 1 update ([9f97174](https://www.github.com/JaCraig/Enlighten/commit/9f971749c13a636fb79ed732b15e1252383a6e71))
+* bump the dependencies group in /Enlighten.Tests with 1 update ([5f09b35](https://www.github.com/JaCraig/Enlighten/commit/5f09b35abedb7fabe414cabbd536c76a50b2c96a))
+* bump the dependencies group in /Enlighten.Tests with 1 update ([ca21e98](https://www.github.com/JaCraig/Enlighten/commit/ca21e9829c8669687baac39e8c432114a1c9d610))
+* bump the dependencies group in /Enlighten.Tests with 1 update ([32ae0a7](https://www.github.com/JaCraig/Enlighten/commit/32ae0a7c620a199042fbcc9a90630a8ea97ce05d))
+* bump the dependencies group in /Enlighten.Tests with 2 updates ([89b631c](https://www.github.com/JaCraig/Enlighten/commit/89b631c3be808a0d57aeb1d22f67fcdae52aad87))
+* bump the dependencies group with 1 update ([7b30d03](https://www.github.com/JaCraig/Enlighten/commit/7b30d0307af619ca41434f3e68f18187d7534b6a))
+* fixing doc gen ([e8651c1](https://www.github.com/JaCraig/Enlighten/commit/e8651c1fef96c4e29fdc03a78072313a1eda5b2d))
+
 <a name="2.0.40"></a>
 ## [2.0.40](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.40) (2023-11-23)
 
