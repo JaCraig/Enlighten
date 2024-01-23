@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.48"></a>
+## [2.0.48](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.48) (2024-01-23)
+
+### Bug Fixes
+
+* bump the dependencies group with 1 update ([a51aa16](https://www.github.com/JaCraig/Enlighten/commit/a51aa164f2241e4f3a921927e104302913503431))
+
+### Other
+
+* Merge pull request #127 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-fe356a0f01 ([751614a](https://www.github.com/JaCraig/Enlighten/commit/751614a036f80c062a9b10b1041a565b0bdc6553))
+* Merge pull request #128 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-5fbe0c1566 ([b5763e3](https://www.github.com/JaCraig/Enlighten/commit/b5763e3e00bfc00221edffa3621b283339744afd))
+* Merge pull request #129 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-3103ae00d9 ([70d2ed3](https://www.github.com/JaCraig/Enlighten/commit/70d2ed3932f7ba3dd740c316adc8a463d5c13d13))
+* Merge pull request #130 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-4da3577a30 ([34ba23c](https://www.github.com/JaCraig/Enlighten/commit/34ba23c876918eb4ce5c79ea167f5bff2329db62))
+* Merge pull request #133 from JaCraig/dependabot/nuget/dependencies-f747b468ae ([050e9ac](https://www.github.com/JaCraig/Enlighten/commit/050e9ac859927ea8ae5d706e088132a10b6367a5))
+* bump the dependencies group in /Enlighten.Tests with 1 update ([6b56b4e](https://www.github.com/JaCraig/Enlighten/commit/6b56b4ef90e163bd898ab1380118b520cc19c3b5))
+* bump the dependencies group in /Enlighten.Tests with 1 update ([c932f45](https://www.github.com/JaCraig/Enlighten/commit/c932f457b45f184d8217db86b6241649343392f3))
+* bump the dependencies group in /Enlighten.Tests with 1 update ([19adf56](https://www.github.com/JaCraig/Enlighten/commit/19adf56934e02ec1f724bc434fe197cde2d1e618))
+* bump the dependencies group in /Enlighten.Tests with 2 updates ([4180c9e](https://www.github.com/JaCraig/Enlighten/commit/4180c9e8093cffb4bbe6fa28273a6a8e167e5470))
+
 <a name="2.0.47"></a>
 ## [2.0.47](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.47) (2024-01-11)
 
