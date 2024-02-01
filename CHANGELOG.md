@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.51"></a>
+## [2.0.51](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.51) (2024-02-01)
+
+### Bug Fixes
+
+* bump the dependencies group with 1 update ([df09aa6](https://www.github.com/JaCraig/Enlighten/commit/df09aa6014579cad5ce3ff8639c95f314581b713))
+
+### Other
+
+* Merge pull request #142 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-c383803938 ([5296395](https://www.github.com/JaCraig/Enlighten/commit/52963956ae19d1a8d336c1740dc17657182bd52a))
+* Merge pull request #143 from JaCraig/dependabot/nuget/dependencies-81f6f115a5 ([9101cd0](https://www.github.com/JaCraig/Enlighten/commit/9101cd0d5e18547eff31234045c4192f6cf451b8))
+* bump the dependencies group in /Enlighten.Tests with 1 update ([7a03c02](https://www.github.com/JaCraig/Enlighten/commit/7a03c0249492e52bb7bd69a53f63e18e678cbaa4))
+
 <a name="2.0.50"></a>
 ## [2.0.50](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.50) (2024-01-30)
 
