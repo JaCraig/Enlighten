@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.71"></a>
+## [2.0.71](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.71) (2024-04-11)
+
+### Bug Fixes
+
+* bump FileCurator from 4.0.73 to 4.0.74 in the dependencies group ([11a3f82](https://www.github.com/JaCraig/Enlighten/commit/11a3f825ba917d7259f6e761ac2b4a55366decbd))
+
+### Other
+
+* Merge pull request #199 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-3929d00113 ([ca6d4d6](https://www.github.com/JaCraig/Enlighten/commit/ca6d4d6cded3af967cf53557df7a5f31cc96c07c))
+* Merge pull request #200 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-bba4a47fc6 ([44777b3](https://www.github.com/JaCraig/Enlighten/commit/44777b3fe1a616edabd8946963138844886dec74))
+* Merge pull request #201 from JaCraig/dependabot/github_actions/dependencies-45223d3826 ([c7f356d](https://www.github.com/JaCraig/Enlighten/commit/c7f356d6266d46be94e68b4c0817c00ad8dfaa60))
+* Merge pull request #202 from JaCraig/dependabot/nuget/dependencies-80771566af ([1fb79bc](https://www.github.com/JaCraig/Enlighten/commit/1fb79bc6020c4248779b4e7742cdeaa2ba6d5123))
+* bump peaceiris/actions-gh-pages in the dependencies group ([4524745](https://www.github.com/JaCraig/Enlighten/commit/45247454ca310f5bf9f7de5d3471a6e1328f4e75))
+* bump the dependencies group in /Enlighten.Tests with 1 update ([75a9a89](https://www.github.com/JaCraig/Enlighten/commit/75a9a89f050d262d7a9c902df1c5d5aab77d929a))
+* bump the dependencies group in /Enlighten.Tests with 1 update ([d2d9634](https://www.github.com/JaCraig/Enlighten/commit/d2d9634a778dc858143b12ff100c5263761543b4))
+
 <a name="2.0.70"></a>
 ## [2.0.70](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.70) (2024-04-01)
 
