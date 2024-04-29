@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.74"></a>
+## [2.0.74](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.74) (2024-04-29)
+
+### Bug Fixes
+
+* bump versionize from 1.22.0 to 1.23.0 in the dependencies group ([9eb22da](https://www.github.com/JaCraig/Enlighten/commit/9eb22da1e6f77484601ff743a358f3c1c79b555d))
+
+### Other
+
+* Merge pull request #209 from JaCraig/dependabot/github_actions/dependencies-67cf71b959 ([a77e425](https://www.github.com/JaCraig/Enlighten/commit/a77e425568f5c412aa1755b2abe740db36b21a04))
+* Merge pull request #210 from JaCraig/dependabot/nuget/dependencies-6d2d24f1fd ([d4cd3ad](https://www.github.com/JaCraig/Enlighten/commit/d4cd3ad780bd2c8b9c0cc056d2870458318d92c6))
+* bump dependabot/fetch-metadata in the dependencies group ([c61a6b3](https://www.github.com/JaCraig/Enlighten/commit/c61a6b3ca879b84269b0741faa9ba04851c597bf))
+
 <a name="2.0.73"></a>
 ## [2.0.73](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.73) (2024-04-16)
 
