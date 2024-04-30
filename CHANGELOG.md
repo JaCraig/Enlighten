@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.75"></a>
+## [2.0.75](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.75) (2024-04-30)
+
+### Bug Fixes
+
+* bump the dependencies group with 2 updates ([c2dc5a8](https://www.github.com/JaCraig/Enlighten/commit/c2dc5a85c2c69eda5fd2814a8d396beb03a38749))
+
+### Other
+
+* Merge pull request #211 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-10b8ce0db7 ([a973103](https://www.github.com/JaCraig/Enlighten/commit/a9731035c2b98ad55c16dfdb8d022d6ce1501dfa))
+* Merge pull request #212 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-7c64645fbf ([4e06ef8](https://www.github.com/JaCraig/Enlighten/commit/4e06ef840805eb3e1a41f0b13fe168664597cc79))
+* Merge pull request #213 from JaCraig/dependabot/nuget/dependencies-b80c681040 ([acbf6ce](https://www.github.com/JaCraig/Enlighten/commit/acbf6ce6df7758cf1a4ec7eb597f37e43e854208))
+* bump Mecha.xUnit in /Enlighten.Tests in the dependencies group ([ef8323b](https://www.github.com/JaCraig/Enlighten/commit/ef8323bfae4e044ee873a10000c16389f227ad05))
+* bump the dependencies group in /Enlighten.Tests with 2 updates ([589dc45](https://www.github.com/JaCraig/Enlighten/commit/589dc45bc58acbdc739d0e2ef4202dfb45e798b9))
+
 <a name="2.0.74"></a>
 ## [2.0.74](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.74) (2024-04-29)
 
