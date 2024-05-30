@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.81"></a>
+## [2.0.81](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.81) (2024-05-30)
+
+### Bug Fixes
+
+* bump FileCurator from 4.0.85 to 4.0.87 in the dependencies group ([65ac1c9](https://www.github.com/JaCraig/Enlighten/commit/65ac1c9df62ab237d0672a814c7a85afeef669fb))
+
+### Other
+
+* --- ([8d4ab66](https://www.github.com/JaCraig/Enlighten/commit/8d4ab6608fd916488fe65e1b39f23481d60a6ccf))
+* --- ([4dfe6b5](https://www.github.com/JaCraig/Enlighten/commit/4dfe6b59a3e8a2a3c2850b99ffd1a2b930eccb3a))
+* Merge pull request #228 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-2c9eff1097 ([d84a291](https://www.github.com/JaCraig/Enlighten/commit/d84a2918c56def7a312c7eb7c94d86d305804e2e))
+* Merge pull request #229 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-b7224192ad ([c1a84a0](https://www.github.com/JaCraig/Enlighten/commit/c1a84a0fccfbcf42f050aa6b405949684391c1f4))
+* Merge pull request #230 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-17bfdebd43 ([767b810](https://www.github.com/JaCraig/Enlighten/commit/767b810589d8ecab87eaa2aa1839277046427f7a))
+* Merge pull request #231 from JaCraig/dependabot/nuget/dependencies-79776c15e3 ([0acb7c3](https://www.github.com/JaCraig/Enlighten/commit/0acb7c3dff4befed1d27bb98c7b74da4e89d6eb0))
+* Merge pull request #232 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-d10d8338a5 ([cd1ffa8](https://www.github.com/JaCraig/Enlighten/commit/cd1ffa83476cf1fd0a0343dfa7dc25d8c3e95290))
+* Merge pull request #233 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-63bf006411 ([a3a489f](https://www.github.com/JaCraig/Enlighten/commit/a3a489fc18b3fd008c1f2861e6c0d07cb27daa65))
+* Merge pull request #234 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-e000669da3 ([9a3094b](https://www.github.com/JaCraig/Enlighten/commit/9a3094bdb86e5289054ed7c5f00a3524eb3b5c4c))
+* Merge pull request #235 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-d04a750083 ([1b9eeb8](https://www.github.com/JaCraig/Enlighten/commit/1b9eeb84583dc0adbcd3e2a3cd076c96dc2af327))
+* Merge pull request #236 from JaCraig/dependabot/nuget/dependencies-3112cd2313 ([12a9260](https://www.github.com/JaCraig/Enlighten/commit/12a926013709ab1d6f225b6fddfef5baf422e454))
+* bump Mecha.xUnit in /Enlighten.Tests in the dependencies group ([9e66d20](https://www.github.com/JaCraig/Enlighten/commit/9e66d20a0634f23bbd824cc877a0a3be23de0206))
+* bump Mecha.xUnit in /Enlighten.Tests in the dependencies group ([d3f0c42](https://www.github.com/JaCraig/Enlighten/commit/d3f0c42e805cff2aa62324cee8fd1a3b7c37b66a))
+* bump Mecha.xUnit in /Enlighten.Tests in the dependencies group ([6f0a1a2](https://www.github.com/JaCraig/Enlighten/commit/6f0a1a2ed81c08320f496817dfd0085229c3c0b6))
+* bump Microsoft.NET.Test.Sdk ([b6397c3](https://www.github.com/JaCraig/Enlighten/commit/b6397c3d056169bb65979a65bcf3f8003f010be3))
+* bump the dependencies group in /Enlighten.Tests with 2 updates ([1540c00](https://www.github.com/JaCraig/Enlighten/commit/1540c00b9780fd24ff7f7ad7dc0d5eb9bcee4f66))
+* bump the dependencies group in /Enlighten.Tests with 2 updates ([34ef109](https://www.github.com/JaCraig/Enlighten/commit/34ef10969e30ac4ff4c33e0d78a22af1ff99c9c1))
+
 <a name="2.0.80"></a>
 ## [2.0.80](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.80) (2024-05-16)
 
