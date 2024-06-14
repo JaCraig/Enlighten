@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.83"></a>
+## [2.0.83](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.83) (2024-06-14)
+
+### Bug Fixes
+
+* bump FileCurator from 4.0.88 to 4.0.89 in the dependencies group ([180736f](https://www.github.com/JaCraig/Enlighten/commit/180736ff1799934bd87070e73829c6c995909d70))
+
+### Other
+
+* Merge pull request #240 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-3467847402 ([941491f](https://www.github.com/JaCraig/Enlighten/commit/941491f6c94c63bae0f0490d67b10470020253e2))
+* Merge pull request #241 from JaCraig/dependabot/nuget/dependencies-92e42bd8ee ([e2bce9c](https://www.github.com/JaCraig/Enlighten/commit/e2bce9ca24185134cc67f3c5eb0f31b14db04453))
+* bump Mecha.xUnit in /Enlighten.Tests in the dependencies group ([ffbc094](https://www.github.com/JaCraig/Enlighten/commit/ffbc094c66b27ab80275f6b4bb83a9a74ac9b7a3))
+
 <a name="2.0.82"></a>
 ## [2.0.82](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.82) (2024-06-12)
 
