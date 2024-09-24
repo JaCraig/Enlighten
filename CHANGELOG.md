@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.104"></a>
+## [2.0.104](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.104) (2024-09-24)
+
+### Bug Fixes
+
+* bump FileCurator from 4.1.0 to 4.1.1 in the dependencies group ([5ce7ad2](https://www.github.com/JaCraig/Enlighten/commit/5ce7ad2847b8bbd2a4fb92ad06491fdb362122cf))
+
+### Other
+
+* Merge pull request #299 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-0a3d0dcfc4 ([08c4998](https://www.github.com/JaCraig/Enlighten/commit/08c49989c361eac5ea5f2d1be2854bb89d3ba0b5))
+* Merge pull request #300 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-e833257e60 ([ae0a54a](https://www.github.com/JaCraig/Enlighten/commit/ae0a54aff7f12e12f8ced095beab36c8fbf2dc7c))
+* Merge pull request #301 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-49bc56e7b9 ([9dd7011](https://www.github.com/JaCraig/Enlighten/commit/9dd70116f127050615aec6091a40fd353473832a))
+* Merge pull request #302 from JaCraig/dependabot/nuget/dependencies-56773b0248 ([bcc1869](https://www.github.com/JaCraig/Enlighten/commit/bcc186963969634e2ca9c836570b8e8f87d06ceb))
+* bump Mecha.xUnit in /Enlighten.Tests in the dependencies group ([880c659](https://www.github.com/JaCraig/Enlighten/commit/880c659dcbe885b4a2cef8024c8824adeea5f3b2))
+* bump the dependencies group in /Enlighten.Tests with 2 updates ([fabcefc](https://www.github.com/JaCraig/Enlighten/commit/fabcefca0b1cac98455fb166bcb39969a27a0ea8))
+* bump xunit in /Enlighten.Tests in the dependencies group ([ca73a53](https://www.github.com/JaCraig/Enlighten/commit/ca73a530ea985f10eb9074ad1d1db33dc424e515))
+
 <a name="2.0.103"></a>
 ## [2.0.103](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.103) (2024-09-17)
 
