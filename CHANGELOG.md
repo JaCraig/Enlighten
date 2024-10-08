@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.107"></a>
+## [2.0.107](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.107) (2024-10-08)
+
+### Bug Fixes
+
+* bump FileCurator from 4.1.3 to 4.1.4 in the dependencies group ([bb4841a](https://www.github.com/JaCraig/Enlighten/commit/bb4841a9cc5fa5c4146ac1fd7638e6e1c1eaafee))
+
+### Other
+
+* Merge pull request #310 from JaCraig/dependabot/nuget/dependencies-14cd457a70 ([1d2bcee](https://www.github.com/JaCraig/Enlighten/commit/1d2bceeb80f1d524b004019b90472c0321828a4a))
+
 <a name="2.0.106"></a>
 ## [2.0.106](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.106) (2024-10-02)
 
