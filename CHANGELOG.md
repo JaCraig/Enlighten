@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="2.0.110"></a>
+## [2.0.110](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.110) (2024-10-29)
+
+### Bug Fixes
+
+* bump versionize from 1.27.0 to 2.0.0 in the dependencies group ([74bfd32](https://www.github.com/JaCraig/Enlighten/commit/74bfd32cda66b8039e647fdb117fface30ea2505))
+* bump versionize from 2.0.0 to 2.1.0 in the dependencies group ([6b893a5](https://www.github.com/JaCraig/Enlighten/commit/6b893a508bfef365c51b320968b51af6310acd53))
+
+### Other
+
+* Merge pull request #315 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-006c3a6508 ([6a4176b](https://www.github.com/JaCraig/Enlighten/commit/6a4176beb9384498828cb4aa1dd98fb588bfdd24))
+* Merge pull request #316 from JaCraig/dependabot/nuget/dependencies-9c36df7c76 ([0641726](https://www.github.com/JaCraig/Enlighten/commit/06417266433b70d949b51c9fe9355c04b7a2bc97))
+* Merge pull request #317 from JaCraig/dependabot/nuget/dependencies-3894128c1d ([e9050f7](https://www.github.com/JaCraig/Enlighten/commit/e9050f7c4de9eb9b64edc1e47b71fc34083bc8f3))
+* Merge pull request #318 from JaCraig/dependabot/github_actions/dependencies-18190d55f2 ([409bb51](https://www.github.com/JaCraig/Enlighten/commit/409bb51e976dc5058cb3394434f81e6c747967b9))
+* bump actions/setup-dotnet in the dependencies group ([ec210fe](https://www.github.com/JaCraig/Enlighten/commit/ec210fe559085d645f6b32e4b470e0a566443d4b))
+* bump Mecha.xUnit in /Enlighten.Tests in the dependencies group ([38a10cf](https://www.github.com/JaCraig/Enlighten/commit/38a10cfe9b25c2586eb2653ee38418d1d1866f04))
+* Refactor versionize command in dotnet-publish workflow ([88de3ad](https://www.github.com/JaCraig/Enlighten/commit/88de3ad270502403512decfadfe21759f28ffcfc))
+
 <a name="2.0.109"></a>
 ## [2.0.109](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.109) (2024-10-11)
 
