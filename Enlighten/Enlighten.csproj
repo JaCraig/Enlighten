@@ -4,7 +4,7 @@
     <Description>Enlighten is a set of tools to help with natural language processing.</Description>
     <AssemblyTitle>Enlighten</AssemblyTitle>
     <Authors>James Craig</Authors>
-	  <TargetFrameworks>net6.0</TargetFrameworks>
+	  <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>Enlighten</AssemblyName>
     <PackageId>Enlighten</PackageId>
@@ -61,10 +61,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FileCurator" Version="4.1.13" />
+    <PackageReference Include="FileCurator" Version="5.0.0" />
     <PackageReference Include="System.Memory" Version="4.6.0" />
 	  <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
-	  <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="7.0.4">
+	  <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="9.0.0">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 	  </PackageReference>

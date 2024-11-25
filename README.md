@@ -31,8 +31,8 @@ To use Enlighten in your C# project, follow these steps:
 2. **Initializing the Library**: Create an instance of the Enlighten class to start using its methods and features:
 
    ```csharp
-   // Add the library and dependencies to your ServiceCollection using the AddCanisterModules method
-   var Services = new ServiceCollection()?.AddCanisterModules()?.BuildServiceProvider();
+   // Add the library and dependencies to your ServiceCollection using the RegisterEnlighten method
+   var Services = new ServiceCollection()?.RegisterEnlighten()?.BuildServiceProvider();
    // Get the Pipeline service from the ServiceCollection
    var DefaultPipeline = Services.GetService<Pipeline>();
    ```

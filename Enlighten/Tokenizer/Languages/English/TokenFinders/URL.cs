@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-using BigBook;
+using BigBook.ExtensionMethods;
 using Enlighten.Tokenizer.BaseClasses;
 using Enlighten.Tokenizer.Languages.English.Enums;
 using Enlighten.Tokenizer.Utils;
@@ -46,9 +46,9 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
 
             var StartPosition = tokenizer.Index;
 
-            var TempSlice = tokenizer.Slice(StartPosition, StartPosition + 7);
+            Span<char> TempSlice = tokenizer.Slice(StartPosition, StartPosition + 7);
 
-            if (TempSlice[0] != 'f' && TempSlice[0] != 'h' && TempSlice[0] != 's' && TempSlice[0] != 'w')
+            if (TempSlice[0] is not 'f' and not 'h' and not 's' and not 'w')
                 return null;
 
             while (!tokenizer.End() && !char.IsWhiteSpace(tokenizer.Current))

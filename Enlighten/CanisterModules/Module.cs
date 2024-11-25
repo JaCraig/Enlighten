@@ -15,20 +15,6 @@ limitations under the License.
 */
 
 using Canister.Interfaces;
-using Enlighten.FeatureExtraction.Interfaces;
-using Enlighten.Frequency;
-using Enlighten.Indexer.Interfaces;
-using Enlighten.Inflector.Interfaces;
-using Enlighten.NameFinder.Interfaces;
-using Enlighten.Normalizer.Interfaces;
-using Enlighten.POSTagger.Interfaces;
-using Enlighten.SentenceDetection.Interfaces;
-using Enlighten.Stemmer.Interfaces;
-using Enlighten.StopWords.Interfaces;
-using Enlighten.SynonymFinder.Interfaces;
-using Enlighten.TextSummarization.Interfaces;
-using Enlighten.Tokenizer.Interfaces;
-using Enlighten.Tokenizer.Languages.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Enlighten.CanisterModules
@@ -48,37 +34,6 @@ namespace Enlighten.CanisterModules
         /// Loads the module using the bootstrapper
         /// </summary>
         /// <param name="bootstrapper">The bootstrapper.</param>
-        public void Load(IServiceCollection bootstrapper)
-        {
-            bootstrapper?.AddAllSingleton<ITokenizerLanguage>()
-                        ?.AddAllSingleton<ITokenizer>()
-                        ?.AddAllSingleton<IStemmerLanguage>()
-                        ?.AddAllSingleton<IStemmer>()
-                        ?.AddAllSingleton<IDetector>()
-                        ?.AddAllSingleton<ISentenceDetector>()
-                        ?.AddAllSingleton<IPOSTagger>()
-                        ?.AddAllSingleton<IPOSTaggerLanguage>()
-                        ?.AddAllSingleton<IEnglishTokenFinder>()
-                        ?.AddSingleton<FrequencyAnalyzer>()
-                        ?.AddAllSingleton<ITextSummarizer>()
-                        ?.AddAllSingleton<ITextSummarizerLanguage>()
-                        ?.AddAllSingleton<IInflector>()
-                        ?.AddAllSingleton<IInflectorLanguage>()
-                        ?.AddAllSingleton<ISynonymFinder>()
-                        ?.AddAllSingleton<ISynonymFinderLanguage>()
-                        ?.AddAllSingleton<IFeatureExtractor>()
-                        ?.AddAllSingleton<IFeatureExtractorLanguage>()
-                        ?.AddAllSingleton<IStopWordsManager>()
-                        ?.AddAllSingleton<IStopWordsLanguage>()
-                        ?.AddAllSingleton<INormalizer>()
-                        ?.AddAllSingleton<ITextNormalizer>()
-                        ?.AddAllSingleton<INormalizerManager>()
-                        ?.AddTransient<Pipeline>()
-                        ?.AddAllSingleton<IIndexer>()
-                        ?.AddAllSingleton<IIndexCreator>()
-                        ?.AddTransient<Index>()
-                        ?.AddAllSingleton<IFinder>()
-                        ?.AddAllSingleton<IEntityFinder>();
-        }
+        public void Load(IServiceCollection bootstrapper) => bootstrapper?.RegisterEnlighten();
     }
 }
