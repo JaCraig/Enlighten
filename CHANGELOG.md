@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.0"></a>
+## [3.0.0](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.0.0) (2024-11-25)
+
+### Features
+
+* Centralize workflows, update frameworks, and refactor code ([4185ec9](https://www.github.com/JaCraig/Enlighten/commit/4185ec9d27f4fbbc8834fa2001d5ecd83579cadb))
+
+### Breaking Changes
+
+* Centralize workflows, update frameworks, and refactor code ([4185ec9](https://www.github.com/JaCraig/Enlighten/commit/4185ec9d27f4fbbc8834fa2001d5ecd83579cadb))
+
+### Other
+
+* Merge pull request #333 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-956fc5c724 ([bbc6bf1](https://www.github.com/JaCraig/Enlighten/commit/bbc6bf1e7646dbbee2d9cbf91789cf778d904b58))
+* Merge pull request #334 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-617062173c ([90b0670](https://www.github.com/JaCraig/Enlighten/commit/90b0670d473c88811008beecc8a8de7a7c520553))
+* bump Mecha.xUnit in /Enlighten.Tests in the dependencies group ([7690bc9](https://www.github.com/JaCraig/Enlighten/commit/7690bc9890f679b91abe936664991f75a63f9294))
+* bump Microsoft.NET.Test.Sdk ([85b9e41](https://www.github.com/JaCraig/Enlighten/commit/85b9e417ced7488e4333252f3a42f2957d05daa5))
+* update husky and versionize tool versions, disable rollForward ([b15e892](https://www.github.com/JaCraig/Enlighten/commit/b15e892602889abc33400fb2c1c4096c24278a06))
+
 <a name="2.0.118"></a>
 ## [2.0.118](https://www.github.com/JaCraig/Enlighten/releases/tag/v2.0.118) (2024-11-13)
 
