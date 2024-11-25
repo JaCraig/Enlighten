@@ -98,8 +98,8 @@
 <p>dotnet add package Enlighten</p>
 </li>
 <li><p><strong>Initializing the Library</strong>: Create an instance of the Enlighten class to start using its methods and features:</p>
-<pre><code class="lang-csharp">// Add the library and dependencies to your ServiceCollection using the AddCanisterModules method
-var Services = new ServiceCollection()?.AddCanisterModules()?.BuildServiceProvider();
+<pre><code class="lang-csharp">// Add the library and dependencies to your ServiceCollection using the RegisterEnlighten method
+var Services = new ServiceCollection()?.RegisterEnlighten()?.BuildServiceProvider();
 // Get the Pipeline service from the ServiceCollection
 var DefaultPipeline = Services.GetService&lt;Pipeline&gt;();
 </code></pre>

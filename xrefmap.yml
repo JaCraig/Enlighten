@@ -7534,6 +7534,15 @@ references:
   fullName.vb: Microsoft.Extensions.DependencyInjection.CanisterRegistration.RegisterEnlighten(Canister.Interfaces.ICanisterConfiguration)
   nameWithType: CanisterRegistration.RegisterEnlighten(ICanisterConfiguration?)
   nameWithType.vb: CanisterRegistration.RegisterEnlighten(ICanisterConfiguration)
+- uid: Microsoft.Extensions.DependencyInjection.CanisterRegistration.RegisterEnlighten(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: RegisterEnlighten(IServiceCollection?)
+  href: api/Microsoft.Extensions.DependencyInjection.CanisterRegistration.html#Microsoft_Extensions_DependencyInjection_CanisterRegistration_RegisterEnlighten_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:Microsoft.Extensions.DependencyInjection.CanisterRegistration.RegisterEnlighten(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: RegisterEnlighten(IServiceCollection)
+  fullName: Microsoft.Extensions.DependencyInjection.CanisterRegistration.RegisterEnlighten(Microsoft.Extensions.DependencyInjection.IServiceCollection?)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.CanisterRegistration.RegisterEnlighten(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: CanisterRegistration.RegisterEnlighten(IServiceCollection?)
+  nameWithType.vb: CanisterRegistration.RegisterEnlighten(IServiceCollection)
 - uid: Microsoft.Extensions.DependencyInjection.CanisterRegistration.RegisterEnlighten*
   name: RegisterEnlighten
   href: api/Microsoft.Extensions.DependencyInjection.CanisterRegistration.html#Microsoft_Extensions_DependencyInjection_CanisterRegistration_RegisterEnlighten_
