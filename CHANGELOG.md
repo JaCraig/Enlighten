@@ -2,6 +2,50 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.1"></a>
+## [3.0.1](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.0.1) (2025-01-30)
+
+### Bug Fixes
+
+* bump FileCurator in /Enlighten in the dependencies group ([0e6c781](https://www.github.com/JaCraig/Enlighten/commit/0e6c781a88082717183ca2808a02bbe7134e7115))
+* **dependencies:** update package dependencies ([6f670e4](https://www.github.com/JaCraig/Enlighten/commit/6f670e43a6a0e417e9d2cf50bb832fb95935a5c9))
+
+### Other
+
+* Merge pull request #335 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-6c34fbe01a ([14fb5aa](https://www.github.com/JaCraig/Enlighten/commit/14fb5aaa52b4693b2188d19705d914810043cf09))
+* Merge pull request #336 from JaCraig/dependabot/nuget/Enlighten.Example/dependencies-0eb5dce03c ([977c6dd](https://www.github.com/JaCraig/Enlighten/commit/977c6ddacf40f057418eefeeed7db919c566ff62))
+* Merge pull request #337 from JaCraig/dependabot/nuget/Enlighten.SpeedTests/dependencies-624a18c145 ([8542942](https://www.github.com/JaCraig/Enlighten/commit/8542942034cb63b5a965fb19ec4091a49bd98ac7))
+* Merge pull request #338 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-ae4dc51d69 ([281d437](https://www.github.com/JaCraig/Enlighten/commit/281d4371ab1797b1d89fd10c42484326822d237e))
+* Merge pull request #339 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-637ad84d5b ([6f5aca2](https://www.github.com/JaCraig/Enlighten/commit/6f5aca2ab02b3ab10f72e731fe914033f374f9c3))
+* Merge pull request #340 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-37a7915f86 ([01d892d](https://www.github.com/JaCraig/Enlighten/commit/01d892d471cfcfef441017967d2fac0152ed98e9))
+* Merge pull request #341 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-2d63af336a ([ae4eda0](https://www.github.com/JaCraig/Enlighten/commit/ae4eda0e257b61b60ab3b260d7861cc7d656d0eb))
+* Merge pull request #342 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-109af05799 ([c025d7d](https://www.github.com/JaCraig/Enlighten/commit/c025d7df3eb485838f486b3c0599921fed3f5f41))
+* Merge pull request #343 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-a3eea154c6 ([aeac60a](https://www.github.com/JaCraig/Enlighten/commit/aeac60a70594524e65c8628d32f161456c51966b))
+* Merge pull request #344 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-293c44675e ([837a376](https://www.github.com/JaCraig/Enlighten/commit/837a376e883e91594f179e18564678f1092ab97d))
+* Merge pull request #345 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-8e84d5e7c4 ([567de57](https://www.github.com/JaCraig/Enlighten/commit/567de574c53d87b96eea8cb23bea0c727328b3e0))
+* Merge pull request #346 from JaCraig/dependabot/nuget/Enlighten.Example/dependencies-111a81e667 ([27dba4d](https://www.github.com/JaCraig/Enlighten/commit/27dba4da8fd0afcb8ea470513428acd17ef113ba))
+* Merge pull request #347 from JaCraig/dependabot/nuget/Enlighten.SpeedTests/dependencies-111a81e667 ([90e1d22](https://www.github.com/JaCraig/Enlighten/commit/90e1d22f98b55f1f73237778faa3ec717c872691))
+* Merge pull request #348 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-cdc5eca79b ([c434c56](https://www.github.com/JaCraig/Enlighten/commit/c434c560dd8f91c9c10fc256d3e2678a00a85f1c))
+* Merge pull request #349 from JaCraig/dependabot/nuget/Enlighten.SpeedTests/dependencies-836e21bf11 ([ee7ac2a](https://www.github.com/JaCraig/Enlighten/commit/ee7ac2af27e3049c0a3e0f53d3f3aeab6e356cf1))
+* Merge pull request #350 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-d90f1eecb3 ([27fbadf](https://www.github.com/JaCraig/Enlighten/commit/27fbadff7c598aa642892dc3f65bcebf5af1ad4b))
+* Merge pull request #351 from JaCraig/dependabot/nuget/Enlighten/dependencies-b23f8c52ef ([2cf0ed9](https://www.github.com/JaCraig/Enlighten/commit/2cf0ed99a554d5363b8349b51830e24dc910224d))
+* bump FileCurator ([8006f78](https://www.github.com/JaCraig/Enlighten/commit/8006f7856e7002f301430a671b5b335037e2e1ad))
+* bump FileCurator ([e5351d9](https://www.github.com/JaCraig/Enlighten/commit/e5351d96d533d7a3cfe47ee4f3ff455a08966976))
+* bump FileCurator in /Enlighten.Example in the dependencies group ([bf43eb2](https://www.github.com/JaCraig/Enlighten/commit/bf43eb2fd86dd84c0970a70b0e548f6c112d72c0))
+* bump husky in /Enlighten.Example in the dependencies group ([0749584](https://www.github.com/JaCraig/Enlighten/commit/074958490723c3d630794a048a7de9e88ae73d5f))
+* bump Mecha.xUnit in /Enlighten.Tests in the dependencies group ([dd1e8f7](https://www.github.com/JaCraig/Enlighten/commit/dd1e8f715583a318e970517068ce35735689b22b))
+* bump Mecha.xUnit in /Enlighten.Tests in the dependencies group ([fc9ef1b](https://www.github.com/JaCraig/Enlighten/commit/fc9ef1ba8c4f075bb29076464f6e42662e88ba1e))
+* bump Mecha.xUnit in /Enlighten.Tests in the dependencies group ([4065160](https://www.github.com/JaCraig/Enlighten/commit/4065160f86792608cfd31e452b8193a5e1198895))
+* bump Mecha.xUnit in /Enlighten.Tests in the dependencies group ([a6a426d](https://www.github.com/JaCraig/Enlighten/commit/a6a426d4a1575cbd21c4d035bafaf3f173b07385))
+* bump Mecha.xUnit in /Enlighten.Tests in the dependencies group ([34fcc83](https://www.github.com/JaCraig/Enlighten/commit/34fcc83e8a52634305565e7c2738aa62814a801e))
+* bump Mecha.xUnit in /Enlighten.Tests in the dependencies group ([a5ce412](https://www.github.com/JaCraig/Enlighten/commit/a5ce412201673f276044ce3a20396a117b758f00))
+* bump Mecha.xUnit in /Enlighten.Tests in the dependencies group ([c2bcb8f](https://www.github.com/JaCraig/Enlighten/commit/c2bcb8f7de130a1cfb926d113dac0f41d70b28a0))
+* bump the dependencies group in /Enlighten.Tests with 2 updates ([5842e08](https://www.github.com/JaCraig/Enlighten/commit/5842e086a3ab21651bc297031995e16308ebbc69))
+* bump the dependencies group in /Enlighten.Tests with 2 updates ([86626ef](https://www.github.com/JaCraig/Enlighten/commit/86626efad7774d367f55fdac7f5adc4c6874c295))
+* bump the dependencies group in /Enlighten.Tests with 2 updates ([6326a31](https://www.github.com/JaCraig/Enlighten/commit/6326a315c7940ecd4f00baa26af48e328ee10353))
+* bump versionize ([b810e28](https://www.github.com/JaCraig/Enlighten/commit/b810e280a8a73143c1cfbaf6d3f3d9a4e3bcae02))
+* bump xunit.runner.visualstudio ([e64986c](https://www.github.com/JaCraig/Enlighten/commit/e64986c30f31550dbccfb2fa7e210e03089e6f50))
+
 <a name="3.0.0"></a>
 ## [3.0.0](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.0.0) (2024-11-25)
 
