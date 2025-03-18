@@ -18,7 +18,11 @@
           "relative_path": "api/Enlighten.CanisterModules.Module.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.CanisterModules.Module",
+      "Summary": "<p sourcefile=\"api/Enlighten.CanisterModules.Module.yml\" sourcestartlinenumber=\"1\">Canister module</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -28,7 +32,11 @@
           "relative_path": "api/Enlighten.CanisterModules.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.CanisterModules",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -38,7 +46,11 @@
           "relative_path": "api/Enlighten.Document.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Document",
+      "Summary": "<p sourcefile=\"api/Enlighten.Document.yml\" sourcestartlinenumber=\"1\">Document information holder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -48,7 +60,11 @@
           "relative_path": "api/Enlighten.Enums.Languages.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Enums.Languages",
+      "Summary": "<p sourcefile=\"api/Enlighten.Enums.Languages.yml\" sourcestartlinenumber=\"1\">Languages</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -58,7 +74,11 @@
           "relative_path": "api/Enlighten.Enums.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Enums",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -68,7 +88,11 @@
           "relative_path": "api/Enlighten.FeatureExtraction.DefaultFeatureExtractor.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.FeatureExtraction.DefaultFeatureExtractor",
+      "Summary": "<p sourcefile=\"api/Enlighten.FeatureExtraction.DefaultFeatureExtractor.yml\" sourcestartlinenumber=\"1\">Class handles basic text</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -78,7 +102,11 @@
           "relative_path": "api/Enlighten.FeatureExtraction.Enum.FeatureExtractionType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.FeatureExtraction.Enum.FeatureExtractionType",
+      "Summary": "<p sourcefile=\"api/Enlighten.FeatureExtraction.Enum.FeatureExtractionType.yml\" sourcestartlinenumber=\"1\">Feature extraction type</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -88,7 +116,11 @@
           "relative_path": "api/Enlighten.FeatureExtraction.Enum.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.FeatureExtraction.Enum",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -98,7 +130,11 @@
           "relative_path": "api/Enlighten.FeatureExtraction.Extractors.EnglishDefault.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.FeatureExtraction.Extractors.EnglishDefault",
+      "Summary": "<p sourcefile=\"api/Enlighten.FeatureExtraction.Extractors.EnglishDefault.yml\" sourcestartlinenumber=\"1\">English default extractor (uses TF-IDF)</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -108,7 +144,11 @@
           "relative_path": "api/Enlighten.FeatureExtraction.Extractors.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.FeatureExtraction.Extractors",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -118,7 +158,11 @@
           "relative_path": "api/Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor",
+      "Summary": "<p sourcefile=\"api/Enlighten.FeatureExtraction.Interfaces.IFeatureExtractor.yml\" sourcestartlinenumber=\"1\">Feature extractor interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -128,7 +172,11 @@
           "relative_path": "api/Enlighten.FeatureExtraction.Interfaces.IFeatureExtractorLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.FeatureExtraction.Interfaces.IFeatureExtractorLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.FeatureExtraction.Interfaces.IFeatureExtractorLanguage.yml\" sourcestartlinenumber=\"1\">Feature extractor language interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -138,7 +186,11 @@
           "relative_path": "api/Enlighten.FeatureExtraction.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.FeatureExtraction.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -148,7 +200,11 @@
           "relative_path": "api/Enlighten.FeatureExtraction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.FeatureExtraction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -158,7 +214,11 @@
           "relative_path": "api/Enlighten.Frequency.FrequencyAnalyzer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Frequency.FrequencyAnalyzer",
+      "Summary": "<p sourcefile=\"api/Enlighten.Frequency.FrequencyAnalyzer.yml\" sourcestartlinenumber=\"1\">Frequency Analyzer</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -168,7 +228,11 @@
           "relative_path": "api/Enlighten.Frequency.FrequencyResults.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Frequency.FrequencyResults",
+      "Summary": "<p sourcefile=\"api/Enlighten.Frequency.FrequencyResults.yml\" sourcestartlinenumber=\"1\">Frequency results</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -178,7 +242,11 @@
           "relative_path": "api/Enlighten.Frequency.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Frequency",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -188,7 +256,11 @@
           "relative_path": "api/Enlighten.Index.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Index",
+      "Summary": "<p sourcefile=\"api/Enlighten.Index.yml\" sourcestartlinenumber=\"1\">Index</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -198,7 +270,11 @@
           "relative_path": "api/Enlighten.Indexer.DefaultIndexer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Indexer.DefaultIndexer",
+      "Summary": "<p sourcefile=\"api/Enlighten.Indexer.DefaultIndexer.yml\" sourcestartlinenumber=\"1\">Default indexer</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -208,7 +284,11 @@
           "relative_path": "api/Enlighten.Indexer.Enums.IndexerType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Indexer.Enums.IndexerType",
+      "Summary": "<p sourcefile=\"api/Enlighten.Indexer.Enums.IndexerType.yml\" sourcestartlinenumber=\"1\">Indexer language</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -218,7 +298,11 @@
           "relative_path": "api/Enlighten.Indexer.Enums.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Indexer.Enums",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -228,7 +312,11 @@
           "relative_path": "api/Enlighten.Indexer.Indexers.InvertedIndex.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Indexer.Indexers.InvertedIndex",
+      "Summary": "<p sourcefile=\"api/Enlighten.Indexer.Indexers.InvertedIndex.yml\" sourcestartlinenumber=\"1\">Inverted index</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -238,7 +326,11 @@
           "relative_path": "api/Enlighten.Indexer.Indexers.InvertedIndexCreator.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Indexer.Indexers.InvertedIndexCreator",
+      "Summary": "<p sourcefile=\"api/Enlighten.Indexer.Indexers.InvertedIndexCreator.yml\" sourcestartlinenumber=\"1\">Inverted index builder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -248,7 +340,11 @@
           "relative_path": "api/Enlighten.Indexer.Indexers.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Indexer.Indexers",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -258,7 +354,11 @@
           "relative_path": "api/Enlighten.Indexer.Interfaces.IIndex.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Indexer.Interfaces.IIndex",
+      "Summary": "<p sourcefile=\"api/Enlighten.Indexer.Interfaces.IIndex.yml\" sourcestartlinenumber=\"1\">Index interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -268,7 +368,11 @@
           "relative_path": "api/Enlighten.Indexer.Interfaces.IIndexCreator.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Indexer.Interfaces.IIndexCreator",
+      "Summary": "<p sourcefile=\"api/Enlighten.Indexer.Interfaces.IIndexCreator.yml\" sourcestartlinenumber=\"1\">Index creator</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -278,7 +382,11 @@
           "relative_path": "api/Enlighten.Indexer.Interfaces.IIndexer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Indexer.Interfaces.IIndexer",
+      "Summary": "<p sourcefile=\"api/Enlighten.Indexer.Interfaces.IIndexer.yml\" sourcestartlinenumber=\"1\">Indexer interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -288,7 +396,11 @@
           "relative_path": "api/Enlighten.Indexer.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Indexer.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -298,7 +410,11 @@
           "relative_path": "api/Enlighten.Indexer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Indexer",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -308,7 +424,11 @@
           "relative_path": "api/Enlighten.Inflector.BaseClasses.InflectorBaseClass.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Inflector.BaseClasses.InflectorBaseClass",
+      "Summary": "<p sourcefile=\"api/Enlighten.Inflector.BaseClasses.InflectorBaseClass.yml\" sourcestartlinenumber=\"1\">Inflector base class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -318,7 +438,11 @@
           "relative_path": "api/Enlighten.Inflector.BaseClasses.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Inflector.BaseClasses",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -328,7 +452,11 @@
           "relative_path": "api/Enlighten.Inflector.DefaultInflector.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Inflector.DefaultInflector",
+      "Summary": "<p sourcefile=\"api/Enlighten.Inflector.DefaultInflector.yml\" sourcestartlinenumber=\"1\">Default inflector</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -338,7 +466,11 @@
           "relative_path": "api/Enlighten.Inflector.EnglishInflector.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Inflector.EnglishInflector",
+      "Summary": "<p sourcefile=\"api/Enlighten.Inflector.EnglishInflector.yml\" sourcestartlinenumber=\"1\">Default inflector</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -348,7 +480,11 @@
           "relative_path": "api/Enlighten.Inflector.Enums.InflectorLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Inflector.Enums.InflectorLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.Inflector.Enums.InflectorLanguage.yml\" sourcestartlinenumber=\"1\">Inflector language</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -358,7 +494,11 @@
           "relative_path": "api/Enlighten.Inflector.Enums.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Inflector.Enums",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -368,7 +508,11 @@
           "relative_path": "api/Enlighten.Inflector.Inflectors.ConjugationRule.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Inflector.Inflectors.ConjugationRule",
+      "Summary": "<p sourcefile=\"api/Enlighten.Inflector.Inflectors.ConjugationRule.yml\" sourcestartlinenumber=\"1\">Inflector rule</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -378,7 +522,11 @@
           "relative_path": "api/Enlighten.Inflector.Inflectors.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Inflector.Inflectors",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -388,7 +536,11 @@
           "relative_path": "api/Enlighten.Inflector.Interfaces.IInflector.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Inflector.Interfaces.IInflector",
+      "Summary": "<p sourcefile=\"api/Enlighten.Inflector.Interfaces.IInflector.yml\" sourcestartlinenumber=\"1\">Inflector interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -398,7 +550,11 @@
           "relative_path": "api/Enlighten.Inflector.Interfaces.IInflectorLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Inflector.Interfaces.IInflectorLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.Inflector.Interfaces.IInflectorLanguage.yml\" sourcestartlinenumber=\"1\">Inflector language interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -408,7 +564,11 @@
           "relative_path": "api/Enlighten.Inflector.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Inflector.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -418,7 +578,11 @@
           "relative_path": "api/Enlighten.Inflector.Rule.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Inflector.Rule",
+      "Summary": "<p sourcefile=\"api/Enlighten.Inflector.Rule.yml\" sourcestartlinenumber=\"1\">Inflector rule</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -428,7 +592,11 @@
           "relative_path": "api/Enlighten.Inflector.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Inflector",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -438,7 +606,11 @@
           "relative_path": "api/Enlighten.NameFinder.DefaultEntityFinder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.NameFinder.DefaultEntityFinder",
+      "Summary": "<p sourcefile=\"api/Enlighten.NameFinder.DefaultEntityFinder.yml\" sourcestartlinenumber=\"1\">Default name finder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -448,7 +620,11 @@
           "relative_path": "api/Enlighten.NameFinder.Enums.EntityFinderLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.NameFinder.Enums.EntityFinderLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.NameFinder.Enums.EntityFinderLanguage.yml\" sourcestartlinenumber=\"1\">Name finder language</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -458,7 +634,11 @@
           "relative_path": "api/Enlighten.NameFinder.Enums.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.NameFinder.Enums",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -468,7 +648,11 @@
           "relative_path": "api/Enlighten.NameFinder.Finders.DefaultFinder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.NameFinder.Finders.DefaultFinder",
+      "Summary": "<p sourcefile=\"api/Enlighten.NameFinder.Finders.DefaultFinder.yml\" sourcestartlinenumber=\"1\">Default name finder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -478,7 +662,11 @@
           "relative_path": "api/Enlighten.NameFinder.Finders.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.NameFinder.Finders",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -488,7 +676,11 @@
           "relative_path": "api/Enlighten.NameFinder.Interfaces.IEntityFinder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.NameFinder.Interfaces.IEntityFinder",
+      "Summary": "<p sourcefile=\"api/Enlighten.NameFinder.Interfaces.IEntityFinder.yml\" sourcestartlinenumber=\"1\">Name finder interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -498,7 +690,11 @@
           "relative_path": "api/Enlighten.NameFinder.Interfaces.IFinder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.NameFinder.Interfaces.IFinder",
+      "Summary": "<p sourcefile=\"api/Enlighten.NameFinder.Interfaces.IFinder.yml\" sourcestartlinenumber=\"1\">Finder interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -508,7 +704,11 @@
           "relative_path": "api/Enlighten.NameFinder.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.NameFinder.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -518,7 +718,11 @@
           "relative_path": "api/Enlighten.NameFinder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.NameFinder",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -528,7 +732,11 @@
           "relative_path": "api/Enlighten.Normalizer.Default.ASCIIFolder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Normalizer.Default.ASCIIFolder",
+      "Summary": "<p sourcefile=\"api/Enlighten.Normalizer.Default.ASCIIFolder.yml\" sourcestartlinenumber=\"1\">ASCII folder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -538,7 +746,11 @@
           "relative_path": "api/Enlighten.Normalizer.Default.HTMLToText.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Normalizer.Default.HTMLToText",
+      "Summary": "<p sourcefile=\"api/Enlighten.Normalizer.Default.HTMLToText.yml\" sourcestartlinenumber=\"1\">HTML to text normalizer</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -548,7 +760,11 @@
           "relative_path": "api/Enlighten.Normalizer.Default.LowerCase.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Normalizer.Default.LowerCase",
+      "Summary": "<p sourcefile=\"api/Enlighten.Normalizer.Default.LowerCase.yml\" sourcestartlinenumber=\"1\">Lower case normalizer</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -558,7 +774,11 @@
           "relative_path": "api/Enlighten.Normalizer.Default.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Normalizer.Default",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -568,7 +788,11 @@
           "relative_path": "api/Enlighten.Normalizer.DefaultNormalizer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Normalizer.DefaultNormalizer",
+      "Summary": "<p sourcefile=\"api/Enlighten.Normalizer.DefaultNormalizer.yml\" sourcestartlinenumber=\"1\">Default normalizer</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -578,7 +802,11 @@
           "relative_path": "api/Enlighten.Normalizer.Interfaces.INormalizer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Normalizer.Interfaces.INormalizer",
+      "Summary": "<p sourcefile=\"api/Enlighten.Normalizer.Interfaces.INormalizer.yml\" sourcestartlinenumber=\"1\">Normalizer interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -588,7 +816,11 @@
           "relative_path": "api/Enlighten.Normalizer.Interfaces.INormalizerManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Normalizer.Interfaces.INormalizerManager",
+      "Summary": "<p sourcefile=\"api/Enlighten.Normalizer.Interfaces.INormalizerManager.yml\" sourcestartlinenumber=\"1\">Normalizer manager interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -598,7 +830,11 @@
           "relative_path": "api/Enlighten.Normalizer.Interfaces.ITextNormalizer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Normalizer.Interfaces.ITextNormalizer",
+      "Summary": "<p sourcefile=\"api/Enlighten.Normalizer.Interfaces.ITextNormalizer.yml\" sourcestartlinenumber=\"1\">Text normalizer interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -608,7 +844,11 @@
           "relative_path": "api/Enlighten.Normalizer.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Normalizer.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -618,7 +858,11 @@
           "relative_path": "api/Enlighten.Normalizer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Normalizer",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -628,7 +872,11 @@
           "relative_path": "api/Enlighten.POSTagger.DefaultTagger.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.POSTagger.DefaultTagger",
+      "Summary": "<p sourcefile=\"api/Enlighten.POSTagger.DefaultTagger.yml\" sourcestartlinenumber=\"1\">Default part of speech tagger</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -638,7 +886,11 @@
           "relative_path": "api/Enlighten.POSTagger.Enum.BrillConditions.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.POSTagger.Enum.BrillConditions",
+      "Summary": "<p sourcefile=\"api/Enlighten.POSTagger.Enum.BrillConditions.yml\" sourcestartlinenumber=\"1\">Brill conditions</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -648,7 +900,11 @@
           "relative_path": "api/Enlighten.POSTagger.Enum.POSTaggerLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.POSTagger.Enum.POSTaggerLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.POSTagger.Enum.POSTaggerLanguage.yml\" sourcestartlinenumber=\"1\">Part of speech tagger language</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -658,7 +914,11 @@
           "relative_path": "api/Enlighten.POSTagger.Enum.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.POSTagger.Enum",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -668,7 +928,11 @@
           "relative_path": "api/Enlighten.POSTagger.Interfaces.IPOSTagger.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.POSTagger.Interfaces.IPOSTagger",
+      "Summary": "<p sourcefile=\"api/Enlighten.POSTagger.Interfaces.IPOSTagger.yml\" sourcestartlinenumber=\"1\">Part of speech tagger</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -678,7 +942,11 @@
           "relative_path": "api/Enlighten.POSTagger.Interfaces.IPOSTaggerLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.POSTagger.Interfaces.IPOSTaggerLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.POSTagger.Interfaces.IPOSTaggerLanguage.yml\" sourcestartlinenumber=\"1\">Part of speech language tagger</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -688,7 +956,11 @@
           "relative_path": "api/Enlighten.POSTagger.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.POSTagger.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -698,7 +970,11 @@
           "relative_path": "api/Enlighten.POSTagger.Taggers.BrillRule.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.POSTagger.Taggers.BrillRule",
+      "Summary": "<p sourcefile=\"api/Enlighten.POSTagger.Taggers.BrillRule.yml\" sourcestartlinenumber=\"1\">Brill rule</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -708,7 +984,11 @@
           "relative_path": "api/Enlighten.POSTagger.Taggers.LexiconRule.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.POSTagger.Taggers.LexiconRule",
+      "Summary": "<p sourcefile=\"api/Enlighten.POSTagger.Taggers.LexiconRule.yml\" sourcestartlinenumber=\"1\">Lexicon rule</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -718,7 +998,11 @@
           "relative_path": "api/Enlighten.POSTagger.Taggers.SimpleTagger.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.POSTagger.Taggers.SimpleTagger",
+      "Summary": "<p sourcefile=\"api/Enlighten.POSTagger.Taggers.SimpleTagger.yml\" sourcestartlinenumber=\"1\">Simple POS tagger</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -728,7 +1012,11 @@
           "relative_path": "api/Enlighten.POSTagger.Taggers.TagProbability.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.POSTagger.Taggers.TagProbability",
+      "Summary": "<p sourcefile=\"api/Enlighten.POSTagger.Taggers.TagProbability.yml\" sourcestartlinenumber=\"1\">Tag probability</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -738,7 +1026,11 @@
           "relative_path": "api/Enlighten.POSTagger.Taggers.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.POSTagger.Taggers",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -748,7 +1040,11 @@
           "relative_path": "api/Enlighten.POSTagger.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.POSTagger",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -758,7 +1054,11 @@
           "relative_path": "api/Enlighten.Pipeline.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Pipeline",
+      "Summary": "<p sourcefile=\"api/Enlighten.Pipeline.yml\" sourcestartlinenumber=\"1\">Main pipeline class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -768,7 +1068,11 @@
           "relative_path": "api/Enlighten.SentenceDetection.DefaultSentenceDetector.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SentenceDetection.DefaultSentenceDetector",
+      "Summary": "<p sourcefile=\"api/Enlighten.SentenceDetection.DefaultSentenceDetector.yml\" sourcestartlinenumber=\"1\">Default sentence detector</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -778,7 +1082,11 @@
           "relative_path": "api/Enlighten.SentenceDetection.Detectors.DefaultDetector.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SentenceDetection.Detectors.DefaultDetector",
+      "Summary": "<p sourcefile=\"api/Enlighten.SentenceDetection.Detectors.DefaultDetector.yml\" sourcestartlinenumber=\"1\">Default detector</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -788,7 +1096,11 @@
           "relative_path": "api/Enlighten.SentenceDetection.Detectors.NewLineDetector.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SentenceDetection.Detectors.NewLineDetector",
+      "Summary": "<p sourcefile=\"api/Enlighten.SentenceDetection.Detectors.NewLineDetector.yml\" sourcestartlinenumber=\"1\">New line detector</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -798,7 +1110,11 @@
           "relative_path": "api/Enlighten.SentenceDetection.Detectors.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SentenceDetection.Detectors",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -808,7 +1124,11 @@
           "relative_path": "api/Enlighten.SentenceDetection.Enum.SentenceDetectorLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SentenceDetection.Enum.SentenceDetectorLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.SentenceDetection.Enum.SentenceDetectorLanguage.yml\" sourcestartlinenumber=\"1\">Sentence detector language</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -818,7 +1138,11 @@
           "relative_path": "api/Enlighten.SentenceDetection.Enum.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SentenceDetection.Enum",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -828,7 +1152,11 @@
           "relative_path": "api/Enlighten.SentenceDetection.Interfaces.IDetector.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SentenceDetection.Interfaces.IDetector",
+      "Summary": "<p sourcefile=\"api/Enlighten.SentenceDetection.Interfaces.IDetector.yml\" sourcestartlinenumber=\"1\">Detector interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -838,7 +1166,11 @@
           "relative_path": "api/Enlighten.SentenceDetection.Interfaces.ISentenceDetector.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SentenceDetection.Interfaces.ISentenceDetector",
+      "Summary": "<p sourcefile=\"api/Enlighten.SentenceDetection.Interfaces.ISentenceDetector.yml\" sourcestartlinenumber=\"1\">Sentence detector interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -848,7 +1180,11 @@
           "relative_path": "api/Enlighten.SentenceDetection.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SentenceDetection.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -858,7 +1194,11 @@
           "relative_path": "api/Enlighten.SentenceDetection.Sentence.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SentenceDetection.Sentence",
+      "Summary": "<p sourcefile=\"api/Enlighten.SentenceDetection.Sentence.yml\" sourcestartlinenumber=\"1\">Sentence data holder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -868,7 +1208,11 @@
           "relative_path": "api/Enlighten.SentenceDetection.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SentenceDetection",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -878,7 +1222,11 @@
           "relative_path": "api/Enlighten.Stemmer.BaseClasses.StemmerLanguageBaseClass.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Stemmer.BaseClasses.StemmerLanguageBaseClass",
+      "Summary": "<p sourcefile=\"api/Enlighten.Stemmer.BaseClasses.StemmerLanguageBaseClass.yml\" sourcestartlinenumber=\"1\">Stemmer language base class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -888,7 +1236,11 @@
           "relative_path": "api/Enlighten.Stemmer.BaseClasses.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Stemmer.BaseClasses",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -898,7 +1250,11 @@
           "relative_path": "api/Enlighten.Stemmer.DefaultStemmer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Stemmer.DefaultStemmer",
+      "Summary": "<p sourcefile=\"api/Enlighten.Stemmer.DefaultStemmer.yml\" sourcestartlinenumber=\"1\">Default stemmer</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -908,7 +1264,11 @@
           "relative_path": "api/Enlighten.Stemmer.Enums.StemmerLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Stemmer.Enums.StemmerLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.Stemmer.Enums.StemmerLanguage.yml\" sourcestartlinenumber=\"1\">Language enum</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -918,7 +1278,11 @@
           "relative_path": "api/Enlighten.Stemmer.Enums.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Stemmer.Enums",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -928,7 +1292,11 @@
           "relative_path": "api/Enlighten.Stemmer.Interfaces.IStemmer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Stemmer.Interfaces.IStemmer",
+      "Summary": "<p sourcefile=\"api/Enlighten.Stemmer.Interfaces.IStemmer.yml\" sourcestartlinenumber=\"1\">Stemmer interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -938,7 +1306,11 @@
           "relative_path": "api/Enlighten.Stemmer.Interfaces.IStemmerLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Stemmer.Interfaces.IStemmerLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.Stemmer.Interfaces.IStemmerLanguage.yml\" sourcestartlinenumber=\"1\">Stemmer language interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -948,7 +1320,11 @@
           "relative_path": "api/Enlighten.Stemmer.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Stemmer.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -958,7 +1334,11 @@
           "relative_path": "api/Enlighten.Stemmer.Languages.EnglishLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Stemmer.Languages.EnglishLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.Stemmer.Languages.EnglishLanguage.yml\" sourcestartlinenumber=\"1\">English language</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -968,7 +1348,11 @@
           "relative_path": "api/Enlighten.Stemmer.Languages.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Stemmer.Languages",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -978,7 +1362,11 @@
           "relative_path": "api/Enlighten.Stemmer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Stemmer",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -988,7 +1376,11 @@
           "relative_path": "api/Enlighten.StopWords.BaseClasses.StopWordsBase.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.StopWords.BaseClasses.StopWordsBase",
+      "Summary": "<p sourcefile=\"api/Enlighten.StopWords.BaseClasses.StopWordsBase.yml\" sourcestartlinenumber=\"1\">Stop words base</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -998,7 +1390,11 @@
           "relative_path": "api/Enlighten.StopWords.BaseClasses.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.StopWords.BaseClasses",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1008,7 +1404,11 @@
           "relative_path": "api/Enlighten.StopWords.Enum.StopWordsLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.StopWords.Enum.StopWordsLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.StopWords.Enum.StopWordsLanguage.yml\" sourcestartlinenumber=\"1\">Stop words language</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1018,7 +1418,11 @@
           "relative_path": "api/Enlighten.StopWords.Enum.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.StopWords.Enum",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1028,7 +1432,11 @@
           "relative_path": "api/Enlighten.StopWords.Interfaces.IStopWordsLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.StopWords.Interfaces.IStopWordsLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.StopWords.Interfaces.IStopWordsLanguage.yml\" sourcestartlinenumber=\"1\">Stop words language</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1038,7 +1446,11 @@
           "relative_path": "api/Enlighten.StopWords.Interfaces.IStopWordsManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.StopWords.Interfaces.IStopWordsManager",
+      "Summary": "<p sourcefile=\"api/Enlighten.StopWords.Interfaces.IStopWordsManager.yml\" sourcestartlinenumber=\"1\">Stop words manager interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1048,7 +1460,11 @@
           "relative_path": "api/Enlighten.StopWords.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.StopWords.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1058,7 +1474,11 @@
           "relative_path": "api/Enlighten.StopWords.Languages.EnglishDefault.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.StopWords.Languages.EnglishDefault",
+      "Summary": "<p sourcefile=\"api/Enlighten.StopWords.Languages.EnglishDefault.yml\" sourcestartlinenumber=\"1\">English default stop words</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1068,7 +1488,11 @@
           "relative_path": "api/Enlighten.StopWords.Languages.EnglishSpacy.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.StopWords.Languages.EnglishSpacy",
+      "Summary": "<p sourcefile=\"api/Enlighten.StopWords.Languages.EnglishSpacy.yml\" sourcestartlinenumber=\"1\">English stop words used in Spacy</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1078,7 +1502,11 @@
           "relative_path": "api/Enlighten.StopWords.Languages.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.StopWords.Languages",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1088,7 +1516,11 @@
           "relative_path": "api/Enlighten.StopWords.StopWordsManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.StopWords.StopWordsManager",
+      "Summary": "<p sourcefile=\"api/Enlighten.StopWords.StopWordsManager.yml\" sourcestartlinenumber=\"1\">Stop words manager</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1098,7 +1530,11 @@
           "relative_path": "api/Enlighten.StopWords.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.StopWords",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1108,7 +1544,11 @@
           "relative_path": "api/Enlighten.SynonymFinder.BaseClasses.SynonymFinderBase.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SynonymFinder.BaseClasses.SynonymFinderBase",
+      "Summary": "<p sourcefile=\"api/Enlighten.SynonymFinder.BaseClasses.SynonymFinderBase.yml\" sourcestartlinenumber=\"1\">Synonym finder base class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1118,7 +1558,11 @@
           "relative_path": "api/Enlighten.SynonymFinder.BaseClasses.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SynonymFinder.BaseClasses",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1128,7 +1572,11 @@
           "relative_path": "api/Enlighten.SynonymFinder.DefaultSynonymFinder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SynonymFinder.DefaultSynonymFinder",
+      "Summary": "<p sourcefile=\"api/Enlighten.SynonymFinder.DefaultSynonymFinder.yml\" sourcestartlinenumber=\"1\">Default synonym finder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1138,7 +1586,11 @@
           "relative_path": "api/Enlighten.SynonymFinder.Enum.SynonymFinderLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SynonymFinder.Enum.SynonymFinderLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.SynonymFinder.Enum.SynonymFinderLanguage.yml\" sourcestartlinenumber=\"1\">Part of speech tagger language</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1148,7 +1600,11 @@
           "relative_path": "api/Enlighten.SynonymFinder.Enum.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SynonymFinder.Enum",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1158,7 +1614,11 @@
           "relative_path": "api/Enlighten.SynonymFinder.Finders.EnglishFinder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SynonymFinder.Finders.EnglishFinder",
+      "Summary": "<p sourcefile=\"api/Enlighten.SynonymFinder.Finders.EnglishFinder.yml\" sourcestartlinenumber=\"1\">English synonym finder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1168,7 +1628,11 @@
           "relative_path": "api/Enlighten.SynonymFinder.Finders.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SynonymFinder.Finders",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1178,7 +1642,11 @@
           "relative_path": "api/Enlighten.SynonymFinder.Interfaces.ISynonymFinder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SynonymFinder.Interfaces.ISynonymFinder",
+      "Summary": "<p sourcefile=\"api/Enlighten.SynonymFinder.Interfaces.ISynonymFinder.yml\" sourcestartlinenumber=\"1\">Synonym finder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1188,7 +1656,11 @@
           "relative_path": "api/Enlighten.SynonymFinder.Interfaces.ISynonymFinderLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SynonymFinder.Interfaces.ISynonymFinderLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.SynonymFinder.Interfaces.ISynonymFinderLanguage.yml\" sourcestartlinenumber=\"1\">Synonym finder language interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1198,7 +1670,11 @@
           "relative_path": "api/Enlighten.SynonymFinder.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SynonymFinder.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1208,7 +1684,11 @@
           "relative_path": "api/Enlighten.SynonymFinder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.SynonymFinder",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1218,7 +1698,11 @@
           "relative_path": "api/Enlighten.TextSummarization.DefaultTextSummarizer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.TextSummarization.DefaultTextSummarizer",
+      "Summary": "<p sourcefile=\"api/Enlighten.TextSummarization.DefaultTextSummarizer.yml\" sourcestartlinenumber=\"1\">Class handles basic text</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1228,7 +1712,11 @@
           "relative_path": "api/Enlighten.TextSummarization.Enum.TextSummarizationLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.TextSummarization.Enum.TextSummarizationLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.TextSummarization.Enum.TextSummarizationLanguage.yml\" sourcestartlinenumber=\"1\">Text summarization language</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1238,7 +1726,11 @@
           "relative_path": "api/Enlighten.TextSummarization.Enum.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.TextSummarization.Enum",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1248,7 +1740,11 @@
           "relative_path": "api/Enlighten.TextSummarization.Interfaces.ITextSummarizer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.TextSummarization.Interfaces.ITextSummarizer",
+      "Summary": "<p sourcefile=\"api/Enlighten.TextSummarization.Interfaces.ITextSummarizer.yml\" sourcestartlinenumber=\"1\">Text summarizer interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1258,7 +1754,11 @@
           "relative_path": "api/Enlighten.TextSummarization.Interfaces.ITextSummarizerLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.TextSummarization.Interfaces.ITextSummarizerLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.TextSummarization.Interfaces.ITextSummarizerLanguage.yml\" sourcestartlinenumber=\"1\">Text summarizer language interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1268,7 +1768,11 @@
           "relative_path": "api/Enlighten.TextSummarization.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.TextSummarization.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1278,7 +1782,11 @@
           "relative_path": "api/Enlighten.TextSummarization.Languages.EnglishDefault.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.TextSummarization.Languages.EnglishDefault",
+      "Summary": "<p sourcefile=\"api/Enlighten.TextSummarization.Languages.EnglishDefault.yml\" sourcestartlinenumber=\"1\">English default summarizer</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1288,7 +1796,11 @@
           "relative_path": "api/Enlighten.TextSummarization.Languages.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.TextSummarization.Languages",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1298,7 +1810,11 @@
           "relative_path": "api/Enlighten.TextSummarization.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.TextSummarization",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1308,7 +1824,11 @@
           "relative_path": "api/Enlighten.Tokenizer.BaseClasses.SingleCharacterTokenFinderBaseClass.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.BaseClasses.SingleCharacterTokenFinderBaseClass",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.BaseClasses.SingleCharacterTokenFinderBaseClass.yml\" sourcestartlinenumber=\"1\">Single character token finder base class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1318,7 +1838,11 @@
           "relative_path": "api/Enlighten.Tokenizer.BaseClasses.TokenFinderBaseClass.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.BaseClasses.TokenFinderBaseClass",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.BaseClasses.TokenFinderBaseClass.yml\" sourcestartlinenumber=\"1\">Token finder base class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1328,7 +1852,11 @@
           "relative_path": "api/Enlighten.Tokenizer.BaseClasses.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.BaseClasses",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1338,7 +1866,11 @@
           "relative_path": "api/Enlighten.Tokenizer.DefaultTokenizer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.DefaultTokenizer",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.DefaultTokenizer.yml\" sourcestartlinenumber=\"1\">Default tokenizer</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1348,7 +1880,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Enums.TokenizerLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Enums.TokenizerLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Enums.TokenizerLanguage.yml\" sourcestartlinenumber=\"1\">Language enum</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1358,7 +1894,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Enums.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Enums",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1368,7 +1908,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Interfaces.ITokenizer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Interfaces.ITokenizer",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Interfaces.ITokenizer.yml\" sourcestartlinenumber=\"1\">Tokenizer interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1378,7 +1922,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Interfaces.ITokenizerLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Interfaces.ITokenizerLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Interfaces.ITokenizerLanguage.yml\" sourcestartlinenumber=\"1\">Language interface</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1388,7 +1936,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1398,7 +1950,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.EnglishLanguage.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English.EnglishLanguage",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Languages.English.EnglishLanguage.yml\" sourcestartlinenumber=\"1\">English language</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1408,7 +1964,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.Enums.TokenType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English.Enums.TokenType",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Languages.English.Enums.TokenType.yml\" sourcestartlinenumber=\"1\">Token type</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1418,7 +1978,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.Enums.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English.Enums",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1428,7 +1992,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Abbreviation.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English.TokenFinders.Abbreviation",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Languages.English.TokenFinders.Abbreviation.yml\" sourcestartlinenumber=\"1\">Abbreviation finder.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1438,7 +2006,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Ellipsis.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English.TokenFinders.Ellipsis",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Languages.English.TokenFinders.Ellipsis.yml\" sourcestartlinenumber=\"1\">Finds ellipsis</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1448,7 +2020,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Email.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English.TokenFinders.Email",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Languages.English.TokenFinders.Email.yml\" sourcestartlinenumber=\"1\">Email token finder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1458,7 +2034,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Emoji.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English.TokenFinders.Emoji",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Languages.English.TokenFinders.Emoji.yml\" sourcestartlinenumber=\"1\">Emoji finder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1468,7 +2048,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.HashTag.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English.TokenFinders.HashTag",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Languages.English.TokenFinders.HashTag.yml\" sourcestartlinenumber=\"1\">HashTag finder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1478,7 +2062,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.NewLine.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English.TokenFinders.NewLine",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Languages.English.TokenFinders.NewLine.yml\" sourcestartlinenumber=\"1\">New line finder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1488,7 +2076,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Number.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English.TokenFinders.Number",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Languages.English.TokenFinders.Number.yml\" sourcestartlinenumber=\"1\">Number finder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1498,7 +2090,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.OtherTokenFinder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English.TokenFinders.OtherTokenFinder",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Languages.English.TokenFinders.OtherTokenFinder.yml\" sourcestartlinenumber=\"1\">Other token finder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1508,7 +2104,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.RomanNumerals.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English.TokenFinders.RomanNumerals",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Languages.English.TokenFinders.RomanNumerals.yml\" sourcestartlinenumber=\"1\">Number finder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1518,7 +2118,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Symbol.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English.TokenFinders.Symbol",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Languages.English.TokenFinders.Symbol.yml\" sourcestartlinenumber=\"1\">Symbol class</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1528,7 +2132,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.URL.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English.TokenFinders.URL",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Languages.English.TokenFinders.URL.yml\" sourcestartlinenumber=\"1\">URL finder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1538,7 +2146,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Username.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English.TokenFinders.Username",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Languages.English.TokenFinders.Username.yml\" sourcestartlinenumber=\"1\">Username finder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1548,7 +2160,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Whitespace.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English.TokenFinders.Whitespace",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Languages.English.TokenFinders.Whitespace.yml\" sourcestartlinenumber=\"1\">Whitespace token finder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1558,7 +2174,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.Word.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English.TokenFinders.Word",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Languages.English.TokenFinders.Word.yml\" sourcestartlinenumber=\"1\">Word token finder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1568,7 +2188,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.TokenFinders.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English.TokenFinders",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1578,7 +2202,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.English.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.English",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1588,7 +2216,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.Interfaces.IEnglishTokenFinder.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.Interfaces.IEnglishTokenFinder",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Languages.Interfaces.IEnglishTokenFinder.yml\" sourcestartlinenumber=\"1\">English token finder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1598,7 +2230,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Languages.Interfaces.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Languages.Interfaces",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1608,7 +2244,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Token.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Token",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Token.yml\" sourcestartlinenumber=\"1\">Token data holder</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1618,7 +2258,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Utils.TokenizableStream-1.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Utils.TokenizableStream<TData>",
+      "Summary": "<p sourcefile=\"api/Enlighten.Tokenizer.Utils.TokenizableStream-1.yml\" sourcestartlinenumber=\"1\">Tokenizable stream</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1628,7 +2272,11 @@
           "relative_path": "api/Enlighten.Tokenizer.Utils.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer.Utils",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1638,7 +2286,11 @@
           "relative_path": "api/Enlighten.Tokenizer.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten.Tokenizer",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1648,7 +2300,11 @@
           "relative_path": "api/Enlighten.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Enlighten",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -1658,7 +2314,11 @@
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.CanisterRegistration.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Microsoft.Extensions.DependencyInjection.CanisterRegistration",
+      "Summary": "<p sourcefile=\"api/Microsoft.Extensions.DependencyInjection.CanisterRegistration.yml\" sourcestartlinenumber=\"1\">Canister registration</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1668,7 +2328,11 @@
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Microsoft.Extensions.DependencyInjection",
+      "Summary": null
     },
     {
       "type": "Conceptual",
@@ -1684,11 +2348,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "api/toc.html"
-        },
         ".json": {
           "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
         }
       },
       "version": ""
@@ -1707,11 +2371,11 @@
       "type": "Toc",
       "source_relative_path": "articles/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "articles/toc.html"
-        },
         ".json": {
           "relative_path": "articles/toc.json"
+        },
+        ".html": {
+          "relative_path": "articles/toc.html"
         }
       },
       "version": ""
@@ -1740,11 +2404,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "toc.html"
-        },
         ".json": {
           "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
         }
       },
       "version": ""
