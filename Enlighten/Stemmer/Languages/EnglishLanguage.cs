@@ -38,24 +38,24 @@ namespace Enlighten.Stemmer.Languages
         /// Gets the vowels.
         /// </summary>
         /// <value>The vowels.</value>
-        protected override char[] Vowels { get; } = new char[] { 'a', 'e', 'i', 'o', 'u', 'y' };
+        protected override char[] Vowels { get; } = ['a', 'e', 'i', 'o', 'u', 'y'];
 
         /// <summary>
         /// Gets the doubles.
         /// </summary>
         /// <value>The doubles.</value>
-        private static char[][] Doubles { get; } = new char[][]
-        {
-            new []{'b','b' },
-            new []{'d','d' },
-            new []{'f','f' },
-            new []{'g','g' },
-            new []{'m','m' },
-            new []{'n','n' },
-            new []{'p','p' },
-            new []{'r','r' },
-            new []{'t','t' }
-        };
+        private static char[][] Doubles { get; } =
+        [
+            ['b','b'],
+            ['d','d'],
+            ['f','f'],
+            ['g','g'],
+            ['m','m'],
+            ['n','n'],
+            ['p','p'],
+            ['r','r'],
+            ['t','t']
+        ];
 
         /// <summary>
         /// Gets the exceptions.
@@ -87,21 +87,21 @@ namespace Enlighten.Stemmer.Languages
         /// Gets the exceptions2.
         /// </summary>
         /// <value>The exceptions2.</value>
-        private static string[] Exceptions2 { get; } = new string[] { "inning", "outing", "canning", "herring", "earring", "proceed", "exceed", "succeed" };
+        private static string[] Exceptions2 { get; } = ["inning", "outing", "canning", "herring", "earring", "proceed", "exceed", "succeed"];
 
         /// <summary>
         /// Gets the step1 replacements.
         /// </summary>
         /// <value>The step1 replacements.</value>
-        private static char[][] Step1Replacements { get; } = new char[][]
-        {
-            new []{'e','e','d','l','y' },
-            new []{'i','n','g','l','y' },
-            new []{'e','d','l','y' },
-            new []{'e','e','d' },
-            new []{'i','n','g' },
-            new []{'e','d' },
-        };
+        private static char[][] Step1Replacements { get; } =
+        [
+            ['e','e','d','l','y'],
+            ['i','n','g','l','y'],
+            ['e','d','l','y'],
+            ['e','e','d'],
+            ['i','n','g'],
+            ['e','d'],
+        ];
 
         /// <summary>
         /// Gets the step2 replacements.
@@ -156,33 +156,33 @@ namespace Enlighten.Stemmer.Languages
         /// Gets the step4 replacements.
         /// </summary>
         /// <value>The step4 replacements.</value>
-        private static char[][] Step4Replacements { get; } = new char[][]
-        {
-            new char[]{'e','m','e','n','t' },
-            new char[]{'m','e','n','t' },
-            new char[]{'e','n','c','e' },
-            new char[]{'a','b','l','e' },
-            new char[]{'i','b','l','e' },
-            new char[]{'a','n','c','e' },
-            new char[]{'i','s','m' },
-            new char[]{'e','n','t' },
-            new char[]{'a','t','e' },
-            new char[]{'i','t','i' },
-            new char[]{'a','n','t' },
-            new char[]{'o','u','s' },
-            new char[]{'i','v','e' },
-            new char[]{'i','z','e' },
-            new char[]{'i','o','n' },
-            new char[]{'i','c' },
-            new char[]{'e','r' },
-            new char[]{'a','l' }
-        };
+        private static char[][] Step4Replacements { get; } =
+        [
+            ['e','m','e','n','t'],
+            ['m','e','n','t'],
+            ['e','n','c','e'],
+            ['a','b','l','e'],
+            ['i','b','l','e'],
+            ['a','n','c','e'],
+            ['i','s','m'],
+            ['e','n','t'],
+            ['a','t','e'],
+            ['i','t','i'],
+            ['a','n','t'],
+            ['o','u','s'],
+            ['i','v','e'],
+            ['i','z','e'],
+            ['i','o','n'],
+            ['i','c'],
+            ['e','r'],
+            ['a','l']
+        ];
 
         /// <summary>
         /// Gets the valid li endings.
         /// </summary>
         /// <value>The valid li endings.</value>
-        private static char[] ValidLiEndings { get; } = new char[] { 'c', 'd', 'e', 'g', 'h', 'k', 'm', 'n', 'r', 't' };
+        private static char[] ValidLiEndings { get; } = ['c', 'd', 'e', 'g', 'h', 'k', 'm', 'n', 'r', 't'];
 
         /// <summary>
         /// Stems the word.
@@ -198,11 +198,11 @@ namespace Enlighten.Stemmer.Languages
             word = word.ToLowerInvariant();
 
             if (word[0] == '\'')
-                word = word.Substring(1);
+                word = word[1..];
 
             //Check for exceptions
-            if (Exceptions.ContainsKey(word))
-                return Exceptions[word];
+            if (Exceptions.TryGetValue(word, out var Value))
+                return Value;
 
             var WordSpan = new Span<char>(word.ToCharArray());
 
@@ -219,7 +219,7 @@ namespace Enlighten.Stemmer.Languages
                     return Exception;
             }
 
-            (int R1Index, int R2Index) = CalculateR1AndR2(WordSpan);
+            (var R1Index, var R2Index) = CalculateR1AndR2(WordSpan);
 
             WordSpan = Step1B(GetRValue(R1Index, WordSpan), R1Index, WordSpan);
 
@@ -242,10 +242,7 @@ namespace Enlighten.Stemmer.Languages
         /// <param name="RIndex">Index of the r.</param>
         /// <param name="word">The word.</param>
         /// <returns>The sliced region.</returns>
-        private static Span<char> GetRValue(int RIndex, Span<char> word)
-        {
-            return RIndex < word.Length ? word.Slice(RIndex) : Span<char>.Empty;
-        }
+        private static Span<char> GetRValue(int RIndex, Span<char> word) => RIndex < word.Length ? word[RIndex..] : Span<char>.Empty;
 
         /// <summary>
         /// Removes the word endings.
@@ -254,17 +251,17 @@ namespace Enlighten.Stemmer.Languages
         /// <returns>The word without the endings.</returns>
         private static Span<char> Step0(Span<char> word)
         {
-            if (word.Length >= 3 && word[word.Length - 3] == '\'' && word[word.Length - 2] == 's' && word[word.Length - 1] == '\'')
+            if (word.Length >= 3 && word[^3] == '\'' && word[^2] == 's' && word[^1] == '\'')
             {
-                return word.Slice(0, word.Length - 3);
+                return word[..^3];
             }
-            if (word.Length >= 2 && word[word.Length - 2] == '\'' && word[word.Length - 1] == 's')
+            if (word.Length >= 2 && word[^2] == '\'' && word[^1] == 's')
             {
-                return word.Slice(0, word.Length - 2);
+                return word[..^2];
             }
-            if (word.Length >= 1 && word[word.Length - 1] == '\'')
+            if (word.Length >= 1 && word[^1] == '\'')
             {
-                return word.Slice(0, word.Length - 1);
+                return word[..^1];
             }
             return word;
         }
@@ -276,7 +273,7 @@ namespace Enlighten.Stemmer.Languages
         /// <param name="r1">The r1.</param>
         private static Span<char> Step2(Span<char> word, Span<char> r1)
         {
-            foreach (var Step2Replacement in Step2Replacements)
+            foreach (KeyValuePair<string, string> Step2Replacement in Step2Replacements)
             {
                 if (word.EndsWith(Step2Replacement.Key.ToCharArray()))
                 {
@@ -284,26 +281,26 @@ namespace Enlighten.Stemmer.Languages
                         return word;
                     if (Step2Replacement.Key == "ogi")
                     {
-                        if (word.EndsWith(new[] { 'l', 'o', 'g', 'i' }))
+                        if (word.EndsWith(['l', 'o', 'g', 'i']))
                         {
-                            return word.Slice(0, word.Length - 1);
+                            return word[..^1];
                         }
                     }
                     else if (Step2Replacement.Key == "li")
                     {
                         if (word.Length >= 3)
                         {
-                            var liEnding = word[word.Length - 3];
+                            var liEnding = word[^3];
                             if (ValidLiEndings.Contains(liEnding))
                             {
-                                return word.Slice(0, word.Length - 2);
+                                return word[..^2];
                             }
                         }
                         return word;
                     }
                     else if (word.Length >= Step2Replacement.Key.Length)
                     {
-                        word = word.Slice(0, word.Length - Step2Replacement.Key.Length);
+                        word = word[..^Step2Replacement.Key.Length];
                         var Final = new char[word.Length + Step2Replacement.Value.Length];
                         Array.Copy(word.ToArray(), Final, word.Length);
                         Array.Copy(Step2Replacement.Value.ToCharArray(), 0, Final, word.Length, Step2Replacement.Value.Length);
@@ -323,15 +320,15 @@ namespace Enlighten.Stemmer.Languages
         /// <returns></returns>
         private static Span<char> Step3(Span<char> word, Span<char> r1, Span<char> r2)
         {
-            foreach (var Step3Replacement in Step3Replacements)
+            foreach (KeyValuePair<string, string> Step3Replacement in Step3Replacements)
             {
                 if (r1.EndsWith(Step3Replacement.Key.ToCharArray()))
                 {
                     if (Step3Replacement.Key == "ative")
                     {
-                        return r2.EndsWith(new[] { 'a', 't', 'i', 'v', 'e' }) ? word.Slice(0, word.Length - Step3Replacement.Key.Length) : word;
+                        return r2.EndsWith(['a', 't', 'i', 'v', 'e']) ? word[..^Step3Replacement.Key.Length] : word;
                     }
-                    word = word.Slice(0, word.Length - Step3Replacement.Key.Length);
+                    word = word[..^Step3Replacement.Key.Length];
                     var Final = new char[word.Length + Step3Replacement.Value.Length];
                     Array.Copy(word.ToArray(), Final, word.Length);
                     Array.Copy(Step3Replacement.Value.ToCharArray(), 0, Final, word.Length, Step3Replacement.Value.Length);
@@ -349,7 +346,7 @@ namespace Enlighten.Stemmer.Languages
         /// <returns>The word without more endings.</returns>
         private static Span<char> Step4(Span<char> word, Span<char> r2)
         {
-            for (int i = 0; i < Step4Replacements.Length; ++i)
+            for (var i = 0; i < Step4Replacements.Length; ++i)
             {
                 var end = Step4Replacements[i];
 
@@ -359,16 +356,16 @@ namespace Enlighten.Stemmer.Languages
                     {
                         if (end[0] == 'i' && end[1] == 'o' && end[2] == 'n')
                         {
-                            char preChar = word.Length > 4 ? word[word.Length - 4] : '\0';
+                            var preChar = word.Length > 4 ? word[^4] : '\0';
 
-                            if (preChar == 's' || preChar == 't')
+                            if (preChar is 's' or 't')
                             {
-                                return word.Slice(0, word.Length - Step4Replacements[i].Length);
+                                return word[..^Step4Replacements[i].Length];
                             }
                         }
                         else
                         {
-                            return word.Slice(0, word.Length - Step4Replacements[i].Length);
+                            return word[..^Step4Replacements[i].Length];
                         }
                     }
 
@@ -385,19 +382,19 @@ namespace Enlighten.Stemmer.Languages
         /// <returns>The resulting r1 and r2 values.</returns>
         private (int R1, int R2) CalculateR1AndR2(Span<char> wordSpan)
         {
-            int r1 = wordSpan.Length;
-            int r2 = wordSpan.Length;
-            if (wordSpan.StartsWith(new[] { 'g', 'e', 'n', 'e', 'r' }) || wordSpan.StartsWith(new[] { 'a', 'r', 's', 'e', 'n' }))
+            var r1 = wordSpan.Length;
+            var r2 = wordSpan.Length;
+            if (wordSpan.StartsWith(['g', 'e', 'n', 'e', 'r']) || wordSpan.StartsWith(['a', 'r', 's', 'e', 'n']))
             {
                 r1 = 5;
             }
-            else if (wordSpan.StartsWith(new[] { 'c', 'o', 'm', 'm', 'u', 'n' }))
+            else if (wordSpan.StartsWith(['c', 'o', 'm', 'm', 'u', 'n']))
             {
                 r1 = 6;
             }
             else
             {
-                for (int x = 1; x < wordSpan.Length; x++)
+                for (var x = 1; x < wordSpan.Length; x++)
                 {
                     if (!IsVowel(wordSpan[x]) && IsVowel(wordSpan[x - 1]))
                     {
@@ -407,7 +404,7 @@ namespace Enlighten.Stemmer.Languages
                 }
             }
 
-            for (int x = r1; x < wordSpan.Length; ++x)
+            for (var x = r1; x < wordSpan.Length; ++x)
             {
                 if (!IsVowel(wordSpan[x]) && IsVowel(wordSpan[x - 1]))
                 {
@@ -429,7 +426,7 @@ namespace Enlighten.Stemmer.Languages
             if (WordSpan[0] == 'y')
                 WordSpan[0] = 'Y';
 
-            for (int x = 1; x < WordSpan.Length; x++)
+            for (var x = 1; x < WordSpan.Length; x++)
             {
                 if (WordSpan[x] == 'y' && IsVowel(WordSpan[x - 1]))
                 {
@@ -472,10 +469,7 @@ namespace Enlighten.Stemmer.Languages
         /// <param name="word">The word.</param>
         /// <param name="r1">The r1.</param>
         /// <returns><c>true</c> if it [is a short word]; otherwise, <c>false</c>.</returns>
-        private bool IsShortWord(Span<char> word, Span<char> r1)
-        {
-            return r1.IsEmpty && IsShortSyllable(word, word.Length - 2);
-        }
+        private bool IsShortWord(Span<char> word, Span<char> r1) => r1.IsEmpty && IsShortSyllable(word, word.Length - 2);
 
         /// <summary>
         /// Removes endings
@@ -484,25 +478,25 @@ namespace Enlighten.Stemmer.Languages
         /// <returns>The word without the endings.</returns>
         private Span<char> Step1A(Span<char> word)
         {
-            if (word.EndsWith(new[] { 's', 's', 'e', 's' }))
+            if (word.EndsWith(['s', 's', 'e', 's']))
             {
-                return word.Slice(0, word.Length - 2);
+                return word[..^2];
             }
-            if (word.EndsWith(new[] { 'i', 'e', 'd' }) || word.EndsWith(new[] { 'i', 'e', 's' }))
+            if (word.EndsWith(['i', 'e', 'd']) || word.EndsWith(['i', 'e', 's']))
             {
-                return word.Length > 4 ? word.Slice(0, word.Length - 2) : word.Slice(0, word.Length - 1);
+                return word.Length > 4 ? word[..^2] : word[..^1];
             }
-            if (word.EndsWith(new[] { 'u', 's' }) || word.EndsWith(new[] { 's', 's' }))
+            if (word.EndsWith(['u', 's']) || word.EndsWith(['s', 's']))
             {
                 return word;
             }
-            if (word[word.Length - 1] == 's' && word.Length >= 2)
+            if (word[^1] == 's' && word.Length >= 2)
             {
-                for (int i = 0; i < word.Length - 2; i++)
+                for (var i = 0; i < word.Length - 2; i++)
                 {
                     if (IsVowel(word[i]))
                     {
-                        return word.Slice(0, word.Length - 1);
+                        return word[..^1];
                     }
                 }
             }
@@ -523,23 +517,23 @@ namespace Enlighten.Stemmer.Languages
                 var Step1Replacement = Step1Replacements[i];
                 if (i == 0 && r1.EndsWith(Step1Replacement))
                 {
-                    return word.Length >= 2 ? word.Slice(0, word.Length - 2) : word;
+                    return word.Length >= 2 ? word[..^2] : word;
                 }
                 if (i == 3 && r1.EndsWith(Step1Replacement))
                 {
-                    return word.Length >= 1 ? word.Slice(0, word.Length - 1) : word;
+                    return word.Length >= 1 ? word[..^1] : word;
                 }
                 if (word.EndsWith(Step1Replacement))
                 {
-                    bool vowelIsFound = false;
+                    var vowelIsFound = false;
 
                     if (word.Length > Step1Replacement.Length)
                     {
-                        for (int x = 0; x < word.Length - Step1Replacement.Length; x++)
+                        for (var x = 0; x < word.Length - Step1Replacement.Length; x++)
                         {
                             if (IsVowel(word[x]))
                             {
-                                word = word.Slice(0, word.Length - Step1Replacement.Length);
+                                word = word[..^Step1Replacement.Length];
                                 vowelIsFound = true;
                                 break;
                             }
@@ -550,20 +544,20 @@ namespace Enlighten.Stemmer.Languages
                         return word;
                     r1 = GetRValue(r1Index, word);
 
-                    if ((word[word.Length - 2] == 'a' && word[word.Length - 1] == 't')
-                        || (word[word.Length - 2] == 'b' && word[word.Length - 1] == 'l')
-                        || (word[word.Length - 2] == 'i' && word[word.Length - 1] == 'z'))
+                    if ((word[^2] == 'a' && word[^1] == 't')
+                        || (word[^2] == 'b' && word[^1] == 'l')
+                        || (word[^2] == 'i' && word[^1] == 'z'))
                     {
                         var Final = new char[word.Length + 1];
                         Array.Copy(word.ToArray(), Final, word.Length);
                         Array.Copy(new char[] { 'e' }, 0, Final, word.Length, 1);
                         return Final.AsSpan();
                     }
-                    for (int x = 0; x < Doubles.Length; x++)
+                    for (var x = 0; x < Doubles.Length; x++)
                     {
                         if (word.EndsWith(Doubles[x]))
                         {
-                            return word.Slice(0, word.Length - 1);
+                            return word[..^1];
                         }
                     }
 
@@ -588,11 +582,11 @@ namespace Enlighten.Stemmer.Languages
         private Span<char> Step1C(Span<char> word)
         {
             if (word.Length > 2
-                && (word[word.Length - 1] == 'y' || word[word.Length - 1] == 'Y')
-                && !IsVowel(word[word.Length - 2]))
+                && (word[^1] == 'y' || word[^1] == 'Y')
+                && !IsVowel(word[^2]))
             {
                 var Final = new char[word.Length];
-                Array.Copy(word.Slice(0, word.Length - 1).ToArray(), Final, word.Length - 1);
+                Array.Copy(word[..^1].ToArray(), Final, word.Length - 1);
                 Array.Copy(new char[] { 'i' }, 0, Final, word.Length - 1, 1);
                 return Final.AsSpan();
             }
@@ -608,13 +602,13 @@ namespace Enlighten.Stemmer.Languages
         /// <returns>The resulting word</returns>
         private Span<char> Step5(Span<char> word, Span<char> r1, Span<char> r2)
         {
-            if (r1.Length > 0 && r1[r1.Length - 1] == 'e' && !IsShortSyllable(word, word.Length - 3))
-                return word.Slice(0, word.Length - 1);
+            if (r1.Length > 0 && r1[^1] == 'e' && !IsShortSyllable(word, word.Length - 3))
+                return word[..^1];
             if (r2.Length == 0)
                 return word;
-            if (r2[r2.Length - 1] == 'e' || (r2[r2.Length - 1] == 'l' && word[word.Length - 2] == 'l' && word[word.Length - 1] == 'l'))
+            if (r2[^1] == 'e' || (r2[^1] == 'l' && word[^2] == 'l' && word[^1] == 'l'))
             {
-                return word.Slice(0, word.Length - 1);
+                return word[..^1];
             }
             return word;
         }

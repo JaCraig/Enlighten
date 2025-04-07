@@ -17,13 +17,13 @@ namespace Enlighten.SynonymFinder.BaseClasses
         protected SynonymFinderBase()
         {
             var Data = new FileInfo($"resource://Enlighten/Enlighten.Resources.{Name.Replace("-", "_", StringComparison.Ordinal)}.synonyms.txt").Read();
-            var Lines = Data.Split(new char[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+            var Lines = Data.Split(['\n', '\r'], StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0, LinesLength = Lines.Length; i < LinesLength; i++)
             {
                 var Line = Lines[i];
                 if (string.IsNullOrEmpty(Line))
                     continue;
-                var LineData = Line.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                var LineData = Line.Split([' '], StringSplitOptions.RemoveEmptyEntries);
                 for (int x = 1; x < LineData.Length; ++x)
                 {
                     SynonymDictionary.Add(LineData[x], LineData[0]);

@@ -30,8 +30,8 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
         /// <summary>
         /// The common abbreviations
         /// </summary>
-        private string[] CommonAbbreviations = new string[]
-        {
+        private string[] CommonAbbreviations =
+        [
             "LLC",
             "LP",
             "LLP",
@@ -224,7 +224,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
             "PR.",
             "INC.",
             "INC"
-        };
+        ];
 
         /// <summary>
         /// Gets the order.

@@ -47,15 +47,14 @@ namespace Enlighten.FeatureExtraction.Extractors
 
             var DocumentFrequencies = FrequencyAnalyzer.Analyze(WordTokens, WordTokens.Length);
 
-            return WordTokens.Distinct((x, y) => x.StemmedValue == y.StemmedValue).OrderByDescending(WordToken =>
+            return [.. WordTokens.Distinct((x, y) => x.StemmedValue == y.StemmedValue).OrderByDescending(WordToken =>
                 {
                     var TermFrequency = DocumentFrequencies.TermFrequency[WordToken.StemmedValue.ToLower()];
                     var InverseDocFrequency = Math.Log(docs.Length / (1 + docs.Count(x => x.Tokens.Any(token => token.StemmedValue == WordToken.StemmedValue))));
                     return TermFrequency * InverseDocFrequency;
                 })
                 .Select(x => x.Value)
-                .Take(featureCount)
-                .ToArray();
+                .Take(featureCount)];
         }
     }
 }

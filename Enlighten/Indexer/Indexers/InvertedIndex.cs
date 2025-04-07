@@ -88,7 +88,7 @@ namespace Enlighten.Indexer.Indexers
                     ReturnValues.Remove(Item => !guids.Contains(Item));
                 }
             }
-            return ReturnValues.ToArray();
+            return [.. ReturnValues];
         }
     }
 }

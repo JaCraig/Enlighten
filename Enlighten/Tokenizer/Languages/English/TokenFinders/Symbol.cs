@@ -89,7 +89,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
 
             var EndPosition = tokenizer.Index - 1;
 
-            var Result = new string(new char[] { Value });
+            var Result = new string([Value]);
 
             return new Token(
                 EndPosition,

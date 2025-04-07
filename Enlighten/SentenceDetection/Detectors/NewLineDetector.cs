@@ -57,12 +57,12 @@ namespace Enlighten.SentenceDetection.Detectors
                 {
                     if (TempTokens.Count > 1)
                     {
-                        ReturnValue.Add(new Sentence(i, CurrentStart, TempTokens.ToArray()));
+                        ReturnValue.Add(new Sentence(i, CurrentStart, [.. TempTokens]));
                     }
                     CurrentStart = i + 1;
                 }
             }
-            return ReturnValue.ToArray();
+            return [.. ReturnValue];
         }
     }
 }

@@ -36,7 +36,7 @@ namespace Enlighten.Tokenizer.Languages.English
         /// </summary>
         public EnglishLanguage(IEnumerable<IEnglishTokenFinder> tokenFinders)
         {
-            TokenFinders = tokenFinders.ToArray();
+            TokenFinders = [.. tokenFinders];
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace Enlighten.Tokenizer.Languages.English
         /// <returns>The tokenized version of the text.</returns>
         public Token[] Tokenize(TokenizableStream<char> text)
         {
-            return GetTokens(text, TokenFinders.OrderBy(x => x.Order).ToArray()).ToArray();
+            return [.. GetTokens(text, [.. TokenFinders.OrderBy(x => x.Order)])];
         }
 
         /// <summary>

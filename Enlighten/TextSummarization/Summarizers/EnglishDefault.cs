@@ -133,7 +133,7 @@ namespace Enlighten.TextSummarization.Languages
             for (int x = 0; x < input.Sentences.Length; ++x)
             {
                 SentenceScore.Add(0);
-                WordTokens = input.Sentences[x].Tokens.Where(x => (x.TokenType == TokenType.Abbreviation || x.TokenType == TokenType.Word) && !x.StopWord).ToArray();
+                WordTokens = [.. input.Sentences[x].Tokens.Where(x => (x.TokenType == TokenType.Abbreviation || x.TokenType == TokenType.Word) && !x.StopWord)];
                 var SentenceTotalTokens = WordTokens.Length;
                 var TermFrequencies = FrequencyAnalyzer.Analyze(WordTokens, SentenceTotalTokens);
 

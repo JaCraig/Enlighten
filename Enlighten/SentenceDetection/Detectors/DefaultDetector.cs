@@ -56,12 +56,12 @@ namespace Enlighten.SentenceDetection.Detectors
                 if (IsSentenceStopper(Token))
                 {
                     if (TempTokens.Count > 1)
-                        ReturnValue.Add(new Sentence(i, CurrentStart, TempTokens.ToArray()));
+                        ReturnValue.Add(new Sentence(i, CurrentStart, [.. TempTokens]));
                     TempTokens = new List<Token>();
                     CurrentStart = i + 1;
                 }
             }
-            return ReturnValue.ToArray();
+            return [.. ReturnValue];
         }
 
         /// <summary>

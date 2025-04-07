@@ -36,7 +36,7 @@ namespace Enlighten.Stemmer
         public DefaultStemmer(IEnumerable<IStemmerLanguage> languages)
         {
             Languages = languages.Where(x => x.GetType().Assembly != typeof(DefaultStemmer).Assembly).ToDictionary(x => x.ISOCode);
-            foreach (var Language in languages.Where(x => x.GetType().Assembly == typeof(DefaultStemmer).Assembly
+            foreach (IStemmerLanguage? Language in languages.Where(x => x.GetType().Assembly == typeof(DefaultStemmer).Assembly
                 && !Languages.ContainsKey(x.ISOCode)))
             {
                 Languages.Add(Language.ISOCode, Language);
@@ -57,7 +57,7 @@ namespace Enlighten.Stemmer
         /// <returns>The resulting stemmed words.</returns>
         public string[] Stem(string[] words, StemmerLanguage language)
         {
-            if (!Languages.TryGetValue(language, out var Stemmer))
+            if (!Languages.TryGetValue(language, out IStemmerLanguage? Stemmer))
                 return words;
             return Stemmer.StemWords(words);
         }
@@ -70,13 +70,13 @@ namespace Enlighten.Stemmer
         /// <returns>The resulting stemmed tokens.</returns>
         public Token[] Stem(Token[] tokens, StemmerLanguage language)
         {
-            Token[] FinalTokens = tokens.Where(x => x.TokenType == TokenType.Word).ToArray();
+            Token[] FinalTokens = [.. tokens.Where(x => x.TokenType == TokenType.Word)];
             var Results = Stem(FinalTokens.Select(x => x.Value).ToArray(), language);
-            for (int x = 0; x < Results.Length; ++x)
+            for (var x = 0; x < Results.Length; ++x)
             {
                 FinalTokens[x].StemmedValue = Results[x];
             }
-            foreach (var Token in tokens.Where(x => x.TokenType != TokenType.Word))
+            foreach (Token? Token in tokens.Where(x => x.TokenType != TokenType.Word))
             {
                 Token.StemmedValue = Token.Value;
             }

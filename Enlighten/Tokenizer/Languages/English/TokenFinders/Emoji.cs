@@ -30,7 +30,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
         /// <summary>
         /// The emojis
         /// </summary>
-        private static readonly char[][] Emojis = {
+        private static readonly char[][] Emojis = [
             "©".ToCharArray(),
             "®".ToCharArray(),
             "‼".ToCharArray(),
@@ -866,7 +866,7 @@ namespace Enlighten.Tokenizer.Languages.English.TokenFinders
             "🐃".ToCharArray(),
             "😐".ToCharArray(),
             "🕧".ToCharArray()
-        };
+        ];
 
         /// <summary>
         /// Gets the order.

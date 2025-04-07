@@ -104,7 +104,7 @@ namespace Enlighten.NameFinder.Finders
                     Tokens.Add(tokens[x]);
                 }
             }
-            return Tokens.ToArray();
+            return [.. Tokens];
         }
     }
 }
