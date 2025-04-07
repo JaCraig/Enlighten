@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.2"></a>
+## [3.0.2](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.0.2) (2025-04-07)
+
+### Bug Fixes
+
+* **stemming:** Add fix for potential out of bounds error ([65bea65](https://www.github.com/JaCraig/Enlighten/commit/65bea65ea5fe2ad55b9ca24d2983fe386de6a741))
+
+### Other
+
+* Merge pull request #352 from JaCraig/dependabot/nuget/Enlighten.Example/dependencies-4f6f877138 ([6926612](https://www.github.com/JaCraig/Enlighten/commit/69266128909b23393e5f0c97bbe2b062ee3cd64a))
+* Merge pull request #353 from JaCraig/dependabot/nuget/Enlighten.Example/dependencies-ce32c65fbc ([ef90e27](https://www.github.com/JaCraig/Enlighten/commit/ef90e270935f0f156baf1244250b5fb1aae75126))
+* Merge pull request #354 from JaCraig/dependabot/nuget/Enlighten.Example/dependencies-1049952546 ([2848813](https://www.github.com/JaCraig/Enlighten/commit/2848813e82c6161bcf2c628b4c4ac4fb44fb3f91))
+* bump System.Memory ([2f10150](https://www.github.com/JaCraig/Enlighten/commit/2f1015037824f4f09d4e9a468860a8e40c6ba22d))
+* bump System.Memory ([3dca9d1](https://www.github.com/JaCraig/Enlighten/commit/3dca9d1fafe62fa8a19c01677e6b4c99e27fcd2e))
+* bump System.Memory ([81f2849](https://www.github.com/JaCraig/Enlighten/commit/81f284929f61aa56d3fafffa94801f680f7c8ea7))
+
 <a name="3.0.1"></a>
 ## [3.0.1](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.0.1) (2025-01-30)
 
