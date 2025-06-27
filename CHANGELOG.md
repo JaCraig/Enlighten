@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.4"></a>
+## [3.0.4](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.0.4) (2025-06-27)
+
+### Bug Fixes
+
+* **dependencies:** update package versions ([f85cfd9](https://www.github.com/JaCraig/Enlighten/commit/f85cfd9a6c6c9b05379bf938092f59847da444c6))
+
+### Other
+
+* Merge pull request #356 from JaCraig/dependabot/nuget/Enlighten.SpeedTests/BenchmarkDotNet-0.15.0 ([476d735](https://www.github.com/JaCraig/Enlighten/commit/476d735c48d6ff1a2ae64c6623e599262bbd8b10))
+* Merge pull request #357 from JaCraig/dependabot/nuget/Enlighten.SpeedTests/dependencies-f88efadd4e ([d20acdb](https://www.github.com/JaCraig/Enlighten/commit/d20acdb512b034992d10390311604052db119f04))
+* Merge pull request #358 from JaCraig/dependabot/nuget/Enlighten.SpeedTests/dependencies-e29392ff60 ([7bcdc4d](https://www.github.com/JaCraig/Enlighten/commit/7bcdc4dc0066eb53f7612bc8fbc014e86ddfa05b))
+* Update BenchmarkDotNet to 0.15.0 ([cadf119](https://www.github.com/JaCraig/Enlighten/commit/cadf11937d57c547657883927d040df9ce3b8889))
+* Bump the dependencies group with 1 update ([b93022f](https://www.github.com/JaCraig/Enlighten/commit/b93022f7505a4da20d39f0651c706c5d6734cef3))
+* Bump the dependencies group with 1 update ([10a9894](https://www.github.com/JaCraig/Enlighten/commit/10a98948c5fd1bda0d33970042dece8ce14cb0e8))
+
 <a name="3.0.3"></a>
 ## [3.0.3](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.0.3) (2025-04-29)
 
