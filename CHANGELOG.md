@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.5"></a>
+## [3.0.5](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.0.5) (2025-06-27)
+
+### Bug Fixes
+
+* **dependabot:** correct formatting of patterns in configuration ([a33a396](https://www.github.com/JaCraig/Enlighten/commit/a33a396ad4a5b448883d3c0832cf17e5c77dcbc9))
+
 <a name="3.0.4"></a>
 ## [3.0.4](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.0.4) (2025-06-27)
 
