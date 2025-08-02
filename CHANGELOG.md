@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.7"></a>
+## [3.0.7](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.0.7) (2025-08-02)
+
+### Bug Fixes
+
+* **project:** remove FileCurator package reference ([c22bd49](https://www.github.com/JaCraig/Enlighten/commit/c22bd490c4cb6e588d8e2c0ed8a5c823d4fafbd3))
+
 <a name="3.0.6"></a>
 ## [3.0.6](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.0.6) (2025-08-01)
 
