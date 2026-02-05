@@ -61,7 +61,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FileCurator" Version="5.1.13" />
+    <PackageReference Include="FileCurator" Version="5.1.14" />
     <PackageReference Include="System.Memory" Version="4.6.3" />
 	  <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.102" PrivateAssets="All" />
 	  <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="10.0.102">
