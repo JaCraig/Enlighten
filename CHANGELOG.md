@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.10"></a>
+## [3.0.10](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.0.10) (2026-02-11)
+
+### Bug Fixes
+
+* Bump the dependencies group with 2 updates ([53f4e83](https://www.github.com/JaCraig/Enlighten/commit/53f4e8352ef90325d97db8eb3b37eef3a91235be))
+
+### Other
+
+* Merge pull request #408 from JaCraig/dependabot/nuget/Enlighten/dependencies-6cb60da957 ([79784bc](https://www.github.com/JaCraig/Enlighten/commit/79784bc22509ab96710cc0ede2a4febb00b0d880))
+* Merge pull request #409 from JaCraig/dependabot/nuget/Enlighten/dependencies-6cb60da957 ([538d791](https://www.github.com/JaCraig/Enlighten/commit/538d791a65ec62095f8140ad56d346d1befdba92))
+* Merge pull request #410 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-0ab92a1bf0 ([a04ab6e](https://www.github.com/JaCraig/Enlighten/commit/a04ab6e4919fca851be5d8b350681b63d50c2185))
+* Merge pull request #411 from JaCraig/dependabot/nuget/Enlighten/dependencies-a5bc480f90 ([7339ae0](https://www.github.com/JaCraig/Enlighten/commit/7339ae038ea9e1847159c3fc7960361e49a7139c))
+* Merge pull request #412 from JaCraig/dependabot/nuget/Enlighten/dependencies-a5bc480f90 ([3b247cc](https://www.github.com/JaCraig/Enlighten/commit/3b247cc228fc648a01db218eb755f659c847efdc))
+* Merge pull request #413 from JaCraig/dependabot/nuget/Enlighten/dependencies-a5bc480f90 ([f19c1d2](https://www.github.com/JaCraig/Enlighten/commit/f19c1d241e41f9d88663b3dad616581542cff8de))
+* Bump the dependencies group with 1 update ([3834571](https://www.github.com/JaCraig/Enlighten/commit/383457174cea63219d6568f353ea1b286812b3c7))
+* Bump the dependencies group with 1 update ([170ad14](https://www.github.com/JaCraig/Enlighten/commit/170ad148507c448cb524efac111c2b8995ee3f80))
+* Bump the dependencies group with 1 update ([52399d0](https://www.github.com/JaCraig/Enlighten/commit/52399d06a7cacba03bcac5d043dacfe0b012cc29))
+* Bump the dependencies group with 2 updates ([7689ada](https://www.github.com/JaCraig/Enlighten/commit/7689ada403a80dadc15f5b7415de93d5df25f352))
+* Bump the dependencies group with 2 updates ([9cc119e](https://www.github.com/JaCraig/Enlighten/commit/9cc119ea5286588c523efd0c8e9e40a0d5d6a09f))
+
 <a name="3.0.9"></a>
 ## [3.0.9](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.0.9) (2026-02-03)
 
