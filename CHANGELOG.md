@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.1.0"></a>
+## [3.1.0](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.1.0) (2026-02-12)
+
+### Features
+
+* **project:** add net10.0 support and update dependencies ([9106156](https://www.github.com/JaCraig/Enlighten/commit/9106156982b62f7e48c636747cb85d0b0fde8f3b))
+
 <a name="3.0.10"></a>
 ## [3.0.10](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.0.10) (2026-02-11)
 
