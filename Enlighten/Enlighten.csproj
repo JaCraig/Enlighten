@@ -15,7 +15,7 @@
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>3.1.0</Version>
+    <Version>3.1.1</Version>
     <Nullable>enable</Nullable>
     <Title>Enlighten</Title>
     <Copyright>Copyright © James Craig 2020</Copyright>
@@ -70,9 +70,7 @@
     </PackageReference>
   </ItemGroup>
   <Target Name="Husky" BeforeTargets="Restore;CollectPackageReferences" Condition="'$(HUSKY)' != 0">
-    <Exec Command="dotnet tool restore" StandardOutputImportance="Low"
-      StandardErrorImportance="High" />
-    <Exec Command="dotnet husky install" StandardOutputImportance="Low"
-      StandardErrorImportance="High" WorkingDirectory=".." />
+    <Exec Command="dotnet tool restore" StandardOutputImportance="Low" StandardErrorImportance="High" />
+    <Exec Command="dotnet husky install" StandardOutputImportance="Low" StandardErrorImportance="High" WorkingDirectory=".." />
   </Target>
 </Project>
