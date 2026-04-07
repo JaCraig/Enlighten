@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.1.3"></a>
+## [3.1.3](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.1.3) (2026-04-07)
+
+### Bug Fixes
+
+* Bump the dependencies group with 1 update ([b0de794](https://www.github.com/JaCraig/Enlighten/commit/b0de794ed2e465c87e5aaef17f6a6c5fcddcd59d))
+
+### Other
+
+* Merge pull request #432 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-6a51363bcd ([ac6b8c8](https://www.github.com/JaCraig/Enlighten/commit/ac6b8c8d7f34fc0c9220c6450ce694a402461313))
+* Merge pull request #433 from JaCraig/dependabot/nuget/Enlighten/dependencies-c484a48cf9 ([482fcc0](https://www.github.com/JaCraig/Enlighten/commit/482fcc06058ce4a6b240227f4e0c5bbc2c3f0583))
+* Bump the dependencies group with 1 update ([b4033d6](https://www.github.com/JaCraig/Enlighten/commit/b4033d62a828c83d2a7ca5ba286d06f18cb79d56))
+
 <a name="3.1.2"></a>
 ## [3.1.2](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.1.2) (2026-03-31)
 
