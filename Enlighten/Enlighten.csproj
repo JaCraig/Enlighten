@@ -15,7 +15,7 @@
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>3.1.8</Version>
+    <Version>3.1.9</Version>
     <Nullable>enable</Nullable>
     <Title>Enlighten</Title>
     <Copyright>Copyright © James Craig 2020</Copyright>
