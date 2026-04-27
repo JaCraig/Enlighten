@@ -544,9 +544,9 @@ namespace Enlighten.Stemmer.Languages
                         return word;
                     r1 = GetRValue(r1Index, word);
 
-                    if ((word[^2] == 'a' && word[^1] == 't')
+                    if (word.Length >= 2 && ((word[^2] == 'a' && word[^1] == 't')
                         || (word[^2] == 'b' && word[^1] == 'l')
-                        || (word[^2] == 'i' && word[^1] == 'z'))
+                        || (word[^2] == 'i' && word[^1] == 'z')))
                     {
                         var Final = new char[word.Length + 1];
                         Array.Copy(word.ToArray(), Final, word.Length);
