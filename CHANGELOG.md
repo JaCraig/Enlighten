@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.1.11"></a>
+## [3.1.11](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.1.11) (2026-04-27)
+
+### Bug Fixes
+
+* **EnglishLanguage:** improve word length check in stemming logic ([128a47b](https://www.github.com/JaCraig/Enlighten/commit/128a47bf5ad891875333a89b23810841a4589bd6))
+
 <a name="3.1.10"></a>
 ## [3.1.10](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.1.10) (2026-04-27)
 
