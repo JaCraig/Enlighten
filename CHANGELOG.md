@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.1.16"></a>
+## [3.1.16](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.1.16) (2026-05-27)
+
+### Bug Fixes
+
+* **workflows:** remove PERSONAL_ACCESS_TOKEN from workflows ([f0c2bec](https://www.github.com/JaCraig/Enlighten/commit/f0c2bec2c6e2c966d0524c05063e9c968bef4143))
+
+### Other
+
+* Merge pull request #455 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-4b47ae212b ([086ae39](https://www.github.com/JaCraig/Enlighten/commit/086ae3948e5bf253a6f033a9442dfb41fbc966eb))
+* Bump the dependencies group with 3 updates ([c368f14](https://www.github.com/JaCraig/Enlighten/commit/c368f140991542645bd32c98a12138d9f463597e))
+* **copilot:** add instructions for commit message formatting ([3a6ae91](https://www.github.com/JaCraig/Enlighten/commit/3a6ae91cd42d7229f743003ed55a378277d436ee))
+
 <a name="3.1.15"></a>
 ## [3.1.15](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.1.15) (2026-05-18)
 
