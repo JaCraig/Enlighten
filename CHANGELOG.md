@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.1.17"></a>
+## [3.1.17](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.1.17) (2026-08-21)
+
+### Bug Fixes
+
+* Bump the dependencies group with 1 update ([b0c786e](https://www.github.com/JaCraig/Enlighten/commit/b0c786e7672a6393749c1e16b5b0f1cb6a108808))
+* Bump the dependencies group with 1 update ([13a55af](https://www.github.com/JaCraig/Enlighten/commit/13a55af0b697644faaa995b21f66483139e36636))
+* Bump the dependencies group with 1 update ([79a0088](https://www.github.com/JaCraig/Enlighten/commit/79a0088d4c48b107916bbb65f581176832196f90))
+* Bump the dependencies group with 1 update ([fc1020f](https://www.github.com/JaCraig/Enlighten/commit/fc1020fe9d67ea5ccc90e1bf8da3d8d8d4d7d7a3))
+* Bump the dependencies group with 2 updates ([7957ad1](https://www.github.com/JaCraig/Enlighten/commit/7957ad1a3b72fd418fdfeab3aeac16b87edabf7d))
+* Bump the dependencies group with 2 updates ([5bb1f3c](https://www.github.com/JaCraig/Enlighten/commit/5bb1f3cd1641765a3a7947a0c773b2b89b28f58d))
+
+### Other
+
+* Merge pull request #456 from JaCraig/dependabot/nuget/Enlighten/dependencies-6fb63528ec ([a498cb4](https://www.github.com/JaCraig/Enlighten/commit/a498cb4ebcc8d2ecd43ca46b3fe55c18046da0f1))
+* Merge pull request #457 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-89e6161468 ([a7a44ee](https://www.github.com/JaCraig/Enlighten/commit/a7a44ee701e75fda5e05b7e4badb12a5444cf096))
+* Merge pull request #458 from JaCraig/dependabot/nuget/Enlighten/dependencies-991ee26f7c ([dd8c93b](https://www.github.com/JaCraig/Enlighten/commit/dd8c93b31ed389f8087adb7f142412237b519315))
+* Merge pull request #459 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-407341980e ([9454049](https://www.github.com/JaCraig/Enlighten/commit/9454049305dd3dbe13a574d7556306c2598f8651))
+* Merge pull request #460 from JaCraig/dependabot/nuget/Enlighten/dependencies-5c1cd76f7e ([10fa399](https://www.github.com/JaCraig/Enlighten/commit/10fa39963439a142e6657de48eeede42097b6cc5))
+* Merge pull request #461 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-7071a909e4 ([67f00a3](https://www.github.com/JaCraig/Enlighten/commit/67f00a3d85a33baba0c32f6afda407c99cd4f144))
+* Merge pull request #462 from JaCraig/dependabot/nuget/dot-config/dependencies-d580172a4f ([2995c74](https://www.github.com/JaCraig/Enlighten/commit/2995c7447741a2f097f955952e75acd6b1b4b7bf))
+* Merge pull request #463 from JaCraig/dependabot/nuget/Enlighten/dependencies-637020aa5a ([9b69529](https://www.github.com/JaCraig/Enlighten/commit/9b69529910dd207c38dfde2301fd148dbc9fc6bc))
+* Merge pull request #464 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-679c1f95be ([b53aed0](https://www.github.com/JaCraig/Enlighten/commit/b53aed091dffd81eb18036ffab29d439727bb314))
+* Merge pull request #465 from JaCraig/dependabot/nuget/Enlighten/dependencies-7d3e3ddd24 ([c486ef7](https://www.github.com/JaCraig/Enlighten/commit/c486ef7d482e4cd891790419f1ddd6be7167215b))
+* Merge pull request #466 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-11bae2cced ([188541c](https://www.github.com/JaCraig/Enlighten/commit/188541c9ac58edd73b87461a783d223d687bb168))
+* Bump the dependencies group with 1 update ([52ae5ce](https://www.github.com/JaCraig/Enlighten/commit/52ae5ced6dd489ddbe544493a54109661749e4ee))
+* Bump the dependencies group with 1 update ([db80219](https://www.github.com/JaCraig/Enlighten/commit/db80219e579401cda7ae9841297a41f6f0eeeda7))
+* Bump the dependencies group with 2 updates ([0cdbd16](https://www.github.com/JaCraig/Enlighten/commit/0cdbd16f7bc292a11c0253c5f5c1aeda387de717))
+* Bump the dependencies group with 2 updates ([0c476d3](https://www.github.com/JaCraig/Enlighten/commit/0c476d3ce14bb1a862b2cf19a9472425b92e0f22))
+* Bump the dependencies group with 2 updates ([20db8aa](https://www.github.com/JaCraig/Enlighten/commit/20db8aae6f2287259c760309c1d8698321fdb171))
+
 <a name="3.1.16"></a>
 ## [3.1.16](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.1.16) (2026-05-27)
 
