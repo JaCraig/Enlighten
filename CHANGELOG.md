@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.1.18"></a>
+## [3.1.18](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.1.18) (2026-11-08)
+
+### Bug Fixes
+
+* Bump the dependencies group with 1 update ([0bc6ca1](https://www.github.com/JaCraig/Enlighten/commit/0bc6ca14c108269afc3fef2f10def5c9c7bbde6e))
+* Bump the dependencies group with 2 updates ([bd08611](https://www.github.com/JaCraig/Enlighten/commit/bd08611b53f8102f04613ab15cafc95405e69d93))
+* Bump the dependencies group with 2 updates ([8f9ad43](https://www.github.com/JaCraig/Enlighten/commit/8f9ad4302beebb07116075728a713faecd141efe))
+* Bump the dependencies group with 2 updates ([f9a636f](https://www.github.com/JaCraig/Enlighten/commit/f9a636fb0c3f738adaa76636d766330638af32c5))
+* **workflow:** update permissions and enhance publish steps ([9a7810f](https://www.github.com/JaCraig/Enlighten/commit/9a7810f9d9203b4cfc7352339321ae7bd82d16a8))
+
+### Other
+
+* Merge pull request #467 from JaCraig/dependabot/nuget/dot-config/dependencies-87dec4854d ([2526aa5](https://www.github.com/JaCraig/Enlighten/commit/2526aa53dca6ecd50b1df3a0aead083ce266a846))
+* Merge pull request #468 from JaCraig/dependabot/nuget/Enlighten/dependencies-39d8d9731f ([b0622da](https://www.github.com/JaCraig/Enlighten/commit/b0622dacc441eb16e37deec5948e63021faa1a8d))
+* Merge pull request #469 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-3e8ca8d6b6 ([8951412](https://www.github.com/JaCraig/Enlighten/commit/895141239341843d4fb230385ad1188e71454183))
+* Merge pull request #470 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-8af17d2a0f ([c50a928](https://www.github.com/JaCraig/Enlighten/commit/c50a928cca28eb8bc5f5875c7876504b162fb963))
+* Merge pull request #471 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-1aaad36d12 ([d1f59c8](https://www.github.com/JaCraig/Enlighten/commit/d1f59c8f68e9705e87820367925e47b9b0b478ce))
+* Merge pull request #472 from JaCraig/dependabot/nuget/Enlighten/dependencies-c1ede9f7c1 ([dd34d04](https://www.github.com/JaCraig/Enlighten/commit/dd34d048d5b7005af930b4d520073d20525d57ee))
+* Merge pull request #473 from JaCraig/dependabot/nuget/Enlighten.Tests/dependencies-ed859a41c4 ([0d5808e](https://www.github.com/JaCraig/Enlighten/commit/0d5808e0272d6ad1be4a02e9f75af9cfebb1d3f8))
+* Merge pull request #474 from JaCraig/dependabot/nuget/Enlighten/dependencies-f4803d6dd8 ([de9ec8d](https://www.github.com/JaCraig/Enlighten/commit/de9ec8d56d6f004e2a0fe536f92dc611b232dc1e))
+* Bump the dependencies group with 1 update ([be8163f](https://www.github.com/JaCraig/Enlighten/commit/be8163fb57816daddab517f7cf7ff0d2c0f4dc93))
+* Bump the dependencies group with 1 update ([4b0794a](https://www.github.com/JaCraig/Enlighten/commit/4b0794af1aed8035649e179c8e8822f52f565304))
+* Bump the dependencies group with 2 updates ([7a15bca](https://www.github.com/JaCraig/Enlighten/commit/7a15bcac6de408c64a7b812fdd80ea43ca8f6bb9))
+* Bump the dependencies group with 2 updates ([8f18d4f](https://www.github.com/JaCraig/Enlighten/commit/8f18d4f1ae5565a5fd635e499cc82d51d82351b2))
+
 <a name="3.1.17"></a>
 ## [3.1.17](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.1.17) (2026-08-21)
 
