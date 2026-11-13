@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.0.0"></a>
+## [4.0.0](https://www.github.com/JaCraig/Enlighten/releases/tag/v4.0.0) (2026-11-13)
+
+### Features
+
+* **framework:** target .NET 10 and 11 ([c925fda](https://www.github.com/JaCraig/Enlighten/commit/c925fda24b442df44b645e3fd8fd76b5cc189b58))
+
+### Bug Fixes
+
+* Bump the dependencies group with 1 update ([9636c07](https://www.github.com/JaCraig/Enlighten/commit/9636c0733be18c1849cc3e91be574dc2b81003c4))
+
+### Breaking Changes
+
+* **framework:** target .NET 10 and 11 ([c925fda](https://www.github.com/JaCraig/Enlighten/commit/c925fda24b442df44b645e3fd8fd76b5cc189b58))
+
+### Other
+
+* Merge pull request #475 from JaCraig/dependabot/nuget/Enlighten/dependencies-200e55c364 ([e463027](https://www.github.com/JaCraig/Enlighten/commit/e463027c2a5ce998ee7f62963e209abf08d9e70b))
+
 <a name="3.1.18"></a>
 ## [3.1.18](https://www.github.com/JaCraig/Enlighten/releases/tag/v3.1.18) (2026-11-08)
 
